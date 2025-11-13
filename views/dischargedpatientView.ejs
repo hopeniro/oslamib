@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Discharged Patient Details</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    .record-container { max-width: 900px; margin: 32px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 32px; }
+    .record-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+    .record-title { font-size: 24px; font-weight: 700; color: #0891b2; }
+    .record-section { margin-bottom: 18px; }
+    .record-label { font-weight: 600; color: #333; margin-right: 8px; }
+    .record-value { color: #222; }
+    .record-table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+    .record-table th, .record-table td { border: 1px solid #ccc; padding: 8px 10px; font-size: 15px; }
+    .record-table th { background: #f3f4f6; font-weight: 600; }
+    .record-table td { background: #fff; }
+    .record-checkbox { margin-right: 12px; }
+  </style>
+</head>
+<body>
+  <div class="invoice-container">
+    <div class="header" style="text-transform: uppercase; text-align:center;">
+      <p style="margin:2px 0;">Republic of the Philippines</p>
+      <p style="margin:2px 0;">Province of Nueva Ecija</p>
+      <p style="margin:2px 0;">Science City of Muñoz</p>
+      <h2 style="margin:8px 0 2px 0; font-size: 16px; font-weight: 800;">OSPITAL NG LUNGSOD AGHAM NG MUÑOZ</h2>
+      <p style="margin:0 0 8px 0;">(Primary Care Facility – Infirmary)</p>
+    </div>
+    <h2 style="text-align:center; letter-spacing:1px; margin-bottom:18px;">ADMISSION AND DISCHARGE RECORD</h2>
+    <div style="display:flex; gap:32px; margin-bottom:18px;">
+      <div style="flex:1;">
+        <p><strong>HRN:</strong> <%= patient.hrn %></p>
+        <p><strong>Full Name:</strong> <%= patient.fullName %></p>
+        <p><strong>Age:</strong> <%= patient.age %></p>
+  <!-- Sex removed -->
+        <p><strong>Gender:</strong> <%= patient.gender %></p>
+        <p><strong>Address:</strong> <%= patient.address %></p>
+        <p><strong>Civil Status:</strong> <%= patient.civilStatus %></p>
+        <p><strong>PHILHEALTH No:</strong> <%= patient.philhealthNo %></p>
+  <p><strong>Birthday:</strong> <%= patient.birthday ? (new Date(patient.birthday).toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' })) : '' %></p>
+        <p><strong>Religion:</strong> <%= patient.religion %></p>
+      </div>
+      <div style="flex:1;">
+    <p><strong>Admitted by:</strong> <%= patient.admittedBy %></p>
+    <p><strong>Admitted At:</strong> <%= patient.admittedAt %></p>
+        <p><strong>Discharged by:</strong> <%= patient.dischargedBy %></p>
+        <p><strong>Attending Physician:</strong> <%= patient.physician %></p>
+        <p><strong>Nurse:</strong> <%= patient.nurse %></p>
+        <p><strong>Admission Date:</strong> <%= patient.admittedAt %></p>
+        <p><strong>Discharge Date:</strong> <%= patient.dischargedAt %></p>
+        <p><strong>Total No. of Days:</strong> <%= patient.totalDays %></p>
+        <p><strong>Admitting Diagnosis:</strong> <%= patient.admittingDiagnosis %></p>
+        <p><strong>Final Diagnosis:</strong> <%= patient.finalDiagnosis %></p>
+        <p><strong>Operation/Procedure:</strong> <%= patient.operation %></p>
+        <p><strong>ICD 10 Code:</strong> <%= patient.icd10 %></p>
+      </div>
+    </div>
+    <div class="info-section">
+      <p><strong>Alert Allergic To:</strong> <%= patient.allergicTo %></p>
+      <p><strong>Social Service:</strong> <%= patient.socialService %></p>
+      <p><strong>Disposition:</strong> <%= patient.disposition %></p>
+      <p><strong>Results:</strong> <%= patient.results %></p>
+      <p><strong>Place of Occurrence:</strong> <%= patient.placeOfOccurrence %></p>
+      <p><strong>Transferred to:</strong> <%= patient.transferredTo %></p>
+      <p><strong>PRC Lic.:</strong> <%= patient.prcLicense %></p>
+  <!-- Signature removed -->
+    </div>
+    <div class="signature-section" style="text-align:center; margin-top:32px;">
+      <div class="signature-line" style="margin:0 auto 5px auto; width:250px; border-bottom:1px solid #000;"></div>
+      <div class="signature-label" style="font-size:15px; font-weight:500;">Printed Name & Signature of Attending Physician</div>
+    </div>
+    <div class="signature-section">
+      <div class="signature-line"></div>
+      <div class="signature-label">Date</div>
+    </div>
+    <div style="text-align:center; margin-top:32px;">
+      <button onclick="window.print()" style="background:#0891b2;color:#fff;padding:10px 28px;border:none;border-radius:4px;font-size:15px;cursor:pointer;">Print</button>
+    </div>
+  </div>
+</body>
+</html>

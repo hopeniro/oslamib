@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Official Receipt</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #fff; padding: 20px; color: #000; }
+    .receipt-container { max-width: 900px; margin: 0 auto; background: #fff; padding: 20px; }
+    .header { text-align: center; border-bottom: 2px solid #000; padding-bottom: 12px; margin-bottom: 16px; }
+    .header h1 { font-size: 20px; color: #000; margin-bottom: 4px; }
+    .header h2 { font-size: 14px; color: #000; font-weight: normal; margin-bottom: 2px; }
+    .header p { font-size: 11px; color: #000; line-height: 1.4; }
+    .or-section { display: flex; justify-content: space-between; margin: 16px 0; padding: 8px 0; border-bottom: 1px solid #000; }
+    .or-number { font-size: 16px; font-weight: bold; color: #000; }
+    .or-date { font-size: 12px; color: #000; }
+    .patient-info { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0 16px; padding: 10px; border: 1px solid #000; }
+    .info-row { display: flex; gap: 8px; font-size: 12px; }
+    .info-label { font-weight: bold; min-width: 150px; }
+    .info-value { }
+    .services-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+    .services-table th, .services-table td { border: 1px solid #000; padding: 6px; font-size: 12px; }
+    .services-table th { background: #f2f2f2; color: #000; }
+    .services-table .text-right { text-align: right; }
+    .services-table .text-center { text-align: center; }
+    .totals-section { margin-left: auto; width: 340px; border-top: 2px solid #000; padding-top: 10px; }
+    .total-row { display: flex; justify-content: space-between; padding: 6px 0; font-size: 12px; }
+    .total-row.subtotal { border-bottom: 1px solid #000; padding-bottom: 8px; margin-bottom: 6px; }
+    .total-row.final { font-size: 14px; font-weight: bold; border-top: 2px solid #000; padding-top: 8px; }
+    .discount-types { font-size: 11px; font-style: italic; }
+    .footer-section { margin-top: 24px; padding-top: 12px; border-top: 1px solid #000; display: flex; justify-content: space-between; align-items: flex-end; font-size: 11px; }
+    .cashier-info { }
+    .cashier-label { font-weight: bold; }
+    .cashier-name { font-size: 12px; margin-top: 4px; }
+  .action-buttons { margin-top: 20px; text-align: center; }
+  /* Match Billing Invoice button look */
+  .action-buttons .btn { background-color: #2196F3; color: white; border: none; padding: 12px 24px; cursor: pointer; border-radius: 4px; font-size: 14px; margin: 0 10px; }
+  .action-buttons .btn:hover { background-color: #0b7dda; }
+  .action-buttons .payment-btn { background-color: #4CAF50; }
+  .action-buttons .payment-btn:hover { background-color: #45a049; }
+  .action-buttons .cancel-btn { background-color: #f44336; }
+  .action-buttons .cancel-btn:hover { background-color: #da190b; }
+    /* Modal styles - match promissory modal from billing */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 6px;
+      width: 95%;
+      max-width: 520px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .modal-close {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .modal-close:hover {
+      color: #dc3545;
+    }
+    .modal-actions {
+      margin-top: 15px;
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+    .form-field label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 5px;
+    }
+    .form-field input {
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .form-field input:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+    .modal .patient-info {
+      background-color: #e3f2fd;
+      border: 1px solid #90caf9;
+      border-radius: 6px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    .modal .patient-info div {
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+    .modal .patient-info strong {
+      color: #1976d2;
+      font-weight: 600;
+    }
+    .modal-actions .btn {
+      padding: 8px 16px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .modal-actions .btn-cancel {
+      background: #dc3545;
+      color: #fff;
+      border: 1px solid #bb2d3b;
+    }
+    .modal-actions .btn-cancel:hover {
+      background: #c82333;
+    }
+    .modal-actions .btn-primary {
+      background: #1976d2;
+      color: #fff;
+      border: 1px solid #115aa3;
+    }
+    .modal-actions .btn-primary:hover {
+      background: #115aa3;
+    }
+    .modal-actions .btn-primary:disabled {
+      background: #bdbdbd;
+      color: #fff;
+      border: 1px solid #bdbdbd;
+      cursor: not-allowed;
+    }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .receipt-container { box-shadow: none; padding: 20px; }
+      .action-buttons, .modal-overlay { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="receipt-container">
+    <div class="header">
+      <h1>REPUBLIC OF THE PHILIPPINES</h1>
+      <h2>Province of Nueva Ecija</h2>
+      <h2>Science City of Muñoz</h2>
+      <h1 style="margin-top: 10px;">OSPITAL NG LUNGSOD AGHAM NG MUÑOZ</h1>
+      <p>Hospital Address Line 1<br>Contact Number | Email Address</p>
+    </div>
+
+    <div class="or-section">
+      <div>
+        <div class="or-number">OR NO: <%= orNumber %></div>
+        <div style="margin-top: 5px; font-size: 12px; color: #999;">Bill No: <%= billNumber %></div>
+      </div>
+      <div class="or-date">
+        <strong>Date:</strong> <%= currentDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) %><br>
+        <strong>Time:</strong> <%= currentDate.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }) %>
+      </div>
+    </div>
+
+    <div class="patient-info">
+      <div class="info-row">
+        <span class="info-label">HRN:</span>
+        <span class="info-value"><%= patient.patientId || patient.tempId %></span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Patient Name:</span>
+        <span class="info-value"><%= patient.firstName %> <%= patient.middleInitial || '' %> <%= patient.lastName %></span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Age/Sex:</span>
+        <span class="info-value"><%= age %> years / <%= patient.sex || 'N/A' %></span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Admission Number:</span>
+        <span class="info-value"><%= admission ? admission.admissionNumber : 'N/A' %></span>
+      </div>
+    </div>
+
+    <table class="services-table">
+      <thead>
+        <tr>
+          <th style="width: 50px;">Ref</th>
+          <th>Description</th>
+          <th style="width: 80px;" class="text-center">Qty</th>
+          <th style="width: 120px;" class="text-right">Unit Price</th>
+          <th style="width: 120px;" class="text-right">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% services.forEach(service => { %>
+          <tr>
+            <td class="text-center"><%= service.ref %></td>
+            <td>
+              <strong><%= service.transactionType %></strong><br>
+              <span style="color: #666; font-size: 12px;"><%= service.description %></span>
+            </td>
+            <td class="text-center"><%= service.qty %></td>
+            <td class="text-right">₱<%= service.unitPrice.toFixed(2) %></td>
+            <td class="text-right"><strong>₱<%= service.amount.toFixed(2) %></strong></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+    <div class="totals-section">
+      <div class="total-row subtotal">
+        <span>Subtotal:</span>
+        <span><strong>₱<%= subtotal.toFixed(2) %></strong></span>
+      </div>
+      <% if (discountAmount > 0) { %>
+        <div class="total-row">
+          <span>
+            Discount (<%= (discountRate * 100).toFixed(0) %>%)
+            <% if (discountTypes && discountTypes.length > 0) { %>
+              <br><span class="discount-types"><%= discountTypes.join(', ') %></span>
+            <% } %>
+          </span>
+          <span>-₱<%= discountAmount.toFixed(2) %></span>
+        </div>
+      <% } %>
+      <% if (promissoryAmount > 0) { %>
+        <div class="total-row">
+          <span>Promissory Covered Amount:</span>
+          <span>-₱<%= promissoryAmount.toFixed(2) %></span>
+        </div>
+      <% } %>
+      <div class="total-row final">
+        <span>TOTAL AMOUNT TO PAY:</span>
+        <span id="totalAmount">₱<%= finalTotal.toFixed(2) %></span>
+      </div>
+    </div>
+
+    <!-- Payment modal -->
+    <div class="modal" id="payModal">
+      <div class="modal-content" role="dialog" aria-modal="true">
+        <button class="modal-close" onclick="closePayModal()">&times;</button>
+        <h3 style="margin-top:0;">Confirm Payment</h3>
+        <div class="patient-info" style="margin-bottom: 12px;">
+          <div><strong>Total Amount:</strong> ₱<%= finalTotal.toFixed(2) %></div>
+        </div>
+        <div class="form-field">
+          <label for="amountReceived"><strong>Amount Received</strong></label>
+          <input type="number" id="amountReceived" placeholder="0.00" step="0.01" min="<%= finalTotal %>" oninput="calculateChange()" />
+        </div>
+        <div class="form-field">
+          <label><strong>Change</strong></label>
+          <div id="changeDisplay" style="font-size: 16px; font-weight: bold; color: #1976d2; padding: 8px;">₱0.00</div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-cancel" onclick="closePayModal()">Cancel</button>
+          <button type="button" class="btn btn-primary" id="confirmBtn" onclick="confirmPayment()" disabled>Confirm</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <div>
+        <p style="font-size: 12px; color: #666;">This is an official receipt from OSPITAL NG LUNGSOD AGHAM NG MUÑOZ</p>
+        <p style="font-size: 11px; color: #999; margin-top: 5px;">Generated electronically. Valid without signature.</p>
+      </div>
+      <div class="cashier-info">
+        <div class="cashier-label">Processed by:</div>
+        <div class="cashier-name"><%= processedBy || 'Cashier' %></div>
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <button class="btn" onclick="window.print()">Print</button>
+      <button class="btn payment-btn" onclick="openPayModal()">Pay</button>
+    </div>
+  </div>
+
+  <script>
+    const transactionIds = <%- JSON.stringify(transactionIds) %>;
+    const paymentId = '<%= paymentId %>';
+    const finalTotal = <%= finalTotal %>;
+    const servicesData = <%- JSON.stringify(services) %>;
+
+    function openPayModal() {
+      document.getElementById('payModal').style.display = 'flex';
+      document.getElementById('amountReceived').focus();
+    }
+    function closePayModal() {
+      document.getElementById('payModal').style.display = 'none';
+    }
+
+    function calculateChange() {
+      const amountReceived = parseFloat(document.getElementById('amountReceived').value) || 0;
+      const change = amountReceived - finalTotal;
+      const changeDisplay = document.getElementById('changeDisplay');
+      const confirmBtn = document.getElementById('confirmBtn');
+      if (amountReceived >= finalTotal) {
+        changeDisplay.textContent = '₱' + change.toFixed(2);
+        confirmBtn.disabled = false;
+      } else if (amountReceived > 0) {
+        changeDisplay.textContent = 'Insufficient';
+        confirmBtn.disabled = true;
+      } else {
+        changeDisplay.textContent = '₱0.00';
+        confirmBtn.disabled = true;
+      }
+    }
+
+    async function confirmPayment() {
+      const amountReceived = parseFloat(document.getElementById('amountReceived').value) || 0;
+      const changeGiven = amountReceived - finalTotal;
+      if (amountReceived < finalTotal) {
+        alert('Amount received is insufficient!');
+        return;
+      }
+      try {
+        const response = await fetch('/cashier/verify-payment', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            transactionIds, paymentId, processedBy: '<%= processedBy || "Cashier" %>', amountReceived, changeGiven, orNumber: '<%= orNumber %>',
+            services: servicesData, patientHRN: '<%= patient.patientId || patient.tempId %>', patientName: '<%= patient.firstName %> <%= patient.lastName %>',
+            billNumber: '<%= billNumber %>', subtotal: <%= subtotal %>, discountTypes: <%- JSON.stringify(discountTypes) %>, discountRate: <%= discountRate %>,
+            discountAmount: <%= discountAmount %>, promissoryAmount: <%= promissoryAmount %>, finalTotal, admissionNumber: '<%= admission ? admission.admissionNumber : "" %>'
+          })
+        });
+        const result = await response.json();
+        if (result.success) {
+          alert('Payment confirmed successfully!\nReceipt saved with OR Number: <%= orNumber %>');
+          window.location.href = '/cashier';
+        } else {
+          alert('Error confirming payment: ' + result.error);
+        }
+      } catch (err) {
+        console.error(err);
+        alert('Failed to confirm payment. Please try again.');
+      }
+    }
+  </script>
+</body>
+</html>

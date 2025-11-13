@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patient Details</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    // Simple tab-style section toggler: only one section visible at a time
+    function showSection(sectionId) {
+      const sections = ['admissionSection', 'diagnoseSection', 'transactionSection'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = (id === sectionId) ? 'block' : 'none';
+      });
+      // Update active tab button
+      const buttons = document.querySelectorAll('.btn-tab');
+      buttons.forEach(btn => {
+        const target = btn.getAttribute('data-section');
+        if (target === sectionId) {
+          btn.classList.add('is-active');
+        } else {
+          btn.classList.remove('is-active');
+        }
+      });
+    }
+    // Show Admission Records by default on load
+    window.addEventListener('DOMContentLoaded', function(){
+      showSection('admissionSection');
+    });
+  </script>
+     <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f8fb;
+      margin: 0;
+      color: #222;
+      font-size: 15px;
+    }
+    /* SIDEBAR & NAV ONLY */
+    .sidebar {
+      width: 250px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding-top: 10px;
+      padding: 12px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      overflow-y: auto;
+      border-left: 4px solid #0891b2;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      border-radius: 10px;
+      margin: 8px 10px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.25s ease;
+      position: relative;
+      text-decoration: none;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      background: #e6f7fa;
+      color: #0891b2;
+      border-color: #b3e5ef;
+      box-shadow: 0 3px 8px rgba(8,145,178,0.1);
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #0891b2; /* OsLAM title color */
+      border-radius: 4px 0 0 4px;
+      box-shadow: 0 0 0 1px #0891b2;
+    }
+  </style>
+</head>
+<body>
+  <!-- FLOATING SIDEBAR -->
+  <aside class="sidebar">
+    <div style="display:flex;align-items:center;gap:12px;padding:24px 20px 12px 20px;">
+      <img src="/logo.png" style="width:44px;height:44px;border-radius:8px;object-fit:contain;">
+      <div>
+        <div style="font-size:20px;font-weight:700;color:#0891b2;">OsLAM</div>
+        <div style="font-size:13px;color:#666;">Emergency</div>
+      </div>
+    </div>
+    <nav style="margin-top:10px;">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="/emergencydashboard" class="nav-link"><i class="bi bi-grid"></i> Dashboard</a></li>
+        <li><a href="/emergency" class="nav-link"><i class="bi bi-hospital"></i> Emergency</a></li>
+        <li><a href="/emergency/voided" class="nav-link"><i class="bi bi-x-circle"></i> Void Transaction</a></li>
+        <li><a href="/emergency/deleted-diagnoses" class="nav-link"><i class="bi bi-trash"></i> Deleted Diagnose</a></li>
+      </ul>
+    </nav>
+  </aside>
+  
+  <div style="margin-left: 320px;">
+  <div class="page-header">
+    <h1 style="margin:0;">Emergency Department</h1>
+    <div class="notif-wrapper">
+      <div id="notif-bell">
+        <i class="bi bi-bell-fill"></i>
+        <span class="badge" id="notif-count"></span>
+      </div>
+      <div id="notif-dropdown"></div>
+    </div>
+  </div>
+
+  <br>
+  <!-- Top: HRN then Full Name (compute name if missing) -->
+  <div class="section">
+    <div class="kv"><strong>HRN:</strong> <span><%= patient.patientId || patient.tempId %></span></div>
+    <% 
+      const nameFromFields = (patient.lastName && patient.firstName) 
+        ? (
+            (patient.lastName.charAt(0).toUpperCase() + patient.lastName.slice(1).toLowerCase()) + ', ' +
+            (patient.firstName.charAt(0).toUpperCase() + patient.firstName.slice(1).toLowerCase()) +
+            ' ' + (patient.middleInitial ? patient.middleInitial.toUpperCase() : '')
+          ).trim()
+        : ((patient.firstName || '') + ' ' + (patient.lastName || '')).trim();
+      const displayFullName = (patient.fullName && patient.fullName.trim().length > 0) ? patient.fullName : nameFromFields;
+    %>
+    <div class="kv"><strong>Full Name:</strong> <span><%= displayFullName || 'N/A' %></span></div>
+  </div>
+
+  <!-- Toggle buttons (tab style) -->
+  <div class="tab-group">
+    <button type="button" class="btn btn-white btn-tab" data-section="admissionSection" onclick="showSection('admissionSection')">Admission Records</button>
+    <button type="button" class="btn btn-white btn-tab" data-section="diagnoseSection" onclick="showSection('diagnoseSection')">Diagnose</button>
+    <button type="button" class="btn btn-white btn-tab" data-section="transactionSection" onclick="showSection('transactionSection')">Transactions</button>
+  </div>
+
+  <!-- Hidden: Medical details (patient + medicals), excluding sensitive fields -->
+  <div id="admissionSection" class="section" style="display:none;">
+    <h3 style="margin-top:0;">Patient Information</h3>
+    <% 
+      const dob = patient.birthDate || patient.birthday;
+      const ageYears = dob ? Math.floor((Date.now() - new Date(dob).getTime()) / (365.25*24*60*60*1000)) : null;
+    %>
+    <div class="kv"><strong>Age:</strong> <span><%= (ageYears !== null) ? (ageYears + ' yrs') : 'N/A' %></span></div>
+    <% if (patient.gender) { %>
+      <div class="kv"><strong>Gender:</strong> <span><%= patient.gender %></span></div>
+    <% } %>
+    <% if (patient.address) { %>
+      <div class="kv"><strong>Address:</strong> <span><%= patient.address %></span></div>
+    <% } %>
+
+    <h3>Vital Signs</h3>
+    <div class="kv"><strong>BP:</strong> <span><%= patient.bp || '—' %></span></div>
+    <div class="kv"><strong>HR:</strong> <span><%= patient.hr || '—' %></span></div>
+    <div class="kv"><strong>RR:</strong> <span><%= patient.rr || '—' %></span></div>
+    <div class="kv"><strong>Temp:</strong> <span><%= patient.temp || '—' %></span></div>
+    <div class="kv"><strong>SpO₂:</strong> <span><%= patient.spo2 || '—' %></span></div>
+    <div class="kv"><strong>Height (cm):</strong> <span><%= patient.height || '—' %></span></div>
+    <div class="kv"><strong>Weight (kg):</strong> <span><%= patient.weight || '—' %></span></div>
+
+    <h3>Medical Records</h3>
+    <% if (medicalRecords.length === 0) { %>
+      <p class="muted">No medical records found.</p>
+    <% } else { %>
+      <% medicalRecords.forEach(record => { %>
+        <div class="section" style="margin:10px 0;">
+          <% if (record.isPWD !== undefined) { %><div class="kv"><strong>PWD:</strong> <span><%= record.isPWD === '1' || record.isPWD === true ? 'Yes' : 'No' %></span></div><% } %>
+          <% if (record.isIPS !== undefined) { %><div class="kv"><strong>IPS:</strong> <span><%= record.isIPS === '1' || record.isIPS === true ? 'Yes' : 'No' %></span></div><% } %>
+          <% if (record.isSC !== undefined)  { %><div class="kv"><strong>SC:</strong>  <span><%= record.isSC  === '1' || record.isSC  === true ? 'Yes' : 'No' %></span></div><% } %>
+          <% if (record.isPregnant !== undefined) { %><div class="kv"><strong>Pregnant:</strong> <span><%= record.isPregnant === '1' || record.isPregnant === true ? 'Yes' : 'No' %></span></div><% } %>
+          <% if (record.allergicTo) { %><div class="kv"><strong>Allergic To:</strong> <span><%= record.allergicTo %></span></div><% } %>
+        </div>
+      <% }) %>
+    <% } %>
+  </div>
+
+  <!-- Hidden: Diagnose list and Add Diagnose form -->
+  <div id="diagnoseSection" class="section" style="display:none;">
+    <h3 style="margin-top:0;">Diagnose Records</h3>
+    <% 
+      // Collect all diagnoses with their medical record and index
+      const allDx = [];
+      medicalRecords.forEach(function(record) {
+        (record.diagnose || []).forEach(function(d, idx) {
+          // Check if diagnose was created after current admission
+          const isAfterAdmission = admissionInfo && d.date && new Date(d.date) >= new Date(admissionInfo.admittedAt);
+          allDx.push({
+            medicalId: record._id,
+            diagnoseIndex: idx,
+            date: d.date,
+            complaint: d.complaint,
+            doctor_order: d.doctor_order,
+            nurse_assist: d.nurse_assist,
+            doctor: d.doctor,
+            canEdit: isAfterAdmission // Only allow edit/delete for diagnoses after admission
+          });
+        });
+      });
+    %>
+    <% if (allDx.length === 0) { %>
+      <p class="muted">No diagnoses added.</p>
+    <% } else { %>
+      <% allDx.forEach(function(d, listIdx) { %>
+        <div class="section" style="margin:10px 0; padding:10px; border:1px solid #ddd; position:relative;">
+          <div id="diagnose-view-<%= listIdx %>" style="display:block;">
+            <strong>Date:</strong> <%= d.date ? new Date(d.date).toDateString() : '—' %><br>
+            <strong>Complaint:</strong> <%= d.complaint || '—' %><br>
+            <strong>Doctor Order:</strong> <%= d.doctor_order || '—' %><br>
+            <strong>Nurse Assist:</strong> <%= d.nurse_assist || '—' %><br>
+            <strong>Doctor:</strong> <%= d.doctor || '—' %><br>
+            <% if (d.canEdit) { %>
+              <div style="margin-top:8px;">
+                <button class="btn" style="background-color:#007bff; color:#fff;" onclick="showEditForm(<%= listIdx %>)">Edit</button>
+                <button class="btn" style="margin-left:8px; background-color:#dc3545; color:#fff;" onclick="deleteDiagnose('<%= d.medicalId %>', <%= d.diagnoseIndex %>)">Delete</button>
+              </div>
+            <% } else { %>
+              <em style="color:#999; font-size:12px;">(Previous admission - read only)</em>
+            <% } %>
+          </div>
+          
+          <% if (d.canEdit) { %>
+          <div id="diagnose-edit-<%= listIdx %>" style="display:none;">
+            <div class="kv"><label><strong>Complaint:</strong></label> <textarea id="edit-complaint-<%= listIdx %>" rows="2" cols="40"><%= d.complaint || '' %></textarea></div>
+            <div class="kv"><label><strong>Doctor Order:</strong></label> <textarea id="edit-doctor-order-<%= listIdx %>" rows="2" cols="40"><%= d.doctor_order || '' %></textarea></div>
+            <div class="kv"><label><strong>Nurse Assist:</strong></label>
+              <select id="edit-nurse-<%= listIdx %>">
+                <% availableNurses.forEach(n => { %>
+                  <option value="<%= n.nurseId %>"><%= n.firstName %> <%= n.middleInitial || '' %> <%= n.lastName %></option>
+                <% }) %>
+              </select>
+            </div>
+            <div class="kv"><label><strong>Doctor:</strong></label>
+              <select id="edit-doctor-<%= listIdx %>">
+                <% availableDoctors.forEach(doc => { %>
+                  <option value="<%= doc.doctorId %>"><%= doc.firstName %> <%= doc.middleName || '' %> <%= doc.lastName %></option>
+                <% }) %>
+              </select>
+            </div>
+            <div class="kv">
+              <button class="btn" style="background-color:#007bff; color:#fff;" onclick="updateDiagnose('<%= d.medicalId %>', <%= d.diagnoseIndex %>, <%= listIdx %>)">Update</button>
+              <button class="btn btn-cancel" style="margin-left:8px;" onclick="cancelEdit(<%= listIdx %>)">Cancel</button>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      <% }) %>
+    <% } %>
+
+    <% 
+      // Check if there's already a diagnosis for this admission
+      const hasCurrentAdmissionDiagnosis = allDx.some(d => d.canEdit);
+    %>
+    <% if (!patient.tempId && !hasCurrentAdmissionDiagnosis) { %>
+      <h4 style="margin-top:16px;">Add Diagnose</h4>
+      <% if (medicalRecords.length === 0) { %>
+        <p class="muted">No medical record found. Please create a medical record first.</p>
+      <% } else { %>
+        <% medicalRecords.forEach(record => { %>
+          <form action="/emergency/view/<%= patient._id %>/diagnose" method="POST" class="section">
+            <input type="hidden" name="medicalId" value="<%= record._id %>">
+            <div class="kv"><label><strong>Complaint:</strong></label> <textarea name="complaint" rows="2" cols="40" required></textarea></div>
+            <div class="kv"><label><strong>Doctor Order:</strong></label> <textarea name="doctor_order" rows="2" cols="40" required></textarea></div>
+            <div class="kv"><label><strong>Nurse Assist:</strong></label>
+              <select name="nurse_assist" required>
+                <% availableNurses.forEach(n => { %>
+                  <option value="<%= n.nurseId %>"><%= n.firstName %> <%= n.middleInitial || '' %> <%= n.lastName %></option>
+                <% }) %>
+              </select>
+            </div>
+            <div class="kv"><label><strong>Doctor:</strong></label>
+              <select name="doctor" required>
+                <% availableDoctors.forEach(d => { %>
+                  <option value="<%= d.doctorId %>"><%= d.firstName %> <%= d.middleName || '' %> <%= d.lastName %></option>
+                <% }) %>
+              </select>
+            </div>
+            <div class="kv"><button type="submit" class="btn primary">Add Diagnose</button></div>
+          </form>
+        <% }) %>
+      <% } %>
+    <% } else if (hasCurrentAdmissionDiagnosis) { %>
+      <p style="color:#666; font-style:italic; margin-top:16px;">Diagnosis already added for this admission.</p>
+    <% } %>
+  </div>
+
+  <!-- Current Charge Slips Section (shown only when Transaction button is clicked) -->
+  <div id="transactionSection" class="section" style="display:none;">
+    <h3 style="margin-top:0;">Current Charge Slips</h3>
+    <% if (transactions && transactions.length > 0) { %>
+      <table id="transactions-table">
+        <thead>
+          <tr>
+            <th style="width:40px;"><input type="checkbox" id="toggle-all-checkboxes" style="display:none;"></th>
+            <th>Transaction Type</th>
+            <th>Description</th>
+            <th>Qty</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% let totalAmount = 0; %>
+          <% transactions.forEach(function(transaction, tIndex) { %>
+            <% (transaction.services || []).forEach(function(service, sIndex) { %>
+              <% totalAmount += (service.amount || 0); %>
+              <tr>
+                <td>
+                  <input type="checkbox" class="service-checkbox" style="display:none;" 
+                         data-transaction-id="<%= transaction.transactionId %>"
+                         data-service-index="<%= sIndex %>"
+                         data-description="<%= service.description || '' %>">
+                </td>
+                <td><%= service.type || '—' %></td>
+                <td><%= service.description || '—' %></td>
+                <td><%= service.qty || 1 %></td>
+                <td>₱<%= (service.amount || 0).toFixed(2) %></td>
+                <td><%= transaction.status || 'For Billing' %></td>
+              </tr>
+            <% }) %>
+          <% }) %>
+        </tbody>
+        <tfoot>
+          <tr style="font-weight:bold;">
+            <td colspan="4" style="text-align:right;">Total:</td>
+            <td>₱<%= totalAmount.toFixed(2) %></td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+      <div style="margin-top:10px;">
+        <button id="void-toggle-btn" class="btn" onclick="toggleVoidMode()">Void</button>
+        <button id="void-confirm-btn" class="btn" style="display:none; background-color:#28a745; color:#fff;" onclick="confirmVoid()">Delete</button>
+        <button id="void-cancel-btn" class="btn btn-cancel" style="display:none;" onclick="cancelVoidMode()">Cancel</button>
+      </div>
+    <% } else { %>
+      <p class="muted">No transactions yet.</p>
+    <% } %>
+  </div>
+
+  <!-- Bottom: Generate Charge Slip button -->
+  <% if (admissionInfo) { %>
+    <div class="section" style="text-align:left;">
+      <% 
+        // Determine if all transactions for this admission are Payment Verified
+        const txForAdmission = (transactions || []).filter(function(t){ return String(t.admissionId||'') === String(admissionInfo.admittingId||''); });
+        const hasTx = txForAdmission.length > 0;
+        const allVerified = hasTx && txForAdmission.every(function(t){ return (t.status||'') === 'Payment Verified'; });
+      %>
+      <form action="/emergency/view/<%= patient.patientId || patient.tempId %>/mark-cleared" method="post" style="display:inline; margin-right:8px;">
+        <% if (admissionInfo.isCleared) { %>
+          <button type="button" class="btn" style="background-color:#28a745;color:#fff;">Cleared</button>
+        <% } else { %>
+          <button type="submit" class="btn" 
+                  style="<%= allVerified ? 'background-color:#28a745;color:#fff;' : '' %>" 
+                  <%= allVerified ? '' : 'disabled' %>>Mark as Cleared</button>
+        <% } %>
+      </form>
+      <button type="button" class="btn <%= hasRecentDiagnose ? 'primary' : 'btn-disabled' %>" 
+              <%= hasRecentDiagnose ? '' : 'disabled' %> 
+              onclick="<%= hasRecentDiagnose ? 'openChargeSlipModal()' : '' %>">Generate Charge Slip</button>
+    </div>
+  <% } %>
+
+  <!-- Charge Slip Modal -->
+  <div id="chargeSlipModal" class="modal">
+  <style>
+    /* Wider modal for charge slip so fields can sit horizontally */
+    #chargeSlipModal .modal-content { max-width: 800px; }
+  </style>
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button class="modal-close" onclick="closeChargeSlipModal()">&times;</button>
+      <h3 style="margin-top:0;">Generate Charge Slip</h3>
+
+      <div id="transaction-container" style="margin-bottom: 15px;"></div>
+
+      <div style="margin-bottom: 15px; font-size: 16px; font-weight: bold; color: #1976d2;">
+        <span id="total">Total: ₱0.00</span>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn btn-white" onclick="addTransactionRow()">Add +</button>
+        <button type="button" class="btn btn-primary" onclick="submitChargeSlip()">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Charge Slip Modal Variables
+  let transactionIndex = 0;
+  let isSubmittingChargeSlip = false;
+  const transactionTypes = <%- JSON.stringify(transactionTypes || []) %>;
+    const admissionId = '<%= admissionInfo ? admissionInfo.admittingId : "" %>';
+  const patientId = '<%= patient._id %>';
+    const categoryId = '<%= category ? category._id : "" %>';
+
+    function openChargeSlipModal() {
+      const modal = document.getElementById('chargeSlipModal');
+      modal.style.display = 'flex';
+      transactionIndex = 0;
+      document.getElementById('transaction-container').innerHTML = '';
+      addTransactionRow(); // Add first row
+    }
+
+    function closeChargeSlipModal() {
+      document.getElementById('chargeSlipModal').style.display = 'none';
+    }
+
+    // Close on outside click
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById('chargeSlipModal');
+      if (event.target === modal) {
+        closeChargeSlipModal();
+      }
+    });
+
+    // Close on Escape key
+    window.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeChargeSlipModal();
+      }
+    });
+
+    function addTransactionRow() {
+      const container = document.getElementById("transaction-container");
+      const row = document.createElement("div");
+      // Use 5-column grid so inputs + remove are in one row
+      row.className = "form-grid grid-5";
+      row.style.gridTemplateColumns = "1fr 2fr 0.6fr 0.8fr auto";
+      row.style.gap = "12px";
+      row.style.marginBottom = "10px";
+      row.style.padding = "10px";
+      row.style.border = "1px solid #ddd";
+      row.style.borderRadius = "4px";
+
+      // Transaction Type dropdown
+      const typeDiv = document.createElement("div");
+      typeDiv.className = "form-field";
+      const typeSelect = document.createElement("select");
+      typeSelect.name = `transactions[${transactionIndex}][type]`;
+      typeSelect.required = true;
+      typeSelect.style.minWidth = "150px";
+      typeSelect.innerHTML = '<option value="">Select Transaction Type</option>';
+      transactionTypes.forEach(tt => {
+        const option = document.createElement("option");
+        option.value = tt.type;
+        option.textContent = tt.type;
+        typeSelect.appendChild(option);
+      });
+      typeDiv.appendChild(typeSelect);
+
+      // Service dropdown
+      const serviceDiv = document.createElement("div");
+      serviceDiv.className = "form-field";
+      const serviceSelect = document.createElement("select");
+      serviceSelect.name = `transactions[${transactionIndex}][description]`;
+      serviceSelect.required = true;
+      serviceSelect.style.minWidth = "240px";
+      serviceSelect.innerHTML = '<option value="">Service</option>';
+      serviceDiv.appendChild(serviceSelect);
+
+      // Quantity input
+      const qtyDiv = document.createElement("div");
+      qtyDiv.className = "form-field";
+      const qtyInput = document.createElement("input");
+      qtyInput.type = "number";
+      qtyInput.name = `transactions[${transactionIndex}][qty]`;
+      qtyInput.placeholder = "Qty";
+      qtyInput.min = "1";
+      qtyInput.value = "1";
+      qtyInput.style.width = "70px";
+      qtyDiv.appendChild(qtyInput);
+
+      // Total Amount input (readonly)
+      const amountDiv = document.createElement("div");
+      amountDiv.className = "form-field";
+      const totalAmountInput = document.createElement("input");
+      totalAmountInput.type = "text";
+      totalAmountInput.name = `transactions[${transactionIndex}][amount]`;
+      totalAmountInput.placeholder = "0.00";
+      totalAmountInput.readOnly = true;
+      totalAmountInput.style.width = "110px";
+      amountDiv.appendChild(totalAmountInput);
+
+      // Hidden inputs for amounts
+      const procedureAmountInput = document.createElement("input");
+      procedureAmountInput.type = "hidden";
+      procedureAmountInput.name = `transactions[${transactionIndex}][procedureAmount]`;
+
+      const itemUsedInput = document.createElement("input");
+      itemUsedInput.type = "hidden";
+      itemUsedInput.name = `transactions[${transactionIndex}][itemUsed]`;
+
+      const itemAmountInput = document.createElement("input");
+      itemAmountInput.type = "hidden";
+      itemAmountInput.name = `transactions[${transactionIndex}][itemAmount]`;
+
+      const baseAmountInput = document.createElement("input");
+      baseAmountInput.type = "hidden";
+      baseAmountInput.name = `transactions[${transactionIndex}][baseAmount]`;
+
+      // Remove button
+      const removeDiv = document.createElement("div");
+      removeDiv.className = "form-field";
+      removeDiv.style.alignSelf = "center";
+      const removeBtn = document.createElement("button");
+      removeBtn.type = "button";
+      removeBtn.className = "btn btn-cancel";
+      removeBtn.textContent = "Remove";
+      removeBtn.style.marginTop = "0";
+      removeBtn.style.padding = "8px 10px";
+      removeBtn.style.fontSize = "14px";
+      removeBtn.onclick = function() {
+        row.remove();
+        updateTotal();
+      };
+      removeDiv.appendChild(removeBtn);
+
+      // Event listeners
+      typeSelect.onchange = function () {
+        updateServiceDropdown(typeSelect, serviceSelect, procedureAmountInput, itemUsedInput, itemAmountInput, baseAmountInput, totalAmountInput);
+      };
+
+      serviceSelect.onchange = function () {
+        updateAmounts(typeSelect.value, serviceSelect.value, procedureAmountInput, itemUsedInput, itemAmountInput, baseAmountInput, totalAmountInput, qtyInput);
+      };
+
+      qtyInput.oninput = function() {
+        updateTotalAmount(qtyInput, baseAmountInput, totalAmountInput);
+      };
+
+      row.appendChild(typeDiv);
+      row.appendChild(serviceDiv);
+      row.appendChild(qtyDiv);
+      row.appendChild(amountDiv);
+      row.appendChild(removeDiv);
+      row.appendChild(procedureAmountInput);
+      row.appendChild(itemUsedInput);
+      row.appendChild(itemAmountInput);
+      row.appendChild(baseAmountInput);
+
+      container.appendChild(row);
+      transactionIndex++;
+    }
+
+    function updateServiceDropdown(typeSelect, serviceSelect, procedureAmountInput, itemUsedInput, itemAmountInput, baseAmountInput, totalAmountInput) {
+      const selectedType = typeSelect.value;
+      const transactionType = transactionTypes.find(tt => tt.type === selectedType);
+
+      serviceSelect.innerHTML = '<option value="">Select Service</option>';
+      procedureAmountInput.value = "";
+      itemUsedInput.value = "";
+      itemAmountInput.value = "";
+      baseAmountInput.value = "";
+      totalAmountInput.value = "";
+
+      if (transactionType && transactionType.services) {
+        transactionType.services.forEach(service => {
+          const option = document.createElement("option");
+          option.value = service.description;
+          option.textContent = service.description;
+          serviceSelect.appendChild(option);
+        });
+      }
+      updateTotal();
+    }
+
+    function updateAmounts(typeName, description, procedureAmountInput, itemUsedInput, itemAmountInput, baseAmountInput, totalAmountInput, qtyInput) {
+      const transactionType = transactionTypes.find(tt => tt.type === typeName);
+      if (transactionType) {
+        const service = transactionType.services.find(s => s.description === description);
+        if (service) {
+          procedureAmountInput.value = service.procedureAmount || "";
+          itemUsedInput.value = service.itemUsed || "";
+          itemAmountInput.value = service.itemAmount || "";
+          
+          const baseAmount = service.amount || 0;
+          baseAmountInput.value = baseAmount;
+          
+          const qty = parseInt(qtyInput.value) || 1;
+          totalAmountInput.value = (baseAmount * qty).toFixed(2);
+        }
+      }
+      updateTotal();
+    }
+
+    function updateTotalAmount(qtyInput, baseAmountInput, totalAmountInput) {
+      const qty = parseInt(qtyInput.value) || 1;
+      const baseAmount = parseFloat(baseAmountInput.value) || 0;
+      totalAmountInput.value = (baseAmount * qty).toFixed(2);
+      updateTotal();
+    }
+
+    function updateTotal() {
+      const amounts = document.querySelectorAll("#transaction-container input[name$='[amount]']");
+      let total = 0;
+      amounts.forEach(input => {
+        const val = parseFloat(input.value);
+        if (!isNaN(val)) total += val;
+      });
+      document.getElementById("total").textContent = "Total: ₱" + total.toFixed(2);
+    }
+
+  async function submitChargeSlip() {
+      if (isSubmittingChargeSlip) return; // prevent double submits
+      isSubmittingChargeSlip = true;
+      const modal = document.getElementById('chargeSlipModal');
+      const submitBtn = document.querySelector('#chargeSlipModal .modal-actions .btn.btn-primary');
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Submitting...'; }
+      // Close modal immediately to avoid extra clicks
+      if (modal) modal.style.display = 'none';
+      try {
+        const transactions = [];
+        const typeInputs = document.querySelectorAll('#transaction-container select[name^="transactions"][name$="[type]"]');
+        
+        typeInputs.forEach(typeEl => {
+          const match = typeEl.name.match(/transactions\[(\d+)\]\[type\]/);
+          if (!match) return;
+          const idx = match[1];
+          const q = suffix => document.querySelector(`#transaction-container [name="transactions[${idx}]${suffix}"]`);
+
+          const descriptionEl = q('[description]');
+          const procedureAmountEl = q('[procedureAmount]');
+          const itemUsedEl = q('[itemUsed]');
+          const itemAmountEl = q('[itemAmount]');
+          const qtyEl = q('[qty]');
+          const totalAmountEl = q('[amount]');
+
+          const type = typeEl.value || '';
+          const description = descriptionEl ? descriptionEl.value : '';
+          if (!type || !description) return;
+
+          const procedureAmount = procedureAmountEl && procedureAmountEl.value !== '' ? parseFloat(procedureAmountEl.value) : null;
+          const itemUsed = itemUsedEl ? (itemUsedEl.value || '') : '';
+          const itemAmount = itemAmountEl && itemAmountEl.value !== '' ? parseFloat(itemAmountEl.value) : null;
+          const qty = qtyEl && qtyEl.value !== '' ? parseInt(qtyEl.value) : 1;
+          const amount = totalAmountEl && totalAmountEl.value !== '' ? parseFloat(totalAmountEl.value) : 0;
+
+          transactions.push({ type, description, procedureAmount, itemUsed, itemAmount, qty, amount });
+        });
+
+        if (transactions.length === 0) {
+          alert('Please add at least one transaction');
+          return;
+        }
+
+        // Send request; server responds with redirect/HTML, not JSON
+        await axios.post('/emergency/charge-slip', {
+          admissionId: admissionId,
+          patientId: patientId,
+          categoryId: categoryId,
+          transactionsJson: JSON.stringify(transactions)
+        });
+
+  // Auto refresh page to reflect new transaction
+  window.location.reload();
+      } catch (err) {
+        console.error('Error creating charge slip:', err);
+        alert('Error: ' + (err.response?.data?.message || err.message));
+        // Re-open modal so the user can try again
+        if (modal) modal.style.display = 'flex';
+      } finally {
+        isSubmittingChargeSlip = false;
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Submit'; }
+      }
+    }
+
+    
+
+    // Void transaction functionality
+    let voidModeActive = false;
+
+    function toggleVoidMode() {
+      voidModeActive = true;
+      document.querySelectorAll('.service-checkbox').forEach(cb => cb.style.display = 'inline-block');
+      document.getElementById('toggle-all-checkboxes').style.display = 'inline-block';
+      document.getElementById('void-toggle-btn').style.display = 'none';
+      document.getElementById('void-cancel-btn').style.display = 'inline-block';
+      updateVoidButton();
+    }
+
+    function cancelVoidMode() {
+      voidModeActive = false;
+      document.querySelectorAll('.service-checkbox').forEach(cb => {
+        cb.checked = false;
+        cb.style.display = 'none';
+      });
+      document.getElementById('toggle-all-checkboxes').style.display = 'none';
+      document.getElementById('toggle-all-checkboxes').checked = false;
+      document.getElementById('void-toggle-btn').style.display = 'inline-block';
+      document.getElementById('void-confirm-btn').style.display = 'none';
+      document.getElementById('void-cancel-btn').style.display = 'none';
+    }
+
+    function updateVoidButton() {
+      const checkedBoxes = document.querySelectorAll('.service-checkbox:checked');
+      const confirmBtn = document.getElementById('void-confirm-btn');
+      if (checkedBoxes.length > 0) {
+        confirmBtn.style.display = 'inline-block';
+      } else {
+        confirmBtn.style.display = 'none';
+      }
+    }
+
+    // Toggle all checkboxes
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggleAll = document.getElementById('toggle-all-checkboxes');
+      if (toggleAll) {
+        toggleAll.addEventListener('change', function() {
+          document.querySelectorAll('.service-checkbox').forEach(cb => cb.checked = this.checked);
+          updateVoidButton();
+        });
+      }
+
+      // Update void button when individual checkboxes change
+      document.querySelectorAll('.service-checkbox').forEach(cb => {
+        cb.addEventListener('change', updateVoidButton);
+      });
+    });
+
+    async function confirmVoid() {
+      const checkedBoxes = document.querySelectorAll('.service-checkbox:checked');
+      if (checkedBoxes.length === 0) {
+        alert('Please select at least one service to void.');
+        return;
+      }
+
+      const descriptions = Array.from(checkedBoxes).map(cb => cb.getAttribute('data-description')).join(', ');
+      const confirmDelete = confirm(`Are you sure you want to delete: ${descriptions}?`);
+      
+      if (!confirmDelete) return;
+
+      const reason = prompt('Reason for voiding:\n1. Wrong punch\n2. Change of mind\n\nEnter 1 or 2:');
+      let voidReason;
+      if (reason === '1') {
+        voidReason = 'Wrong punch';
+      } else if (reason === '2') {
+        voidReason = 'Change of mind';
+      } else {
+        alert('Invalid reason. Please enter 1 or 2.');
+        return;
+      }
+
+      const serviceData = Array.from(checkedBoxes).map(cb => ({
+        transactionId: cb.getAttribute('data-transaction-id'),
+        serviceIndex: parseInt(cb.getAttribute('data-service-index'))
+      }));
+
+      try {
+        const patientId = '<%= patient._id %>';
+        const res = await axios.post(`/emergency/view/${patientId}/void-services`, {
+          services: serviceData,
+          reason: voidReason
+        });
+        
+        if (res.data.success) {
+          alert('Services voided successfully');
+          window.location.reload();
+        }
+      } catch (err) {
+        console.error('Error voiding services:', err);
+        alert('Error voiding services: ' + (err.response?.data?.message || err.message));
+      }
+    }
+
+    // Time-ago helper for notification timestamps
+    function timeAgo(ts) {
+      if (!ts) return '';
+      const t = new Date(ts).getTime();
+      if (isNaN(t)) return '';
+      const now = Date.now();
+      const minutes = Math.floor((now - t) / 60000);
+      const hours = Math.floor((now - t) / 3600000);
+      const days = Math.floor((now - t) / 86400000);
+      if (minutes < 1) return 'just now';
+      if (minutes < 60) return `${minutes} min ago`;
+      if (hours < 24) return `${hours} hr${hours > 1 ? 's' : ''} ago`;
+      return `${days} day${days > 1 ? 's' : ''} ago`;
+    }
+
+    async function fetchNotifications() {
+      try {
+        const res = await axios.get('/notifications/emergency');
+        const notifs = res.data || [];
+        const unreadCount = notifs.filter(n => !n.read).length;
+        const badge = document.getElementById('notif-count');
+        if (unreadCount > 0) { badge.textContent = unreadCount; badge.style.display = 'block'; }
+        else { badge.textContent = ''; badge.style.display = 'none'; }
+        const dd = document.getElementById('notif-dropdown');
+        dd.innerHTML = notifs.map(n => `<div class="notif-item${n.read ? '' : ' unread'}" data-hrn="${n.patientId}">${n.message} (${timeAgo(n.createdAt)})</div>`).join('');
+      } catch (e) { /* silent */ }
+    }
+    setInterval(fetchNotifications, 3000);
+    fetchNotifications();
+
+    document.getElementById('notif-bell').onclick = function() {
+      const dd = document.getElementById('notif-dropdown');
+      dd.style.display = dd.style.display === 'block' ? 'none' : 'block';
+    };
+
+    document.getElementById('notif-dropdown').addEventListener('click', function(e) {
+      if (e.target.classList.contains('notif-item')) {
+        const hrn = e.target.getAttribute('data-hrn');
+        axios.post('/notifications/read', { patientId: hrn, department: 'Emergency' });
+        document.getElementById('notif-dropdown').style.display = 'none';
+        fetchNotifications();
+      }
+    });
+
+    // Diagnose Edit/Delete Functions
+    function showEditForm(idx) {
+      document.getElementById(`diagnose-view-${idx}`).style.display = 'none';
+      document.getElementById(`diagnose-edit-${idx}`).style.display = 'block';
+    }
+
+    function cancelEdit(idx) {
+      document.getElementById(`diagnose-view-${idx}`).style.display = 'block';
+      document.getElementById(`diagnose-edit-${idx}`).style.display = 'none';
+    }
+
+    async function updateDiagnose(medicalId, diagnoseIndex, listIdx) {
+      const complaint = document.getElementById(`edit-complaint-${listIdx}`).value;
+      const doctor_order = document.getElementById(`edit-doctor-order-${listIdx}`).value;
+      const nurse_assist = document.getElementById(`edit-nurse-${listIdx}`).value;
+      const doctor = document.getElementById(`edit-doctor-${listIdx}`).value;
+
+      if (!complaint || !doctor_order || !nurse_assist || !doctor) {
+        alert('All fields are required');
+        return;
+      }
+
+      try {
+        const patientId = '<%= patient._id %>';
+        const res = await axios.post(`/emergency/view/${patientId}/diagnose/update`, {
+          medicalId,
+          diagnoseIndex,
+          complaint,
+          doctor_order,
+          nurse_assist,
+          doctor
+        });
+
+        if (res.data.success) {
+          alert('Diagnose updated successfully');
+          window.location.reload();
+        }
+      } catch (err) {
+        console.error('Error updating diagnose:', err);
+        alert('Error: ' + (err.response?.data?.message || err.message));
+      }
+    }
+
+    async function deleteDiagnose(medicalId, diagnoseIndex) {
+      const confirmDelete = confirm('Are you sure you want to delete this diagnose?');
+      if (!confirmDelete) return;
+
+      const reason = prompt('Reason for deletion:\n1. Wrong entry\n2. Change of mind\n\nEnter 1 or 2:');
+      let deleteReason;
+      if (reason === '1') {
+        deleteReason = 'Wrong entry';
+      } else if (reason === '2') {
+        deleteReason = 'Change of mind';
+      } else {
+        alert('Invalid reason. Please enter 1 or 2.');
+        return;
+      }
+
+      try {
+        const patientId = '<%= patient._id %>';
+        const res = await axios.post(`/emergency/view/${patientId}/diagnose/delete`, {
+          medicalId,
+          diagnoseIndex,
+          reason: deleteReason,
+          deletedBy: 'Emergency Staff'
+        });
+
+        if (res.data.success) {
+          alert('Diagnose deleted successfully');
+          window.location.reload();
+        }
+      } catch (err) {
+        console.error('Error deleting diagnose:', err);
+        alert('Error: ' + (err.response?.data?.message || err.message));
+      }
+    }
+
+    // AJAX handler for Add Diagnose form
+    document.addEventListener('DOMContentLoaded', function() {
+      const diagnoseForm = document.querySelector('form[action*="/emergency/view"][action$="/diagnose"]');
+      if (diagnoseForm) {
+        diagnoseForm.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          
+          const formData = new FormData(this);
+          const urlEncodedData = new URLSearchParams(formData).toString();
+          
+          try {
+            const response = await axios.post(this.action, urlEncodedData, {
+              headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded'
+              }
+            });
+            
+            if (response.data.success) {
+              window.location.reload();
+            }
+          } catch (error) {
+            console.error('Failed to add diagnose:', error);
+            alert('Failed to add diagnose: ' + (error.response?.data?.message || error.message));
+          }
+        });
+      }
+    });
+  </script>
+</div>
+</body>
+</html>

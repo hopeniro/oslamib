@@ -1,0 +1,1179 @@
+[{
+  "_id": {
+    "$oid": "69086acdd018131c649fea5b"
+  },
+  "admittingId": "ADMT1762159038579",
+  "patientId": "25-00-00-32",
+  "patientRef": {
+    "$oid": "690802d8e66e61bb0e2839e3"
+  },
+  "fullName": "Niro, Mary hope ASIS",
+  "birthdate": {
+    "$date": "2003-09-07T16:00:00.000Z"
+  },
+  "department": "Emergency",
+  "admittedAt": {
+    "$date": "2025-11-03T08:37:18.579Z"
+  },
+  "dischargedAt": {
+    "$date": "2025-11-03T08:41:49.688Z"
+  },
+  "dischargedBy": "Nurse",
+  "clearedBy": "Emergency",
+  "diagnoses": [
+    {
+      "date": {
+        "$date": "2025-11-03T08:39:44.817Z"
+      },
+      "complaint": "natatae",
+      "doctor_order": "inom gamot",
+      "nurse_assist": "Dondon E kembot",
+      "doctor": "kwak k kwaker",
+      "_id": {
+        "$oid": "69086acdd018131c649fea5c"
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "transactionId": "04B9A0CF",
+      "status": "Payment Verified",
+      "createdAt": {
+        "$date": "2025-11-03T08:40:33.472Z"
+      },
+      "services": [
+        {
+          "serviceType": "Radiology",
+          "description": "Chest AP/L Pedia (2 views)",
+          "procedureAmount": 350,
+          "itemUsed": "xray film",
+          "itemAmount": 150,
+          "qty": 5,
+          "amount": 2500
+        }
+      ],
+      "_id": {
+        "$oid": "69086acdd018131c649fea5d"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-11-03T08:41:49.690Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T08:41:49.690Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69086f56027afa57517c846c"
+  },
+  "admittingId": "ADMT1762085260826",
+  "patientId": "25-00-00-26",
+  "patientRef": {
+    "$oid": "690738b9691fa9aae11d14a4"
+  },
+  "fullName": "Valino, Raycharlesess E",
+  "birthdate": {
+    "$date": "1993-03-10T16:00:00.000Z"
+  },
+  "department": "Emergency",
+  "admittedAt": {
+    "$date": "2025-11-02T12:07:40.827Z"
+  },
+  "dischargedAt": {
+    "$date": "2025-11-03T09:01:10.025Z"
+  },
+  "dischargedBy": "Nurse",
+  "clearedBy": "Emergency",
+  "diagnoses": [
+    {
+      "date": {
+        "$date": "2025-11-02T12:07:54.807Z"
+      },
+      "complaint": "masakit ulo",
+      "doctor_order": "inom gamot",
+      "nurse_assist": "Dondon E kembot",
+      "doctor": "eman s suka",
+      "_id": {
+        "$oid": "69086f56027afa57517c846d"
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "transactionId": "63246ED8",
+      "status": "Payment Verified",
+      "createdAt": {
+        "$date": "2025-11-02T12:08:09.008Z"
+      },
+      "services": [
+        {
+          "serviceType": "Equipment Use",
+          "description": "Defibrillator",
+          "procedureAmount": null,
+          "itemUsed": "",
+          "itemAmount": null,
+          "qty": 6,
+          "amount": 1800
+        }
+      ],
+      "_id": {
+        "$oid": "69086f56027afa57517c846e"
+      }
+    },
+    {
+      "transactionId": "E1D0C973",
+      "status": "Payment Verified",
+      "createdAt": {
+        "$date": "2025-11-02T17:02:18.959Z"
+      },
+      "services": [
+        {
+          "serviceType": "Radiology",
+          "description": "Chest AP/L Pedia (2 views)",
+          "procedureAmount": 350,
+          "itemUsed": "xray film",
+          "itemAmount": 150,
+          "qty": 6,
+          "amount": 3000
+        }
+      ],
+      "_id": {
+        "$oid": "69086f56027afa57517c846f"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-11-03T09:01:10.029Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T09:01:10.029Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69093635e7eca93a3d33b41c"
+  },
+  "admittingId": "ADMT1762211082186",
+  "patientId": "25-00-00-33",
+  "patientRef": {
+    "$oid": "690934e5e7eca93a3d33b15d"
+  },
+  "fullName": "Crema, Pangke E",
+  "birthdate": {
+    "$date": "1988-12-14T16:00:00.000Z"
+  },
+  "department": "Emergency",
+  "admittedAt": {
+    "$date": "2025-11-03T23:04:42.195Z"
+  },
+  "dischargedAt": {
+    "$date": "2025-11-03T23:09:41.904Z"
+  },
+  "dischargedBy": "Nurse",
+  "clearedBy": "Emergency",
+  "diagnoses": [
+    {
+      "date": {
+        "$date": "2025-11-03T23:07:57.223Z"
+      },
+      "complaint": "masakit ulo",
+      "doctor_order": "inom gamot",
+      "nurse_assist": "Dondon E kembot",
+      "doctor": "kwak k kwaker",
+      "_id": {
+        "$oid": "69093635e7eca93a3d33b41d"
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "transactionId": "E5B9DCD4",
+      "status": "Payment Verified",
+      "createdAt": {
+        "$date": "2025-11-03T23:08:30.298Z"
+      },
+      "services": [
+        {
+          "serviceType": "Radiology",
+          "description": "Chest AP/L Pedia (2 views)",
+          "procedureAmount": 350,
+          "itemUsed": "xray film",
+          "itemAmount": 150,
+          "qty": 1,
+          "amount": 500
+        },
+        {
+          "serviceType": "Radiology",
+          "description": "Plain Abdomen",
+          "procedureAmount": null,
+          "itemUsed": "",
+          "itemAmount": null,
+          "qty": 1,
+          "amount": 250
+        }
+      ],
+      "_id": {
+        "$oid": "69093635e7eca93a3d33b41e"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-11-03T23:09:41.906Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T23:09:41.906Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69095d57d4bd76fdf3bedce0"
+  },
+  "admittingId": "ADMT1762212911978",
+  "patientId": "25-00-00-32",
+  "patientRef": {
+    "$oid": "690802d8e66e61bb0e2839e3"
+  },
+  "fullName": "Niro, Mary hope ASIS",
+  "birthdate": {
+    "$date": "2003-09-07T16:00:00.000Z"
+  },
+  "department": "Out Patient Department",
+  "admittedAt": {
+    "$date": "2025-11-03T23:35:11.979Z"
+  },
+  "dischargedAt": {
+    "$date": "2025-11-04T01:56:39.448Z"
+  },
+  "dischargedBy": "Nurse",
+  "clearedBy": "OPD",
+  "diagnoses": [
+    {
+      "date": {
+        "$date": "2025-11-04T01:55:35.853Z"
+      },
+      "complaint": "masakit ulo",
+      "doctor_order": "inom gamot",
+      "nurse_assist": "hopya A Roni",
+      "doctor": "eman s suka",
+      "_id": {
+        "$oid": "69095d57d4bd76fdf3bedce1"
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "transactionId": "441ACEBF",
+      "status": "Payment Verified",
+      "createdAt": {
+        "$date": "2025-11-04T01:55:59.746Z"
+      },
+      "services": [
+        {
+          "serviceType": "Radiology",
+          "description": "Chest AP/L Pedia (2 views)",
+          "procedureAmount": 350,
+          "itemUsed": "xray film",
+          "itemAmount": 150,
+          "qty": 6,
+          "amount": 3000
+        }
+      ],
+      "_id": {
+        "$oid": "69095d57d4bd76fdf3bedce2"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-11-04T01:56:39.452Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T01:56:39.452Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690962697938b889fe6389dd"
+  },
+  "admittingId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "patientRef": {
+    "$oid": "69073c298cb13e087f214f7c"
+  },
+  "fullName": "Tengteng, Tangtang T",
+  "birthdate": {
+    "$date": "1986-03-02T16:00:00.000Z"
+  },
+  "department": "Out Patient Department",
+  "admittedAt": {
+    "$date": "2025-11-02T11:13:27.870Z"
+  },
+  "dischargedAt": {
+    "$date": "2025-11-04T02:18:17.057Z"
+  },
+  "dischargedBy": "Nurse",
+  "clearedBy": "OPD",
+  "diagnoses": [
+    {
+      "date": {
+        "$date": "2025-11-02T11:13:37.918Z"
+      },
+      "complaint": "masakit ulo",
+      "doctor_order": "inom gamot",
+      "nurse_assist": "hopya A Roni",
+      "doctor": "kwak k kwaker",
+      "_id": {
+        "$oid": "690962697938b889fe6389de"
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "transactionId": "0AF97231",
+      "status": "Payment Verified",
+      "createdAt": {
+        "$date": "2025-11-02T11:13:52.143Z"
+      },
+      "services": [
+        {
+          "serviceType": "Equipment Use",
+          "description": "Defibrillator",
+          "procedureAmount": null,
+          "itemUsed": "",
+          "itemAmount": null,
+          "qty": 4,
+          "amount": 1200
+        }
+      ],
+      "_id": {
+        "$oid": "690962697938b889fe6389df"
+      }
+    },
+    {
+      "transactionId": "DC14EECA",
+      "status": "Payment Verified",
+      "createdAt": {
+        "$date": "2025-11-02T12:33:36.516Z"
+      },
+      "services": [
+        {
+          "serviceType": "Equipment Use",
+          "description": "Defibrillator",
+          "procedureAmount": null,
+          "itemUsed": "",
+          "itemAmount": null,
+          "qty": 1,
+          "amount": 300
+        }
+      ],
+      "_id": {
+        "$oid": "690962697938b889fe6389e0"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-11-04T02:18:17.061Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:18:17.061Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690962c77938b889fe638ba9"
+  },
+  "admittingId": "ADMT1762084302638",
+  "patientId": "25-00-00-30",
+  "patientRef": {
+    "$oid": "690745472e79bc8b210fff95"
+  },
+  "fullName": "Lololo, Lololololo L",
+  "birthdate": {
+    "$date": "1992-02-01T16:00:00.000Z"
+  },
+  "department": "Emergency",
+  "admittedAt": {
+    "$date": "2025-11-02T11:51:42.638Z"
+  },
+  "dischargedAt": {
+    "$date": "2025-11-04T02:19:51.670Z"
+  },
+  "dischargedBy": "Nurse",
+  "clearedBy": "Emergency",
+  "diagnoses": [
+    {
+      "date": {
+        "$date": "2025-11-02T11:52:40.725Z"
+      },
+      "complaint": "masakit ulo",
+      "doctor_order": "inom gamot",
+      "nurse_assist": "Dondon E kembot",
+      "doctor": "eman s suka",
+      "_id": {
+        "$oid": "690962c77938b889fe638baa"
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "transactionId": "57AA1690",
+      "status": "Payment Verified",
+      "createdAt": {
+        "$date": "2025-11-02T17:29:48.167Z"
+      },
+      "services": [
+        {
+          "serviceType": "Equipment Use",
+          "description": "Cardiac Monitor (Defibrillator)",
+          "procedureAmount": null,
+          "itemUsed": "",
+          "itemAmount": null,
+          "qty": 1,
+          "amount": 150
+        }
+      ],
+      "_id": {
+        "$oid": "690962c77938b889fe638bab"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-11-04T02:19:51.673Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:19:51.673Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909630a7938b889fe638d03"
+  },
+  "admittingId": "ADMT1762082790545",
+  "patientId": "25-00-00-28",
+  "patientRef": {
+    "$oid": "69073f2ce432796c1be4ddba"
+  },
+  "fullName": "Ram, Ram E",
+  "birthdate": {
+    "$date": "1999-02-10T16:00:00.000Z"
+  },
+  "department": "Emergency",
+  "admittedAt": {
+    "$date": "2025-11-02T11:26:30.546Z"
+  },
+  "dischargedAt": {
+    "$date": "2025-11-04T02:20:58.552Z"
+  },
+  "dischargedBy": "Nurse",
+  "clearedBy": "Emergency",
+  "diagnoses": [
+    {
+      "date": {
+        "$date": "2025-11-02T11:26:41.185Z"
+      },
+      "complaint": "masakit ulo",
+      "doctor_order": "inom gamot",
+      "nurse_assist": "Dondon E kembot",
+      "doctor": "eman s suka",
+      "_id": {
+        "$oid": "6909630a7938b889fe638d04"
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "transactionId": "ECD2BCC6",
+      "status": "Payment Verified",
+      "createdAt": {
+        "$date": "2025-11-02T16:55:51.964Z"
+      },
+      "services": [
+        {
+          "serviceType": "Radiology",
+          "description": "Chest AP/L Pedia (2 views)",
+          "procedureAmount": 350,
+          "itemUsed": "xray film",
+          "itemAmount": 150,
+          "qty": 2,
+          "amount": 1000
+        }
+      ],
+      "_id": {
+        "$oid": "6909630a7938b889fe638d05"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-11-04T02:20:58.556Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:20:58.556Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690965337938b889fe6390dd"
+  },
+  "admittingId": "ADMT1762223348572",
+  "patientId": "25-00-00-20",
+  "patientRef": {
+    "$oid": "69057d9aa9ac9b44a00cbf19"
+  },
+  "fullName": "System, Ofthe down E",
+  "birthdate": {
+    "$date": "1981-11-22T16:00:00.000Z"
+  },
+  "department": "Out Patient Department",
+  "admittedAt": {
+    "$date": "2025-11-04T02:29:08.573Z"
+  },
+  "dischargedAt": {
+    "$date": "2025-11-04T02:30:11.225Z"
+  },
+  "dischargedBy": "Nurse",
+  "clearedBy": "OPD",
+  "diagnoses": [
+    {
+      "date": {
+        "$date": "2025-11-04T02:29:20.518Z"
+      },
+      "complaint": "masakit ulo",
+      "doctor_order": "inom gamot",
+      "nurse_assist": "hopya A Roni",
+      "doctor": "eman s suka",
+      "_id": {
+        "$oid": "690965337938b889fe6390de"
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "transactionId": "1DB08CE2",
+      "status": "Payment Verified",
+      "createdAt": {
+        "$date": "2025-11-04T02:29:32.158Z"
+      },
+      "services": [
+        {
+          "serviceType": "Equipment Use",
+          "description": "Defibrillator",
+          "procedureAmount": null,
+          "itemUsed": "",
+          "itemAmount": null,
+          "qty": 1,
+          "amount": 300
+        }
+      ],
+      "_id": {
+        "$oid": "690965337938b889fe6390df"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-11-04T02:30:11.227Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:30:11.227Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909774db7519306a1d22e09"
+  },
+  "admittingId": "ADMT1762227710081",
+  "patientId": "25-00-00-37",
+  "patientRef": {
+    "$oid": "690975e4bdf42b59308a08dc"
+  },
+  "fullName": "Tniy, Tinay E",
+  "birthdate": {
+    "$date": "1991-12-24T16:00:00.000Z"
+  },
+  "department": "Emergency",
+  "admittedAt": {
+    "$date": "2025-11-04T03:41:50.091Z"
+  },
+  "dischargedAt": {
+    "$date": "2025-11-04T03:47:25.050Z"
+  },
+  "dischargedBy": "Nurse",
+  "clearedBy": "Emergency",
+  "diagnoses": [
+    {
+      "date": {
+        "$date": "2025-11-04T03:42:05.244Z"
+      },
+      "complaint": "masakit ulo",
+      "doctor_order": "inom gamot",
+      "nurse_assist": "Dondon E kembot",
+      "doctor": "kwak k kwaker",
+      "_id": {
+        "$oid": "6909774db7519306a1d22e0a"
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "transactionId": "D66395FF",
+      "status": "Payment Verified",
+      "createdAt": {
+        "$date": "2025-11-04T03:43:02.091Z"
+      },
+      "services": [
+        {
+          "serviceType": "Radiology",
+          "description": "Chest AP/L Pedia (2 views)",
+          "procedureAmount": 350,
+          "itemUsed": "xray film",
+          "itemAmount": 150,
+          "qty": 1,
+          "amount": 500
+        },
+        {
+          "serviceType": "Equipment Use",
+          "description": "Doppler",
+          "procedureAmount": null,
+          "itemUsed": "",
+          "itemAmount": null,
+          "qty": 1,
+          "amount": 150
+        }
+      ],
+      "_id": {
+        "$oid": "6909774db7519306a1d22e0b"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-11-04T03:47:25.054Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T03:47:25.054Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909828b90343d833da9ac9c"
+  },
+  "admittingId": "ADMT1762230787495",
+  "patientId": "25-00-00-38",
+  "patientRef": {
+    "$oid": "69098125e31874b2d3fad656"
+  },
+  "fullName": "Kulet, Kuleti E",
+  "birthdate": {
+    "$date": "1989-08-11T16:00:00.000Z"
+  },
+  "department": "Emergency",
+  "admittedAt": {
+    "$date": "2025-11-04T04:33:07.497Z"
+  },
+  "dischargedAt": {
+    "$date": "2025-11-04T04:35:23.341Z"
+  },
+  "dischargedBy": "Nurse",
+  "clearedBy": "Emergency",
+  "diagnoses": [
+    {
+      "date": {
+        "$date": "2025-11-04T04:33:27.144Z"
+      },
+      "complaint": "masakit ulo",
+      "doctor_order": "inom gamot",
+      "nurse_assist": "Dondon E kembot",
+      "doctor": "kwak k kwaker",
+      "_id": {
+        "$oid": "6909828b90343d833da9ac9d"
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "transactionId": "EBC813C3",
+      "status": "Payment Verified",
+      "createdAt": {
+        "$date": "2025-11-04T04:34:32.160Z"
+      },
+      "services": [
+        {
+          "serviceType": "Equipment Use",
+          "description": "Defibrillator",
+          "procedureAmount": null,
+          "itemUsed": "",
+          "itemAmount": null,
+          "qty": 3,
+          "amount": 900
+        }
+      ],
+      "_id": {
+        "$oid": "6909828b90343d833da9ac9e"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-11-04T04:35:23.343Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T04:35:23.343Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a0d52823f741e3d2f5bfc"
+  },
+  "admittingId": "ADMT1762260341240",
+  "patientId": "25-00-00-37",
+  "patientRef": {
+    "$oid": "690975e4bdf42b59308a08dc"
+  },
+  "fullName": "tinay tniy",
+  "birthdate": {
+    "$date": "1991-12-24T16:00:00.000Z"
+  },
+  "department": "Emergency",
+  "admittedAt": {
+    "$date": "2025-11-04T12:45:41.242Z"
+  },
+  "dischargedAt": {
+    "$date": "2025-11-04T14:27:30.669Z"
+  },
+  "dischargedBy": "Nurse",
+  "clearedBy": "Emergency",
+  "diagnoses": [
+    {
+      "date": {
+        "$date": "2025-11-04T14:22:17.747Z"
+      },
+      "complaint": "masakit ulo",
+      "doctor_order": "inom gamot",
+      "nurse_assist": "Dondon E kembot",
+      "doctor": "kwak k kwaker",
+      "_id": {
+        "$oid": "690a0d52823f741e3d2f5bfd"
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "transactionId": "3CCF5BB7",
+      "status": "Payment Verified",
+      "createdAt": {
+        "$date": "2025-11-04T14:22:42.750Z"
+      },
+      "services": [
+        {
+          "serviceType": "Radiology",
+          "description": "Pelvis AP",
+          "procedureAmount": null,
+          "itemUsed": "",
+          "itemAmount": null,
+          "qty": 1,
+          "amount": 300
+        },
+        {
+          "serviceType": "Radiology",
+          "description": "Femur AP/L (2 views)",
+          "procedureAmount": null,
+          "itemUsed": "",
+          "itemAmount": null,
+          "qty": 1,
+          "amount": 400
+        },
+        {
+          "serviceType": "Equipment Use",
+          "description": "Defibrillator",
+          "procedureAmount": null,
+          "itemUsed": "",
+          "itemAmount": null,
+          "qty": 1,
+          "amount": 300
+        }
+      ],
+      "_id": {
+        "$oid": "690a0d52823f741e3d2f5bfe"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-11-04T14:27:30.677Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T14:27:30.677Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b39062f6bb4d5c69c1166"
+  },
+  "admittingId": "ADMT1762342630888",
+  "patientId": "25-00-00-41",
+  "patientRef": {
+    "$oid": "690b36662f6bb4d5c69c0cbb"
+  },
+  "fullName": "mcjim dolente",
+  "birthdate": {
+    "$date": "1986-08-24T16:00:00.000Z"
+  },
+  "department": "Emergency",
+  "admittedAt": {
+    "$date": "2025-11-05T11:37:10.889Z"
+  },
+  "dischargedAt": {
+    "$date": "2025-11-05T11:46:14.226Z"
+  },
+  "dischargedBy": "Nurse",
+  "clearedBy": "Emergency",
+  "diagnoses": [
+    {
+      "date": {
+        "$date": "2025-11-05T11:38:44.167Z"
+      },
+      "complaint": "hinihika po lalo na pag may pusa",
+      "doctor_order": "wag mag alaga ng pusa, saka inom ng maraming tubig",
+      "nurse_assist": "Dondon E kembot",
+      "doctor": "kwak k kwaker",
+      "_id": {
+        "$oid": "690b39062f6bb4d5c69c1167"
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "transactionId": "F597CEC2",
+      "status": "Payment Verified",
+      "createdAt": {
+        "$date": "2025-11-05T11:39:02.357Z"
+      },
+      "services": [
+        {
+          "serviceType": "Medicines",
+          "description": "Paracetamol Biogesic",
+          "procedureAmount": 5,
+          "itemUsed": "ParacetamoL",
+          "itemAmount": 10,
+          "qty": 80,
+          "amount": 1200
+        }
+      ],
+      "_id": {
+        "$oid": "690b39062f6bb4d5c69c1168"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-11-05T11:46:14.228Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-05T11:46:14.228Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c32d3eea75267ee39d5af"
+  },
+  "admittingId": "ADMT1762406223775",
+  "patientId": "25-00-00-43",
+  "patientRef": {
+    "$oid": "690c2ec2eea75267ee39d049"
+  },
+  "fullName": "alex sabangan",
+  "birthdate": {
+    "$date": "2004-05-05T16:00:00.000Z"
+  },
+  "department": "Emergency",
+  "admittedAt": {
+    "$date": "2025-11-06T05:17:03.775Z"
+  },
+  "dischargedAt": {
+    "$date": "2025-11-06T05:32:03.688Z"
+  },
+  "dischargedBy": "Nurse",
+  "clearedBy": "Emergency",
+  "diagnoses": [
+    {
+      "date": {
+        "$date": "2025-11-06T05:23:37.860Z"
+      },
+      "complaint": "masakit ulo",
+      "doctor_order": "inom gamot",
+      "nurse_assist": "Dondon E kembot",
+      "doctor": "Hope A Niro",
+      "_id": {
+        "$oid": "690c32d3eea75267ee39d5b0"
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "transactionId": "96A177EB",
+      "status": "Payment Verified",
+      "createdAt": {
+        "$date": "2025-11-06T05:24:14.079Z"
+      },
+      "services": [
+        {
+          "serviceType": "Radiology",
+          "description": "Chest AP/L Pedia (2 views)",
+          "procedureAmount": 350,
+          "itemUsed": "",
+          "itemAmount": 150,
+          "qty": 1,
+          "amount": 500
+        },
+        {
+          "serviceType": "Medicines",
+          "description": "Paracetamol Biogesic",
+          "procedureAmount": 5,
+          "itemUsed": "ParacetamoL",
+          "itemAmount": 10,
+          "qty": 5,
+          "amount": 75
+        }
+      ],
+      "_id": {
+        "$oid": "690c32d3eea75267ee39d5b1"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-11-06T05:32:03.690Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-06T05:32:03.690Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c48173cca6e3f4e10d7db"
+  },
+  "admittingId": "ADMT1762411994548",
+  "patientId": "25-00-00-44",
+  "patientRef": {
+    "$oid": "690c45af3cca6e3f4e10d49b"
+  },
+  "fullName": "edmar kalambang",
+  "birthdate": {
+    "$date": "1982-12-11T16:00:00.000Z"
+  },
+  "department": "Out Patient Department",
+  "admittedAt": {
+    "$date": "2025-11-06T06:53:14.548Z"
+  },
+  "dischargedAt": {
+    "$date": "2025-11-06T07:02:47.778Z"
+  },
+  "dischargedBy": "Nurse",
+  "clearedBy": "OPD",
+  "diagnoses": [
+    {
+      "date": {
+        "$date": "2025-11-06T06:54:22.783Z"
+      },
+      "complaint": "Masakit mata",
+      "doctor_order": "inom gamot",
+      "nurse_assist": "hopya A Roni",
+      "doctor": "kwak k kwaker",
+      "_id": {
+        "$oid": "690c48173cca6e3f4e10d7dc"
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "transactionId": "BAC85726",
+      "status": "Payment Verified",
+      "createdAt": {
+        "$date": "2025-11-06T06:54:48.903Z"
+      },
+      "services": [
+        {
+          "serviceType": "Equipment Use",
+          "description": "Defibrillator",
+          "procedureAmount": 50,
+          "itemUsed": "",
+          "itemAmount": 150,
+          "qty": 4,
+          "amount": 800
+        }
+      ],
+      "_id": {
+        "$oid": "690c48173cca6e3f4e10d7dd"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-11-06T07:02:47.780Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-06T07:02:47.780Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c4efd3cca6e3f4e10dbae"
+  },
+  "admittingId": "ADMT1762413873161",
+  "patientId": "25-00-00-45",
+  "patientRef": {
+    "$oid": "690c4c9a3cca6e3f4e10d8b4"
+  },
+  "fullName": "angelo pecana",
+  "birthdate": {
+    "$date": "2003-04-08T16:00:00.000Z"
+  },
+  "department": "Emergency",
+  "admittedAt": {
+    "$date": "2025-11-06T07:24:33.161Z"
+  },
+  "dischargedAt": {
+    "$date": "2025-11-06T07:32:13.931Z"
+  },
+  "dischargedBy": "Nurse",
+  "clearedBy": "Emergency",
+  "diagnoses": [
+    {
+      "date": {
+        "$date": "2025-11-06T07:25:53.444Z"
+      },
+      "complaint": "Nagdudumi",
+      "doctor_order": "Inom diatabs",
+      "nurse_assist": "Dondon E kembot",
+      "doctor": "Hope A Niro",
+      "_id": {
+        "$oid": "690c4efd3cca6e3f4e10dbaf"
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "transactionId": "E8CD34A2",
+      "status": "Payment Verified",
+      "createdAt": {
+        "$date": "2025-11-06T07:26:38.413Z"
+      },
+      "services": [
+        {
+          "serviceType": "Medicines",
+          "description": "Paracetamol Biogesic",
+          "procedureAmount": 5,
+          "itemUsed": "ParacetamoL",
+          "itemAmount": 10,
+          "qty": 1,
+          "amount": 15
+        },
+        {
+          "serviceType": "Equipment Use",
+          "description": "Defibrillator",
+          "procedureAmount": 50,
+          "itemUsed": "",
+          "itemAmount": 150,
+          "qty": 1,
+          "amount": 200
+        }
+      ],
+      "_id": {
+        "$oid": "690c4efd3cca6e3f4e10dbb0"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-11-06T07:32:13.934Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-06T07:32:13.934Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff8470bafd470e29e0b4d"
+  },
+  "admittingId": "ADMT1762653798562",
+  "patientId": "25-00-00-47",
+  "patientRef": {
+    "$oid": "690ff4c5423db8d7ba9c891a"
+  },
+  "fullName": "pasig anak",
+  "birthdate": {
+    "$date": {
+      "$numberLong": "-247392000000"
+    }
+  },
+  "department": "Emergency",
+  "admittedAt": {
+    "$date": "2025-11-09T02:03:18.563Z"
+  },
+  "dischargedAt": {
+    "$date": "2025-11-09T02:11:19.479Z"
+  },
+  "dischargedBy": "Nurse",
+  "clearedBy": "Emergency",
+  "diagnoses": [
+    {
+      "date": {
+        "$date": "2025-11-09T02:08:47.310Z"
+      },
+      "complaint": "sakit ulo",
+      "doctor_order": "inom gamot",
+      "nurse_assist": "hkjh j hjhhkjj",
+      "doctor": "eman s suka",
+      "_id": {
+        "$oid": "690ff8470bafd470e29e0b4e"
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "transactionId": "D7EE4B1D",
+      "status": "Payment Verified",
+      "createdAt": {
+        "$date": "2025-11-09T02:08:59.604Z"
+      },
+      "services": [
+        {
+          "serviceType": "Equipment Use",
+          "description": "Doppler",
+          "procedureAmount": 50,
+          "itemUsed": "",
+          "itemAmount": 100,
+          "qty": 1,
+          "amount": 150
+        },
+        {
+          "serviceType": "Equipment Use",
+          "description": "Doppler",
+          "procedureAmount": 50,
+          "itemUsed": "",
+          "itemAmount": 100,
+          "qty": 1,
+          "amount": 150
+        }
+      ],
+      "_id": {
+        "$oid": "690ff8470bafd470e29e0b4f"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-11-09T02:11:19.482Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-09T02:11:19.482Z"
+  },
+  "__v": 0
+}]

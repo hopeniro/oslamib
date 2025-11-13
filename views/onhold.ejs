@@ -1,0 +1,268 @@
+<!-- views/onhold.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Content card left border color for OsLAM */
+    .content-card {
+      border-left: 4px solid #0891b2;
+    }
+    /* Sidebar left border color for OsLAM */
+    .sidebar {
+      border-left: 4px solid #0891b2;
+    }
+    /* Merge left border into main card style */
+    .form-section {
+      margin-bottom: 30px;
+      background: #f9fbfc;
+      border: 1px solid #e5e7eb;
+      border-left: 4px solid #0891b2;
+      border-radius: 10px;
+      padding: 24px;
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.02);
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f8fb;
+      margin: 0;
+      color: #222;
+      font-size: 15px;
+    }
+    .sidebar {
+      width: 250px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding-top: 10px;
+      padding: 12px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      overflow-y: auto;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      border-radius: 10px;
+      margin: 8px 10px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.25s ease;
+      position: relative;
+      text-decoration: none;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      background: #e6f7fa;
+      color: #0891b2;
+      border-color: #b3e5ef;
+      box-shadow: 0 3px 8px rgba(8,145,178,0.1);
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #0891b2;
+      border-radius: 4px 0 0 4px;
+    }
+    .main-container {
+      margin-left: 290px;
+      padding: 40px 60px;
+      transition: margin-left 0.3s;
+    }
+    .content-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
+      padding: 40px 50px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .content-card h2 {
+      font-size: 26px;
+      color: #0891b2;
+      border-bottom: 2px solid #e5f3f5;
+      padding-bottom: 8px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .form-section {
+      margin-bottom: 30px;
+      background: #f9fbfc;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 24px;
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.02);
+    }
+    .form-section h3 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 17px;
+      color: #0891b2;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    .form-grid {
+      display: grid;
+      gap: 18px 24px;
+    }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .form-field label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 5px;
+      display: block;
+    }
+    .form-field input,
+    .form-field select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #cfd8dc;
+      border-radius: 6px;
+      font-size: 14px;
+      background: #fff;
+      transition: all 0.2s ease;
+    }
+    .form-field input:focus,
+    .form-field select:focus {
+      border-color: #0891b2;
+      box-shadow: 0 0 0 3px rgba(8,145,178,0.15);
+      outline: none;
+      background: #fff;
+    }
+    .actions {
+      text-align: right;
+      margin-top: 30px;
+    }
+    .actions button {
+      padding: 12px 24px;
+      background: #0891b2;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(8,145,178,0.2);
+      transition: all 0.25s ease;
+    }
+    .actions button:hover {
+      background: #067a95;
+      box-shadow: 0 6px 16px rgba(8,145,178,0.25);
+      transform: translateY(-1px);
+    }
+    @media (max-width: 900px) {
+      .main-container { margin-left: 0; padding: 20px; }
+      .sidebar { position: static; width: 100%; margin-bottom: 20px; }
+      .form-grid { grid-template-columns: 1fr !important; }
+      .actions { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+   <!-- FLOATING SIDEBAR -->
+  <aside class="sidebar">
+    <div style="display:flex;align-items:center;gap:12px;padding:24px 20px 12px 20px;">
+      <img src="/logo.png" style="width:44px;height:44px;border-radius:8px;object-fit:contain;">
+      <div>
+        <div style="font-size:20px;font-weight:700;color:#0891b2;">OsLAM</div>
+        <div style="font-size:13px;color:#666;">Triage</div>
+      </div>
+    </div>
+   <nav style="margin-top:10px;">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="/triagedashboard" class="nav-link"><i class="bi bi-grid"></i> <span class="nav-text">Dashboard</span></a></li>
+        <li><a href="/admit-list" class="nav-link"><i class="bi bi-list-check"></i> <span class="nav-text">Patient List</span></a></li>
+        <li><a href="/patient" class="nav-link"><i class="bi bi-person-plus"></i> <span class="nav-text">Registration</span></a></li>
+        <li><a href="/onhold" class="nav-link"><i class="bi bi-question-circle"></i> <span class="nav-text">Unidentified</span></a></li>
+        <li><a href="/patient-archive" class="nav-link"><i class="bi bi-archive"></i> <span class="nav-text">Archived Patients</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+    </aside>
+    <!-- Removed duplicate nav markup after sidebar -->
+    <body style="background: #f5f7fa;">
+      <div class="main-container">
+        <div class="content-card">
+          <h2 style="font-size:2.1rem;font-weight:700;color:#0891b2;display:flex;align-items:center;gap:10px;margin-bottom:0;">
+            <i class="bi bi-question-circle" style="font-size:2rem;color:#0891b2;"></i>
+            Unidentified Patient Form
+          </h2>
+          <div style="height:2px;width:100%;background:#e5f3f5;border-radius:1px;margin-top:10px;margin-bottom:30px;"></div>
+          <% if (typeof success !== 'undefined' && success) { %>
+            <p style="color: green; padding: 10px; border: 1px solid #ddd; margin-bottom: 20px;">
+              <%= success %>
+            </p>
+          <% } %>
+          <% if (typeof error !== 'undefined' && error) { %>
+            <p style="color: red; padding: 10px; border: 1px solid #ddd; margin-bottom: 20px;">
+              <%= error %>
+            </p>
+          <% } %>
+          <form action="/onhold" method="POST">
+            <input type="hidden" name="tempId" value="<%= typeof hrn !== 'undefined' ? hrn : '' %>">
+            <input type="hidden" name="dateTimeFound" value="<%= typeof regDate !== 'undefined' ? regDate : new Date().toISOString() %>">
+            <div class="form-section">
+              <h3><i class="bi bi-clipboard2-pulse"></i> Triage Details</h3>
+              <div class="form-grid grid-2">
+                <div class="form-field">
+                  <label>Estimated Age</label>
+                  <input type="text" name="estimateAge" required>
+                </div>
+                <div class="form-field">
+                  <label>Clothes</label>
+                  <input type="text" name="clothes" required>
+                </div>
+              </div>
+              <div class="form-grid" style="margin-top:12px; grid-template-columns: 1fr;">
+                <div class="form-field">
+                  <label>Location Found</label>
+                  <input type="text" name="locationFound" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-section">
+              <fieldset>
+                <legend>Status (Check all that apply)</legend>
+                <div class="checkbox-grid">
+                  <label><input type="checkbox" name="status" value="Unconscious"> Unconscious</label>
+                  <label><input type="checkbox" name="status" value="Severe Injuries"> Severe Injuries</label>
+                  <label><input type="checkbox" name="status" value="Mild Injuries"> Mild Injuries</label>
+                  <label><input type="checkbox" name="status" value="Seizure"> Seizure</label>
+                  <label><input type="checkbox" name="status" value="Disoriented"> Disoriented</label>
+                  <label><input type="checkbox" name="status" value="PWD"> PWD</label>
+                  <label><input type="checkbox" name="status" value="Unable to Speak"> Unable to Speak</label>
+                  <label><input type="checkbox" name="status" value="Alcohol Influence"> Alcohol Influence</label>
+                  <label><input type="checkbox" name="status" value="Severe Illness"> Severe Illness</label>
+                  <label><input type="checkbox" name="status" value="Assault"> Assault</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="actions">
+              <button type="submit"><i class="bi bi-person-check"></i> Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+</body>
+</html>

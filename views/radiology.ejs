@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Radiology Department</title>
+</head>
+<body>
+  <div style="width: 150px; float: left; margin-right: 20px;">
+    <ul style="list-style-type: none; padding: 0;">
+      <li><a href="/patient">Patient</a></li>
+      <li><a href="/onhold">On Hold</a></li>
+      <li><a href="/services">services</a></li>
+      <li><a href="/doctor">Doctors</a></li>
+      <li><a href="/nurse">Nurses</a></li>
+      <li><a href="/doctorscheduling">Doctor Schedule</a></li>
+      <li><a href="/nursescheduling">Nurse Schedule</a></li>
+      <li><a href="/medical">medical</a></li>
+      <li><a href="/admit-list">All Patient List</a></li>
+       <li><a href="/opd">OPD</a></li>
+      <li><a href="/emergency">Emergency</a></li>
+      <li><a href="/laboratory">Laboratory</a></li>
+      <li><a href="/Radiology">Radiology</a></li>
+      <li><a href="/category">Departments</a></li>
+    </ul>
+  </div>
+  <div style="margin-left: 170px;">
+  <h1>Radiology Department Patients</h1>
+  <% if (patients.length === 0) { %>
+    <p>No patients found.</p>
+  <% } else { %>
+    <table border="1">
+      <tr>
+        <th>Admission ID</th>
+        <th>Patient ID</th>
+        <th>Full Name</th>
+        <th>Birthday</th>
+        <th>Actions</th>
+      </tr>
+      <% patients.forEach(patient => { %>
+        <tr>
+          <td><%= patient.admittingId %></td>
+          <td><%= patient.patientId %></td>
+          <td><%= patient.fullName %></td>
+          <td><%= patient.birthday ? patient.birthday.toDateString() : 'N/A' %></td>
+          <td>
+            <form action="/radiology/view/<%= patient.patientId || patient.tempId %>" method="get">
+            <button type="submit">View Details</button>
+             </form>
+          </td>
+        </tr>
+      <% }) %>
+    </table>
+  <% } %>
+  </div>
+</body>
+</html>

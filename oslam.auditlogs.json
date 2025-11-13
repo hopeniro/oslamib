@@ -1,0 +1,2733 @@
+[{
+  "_id": {
+    "$oid": "690b40b25c8c02fe9f1971a6"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-05T12:18:58.150Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b40d15c8c02fe9f1971cd"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-05T12:19:29.641Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b41c1b75e2e453857bfa8"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-05T12:23:29.724Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b4201b75e2e453857c013"
+  },
+  "userId": "STF-250002",
+  "username": "admission.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250002",
+  "timestamp": {
+    "$date": "2025-11-05T12:24:33.071Z"
+  },
+  "details": {
+    "category": "Admission",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b424fb75e2e453857c136"
+  },
+  "userId": "STF-250003",
+  "username": "emergency.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250003",
+  "timestamp": {
+    "$date": "2025-11-05T12:25:51.923Z"
+  },
+  "details": {
+    "category": "Emergency Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b426eb75e2e453857c1dd"
+  },
+  "userId": "STF-250004",
+  "username": "opd.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250004",
+  "timestamp": {
+    "$date": "2025-11-05T12:26:22.706Z"
+  },
+  "details": {
+    "category": "Out Patient Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b429db75e2e453857c24a"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-05T12:27:09.836Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b42b7b75e2e453857c2c8"
+  },
+  "userId": "STF-250006",
+  "username": "cashier.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250006",
+  "timestamp": {
+    "$date": "2025-11-05T12:27:35.217Z"
+  },
+  "details": {
+    "category": "Cashier",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b42e3b75e2e453857c380"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-05T12:28:19.062Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b4495b75e2e453857c3a8"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-05T12:35:33.106Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b44eeb75e2e453857c3f7"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-05T12:37:02.304Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b470f68e63cf0638a5815"
+  },
+  "userId": "STF-250002",
+  "username": "admission.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250002",
+  "timestamp": {
+    "$date": "2025-11-05T12:46:07.273Z"
+  },
+  "details": {
+    "category": "Admission",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b472d68e63cf0638a5837"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-05T12:46:37.197Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b56783aa5a2322f43ed0a"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-05T13:51:52.552Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b5775606b396b74ff164d"
+  },
+  "userId": "STF-250006",
+  "username": "cashier.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250006",
+  "timestamp": {
+    "$date": "2025-11-05T13:56:05.966Z"
+  },
+  "details": {
+    "category": "Cashier",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b5ae15ddf700e15f10e5e"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-05T14:10:41.703Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b5edd358f56e0b805ed32"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-05T14:27:41.192Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b5f1b358f56e0b805eddc"
+  },
+  "userId": "STF-250006",
+  "username": "cashier.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250006",
+  "timestamp": {
+    "$date": "2025-11-05T14:28:43.315Z"
+  },
+  "details": {
+    "category": "Cashier",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b6027d3b3fcfb2640548f"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-05T14:33:11.155Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b6128e09bfd9e55e6baf2"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-05T14:37:28.280Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b625e888e1baf63007381"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-05T14:42:38.664Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b64427460b352d4e119e3"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-05T14:50:42.550Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b64967460b352d4e11ae0"
+  },
+  "userId": "STF-250004",
+  "username": "opd.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250004",
+  "timestamp": {
+    "$date": "2025-11-05T14:52:06.825Z"
+  },
+  "details": {
+    "category": "Out Patient Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b67769d34376541ecda6a"
+  },
+  "userId": "STF-250004",
+  "username": "opd.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250004",
+  "timestamp": {
+    "$date": "2025-11-05T15:04:22.262Z"
+  },
+  "details": {
+    "category": "Out Patient Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b67e99d34376541ecdacf"
+  },
+  "userId": "STF-250003",
+  "username": "emergency.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250003",
+  "timestamp": {
+    "$date": "2025-11-05T15:06:17.230Z"
+  },
+  "details": {
+    "category": "Emergency Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b68e01fb87c74c4a8c272"
+  },
+  "userId": "STF-250003",
+  "username": "emergency.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250003",
+  "timestamp": {
+    "$date": "2025-11-05T15:10:24.610Z"
+  },
+  "details": {
+    "category": "Emergency Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b6ae12328bcbb335ee7e3"
+  },
+  "userId": "STF-250004",
+  "username": "opd.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250004",
+  "timestamp": {
+    "$date": "2025-11-05T15:18:57.624Z"
+  },
+  "details": {
+    "category": "Out Patient Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b6ddc9de17ceead57b6ae"
+  },
+  "userId": "STF-250003",
+  "username": "emergency.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250003",
+  "timestamp": {
+    "$date": "2025-11-05T15:31:40.572Z"
+  },
+  "details": {
+    "category": "Emergency Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b6ea3465d015bbb6685b7"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-05T15:34:59.862Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b6edf465d015bbb668666"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-05T15:35:59.813Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b6f5c465d015bbb66877a"
+  },
+  "userId": "STF-250002",
+  "username": "admission.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250002",
+  "timestamp": {
+    "$date": "2025-11-05T15:38:04.418Z"
+  },
+  "details": {
+    "category": "Admission",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b715e5e48253664dcc5ec"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-05T15:46:38.358Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b77fa146f2af30af543f7"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-05T16:14:50.988Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690be11eaab48d670dbcf413"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-05T23:43:26.250Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690bed80825dfa846d4522ed"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-06T00:36:16.790Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690bee21825dfa846d452314"
+  },
+  "userId": "STF-250006",
+  "username": "cashier.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250006",
+  "timestamp": {
+    "$date": "2025-11-06T00:38:57.699Z"
+  },
+  "details": {
+    "category": "Cashier",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690bf2e71bdf03a21df681da"
+  },
+  "userId": "STF-250004",
+  "username": "opd.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250004",
+  "timestamp": {
+    "$date": "2025-11-06T00:59:19.822Z"
+  },
+  "details": {
+    "category": "Out Patient Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690bf88386bcb360b9bc0b20"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-06T01:23:15.287Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690bfa1a86bcb360b9bc0b80"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-06T01:30:02.168Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690bfafc86bcb360b9bc0c0d"
+  },
+  "userId": "STF-250004",
+  "username": "opd.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250004",
+  "timestamp": {
+    "$date": "2025-11-06T01:33:48.834Z"
+  },
+  "details": {
+    "category": "Out Patient Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690bfea086bcb360b9bc0c2f"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-06T01:49:20.192Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c06d6e90f8f883d578ceb"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-06T02:24:22.303Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c162eee00955fe8ed9004"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-06T03:29:50.041Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c2e79eea75267ee39d021"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-06T05:13:29.830Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c2f0beea75267ee39d074"
+  },
+  "userId": "STF-250002",
+  "username": "admission.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250002",
+  "timestamp": {
+    "$date": "2025-11-06T05:15:55.802Z"
+  },
+  "details": {
+    "category": "Admission",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c2f99eea75267ee39d0e5"
+  },
+  "userId": "STF-250003",
+  "username": "emergency.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250003",
+  "timestamp": {
+    "$date": "2025-11-06T05:18:17.640Z"
+  },
+  "details": {
+    "category": "Emergency Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c3058eea75267ee39d166"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-06T05:21:28.871Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c30c2eea75267ee39d1bb"
+  },
+  "userId": "STF-250003",
+  "username": "emergency.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250003",
+  "timestamp": {
+    "$date": "2025-11-06T05:23:14.224Z"
+  },
+  "details": {
+    "category": "Emergency Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c3131eea75267ee39d2d2"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-06T05:25:05.402Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c31e0eea75267ee39d360"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-06T05:28:00.873Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c3201eea75267ee39d3b5"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "update",
+  "recordType": "Promissory",
+  "recordId": "690c31a7eea75267ee39d327",
+  "before": {
+    "_id": {
+      "$oid": "690c31a7eea75267ee39d327"
+    },
+    "patientId": "25-00-00-43",
+    "transactionIds": [
+      "96A177EB"
+    ],
+    "paymentExpected": {
+      "$date": "2025-11-11T00:00:00.000Z"
+    },
+    "status": "Pending",
+    "amount": 200,
+    "imagePath": "/uploads/promissory/promissory-1762406823112-387306930.png",
+    "dateIssued": {
+      "$date": "2025-11-06T05:27:03.175Z"
+    },
+    "__v": 0
+  },
+  "after": {
+    "_id": {
+      "$oid": "690c31a7eea75267ee39d327"
+    },
+    "patientId": "25-00-00-43",
+    "transactionIds": [
+      "96A177EB"
+    ],
+    "paymentExpected": {
+      "$date": "2025-11-11T00:00:00.000Z"
+    },
+    "status": "Approved",
+    "amount": 200,
+    "imagePath": "/uploads/promissory/promissory-1762406823112-387306930.png",
+    "dateIssued": {
+      "$date": "2025-11-06T05:27:03.175Z"
+    },
+    "__v": 0,
+    "dateApproved": {
+      "$date": "2025-11-06T05:28:33.416Z"
+    },
+    "approvedBy": "superadmin.demo"
+  },
+  "details": {
+    "status": "Approved"
+  },
+  "timestamp": {
+    "$date": "2025-11-06T05:28:33.430Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c3237eea75267ee39d404"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-06T05:29:27.200Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c3264eea75267ee39d467"
+  },
+  "userId": "STF-250006",
+  "username": "cashier.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250006",
+  "timestamp": {
+    "$date": "2025-11-06T05:30:12.428Z"
+  },
+  "details": {
+    "category": "Cashier",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c329ceea75267ee39d4cb"
+  },
+  "userId": "STF-250003",
+  "username": "emergency.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250003",
+  "timestamp": {
+    "$date": "2025-11-06T05:31:08.811Z"
+  },
+  "details": {
+    "category": "Emergency Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c32cceea75267ee39d579"
+  },
+  "userId": "STF-250002",
+  "username": "admission.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250002",
+  "timestamp": {
+    "$date": "2025-11-06T05:31:56.160Z"
+  },
+  "details": {
+    "category": "Admission",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c35bfeea75267ee39d600"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-06T05:44:31.508Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c3654eea75267ee39d6bc"
+  },
+  "userId": "STF-250002",
+  "username": "admission.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250002",
+  "timestamp": {
+    "$date": "2025-11-06T05:47:00.483Z"
+  },
+  "details": {
+    "category": "Admission",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c36a1eea75267ee39d706"
+  },
+  "userId": "STF-250003",
+  "username": "emergency.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250003",
+  "timestamp": {
+    "$date": "2025-11-06T05:48:17.102Z"
+  },
+  "details": {
+    "category": "Emergency Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c3700eea75267ee39d776"
+  },
+  "userId": "STF-250004",
+  "username": "opd.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250004",
+  "timestamp": {
+    "$date": "2025-11-06T05:49:52.152Z"
+  },
+  "details": {
+    "category": "Out Patient Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c37a4eea75267ee39d7c0"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-06T05:52:36.414Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c37eaeea75267ee39d80a"
+  },
+  "userId": "STF-250006",
+  "username": "cashier.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250006",
+  "timestamp": {
+    "$date": "2025-11-06T05:53:46.545Z"
+  },
+  "details": {
+    "category": "Cashier",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c3887eea75267ee39d87a"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-06T05:56:23.054Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c44703cca6e3f4e10d319"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-06T06:47:12.018Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c47ac3cca6e3f4e10d6d9"
+  },
+  "userId": "unknown",
+  "username": "unknown",
+  "action": "update",
+  "recordType": "Promissory",
+  "recordId": "690c479a3cca6e3f4e10d692",
+  "before": {
+    "_id": {
+      "$oid": "690c479a3cca6e3f4e10d692"
+    },
+    "patientId": "25-00-00-44",
+    "transactionIds": [
+      "BAC85726"
+    ],
+    "paymentExpected": {
+      "$date": "2025-11-14T00:00:00.000Z"
+    },
+    "status": "Pending",
+    "amount": 100,
+    "imagePath": null,
+    "dateIssued": {
+      "$date": "2025-11-06T07:00:42.396Z"
+    },
+    "__v": 0
+  },
+  "after": {
+    "_id": {
+      "$oid": "690c479a3cca6e3f4e10d692"
+    },
+    "patientId": "25-00-00-44",
+    "transactionIds": [
+      "BAC85726"
+    ],
+    "paymentExpected": {
+      "$date": "2025-11-14T00:00:00.000Z"
+    },
+    "status": "Approved",
+    "amount": 100,
+    "imagePath": null,
+    "dateIssued": {
+      "$date": "2025-11-06T07:00:42.396Z"
+    },
+    "__v": 0,
+    "dateApproved": {
+      "$date": "2025-11-06T07:01:00.692Z"
+    },
+    "approvedBy": "Admin"
+  },
+  "details": {
+    "status": "Approved"
+  },
+  "timestamp": {
+    "$date": "2025-11-06T07:01:00.701Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c4c3b3cca6e3f4e10d87d"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-06T07:20:27.048Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c4e1a3cca6e3f4e10da4d"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "update",
+  "recordType": "Promissory",
+  "recordId": "690c4df93cca6e3f4e10da06",
+  "before": {
+    "_id": {
+      "$oid": "690c4df93cca6e3f4e10da06"
+    },
+    "patientId": "25-00-00-45",
+    "transactionIds": [
+      "E8CD34A2"
+    ],
+    "paymentExpected": {
+      "$date": "2025-11-10T00:00:00.000Z"
+    },
+    "status": "Pending",
+    "amount": 100,
+    "imagePath": "/uploads/promissory/promissory-1762414073371-606688425.png",
+    "dateIssued": {
+      "$date": "2025-11-06T07:27:53.391Z"
+    },
+    "__v": 0
+  },
+  "after": {
+    "_id": {
+      "$oid": "690c4df93cca6e3f4e10da06"
+    },
+    "patientId": "25-00-00-45",
+    "transactionIds": [
+      "E8CD34A2"
+    ],
+    "paymentExpected": {
+      "$date": "2025-11-10T00:00:00.000Z"
+    },
+    "status": "Approved",
+    "amount": 100,
+    "imagePath": "/uploads/promissory/promissory-1762414073371-606688425.png",
+    "dateIssued": {
+      "$date": "2025-11-06T07:27:53.391Z"
+    },
+    "__v": 0,
+    "dateApproved": {
+      "$date": "2025-11-06T07:28:26.666Z"
+    },
+    "approvedBy": "triage.demo"
+  },
+  "details": {
+    "status": "Approved"
+  },
+  "timestamp": {
+    "$date": "2025-11-06T07:28:26.675Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690d9e8d9b79b2e8c22c239b"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-07T07:23:57.500Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690d9f459b79b2e8c22c2563"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-07T07:27:01.350Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690dcb1690b99148dab98e1c"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-07T10:33:58.894Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690dcd094802da25aad939d0"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-07T10:42:17.844Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690dcd514802da25aad939fd"
+  },
+  "userId": "STF-250006",
+  "username": "cashier.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250006",
+  "timestamp": {
+    "$date": "2025-11-07T10:43:29.231Z"
+  },
+  "details": {
+    "category": "Cashier",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690dce8d4802da25aad93a7d"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-07T10:48:45.245Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690dcf104802da25aad93ae8"
+  },
+  "userId": "STF-250003",
+  "username": "emergency.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250003",
+  "timestamp": {
+    "$date": "2025-11-07T10:50:56.631Z"
+  },
+  "details": {
+    "category": "Emergency Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690dcf794802da25aad93b35"
+  },
+  "userId": "STF-250004",
+  "username": "opd.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250004",
+  "timestamp": {
+    "$date": "2025-11-07T10:52:41.451Z"
+  },
+  "details": {
+    "category": "Out Patient Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690dd2f54802da25aad93b82"
+  },
+  "userId": "STF-250002",
+  "username": "admission.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250002",
+  "timestamp": {
+    "$date": "2025-11-07T11:07:33.840Z"
+  },
+  "details": {
+    "category": "Admission",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690dd3524802da25aad93baa"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-07T11:09:06.579Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690dd9c417a4ed717cfcfa6c"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-07T11:36:36.113Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690dda96226cf04c66cac4be"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-07T11:40:06.527Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ddd3e661ba8610871bf04"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-07T11:51:26.846Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690dde09b0dc2b77e0da868c"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-07T11:54:49.941Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ddf9f6e065de1fa4d2905"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-07T12:01:35.966Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690de06f8f02bb3d35d5b5d3"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-07T12:05:03.677Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690de647b8a93a39f6a46724"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-07T12:29:59.911Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690de8fa074906cd0699860c"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-07T12:41:30.392Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690de97722e7106db23e51a3"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-07T12:43:35.118Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690dea040f690d9091dafb8d"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-07T12:45:56.446Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690deab9768d51be121065b5"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-07T12:48:57.382Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690deafa768d51be121065e2"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-07T12:50:02.826Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690deb33768d51be1210660f"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-07T12:50:59.636Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690deb6f768d51be12106637"
+  },
+  "userId": "STF-250002",
+  "username": "admission.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250002",
+  "timestamp": {
+    "$date": "2025-11-07T12:51:59.374Z"
+  },
+  "details": {
+    "category": "Admission",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690debac768d51be1210665f"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-07T12:53:00.489Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690debfc768d51be1210668c"
+  },
+  "userId": "STF-250003",
+  "username": "emergency.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250003",
+  "timestamp": {
+    "$date": "2025-11-07T12:54:20.099Z"
+  },
+  "details": {
+    "category": "Emergency Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690decb836af39db2059d461"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-07T12:57:28.742Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ded78b724e7a8123e7d66"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-07T13:00:40.701Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690deffa87f62484efe96a56"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-07T13:11:22.767Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690e27ea798c797eae98fb51"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-07T17:10:02.902Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ec0b7b177f30bfce3867e"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-08T04:01:59.286Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ec101b177f30bfce386ab"
+  },
+  "userId": "STF-250006",
+  "username": "cashier.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250006",
+  "timestamp": {
+    "$date": "2025-11-08T04:03:13.467Z"
+  },
+  "details": {
+    "category": "Cashier",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ec15fb177f30bfce386d3"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-08T04:04:47.288Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690edde5dd5ecf02a6959a99"
+  },
+  "userId": "STF-250002",
+  "username": "admission.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250002",
+  "timestamp": {
+    "$date": "2025-11-08T06:06:29.865Z"
+  },
+  "details": {
+    "category": "Admission",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ede64dd5ecf02a6959d77"
+  },
+  "userId": "STF-250003",
+  "username": "emergency.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250003",
+  "timestamp": {
+    "$date": "2025-11-08T06:08:36.090Z"
+  },
+  "details": {
+    "category": "Emergency Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690edec6dd5ecf02a6959f0d"
+  },
+  "userId": "STF-250004",
+  "username": "opd.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250004",
+  "timestamp": {
+    "$date": "2025-11-08T06:10:14.647Z"
+  },
+  "details": {
+    "category": "Out Patient Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690edf5add5ecf02a695a054"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-08T06:12:42.112Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690edfb5dd5ecf02a695a1c4"
+  },
+  "userId": "STF-250006",
+  "username": "cashier.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250006",
+  "timestamp": {
+    "$date": "2025-11-08T06:14:13.444Z"
+  },
+  "details": {
+    "category": "Cashier",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ee009dd5ecf02a695a33c"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-08T06:15:37.815Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ee531c0e4defa9c24e289"
+  },
+  "userId": "STF-250006",
+  "username": "cashier.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250006",
+  "timestamp": {
+    "$date": "2025-11-08T06:37:37.465Z"
+  },
+  "details": {
+    "category": "Cashier",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ee63e812e2a97fe6e02f3"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-08T06:42:06.157Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ee6d4812e2a97fe6e0467"
+  },
+  "userId": "STF-250003",
+  "username": "emergency.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250003",
+  "timestamp": {
+    "$date": "2025-11-08T06:44:36.203Z"
+  },
+  "details": {
+    "category": "Emergency Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ee732812e2a97fe6e052a"
+  },
+  "userId": "STF-250004",
+  "username": "opd.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250004",
+  "timestamp": {
+    "$date": "2025-11-08T06:46:10.365Z"
+  },
+  "details": {
+    "category": "Out Patient Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ee7b2812e2a97fe6e06d3"
+  },
+  "userId": "STF-250002",
+  "username": "admission.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250002",
+  "timestamp": {
+    "$date": "2025-11-08T06:48:18.026Z"
+  },
+  "details": {
+    "category": "Admission",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ee816812e2a97fe6e08c1"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-08T06:49:58.828Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690eee72d5755c62f501e5b3"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-08T07:17:06.233Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690efdf2251ce22f936d3b4b"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-08T08:23:14.655Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f2860d6bc6de177195471"
+  },
+  "userId": "STF-250002",
+  "username": "admission.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250002",
+  "timestamp": {
+    "$date": "2025-11-08T11:24:16.249Z"
+  },
+  "details": {
+    "category": "Admission",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f295fd6bc6de1771956bf"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-08T11:28:31.472Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f2a12ad225ac407043250"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-08T11:31:30.839Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f2b83ddf19595e5e8a074"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-08T11:37:39.825Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f3265aa82ceb05e659ed4"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-08T12:07:01.047Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f3400e1baaaf4d23ba896"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-08T12:13:52.992Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f36ca85090199548b913f"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-08T12:25:46.507Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f3f0f632fee5631e2e25b"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-08T13:01:03.232Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff042d31466672f01b6fa"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-09T01:37:06.203Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff08804eeedbfbc1c049c"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-09T01:38:16.334Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff18854009752fc1de854"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-09T01:42:32.700Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff202ab965fa55ddc4f1f"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-09T01:44:34.352Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff348892fd814fc7ca61b"
+  },
+  "userId": "STF-250002",
+  "username": "admission.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250002",
+  "timestamp": {
+    "$date": "2025-11-09T01:50:00.115Z"
+  },
+  "details": {
+    "category": "Admission",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff48d423db8d7ba9c88e1"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-09T01:55:25.448Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff4ef423db8d7ba9c894b"
+  },
+  "userId": "STF-250002",
+  "username": "admission.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250002",
+  "timestamp": {
+    "$date": "2025-11-09T01:57:03.189Z"
+  },
+  "details": {
+    "category": "Admission",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff5840bafd470e29e063f"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-09T01:59:32.094Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff6440bafd470e29e0714"
+  },
+  "userId": "STF-250002",
+  "username": "admission.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250002",
+  "timestamp": {
+    "$date": "2025-11-09T02:02:44.165Z"
+  },
+  "details": {
+    "category": "Admission",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff7040bafd470e29e0789"
+  },
+  "userId": "STF-250003",
+  "username": "emergency.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250003",
+  "timestamp": {
+    "$date": "2025-11-09T02:05:56.134Z"
+  },
+  "details": {
+    "category": "Emergency Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff7310bafd470e29e0810"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-09T02:06:41.869Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff79a0bafd470e29e0873"
+  },
+  "userId": "STF-250003",
+  "username": "emergency.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250003",
+  "timestamp": {
+    "$date": "2025-11-09T02:08:26.544Z"
+  },
+  "details": {
+    "category": "Emergency Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff7d00bafd470e29e0972"
+  },
+  "userId": "STF-250005",
+  "username": "billing.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250005",
+  "timestamp": {
+    "$date": "2025-11-09T02:09:20.013Z"
+  },
+  "details": {
+    "category": "Billing",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff8020bafd470e29e09e3"
+  },
+  "userId": "STF-250006",
+  "username": "cashier.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250006",
+  "timestamp": {
+    "$date": "2025-11-09T02:10:10.977Z"
+  },
+  "details": {
+    "category": "Cashier",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff8230bafd470e29e0a51"
+  },
+  "userId": "STF-250003",
+  "username": "emergency.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250003",
+  "timestamp": {
+    "$date": "2025-11-09T02:10:43.837Z"
+  },
+  "details": {
+    "category": "Emergency Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff8420bafd470e29e0b11"
+  },
+  "userId": "STF-250002",
+  "username": "admission.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250002",
+  "timestamp": {
+    "$date": "2025-11-09T02:11:14.513Z"
+  },
+  "details": {
+    "category": "Admission",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff85d0bafd470e29e0bdc"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-09T02:11:41.320Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ffa4f6d3f19d64f2ad67f"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-09T02:19:59.728Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ffb15671596300141847e"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-09T02:23:17.633Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ffb9550e626db191e4937"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-09T02:25:25.034Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ffbf850e626db191e49bf"
+  },
+  "userId": "STF-250002",
+  "username": "admission.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250002",
+  "timestamp": {
+    "$date": "2025-11-09T02:27:04.277Z"
+  },
+  "details": {
+    "category": "Admission",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ffc4350e626db191e4a4d"
+  },
+  "userId": "STF-250003",
+  "username": "emergency.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250003",
+  "timestamp": {
+    "$date": "2025-11-09T02:28:19.611Z"
+  },
+  "details": {
+    "category": "Emergency Department",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ffc8950e626db191e4a9e"
+  },
+  "userId": "STF-250007",
+  "username": "superadmin.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250007",
+  "timestamp": {
+    "$date": "2025-11-09T02:29:29.887Z"
+  },
+  "details": {
+    "category": "Admin",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691002c546f35711c61b9013"
+  },
+  "userId": "STF-250001",
+  "username": "triage.demo",
+  "action": "login",
+  "recordType": "Staff",
+  "recordId": "STF-250001",
+  "timestamp": {
+    "$date": "2025-11-09T02:56:05.946Z"
+  },
+  "details": {
+    "category": "Triage",
+    "email": "raycharlesvalino1993@gmail.com"
+  },
+  "__v": 0
+}]

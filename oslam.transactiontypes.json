@@ -1,0 +1,410 @@
+[{
+  "_id": {
+    "$oid": "683c1b10ca77ee4bd1256b9c"
+  },
+  "type": "Equipment Use",
+  "services": [
+    {
+      "_id": {
+        "$oid": "683c5751200991b3b90d47aa"
+      },
+      "description": "Defibrillator",
+      "amount": 200,
+      "itemAmount": 150,
+      "itemUsed": null,
+      "procedureAmount": 50
+    },
+    {
+      "_id": {
+        "$oid": "683c5751200991b3b90d47ab"
+      },
+      "description": "Doppler",
+      "amount": 150,
+      "itemAmount": 100,
+      "itemUsed": null,
+      "procedureAmount": 50
+    },
+    {
+      "_id": {
+        "$oid": "683c5751200991b3b90d47ac"
+      },
+      "description": "Cardiac Monitor (Defibrillator)",
+      "amount": 150,
+      "itemAmount": 100,
+      "itemUsed": null,
+      "procedureAmount": 50
+    },
+    {
+      "_id": {
+        "$oid": "683c5751200991b3b90d47ad"
+      },
+      "description": "ECG",
+      "amount": 150,
+      "itemAmount": 100,
+      "itemUsed": null,
+      "procedureAmount": 50
+    },
+    {
+      "description": "Xray",
+      "procedureAmount": 70,
+      "itemUsed": null,
+      "itemAmount": 200,
+      "amount": 270,
+      "_id": {
+        "$oid": "690afca74631a6e819fed74a"
+      }
+    },
+    {
+      "description": "xray",
+      "procedureAmount": 100,
+      "itemUsed": null,
+      "itemAmount": 200,
+      "amount": 300,
+      "_id": {
+        "$oid": "690c44a43cca6e3f4e10d365"
+      }
+    }
+  ],
+  "__v": 5
+},
+{
+  "_id": {
+    "$oid": "683c1b88ca77ee4bd1256b9e"
+  },
+  "type": "Radiology",
+  "services": [
+    {
+      "_id": {
+        "$oid": "69042779180f86ee10860145"
+      },
+      "description": "Chest AP/L Pedia (2 views)",
+      "amount": 500,
+      "itemAmount": 150,
+      "itemUsed": null,
+      "procedureAmount": 350
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee10860146"
+      },
+      "description": "Apicolordotic View",
+      "amount": 275,
+      "itemAmount": 200,
+      "itemUsed": null,
+      "procedureAmount": 75
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee10860147"
+      },
+      "description": "Plain Abdomen",
+      "amount": 250,
+      "itemAmount": 200,
+      "itemUsed": null,
+      "procedureAmount": 50
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee10860148"
+      },
+      "description": "Abdomen Upright/Supine (2 views)",
+      "amount": 520,
+      "itemAmount": 400,
+      "itemUsed": null,
+      "procedureAmount": 120
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee10860149"
+      },
+      "description": "Shoulder AP",
+      "amount": 250,
+      "itemAmount": 200,
+      "itemUsed": null,
+      "procedureAmount": 50
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee1086014a"
+      },
+      "description": "Clavicle AP",
+      "amount": 250,
+      "itemAmount": 180,
+      "itemUsed": null,
+      "procedureAmount": 70
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee1086014b"
+      },
+      "description": "Arm AP/L (2 views)",
+      "amount": 380,
+      "itemAmount": 300,
+      "itemUsed": null,
+      "procedureAmount": 80
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee1086014c"
+      },
+      "description": "Elbow AP/L (2 views)",
+      "amount": 380,
+      "itemAmount": 300,
+      "itemUsed": null,
+      "procedureAmount": 80
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee1086014d"
+      },
+      "description": "Forearm AP/L (2 views)",
+      "amount": 380,
+      "itemAmount": 300,
+      "itemUsed": null,
+      "procedureAmount": 80
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee1086014e"
+      },
+      "description": "Wrist AP/L (2 views)",
+      "amount": 380,
+      "itemAmount": 300,
+      "itemUsed": null,
+      "procedureAmount": 80
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee1086014f"
+      },
+      "description": "Hand AP/O or AP/L (2 views)",
+      "amount": 380,
+      "itemAmount": 300,
+      "itemUsed": null,
+      "procedureAmount": 80
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee10860150"
+      },
+      "description": "Pelvis AP",
+      "amount": 300,
+      "itemAmount": 200,
+      "itemUsed": null,
+      "procedureAmount": 100
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee10860151"
+      },
+      "description": "Hip Joint AP",
+      "amount": 300,
+      "itemAmount": 200,
+      "itemUsed": null,
+      "procedureAmount": 100
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee10860152"
+      },
+      "description": "Femur AP/L (2 views)",
+      "amount": 400,
+      "itemAmount": 300,
+      "itemUsed": null,
+      "procedureAmount": 100
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee10860153"
+      },
+      "description": "Leg AP/L (2 views)",
+      "amount": 400,
+      "itemAmount": 300,
+      "itemUsed": null,
+      "procedureAmount": 100
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee10860154"
+      },
+      "description": "Knee AP/L (2 views)",
+      "amount": 400,
+      "itemAmount": 300,
+      "itemUsed": null,
+      "procedureAmount": 100
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee10860155"
+      },
+      "description": "Ankle AP/L (2 views)",
+      "amount": 200,
+      "itemAmount": 100,
+      "itemUsed": null,
+      "procedureAmount": 100
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee10860156"
+      },
+      "description": "Foot AP/O or AP/L (2 views)",
+      "amount": 400,
+      "itemAmount": 300,
+      "itemUsed": null,
+      "procedureAmount": 100
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee10860157"
+      },
+      "description": "Cervical Spine APL/L (2 views)",
+      "amount": 400,
+      "itemAmount": 300,
+      "itemUsed": null,
+      "procedureAmount": 100
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee10860158"
+      },
+      "description": "Thoracic Cage",
+      "amount": 275,
+      "itemAmount": 200,
+      "itemUsed": null,
+      "procedureAmount": 75
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee10860159"
+      },
+      "description": "Thoracolumbar AP/L (2 views)",
+      "amount": 450,
+      "itemAmount": 300,
+      "itemUsed": null,
+      "procedureAmount": 150
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee1086015a"
+      },
+      "description": "Lumbosacral AP/L (2 views)",
+      "amount": 450,
+      "itemAmount": 300,
+      "itemUsed": null,
+      "procedureAmount": 150
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee1086015b"
+      },
+      "description": "Skull AP/L (2 views)",
+      "amount": 400,
+      "itemAmount": 300,
+      "itemUsed": null,
+      "procedureAmount": 100
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee1086015c"
+      },
+      "description": "Paranasal Sunuses AP/L (3 views)",
+      "amount": 400,
+      "itemAmount": 300,
+      "itemUsed": null,
+      "procedureAmount": 100
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee1086015d"
+      },
+      "description": "Mandible (3 views)",
+      "amount": 560,
+      "itemAmount": 400,
+      "itemUsed": null,
+      "procedureAmount": 160
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee1086015e"
+      },
+      "description": "Water's View",
+      "amount": 250
+    },
+    {
+      "_id": {
+        "$oid": "69042779180f86ee1086015f"
+      },
+      "description": "Nasal Bone/Soft Tissue (2 views)",
+      "amount": 400,
+      "itemAmount": 300,
+      "itemUsed": null,
+      "procedureAmount": 100
+    },
+    {
+      "description": "Ches PA",
+      "procedureAmount": 400,
+      "itemUsed": "xray",
+      "itemAmount": 150,
+      "amount": 550,
+      "_id": {
+        "$oid": "69043ddffd3710e407fb0471"
+      }
+    },
+    {
+      "description": "Xray",
+      "procedureAmount": 100,
+      "itemUsed": null,
+      "itemAmount": 500,
+      "amount": 600,
+      "_id": {
+        "$oid": "690c44c43cca6e3f4e10d391"
+      }
+    }
+  ],
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "683c55b1bf86acefa4e0b92c"
+  },
+  "type": "OPD",
+  "services": [
+    {
+      "description": "Consultation Fee",
+      "amount": 52,
+      "_id": {
+        "$oid": "683c55ddbf86acefa4e0bb18"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69043cf6777ded6d1c8cda0b"
+  },
+  "type": "Medicines",
+  "services": [
+    {
+      "description": "Paracetamol Biogesic",
+      "procedureAmount": 5,
+      "itemUsed": "ParacetamoL",
+      "itemAmount": 10,
+      "amount": 15,
+      "_id": {
+        "$oid": "690b00884631a6e819fed7b8"
+      }
+    },
+    {
+      "description": "Acetylcisteine 200mg",
+      "procedureAmount": 2,
+      "itemUsed": null,
+      "itemAmount": 9,
+      "amount": 11,
+      "_id": {
+        "$oid": "690c452b3cca6e3f4e10d3d7"
+      }
+    }
+  ],
+  "__v": 0
+}]

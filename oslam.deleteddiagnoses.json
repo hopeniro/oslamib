@@ -1,0 +1,432 @@
+[{
+  "_id": {
+    "$oid": "690623af6bc61e2b86a17b95"
+  },
+  "originalMedicalId": {
+    "$oid": "69061eb0213e659dded80970"
+  },
+  "patientId": {
+    "$oid": "69020ac788de4808173bb1ed"
+  },
+  "department": "OPD",
+  "diagnose": {
+    "date": {
+      "$date": "2025-11-01T14:53:16.203Z"
+    },
+    "complaint": "masakit ulol",
+    "doctor_order": "inom gamot",
+    "nurse_assist": "Dondon E kembot",
+    "doctor": "eman s suka"
+  },
+  "deleteReason": "Wrong entry",
+  "deletedBy": "OPD Staff",
+  "deletedAt": {
+    "$date": "2025-11-01T15:13:51.302Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690624166bc61e2b86a17bf3"
+  },
+  "originalMedicalId": {
+    "$oid": "69036950d2f05263da5ea4c7"
+  },
+  "patientId": {
+    "$oid": "69022edc20108e5204a19fab"
+  },
+  "department": "OPD",
+  "diagnose": {
+    "date": {
+      "$date": "2025-10-31T00:00:00.000Z"
+    },
+    "complaint": "maskit mata",
+    "doctor_order": "inom papaya",
+    "nurse_assist": "hopya A Roni",
+    "doctor": "kwak k kwaker"
+  },
+  "deleteReason": "Wrong entry",
+  "deletedBy": "OPD Staff",
+  "deletedAt": {
+    "$date": "2025-11-01T15:15:34.456Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906241d6bc61e2b86a17c06"
+  },
+  "originalMedicalId": {
+    "$oid": "69036950d2f05263da5ea4c7"
+  },
+  "patientId": {
+    "$oid": "69022edc20108e5204a19fab"
+  },
+  "department": "OPD",
+  "diagnose": {
+    "date": {
+      "$date": "2025-10-31T00:00:00.000Z"
+    },
+    "complaint": "maskit mata",
+    "doctor_order": "inom papaya",
+    "nurse_assist": "Dondon E kembot",
+    "doctor": "eman s suka"
+  },
+  "deleteReason": "Wrong entry",
+  "deletedBy": "OPD Staff",
+  "deletedAt": {
+    "$date": "2025-11-01T15:15:41.713Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690624366bc61e2b86a17c33"
+  },
+  "originalMedicalId": {
+    "$oid": "6905cdd70f058b6a16195f5c"
+  },
+  "patientId": {
+    "$oid": "6901fd7288de4808173bb1d5"
+  },
+  "department": "OPD",
+  "diagnose": {
+    "date": {
+      "$date": "2025-11-01T09:10:05.937Z"
+    },
+    "complaint": "masakit ulo",
+    "doctor_order": "inom gamot",
+    "nurse_assist": "Dondon E kembot",
+    "doctor": "eman s suka"
+  },
+  "deleteReason": "Change of mind",
+  "deletedBy": "OPD Staff",
+  "deletedAt": {
+    "$date": "2025-11-01T15:16:06.352Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690624936bc61e2b86a17c92"
+  },
+  "originalMedicalId": {
+    "$oid": "690340e971a9614359f040c6"
+  },
+  "patientId": {
+    "$oid": "69022f7c20108e5204a19fb8"
+  },
+  "department": "Emergency",
+  "diagnose": {
+    "date": {
+      "$date": "2025-10-31T00:00:00.000Z"
+    },
+    "complaint": "maskit mata",
+    "doctor_order": "inom papaya",
+    "nurse_assist": "hopya A Roni",
+    "doctor": "kwak k kwaker"
+  },
+  "deleteReason": "Wrong entry",
+  "deletedBy": "Emergency Staff",
+  "deletedAt": {
+    "$date": "2025-11-01T15:17:39.108Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690624996bc61e2b86a17ca6"
+  },
+  "originalMedicalId": {
+    "$oid": "690340e971a9614359f040c6"
+  },
+  "patientId": {
+    "$oid": "69022f7c20108e5204a19fb8"
+  },
+  "department": "Emergency",
+  "diagnose": {
+    "date": {
+      "$date": "2025-11-01T11:16:17.634Z"
+    },
+    "complaint": "masakit ulo",
+    "doctor_order": "inom gamot",
+    "nurse_assist": "Dondon E kembot",
+    "doctor": "eman s suka"
+  },
+  "deleteReason": "Change of mind",
+  "deletedBy": "Emergency Staff",
+  "deletedAt": {
+    "$date": "2025-11-01T15:17:45.852Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690625346bc61e2b86a17cf7"
+  },
+  "originalMedicalId": {
+    "$oid": "6904c20845a9b17130c2c25d"
+  },
+  "patientId": {
+    "$oid": "6904c19345a9b17130c2c216"
+  },
+  "department": "Emergency",
+  "diagnose": {
+    "date": {
+      "$date": "2025-11-30T00:00:00.000Z"
+    },
+    "complaint": "maskit mata",
+    "doctor_order": "inom papaya",
+    "nurse_assist": "hopya A Roni",
+    "doctor": "Hope A Niro"
+  },
+  "deleteReason": "Change of mind",
+  "deletedBy": "Emergency Staff",
+  "deletedAt": {
+    "$date": "2025-11-01T15:20:20.548Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690625746bc61e2b86a17d27"
+  },
+  "originalMedicalId": {
+    "$oid": "6905d2a719a8865eac4f73bd"
+  },
+  "patientId": {
+    "$oid": "690206e588de4808173bb1e1"
+  },
+  "department": "Emergency",
+  "diagnose": {
+    "date": {
+      "$date": "2025-11-01T09:31:23.922Z"
+    },
+    "complaint": "masakit ulo",
+    "doctor_order": "inom gamot",
+    "nurse_assist": "Dondon E kembot",
+    "doctor": "eman s suka"
+  },
+  "deleteReason": "Wrong entry",
+  "deletedBy": "Emergency Staff",
+  "deletedAt": {
+    "$date": "2025-11-01T15:21:24.470Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690625be6bc61e2b86a17d82"
+  },
+  "originalMedicalId": {
+    "$oid": "6905eb9dc3fe3d62bc6fa5c7"
+  },
+  "patientId": {
+    "$oid": "6905eb0ec3fe3d62bc6fa54a"
+  },
+  "department": "Emergency",
+  "diagnose": {
+    "date": {
+      "$date": "2025-11-01T11:17:43.841Z"
+    },
+    "complaint": "masakit ulo",
+    "doctor_order": "inom gamot",
+    "nurse_assist": "Dondon E kembot",
+    "doctor": "eman s suka"
+  },
+  "deleteReason": "Change of mind",
+  "deletedBy": "Emergency Staff",
+  "deletedAt": {
+    "$date": "2025-11-01T15:22:38.688Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073b9a4b9793f42d8b8293"
+  },
+  "originalMedicalId": {
+    "$oid": "690738d0691fa9aae11d14bd"
+  },
+  "patientId": {
+    "$oid": "690738b9691fa9aae11d14a4"
+  },
+  "department": "Emergency",
+  "diagnose": {
+    "date": {
+      "$date": "2025-11-02T11:00:23.525Z"
+    },
+    "complaint": "masakit ulo",
+    "doctor_order": "inom gamot",
+    "nurse_assist": "Dondon E kembot",
+    "doctor": "eman s suka"
+  },
+  "deleteReason": "Wrong entry",
+  "deletedBy": "Emergency Staff",
+  "deletedAt": {
+    "$date": "2025-11-02T11:08:10.688Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073e90e432796c1be4dce6"
+  },
+  "originalMedicalId": {
+    "$oid": "690738d0691fa9aae11d14bd"
+  },
+  "patientId": {
+    "$oid": "690738b9691fa9aae11d14a4"
+  },
+  "department": "Emergency",
+  "diagnose": {
+    "date": {
+      "$date": "2025-11-02T11:09:00.462Z"
+    },
+    "complaint": "masakit ulo",
+    "doctor_order": "inom gamot",
+    "nurse_assist": "Dondon E kembot",
+    "doctor": "eman s suka"
+  },
+  "deleteReason": "Wrong entry",
+  "deletedBy": "Emergency Staff",
+  "deletedAt": {
+    "$date": "2025-11-02T11:20:48.866Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073f64e432796c1be4de1d"
+  },
+  "originalMedicalId": {
+    "$oid": "69073f3fe432796c1be4ddd0"
+  },
+  "patientId": {
+    "$oid": "69073f2ce432796c1be4ddba"
+  },
+  "department": "Emergency",
+  "diagnose": {
+    "date": {
+      "$date": "2025-11-02T11:24:06.943Z"
+    },
+    "complaint": "masakit ulo",
+    "doctor_order": "inom gamot",
+    "nurse_assist": "Dondon E kembot",
+    "doctor": "eman s suka"
+  },
+  "deleteReason": "Wrong entry",
+  "deletedBy": "Emergency Staff",
+  "deletedAt": {
+    "$date": "2025-11-02T11:24:20.150Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690987dbac1c2bc222df5ff6"
+  },
+  "originalMedicalId": {
+    "$oid": "6909848122ef0bfb50114f6f"
+  },
+  "patientId": {
+    "$oid": "6909846222ef0bfb50114f4f"
+  },
+  "department": "Emergency",
+  "diagnose": {
+    "date": {
+      "$date": "2025-11-04T04:56:15.983Z"
+    },
+    "complaint": "masakit ulo",
+    "doctor_order": "inom gamot",
+    "nurse_assist": "Dondon E kembot",
+    "doctor": "kwak k kwaker"
+  },
+  "deleteReason": "Change of mind",
+  "deletedBy": "Emergency Staff",
+  "deletedAt": {
+    "$date": "2025-11-04T04:58:03.470Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69098bb70d83bc1632e50661"
+  },
+  "originalMedicalId": {
+    "$oid": "6909848122ef0bfb50114f6f"
+  },
+  "patientId": {
+    "$oid": "6909846222ef0bfb50114f4f"
+  },
+  "department": "Emergency",
+  "diagnose": {
+    "date": {
+      "$date": "2025-11-04T05:03:36.673Z"
+    },
+    "complaint": "masakit ulo",
+    "doctor_order": "inom gamot",
+    "nurse_assist": "Dondon E kembot",
+    "doctor": "kwak k kwaker"
+  },
+  "deleteReason": "Wrong entry",
+  "deletedBy": "Emergency Staff",
+  "deletedAt": {
+    "$date": "2025-11-04T05:14:31.789Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69098c7d6ca0e378373b38ed"
+  },
+  "originalMedicalId": {
+    "$oid": "6909848122ef0bfb50114f6f"
+  },
+  "patientId": {
+    "$oid": "6909846222ef0bfb50114f4f"
+  },
+  "department": "Emergency",
+  "diagnose": {
+    "date": {
+      "$date": "2025-11-04T05:16:55.287Z"
+    },
+    "complaint": "masakit ulo",
+    "doctor_order": "inom gamot",
+    "nurse_assist": "Dondon E kembot",
+    "doctor": "kwak k kwaker"
+  },
+  "deleteReason": "Wrong entry",
+  "deletedBy": "Emergency Staff",
+  "deletedAt": {
+    "$date": "2025-11-04T05:17:49.094Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ac3b0a4ed0704caefe1e5"
+  },
+  "originalMedicalId": {
+    "$oid": "690983b6ae2830015bd74aea"
+  },
+  "patientId": {
+    "$oid": "690982f890343d833da9acb4"
+  },
+  "department": "Emergency",
+  "diagnose": {
+    "date": {
+      "$date": "2025-11-05T03:22:50.271Z"
+    },
+    "complaint": "masakit ulo",
+    "doctor_order": "diatabs inom",
+    "nurse_assist": "Dondon E kembot",
+    "doctor": "kwak k kwaker"
+  },
+  "deleteReason": "Wrong entry",
+  "deletedBy": "Emergency Staff",
+  "deletedAt": {
+    "$date": "2025-11-05T03:25:36.094Z"
+  },
+  "__v": 0
+}]

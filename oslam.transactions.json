@@ -1,0 +1,432 @@
+[{
+  "_id": {
+    "$oid": "6906265a6bc61e2b86a17e59"
+  },
+  "transactionId": "DDC6DF7A",
+  "admissionId": "ADMT1762010646283",
+  "patientId": "6905eb0ec3fe3d62bc6fa54a",
+  "categoryId": {
+    "$oid": "683c62e341ea51974b44bf18"
+  },
+  "services": [
+    {
+      "type": "OPD",
+      "description": "Consultation Fee",
+      "procedureAmount": null,
+      "itemUsed": "",
+      "itemAmount": null,
+      "qty": 1,
+      "amount": 52,
+      "_id": {
+        "$oid": "6906265a6bc61e2b86a17e5a"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-11-01T15:25:14.839Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T05:51:09.602Z"
+  },
+  "status": "Payment Verified"
+},
+{
+  "_id": {
+    "$oid": "6906948af5b743e6eb8c99ce"
+  },
+  "transactionId": "C859A91C",
+  "admissionId": "ADMT1762038756187",
+  "patientId": "6905a71ec86ed778ba847688",
+  "categoryId": {
+    "$oid": "683c62ed41ea51974b44bf1d"
+  },
+  "services": [
+    {
+      "type": "Equipment Use",
+      "description": "ECG",
+      "procedureAmount": null,
+      "itemUsed": "",
+      "itemAmount": null,
+      "qty": 4,
+      "amount": 600,
+      "_id": {
+        "$oid": "6906948af5b743e6eb8c99cf"
+      }
+    },
+    {
+      "type": "Equipment Use",
+      "description": "Defibrillator",
+      "procedureAmount": null,
+      "itemUsed": "",
+      "itemAmount": null,
+      "qty": 5,
+      "amount": 1500,
+      "_id": {
+        "$oid": "6906948af5b743e6eb8c99d0"
+      }
+    }
+  ],
+  "status": "Payment Verified",
+  "createdAt": {
+    "$date": "2025-11-01T23:15:22.109Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T04:20:35.278Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6906ba5c1cc79678cf2e31b9"
+  },
+  "transactionId": "D6FF708C",
+  "admissionId": "ADMT1762048349475",
+  "patientId": "6905a36688b477825c3320ac",
+  "categoryId": {
+    "$oid": "683c62e341ea51974b44bf18"
+  },
+  "services": [
+    {
+      "type": "Equipment Use",
+      "description": "Doppler",
+      "procedureAmount": null,
+      "itemUsed": "",
+      "itemAmount": null,
+      "qty": 20,
+      "amount": 3000,
+      "_id": {
+        "$oid": "6906ba5c1cc79678cf2e31ba"
+      }
+    }
+  ],
+  "status": "Payment Verified",
+  "createdAt": {
+    "$date": "2025-11-02T01:56:44.255Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T03:51:40.939Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6907010f2ed5baf0371dbfe5"
+  },
+  "transactionId": "F7AFB284",
+  "admissionId": "ADMT1762066674542",
+  "patientId": "690206e588de4808173bb1e1",
+  "categoryId": {
+    "$oid": "683c62e341ea51974b44bf18"
+  },
+  "services": [
+    {
+      "type": "Radiology",
+      "description": "Apicolordotic View",
+      "procedureAmount": null,
+      "itemUsed": "",
+      "itemAmount": null,
+      "qty": 4,
+      "amount": 1100,
+      "_id": {
+        "$oid": "6907010f2ed5baf0371dbfe6"
+      }
+    }
+  ],
+  "status": "Payment Verified",
+  "createdAt": {
+    "$date": "2025-11-02T06:58:23.011Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T07:38:14.304Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6907017e2ed5baf0371dc0c5"
+  },
+  "transactionId": "6D9AC808",
+  "admissionId": "ADMT1762066789114",
+  "patientId": "690209fb88de4808173bb1e9",
+  "categoryId": {
+    "$oid": "683c62e341ea51974b44bf18"
+  },
+  "services": [
+    {
+      "type": "Radiology",
+      "description": "Plain Abdomen",
+      "procedureAmount": null,
+      "itemUsed": "",
+      "itemAmount": null,
+      "qty": 4,
+      "amount": 1000,
+      "_id": {
+        "$oid": "6907017e2ed5baf0371dc0c6"
+      }
+    }
+  ],
+  "status": "Payment Verified",
+  "createdAt": {
+    "$date": "2025-11-02T07:00:14.770Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T07:08:04.462Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69070abd859f2c8d827a0bf1"
+  },
+  "transactionId": "FAFCCB68",
+  "admissionId": "ADMT1762066010125",
+  "patientId": "6901fd7288de4808173bb1d5",
+  "categoryId": {
+    "$oid": "683c62e341ea51974b44bf18"
+  },
+  "services": [
+    {
+      "type": "Equipment Use",
+      "description": "Defibrillator",
+      "procedureAmount": null,
+      "itemUsed": "",
+      "itemAmount": null,
+      "qty": 1,
+      "amount": 300,
+      "_id": {
+        "$oid": "69070abd859f2c8d827a0bf2"
+      }
+    }
+  ],
+  "status": "Payment Verified",
+  "createdAt": {
+    "$date": "2025-11-02T07:39:41.905Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T07:40:20.926Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690a28bacbfd44eed89d50b3"
+  },
+  "transactionId": "72B59168",
+  "admissionId": "ADMT1762233484070",
+  "patientId": "6909846222ef0bfb50114f4f",
+  "categoryId": {
+    "$oid": "683c62e341ea51974b44bf18"
+  },
+  "services": [
+    {
+      "type": "Radiology",
+      "description": "Hand AP/O or AP/L (2 views)",
+      "procedureAmount": null,
+      "itemUsed": "",
+      "itemAmount": null,
+      "qty": 6,
+      "amount": 2280,
+      "_id": {
+        "$oid": "690a28bacbfd44eed89d50b4"
+      }
+    }
+  ],
+  "status": "For Billing",
+  "createdAt": {
+    "$date": "2025-11-04T16:24:26.819Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T16:24:26.819Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690a2a29e6218003947d71ce"
+  },
+  "transactionId": "C8D33ECE",
+  "admissionId": "ADMT1762273728934",
+  "patientId": "69022f7c20108e5204a19fb8",
+  "categoryId": {
+    "$oid": "683c62e341ea51974b44bf18"
+  },
+  "services": [
+    {
+      "type": "Equipment Use",
+      "description": "Defibrillator",
+      "procedureAmount": null,
+      "itemUsed": "",
+      "itemAmount": null,
+      "qty": 3,
+      "amount": 900,
+      "_id": {
+        "$oid": "690a2a29e6218003947d71cf"
+      }
+    },
+    {
+      "type": "Equipment Use",
+      "description": "Doppler",
+      "procedureAmount": null,
+      "itemUsed": "",
+      "itemAmount": null,
+      "qty": 1,
+      "amount": 150,
+      "_id": {
+        "$oid": "690a2a29e6218003947d71d0"
+      }
+    }
+  ],
+  "status": "For Billing",
+  "createdAt": {
+    "$date": "2025-11-04T16:30:33.814Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T16:30:33.814Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690a2d8c70a28fbae04b7291"
+  },
+  "transactionId": "1979D3AF",
+  "admissionId": "ADMT1762274589893",
+  "patientId": "690975e4bdf42b59308a08dc",
+  "categoryId": {
+    "$oid": "683c62e341ea51974b44bf18"
+  },
+  "services": [
+    {
+      "type": "Equipment Use",
+      "description": "Defibrillator",
+      "procedureAmount": null,
+      "itemUsed": "",
+      "itemAmount": null,
+      "qty": 2,
+      "amount": 600,
+      "_id": {
+        "$oid": "690a2d8c70a28fbae04b7292"
+      }
+    },
+    {
+      "type": "Equipment Use",
+      "description": "Defibrillator",
+      "procedureAmount": null,
+      "itemUsed": "",
+      "itemAmount": null,
+      "qty": 1,
+      "amount": 300,
+      "_id": {
+        "$oid": "690a2d8c70a28fbae04b7293"
+      }
+    }
+  ],
+  "status": "For Billing",
+  "createdAt": {
+    "$date": "2025-11-04T16:45:00.263Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T16:45:00.263Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690a3107b2f451b548347434"
+  },
+  "transactionId": "ED90A37E",
+  "admissionId": "ADMT1762275282674",
+  "patientId": "69093b203731d02365187da5",
+  "categoryId": {
+    "$oid": "683c62ed41ea51974b44bf1d"
+  },
+  "services": [
+    {
+      "type": "Equipment Use",
+      "description": "Defibrillator",
+      "procedureAmount": null,
+      "itemUsed": "",
+      "itemAmount": null,
+      "qty": 1,
+      "amount": 300,
+      "_id": {
+        "$oid": "690a3107b2f451b548347435"
+      }
+    },
+    {
+      "type": "Radiology",
+      "description": "Shoulder AP",
+      "procedureAmount": null,
+      "itemUsed": "",
+      "itemAmount": null,
+      "qty": 1,
+      "amount": 250,
+      "_id": {
+        "$oid": "690a3107b2f451b548347436"
+      }
+    }
+  ],
+  "status": "For Billing",
+  "createdAt": {
+    "$date": "2025-11-04T16:59:51.911Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T16:59:51.911Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690a35534270929110479071"
+  },
+  "transactionId": "EC9C2414",
+  "admissionId": "ADMT1762276655553",
+  "patientId": "69098125e31874b2d3fad656",
+  "categoryId": {
+    "$oid": "683c62ed41ea51974b44bf1d"
+  },
+  "services": [
+    {
+      "type": "Radiology",
+      "description": "Pelvis AP",
+      "procedureAmount": null,
+      "itemUsed": "",
+      "itemAmount": null,
+      "qty": 1,
+      "amount": 300,
+      "_id": {
+        "$oid": "690a35534270929110479072"
+      }
+    }
+  ],
+  "status": "For Billing",
+  "createdAt": {
+    "$date": "2025-11-04T17:18:11.817Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T17:18:11.817Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690c454d3cca6e3f4e10d440"
+  },
+  "transactionId": "DA8E692F",
+  "admissionId": "ADMT1762276655553",
+  "patientId": "69098125e31874b2d3fad656",
+  "categoryId": {
+    "$oid": "683c62ed41ea51974b44bf1d"
+  },
+  "services": [
+    {
+      "type": "Medicines",
+      "description": "Acetylcisteine 200mg",
+      "procedureAmount": 2,
+      "itemUsed": "",
+      "itemAmount": 9,
+      "qty": 1,
+      "amount": 11,
+      "_id": {
+        "$oid": "690c454d3cca6e3f4e10d441"
+      }
+    }
+  ],
+  "status": "For Billing",
+  "createdAt": {
+    "$date": "2025-11-06T06:50:53.890Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-06T06:50:53.890Z"
+  }
+}]

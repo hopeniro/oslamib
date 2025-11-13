@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patient Details</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f8fb;
+      margin: 0;
+      color: #222;
+      font-size: 15px;
+    }
+    h1, h2, h3 {
+      font-weight: 600;
+      color: #0891b2;
+      margin: 0;
+    }
+    a { text-decoration: none; }
+    .sidebar {
+      width: 250px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding-top: 10px;
+      padding: 12px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      overflow-y: auto;
+      border-left: 4px solid #0891b2;
+      transition: width 0.3s;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      border-radius: 10px;
+      margin: 8px 10px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.25s ease;
+      position: relative;
+      text-decoration: none;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      background: #e6f7fa;
+      color: #0891b2;
+      border-color: #b3e5ef;
+      box-shadow: 0 3px 8px rgba(8,145,178,0.1);
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #0891b2;
+      border-radius: 4px 0 0 4px;
+    }
+    .main-container {
+  margin-left: 300px;
+  padding: 0 20px;
+  transition: margin-left 0.3s;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px; /* match sidebar top margin */
+  height: calc(89vh - 40px);
+    }
+    .content-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.10);
+  padding: 40px 50px;
+  width: 92%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-left: 4px solid #0891b2;
+    }
+    .wrapbox-scroll {
+  overflow-y: auto;
+  padding-top: 0;
+  flex: 1;
+    }
+    .content-card h2 {
+      font-size: 26px;
+      color: #0891b2;
+      border-bottom: 2px solid #e5f3f5;
+      padding-bottom: 8px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .form-section {
+      margin-bottom: 30px;
+      background: #f9fbfc;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 24px;
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.02);
+    }
+    .form-section h3 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 17px;
+      color: #0891b2;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    .form-grid {
+      display: grid;
+      gap: 18px 24px;
+    }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .field label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 5px;
+      display: block;
+    }
+    .field .value {
+      padding: 10px 12px;
+      border: 1px solid #cfd8dc;
+      border-radius: 6px;
+      font-size: 14px;
+      background: #fff;
+      min-height: 18px;
+    }
+    .actions {
+      text-align: right;
+      margin-top: 30px;
+    }
+    .actions button, .btn, .btn-primary, .btn-danger {
+      padding: 12px 24px;
+      background: #0891b2;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(8,145,178,0.2);
+      transition: all 0.25s ease;
+    }
+    .actions button:hover, .btn-primary:hover {
+      background: #067a95;
+      box-shadow: 0 6px 16px rgba(8,145,178,0.25);
+      transform: translateY(-1px);
+    }
+    .btn-danger {
+      background: #c62828;
+    }
+    .banner {
+      padding: 10px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+    }
+    .banner.success { color: green; }
+    .banner.error { color: red; }
+    .note {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 900px) {
+      .main-container { margin-left: 0; padding: 20px; }
+      .sidebar { position: static; width: 100%; margin-bottom: 20px; }
+      .form-grid { grid-template-columns: 1fr !important; }
+      .actions { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <button id="sidebarToggle" style="background:#fff;border:1.5px solid #e5f3f5;cursor:pointer;padding:6px 8px;position:absolute;top:18px;right:18px;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,0.04);font-size:16px;color:#0891b2;z-index:10;">
+      <i id="sidebarToggleIcon" class="bi bi-box-arrow-left" style="color:#0891b2;"></i>
+    </button>
+    <div style="display:flex;align-items:center;gap:12px;padding:24px 20px 12px 20px;">
+      <img src="/logo.png" style="width:44px;height:44px;border-radius:8px;object-fit:contain;">
+      <div>
+        <div style="font-size:20px;font-weight:700;color:#0891b2;">OsLAM</div>
+        <div style="font-size:13px;color:#666;">Triage</div>
+      </div>
+    </div>
+    <nav style="margin-top:10px;">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="/triagedashboard" class="nav-link"><i class="bi bi-grid"></i> <span class="nav-text">Dashboard</span></a></li>
+        <li><a href="/admit-list" class="nav-link"><i class="bi bi-list-check"></i> <span class="nav-text">Patient List</span></a></li>
+        <li><a href="/patient" class="nav-link"><i class="bi bi-person-plus"></i> <span class="nav-text">Registration</span></a></li>
+        <li><a href="/onhold" class="nav-link"><i class="bi bi-question-circle"></i> <span class="nav-text">Unidentified</span></a></li>
+        <li><a href="/patient-archive" class="nav-link"><i class="bi bi-archive"></i> <span class="nav-text">Archived Patients</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+  <div class="main-container" style="margin-left: 290px;">
+    <div class="content-card">
+    
+
+      <% if (typeof success !== 'undefined' && success) { %>
+        <p class="banner success"><%= success %></p>
+      <% } %>
+      <% if (typeof error !== 'undefined' && error) { %>
+        <p class="banner error"><%= error %></p>
+      <% } %>
+
+      <h2>HRN: <%= patient.patientId %></h2>
+     <div class="wrapbox-scroll">
+      <% if (patient.isArchived) { %>
+        <div class="banner" style="background:#fff3cd; border-color:#ffc107; color:#856404;">
+          <strong>Archived</strong> on <%= patient.archivedAt ? new Date(patient.archivedAt).toLocaleString() : 'N/A' %>
+          <br>Reason: <%= patient.archiveReason || 'N/A' %>
+        </div>
+      <% } %>
+
+      <% if (isProcessed) { %>
+        <div class="note">Patient has been processed and sent to admission records.</div>
+      <% } %>
+      <% if (admissionCount || medicalCount) { %>
+        <div class="note">Linked records — Admissions: <%= admissionCount %>, Medical: <%= medicalCount %></div>
+      <% } %>
+
+      <div class="form-section">
+        <h3>Personal Information</h3>
+        <div class="form-grid grid-3">
+          <div class="field"><label>Last Name</label><div class="value"><%= patient.lastName %></div></div>
+          <div class="field"><label>First Name</label><div class="value"><%= patient.firstName %></div></div>
+          <div class="field"><label>Middle Initial</label><div class="value"><%= patient.middleInitial || '' %></div></div>
+        </div>
+        <div class="form-grid grid-4" style="margin-top:12px;">
+          <div class="field"><label>Date of Birth</label><div class="value"><%= patient.birthDate ? new Date(patient.birthDate).toDateString() : '' %></div></div>
+          <div class="field"><label>Sex</label><div class="value"><%= patient.gender %></div></div>
+          <div class="field"><label>Edad (Age)</label><div class="value"><%= patient.edad || '' %></div></div>
+          <div class="field"><label>Civil Status</label><div class="value"><%= patient.civilStatus || '' %></div></div>
+        </div>
+        <div class="form-grid" style="margin-top:12px; grid-template-columns: 1fr;">
+          <div class="field"><label>Address</label><div class="value"><%= patient.address || '' %></div></div>
+        </div>
+        <div class="form-grid grid-2" style="margin-top:12px;">
+          <div class="field"><label>Contact Number</label><div class="value"><%= patient.contactInfo || '' %></div></div>
+          <div class="field"><label>Religion</label><div class="value"><%= patient.religion || '' %></div></div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3>Vitals</h3>
+        <div class="form-grid grid-4">
+          <div class="field"><label>BP</label><div class="value"><%= patient.bp || '' %></div></div>
+          <div class="field"><label>HR</label><div class="value"><%= patient.hr || '' %></div></div>
+          <div class="field"><label>RR</label><div class="value"><%= patient.rr || '' %></div></div>
+          <div class="field"><label>Temp</label><div class="value"><%= patient.temp || '' %></div></div>
+          <div class="field"><label>SpO₂</label><div class="value"><%= patient.spo2 || '' %></div></div>
+          <div class="field"><label>Height</label><div class="value"><%= patient.height || '' %></div></div>
+          <div class="field"><label>Weight</label><div class="value"><%= patient.weight || '' %></div></div>
+          <div class="field"><label>LMP</label><div class="value"><%= patient.lmp ? new Date(patient.lmp).toDateString() : '' %></div></div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <% if (patient.isArchived) { %>
+          <!-- Archived patient - show only Restore button -->
+          <form action="/patients/<%= patient.patientId %>/restore" method="POST" style="display: inline;">
+            <button class="btn btn-primary" type="submit" onclick="return confirm('Restore HRN <%= patient.patientId %>?');">Restore</button>
+          </form>
+        <% } else { %>
+          <% if (isProcessed) { %>
+            <button class="btn btn-primary" type="button" disabled title="Patient is in process for admission">Update</button>
+          <% } else { %>
+            <a class="btn btn-primary" href="/patients/<%= patient.patientId %>/edit">Update</a>
+          <% } %>
+          <form action="/patients/<%= patient.patientId %>/archive" method="POST" onsubmit="return confirmArchive('<%= patient.patientId %>','<%= (patient.lastName||'').toUpperCase() %> <%= (patient.firstName||'').toUpperCase() %> <%= (patient.middleInitial||'').toUpperCase() %>');" style="display: inline;">
+            <input type="hidden" name="reason" id="archive-reason">
+            <button class="btn btn-danger" type="submit">Archive</button>
+          </form>
+        <% } %>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script>
+    function confirmArchive(hrn, name) {
+      // Confirm first
+      var proceed = confirm('Archive HRN ' + hrn + ' ' + name + '?');
+      if (!proceed) return false;
+
+      // Then ask for a required reason
+      var reason = prompt('Enter reason for archiving HRN ' + hrn);
+      if (reason === null) return false; // cancelled
+      reason = String(reason).trim();
+      if (!reason) {
+        alert('Reason is required.');
+        return false;
+      }
+      var hidden = document.getElementById('archive-reason');
+      if (hidden) hidden.value = reason;
+      return true;
+    }
+  </script>
+  <script>
+    // sidebar toggle (copy of patient design)
+    (function(){
+      const sidebar = document.getElementById('sidebar');
+      const toggleBtn = document.getElementById('sidebarToggle');
+      const toggleIcon = document.getElementById('sidebarToggleIcon');
+      const navTexts = document.querySelectorAll('.nav-text');
+      if (!sidebar || !toggleBtn) return;
+      toggleBtn.addEventListener('click', function(){
+        sidebar.classList.toggle('collapsed');
+        const collapsed = sidebar.classList.contains('collapsed');
+        navTexts.forEach(s=> s.style.display = collapsed ? 'none' : 'inline');
+        sidebar.style.width = collapsed ? '70px' : '250px';
+        // adjust main content margin
+        const main = document.querySelector('div[style*="margin-left:"]');
+        if (main) main.style.marginLeft = collapsed ? '90px' : '290px';
+        toggleIcon.className = collapsed ? 'bi bi-box-arrow-right' : 'bi bi-box-arrow-left';
+      });
+      // on load ensure state
+      if (sidebar.classList.contains('collapsed')){
+        navTexts.forEach(s=> s.style.display = 'none');
+        sidebar.style.width = '70px';
+      }
+    })();
+  </script>
+</body>
+</html>

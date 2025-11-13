@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transaction Details - <%= patient.patientId %></title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .patient-info {
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .patient-info h2 {
+      margin-top: 0;
+    }
+    .patient-info p {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    .transaction-header {
+      background-color: #e0e0e0;
+      font-weight: bold;
+    }
+    .grand-total {
+      font-size: 20px;
+      font-weight: bold;
+      color: #4CAF50;
+      text-align: right;
+      margin-top: 20px;
+    }
+    .back-btn {
+      background-color: #607D8B;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .back-btn:hover {
+      background-color: #455A64;
+    }
+  </style>
+</head>
+<body>
+  <a href="/billing" class="back-btn">← Back to Billing</a>
+  <a href="/billing/print/<%= patient._id %>" class="back-btn" style="background-color: #4CAF50; margin-left: 10px;">🖨️ Print Invoice</a>
+
+  <div class="patient-info">
+    <h2>Patient Information</h2>
+    <p><strong>HRN:</strong> <%= patient.patientId %></p>
+    <p><strong>Name:</strong> <%= patient.firstName %> <%= patient.middleInitial || '' %> <%= patient.lastName %></p>
+    <p><strong>Birthday:</strong> <%= new Date(patient.birthday).toLocaleDateString() %></p>
+    <p><strong>Gender:</strong> <%= patient.gender %></p>
+    <p><strong>Contact:</strong> <%= patient.contact %></p>
+  </div>
+
+  <h2>Transaction History</h2>
+
+  <% transactions.forEach((transaction, txIndex) => { %>
+    <h3>Transaction ID: <%= transaction.transactionId %> - <%= new Date(transaction.createdAt).toLocaleString() %></h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Procedure Amount</th>
+          <th>Item Used</th>
+          <th>Item Amount</th>
+          <th>Total Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% transaction.services.forEach(service => { %>
+          <tr>
+            <td><%= service.type %></td>
+            <td><%= service.description %></td>
+            <td>₱<%= service.procedureAmount ? service.procedureAmount.toFixed(2) : '0.00' %></td>
+            <td><%= service.itemUsed || '-' %></td>
+            <td>₱<%= service.itemAmount ? service.itemAmount.toFixed(2) : '0.00' %></td>
+            <td><strong>₱<%= service.amount.toFixed(2) %></strong></td>
+          </tr>
+        <% }) %>
+        <tr class="transaction-header">
+          <td colspan="5" style="text-align: right;"><strong>Transaction Subtotal:</strong></td>
+          <td><strong>₱<%= transaction.services.reduce((sum, s) => sum + (s.amount || 0), 0).toFixed(2) %></strong></td>
+        </tr>
+      </tbody>
+    </table>
+  <% }) %>
+
+  <div class="grand-total">
+    Grand Total: ₱<%= grandTotal.toFixed(2) %>
+  </div>
+
+  <a href="/billing" class="back-btn" style="margin-top: 20px;">← Back to Billing</a>
+</body>
+</html>

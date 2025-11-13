@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Promissory Notes</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    body {
+      background: #f5f7fa;
+    }
+    .promissory-image {
+      max-width: 200px;
+      max-height: 200px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .status-badge {
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .status-pending { background: #FFC107; color: #000; }
+    .status-approved { background: #4CAF50; color: #fff; }
+    .status-settled { background: #2196F3; color: #fff; }
+    .status-overdue { background: #f44336; color: #fff; }
+  .status-rejected { background: #9E9E9E; color: #fff; }
+    .action-btn {
+      padding: 6px 12px;
+      margin: 2px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .btn-approve { background: #4CAF50; color: white; }
+    .btn-edit { background: #2196F3; color: white; }
+    .btn-settle { background: #9C27B0; color: white; }
+    .btn-overdue { background: #f44336; color: white; }
+  </style>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f8fb;
+      margin: 0;
+      color: #222;
+      font-size: 15px;
+    }
+    /* SIDEBAR & NAV ONLY */
+    .sidebar {
+      width: 250px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding-top: 10px;
+      padding: 12px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      overflow-y: auto;
+      border-left: 4px solid #0891b2;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      border-radius: 10px;
+      margin: 8px 10px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      background: #e6f7fa;
+      color: #0891b2;
+      border-color: #b3e5ef;
+      box-shadow: 0 3px 8px rgba(8,145,178,0.1);
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #0891b2; /* OsLAM title color */
+      border-radius: 4px 0 0 4px;
+      box-shadow: 0 0 0 1px #0891b2;
+    }
+  </style>
+</head>
+<body>
+   <!-- FLOATING SIDEBAR -->
+  <aside class="sidebar">
+    <div style="display:flex;align-items:center;gap:12px;padding:24px 20px 12px 20px;">
+      <img src="/logo.png" style="width:44px;height:44px;border-radius:8px;object-fit:contain;">
+      <div>
+        <div style="font-size:20px;font-weight:700;color:#0891b2;">OsLAM</div>
+        <div style="font-size:13px;color:#666;">Billing</div>
+      </div>
+    </div>
+    <nav style="margin-top:10px;">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="/dashboard" class="nav-link"><i class="bi bi-grid"></i> Dashboard</a></li>
+        <li><a href="/promissory" class="nav-link"><i class="bi bi-file-earmark-text"></i> Promissory Notes</a></li>
+        <li><a href="/services" class="nav-link"><i class="bi bi-tools"></i> Services</a></li>
+         <li><a href="/doctor" class="nav-link"><i class="bi bi-person-badge"></i> Doctors</a></li>
+        <li><a href="/nurse" class="nav-link"><i class="bi bi-person-lines-fill"></i> Nurses</a></li>
+         <li><a href="/doctorscheduling" class="nav-link"><i class="bi bi-calendar-event"></i> Doctor Schedule</a></li>
+        <li><a href="/nursescheduling" class="nav-link"><i class="bi bi-calendar-event"></i> Nurse Schedule</a></li>
+         <li><a href="/staff" class="nav-link"><i class="bi bi-people"></i> Staff</a></li>
+        <li><a href="/audittrail" class="nav-link"><i class="bi bi-shield-check"></i> Audit Trail</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div style="margin-left: 270px;">
+    <!-- Removed duplicate titles and filter/search/pager above the box -->
+
+    <div class="container" style="max-width: 1100px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 32px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 16px;">
+        <h2 style="margin:0;">Promissory Notes</h2>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div style="position:relative;" id="promissoryViewWrapper">
+            <button id="promissoryViewBtn" onclick="togglePromissoryViewMenu(event)" style="padding:6px 12px; cursor:pointer; border:1px solid #ccc; background:white; border-radius:4px;">
+              <i class="bi bi-eye"></i> View
+            </button>
+            <div id="promissoryViewMenu" style="display:none; position:absolute; right:0; top:100%; margin-top:4px; background:white; border:1px solid #ccc; border-radius:4px; box-shadow:0 2px 8px rgba(0,0,0,0.15); min-width:220px; z-index:1000;">
+              <div style="padding:8px 12px; border-bottom:1px solid #eee; font-weight:600; font-size:13px;">Show Columns</div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="promissoryToggle-hrn" checked onchange="togglePromissoryColumn('hrn', this.checked)"> <label for="promissoryToggle-hrn">HRN</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="promissoryToggle-name" checked onchange="togglePromissoryColumn('name', this.checked)"> <label for="promissoryToggle-name">Patient Name</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="promissoryToggle-amount" checked onchange="togglePromissoryColumn('amount', this.checked)"> <label for="promissoryToggle-amount">Amount</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="promissoryToggle-issued" checked onchange="togglePromissoryColumn('issued', this.checked)"> <label for="promissoryToggle-issued">Date Issued</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="promissoryToggle-expected" checked onchange="togglePromissoryColumn('expected', this.checked)"> <label for="promissoryToggle-expected">Expected Payment</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="promissoryToggle-approved" checked onchange="togglePromissoryColumn('approved', this.checked)"> <label for="promissoryToggle-approved">Approved By</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="promissoryToggle-status" checked onchange="togglePromissoryColumn('status', this.checked)"> <label for="promissoryToggle-status">Status</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="promissoryToggle-image" checked onchange="togglePromissoryColumn('image', this.checked)"> <label for="promissoryToggle-image">Image</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="promissoryToggle-action" checked onchange="togglePromissoryColumn('action', this.checked)"> <label for="promissoryToggle-action">Action</label></div>
+            </div>
+          </div>
+          <input id="promissorySearch" type="text" placeholder="Search HRN or name" style="border:1px solid #ccc; border-radius:4px; padding:6px 10px; font-size:13px; width:200px;">
+          <div style="display:flex; align-items:center; gap:6px; font-size:13px;">
+            Rows per page
+            <select id="promissoryRowsPerPage" style="border:1px solid #ccc; border-radius:4px; padding:4px 8px;">
+              <option>10</option>
+              <option>25</option>
+              <option>50</option>
+              <option>100</option>
+              <option value="all">All</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <table id="promissoryTable">
+        <thead>
+          <tr>
+            <th class="col-hrn">HRN</th>
+            <th class="col-name">Patient Name</th>
+            <th class="col-amount">Amount</th>
+            <th class="col-issued">Date Issued</th>
+            <th class="col-expected">Expected Payment</th>
+            <th class="col-approved">Approved By</th>
+            <th class="col-status">Status</th>
+            <th class="col-image">Image</th>
+            <th class="col-action">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (promissories.length === 0) { %>
+            <tr>
+              <td colspan="9" style="text-align: center;">No promissory notes found</td>
+            </tr>
+          <% } else { %>
+            <% promissories.forEach(p => { %>
+              <tr class="promissory-row" data-hrn="<%= p.patientId %>">
+                <td class="col-hrn"><%= p.patientId %></td>
+                <td class="col-name"><%= p.patientName %></td>
+                <td class="col-amount">
+                  ₱<%= p.amount.toFixed(2) %>
+                  <% if (p.status === 'Pending') { %>
+                    <button title="Edit amount" style="border:none;background:none;cursor:pointer;margin-left:6px;" onclick="editAmount('<%= p._id %>', <%= p.amount %>)">
+                      <i class="bi bi-pencil-square"></i>
+                    </button>
+                  <% } %>
+                </td>
+                <td class="col-issued"><%= new Date(p.dateIssued).toLocaleDateString() %></td>
+                <td class="col-expected"><%= new Date(p.paymentExpected).toLocaleDateString() %></td>
+                <td class="col-approved"><%= p.approvedBy || 'N/A' %></td>
+                <td class="col-status">
+                  <% if (p.status === 'Settled') { %>
+                    <span class="status-badge status-<%= p.status.toLowerCase() %>"><%= p.status %></span>
+                  <% } else { %>
+                    <span class="status-badge status-<%= p.status.toLowerCase() %>" style="display:flex;align-items:center;gap:6px;">
+                      <% if (p.status === 'Pending') { %>
+                        <i class="bi bi-hourglass-split" style="font-size:16px;color:#222;"></i>
+                      <% } else if (p.status === 'Approved') { %>
+                        <i class="bi bi-check-circle" style="font-size:16px;color:#4CAF50;"></i>
+                      <% } else if (p.status === 'Overdue') { %>
+                        <i class="bi bi-exclamation-circle" style="font-size:16px;color:#f44336;"></i>
+                      <% } else if (p.status === 'Rejected') { %>
+                        <i class="bi bi-x-circle" style="font-size:16px;color:#9E9E9E;"></i>
+                      <% } %>
+                      <%= p.status %>
+                    </span>
+                  <% } %>
+                </td>
+                <td class="col-image">
+                  <% if (p.imagePath) { %>
+                    <img src="<%= p.imagePath %>" class="promissory-image" onclick="viewImage('<%= p.imagePath %>')" alt="Promissory">
+                  <% } else { %>
+                    <span style="color:#999;">No Image</span>
+                  <% } %>
+                </td>
+                <td class="col-action">
+                  <a href="/promissory/invoice/<%= p._id %>" class="view-btn">Promissory</a>
+                </td>
+              </tr>
+            <% }) %>
+          <% } %>
+        </tbody>
+      </table>
+      <div id="promissoryPager" style="display:flex; align-items:center; justify-content:flex-end; gap:10px; margin-top:10px; font-size:13px; color:#666;">
+        <span id="promissoryPageInfo">Page 1 of 1</span>
+        <button id="promissoryPrev" style="padding:4px 8px; cursor:pointer;">&laquo;</button>
+        <button id="promissoryNext" style="padding:4px 8px; cursor:pointer;">&raquo;</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    // Notification logic with dropdown
+    async function fetchNotifications() {
+      try {
+        const res = await axios.get('/notifications/promissory');
+        const notifs = res.data || [];
+        const unreadCount = notifs.filter(n => !n.read).length;
+        const badge = document.getElementById('notificationBadge');
+        if (unreadCount > 0) {
+          badge.textContent = unreadCount;
+          badge.style.display = 'block';
+        } else {
+          badge.textContent = '';
+          badge.style.display = 'none';
+        }
+        
+        const dropdown = document.getElementById('notif-dropdown');
+        dropdown.innerHTML = notifs.map(n => `<div class="notif-item${n.read ? '' : ' unread'}" data-hrn="${n.patientId}">${n.message} (${timeAgo(n.createdAt)})</div>`).join('');
+      } catch (err) {
+        console.error('Error fetching notifications:', err);
+      }
+    }
+    setInterval(fetchNotifications, 3000);
+    fetchNotifications();
+
+    // Toggle dropdown on bell click
+    document.getElementById('notif-bell').onclick = function() {
+      const dd = document.getElementById('notif-dropdown');
+      dd.style.display = dd.style.display === 'block' ? 'none' : 'block';
+    };
+
+    // Navigate to patient row and highlight on notification click
+    document.getElementById('notif-dropdown').addEventListener('click', function(e) {
+      if (e.target.classList.contains('notif-item')) {
+        const hrn = e.target.getAttribute('data-hrn');
+        const row = document.querySelector(`tr[data-hrn='${hrn}']`);
+        if (row) {
+          // Scroll to the row
+          row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          
+          // Highlight the row with gray (stays until clicked)
+          row.classList.add('highlight-row');
+          
+          // Hide dropdown
+          document.getElementById('notif-dropdown').style.display = 'none';
+          
+          // Mark notification as read
+          axios.post('/notifications/read', { patientId: hrn, department: 'Promissory' });
+          fetchNotifications();
+        }
+      }
+    });
+
+    // Remove highlight when row is clicked
+    const tableBody = document.querySelector('table tbody');
+    if (tableBody) {
+      tableBody.addEventListener('click', function(e) {
+        const row = e.target.closest('tr');
+        if (row) {
+          row.classList.remove('highlight-row');
+        }
+      });
+    }
+
+    // Socket.IO for real-time notifications
+    const socket = io();
+    socket.on('new-notification', (data) => {
+      if (data.department === 'Promissory') {
+        fetchNotifications();
+      }
+    });
+
+    function timeAgo(date) {
+      const seconds = Math.floor((new Date() - new Date(date)) / 1000);
+      let interval = seconds / 31536000;
+      if (interval > 1) return Math.floor(interval) + ' year' + (Math.floor(interval) > 1 ? 's' : '') + ' ago';
+      interval = seconds / 2592000;
+      if (interval > 1) return Math.floor(interval) + ' month' + (Math.floor(interval) > 1 ? 's' : '') + ' ago';
+      interval = seconds / 86400;
+      if (interval > 1) return Math.floor(interval) + ' day' + (Math.floor(interval) > 1 ? 's' : '') + ' ago';
+      interval = seconds / 3600;
+      if (interval > 1) return Math.floor(interval) + ' hr' + (Math.floor(interval) > 1 ? 's' : '') + ' ago';
+      interval = seconds / 60;
+      if (interval > 1) return Math.floor(interval) + ' min ago';
+      return Math.floor(seconds) + ' sec ago';
+    }
+
+    function viewImage(imagePath) {
+      window.open(imagePath, '_blank');
+    }
+
+    async function updateStatus(promissoryId, status) {
+      if (!confirm(`Are you sure you want to mark this promissory note as ${status}?`)) {
+        return;
+      }
+
+      try {
+        const response = await axios.post('/promissory/update-status', {
+          promissoryId,
+          status
+        });
+
+        if (response.data.success) {
+          alert('Status updated successfully!');
+          window.location.reload();
+        } else {
+          alert('Error: ' + (response.data.error || 'Failed to update status'));
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Error updating status');
+      }
+    }
+
+    async function editAmount(promissoryId, currentAmount) {
+      const newAmount = prompt(`Enter new amount (current: ₱${currentAmount.toFixed(2)}):`, currentAmount);
+      
+      if (newAmount === null) return;
+      
+      const amount = parseFloat(newAmount);
+      if (isNaN(amount) || amount <= 0) {
+        alert('Invalid amount');
+        return;
+      }
+
+      try {
+        const response = await axios.post('/promissory/update-amount', {
+          promissoryId,
+          amount
+        });
+
+        if (response.data.success) {
+          alert('Amount updated successfully!');
+          window.location.reload();
+        } else {
+          alert('Error: ' + (response.data.error || 'Failed to update amount'));
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Error updating amount');
+      }
+    }
+  </script>
+
+  <script>
+    // ================= Table UI: View/Search/Pagination =================
+    function togglePromissoryViewMenu(event){
+      const menu = document.getElementById('promissoryViewMenu');
+      if (!menu) return;
+      const isShown = menu.style.display === 'block';
+      menu.style.display = isShown ? 'none' : 'block';
+      if (!isShown){
+        setTimeout(()=>document.addEventListener('click', promissoryViewOutside), 0);
+      }
+      event.stopPropagation();
+    }
+    function promissoryViewOutside(e){
+      const menu = document.getElementById('promissoryViewMenu');
+      const btn = document.getElementById('promissoryViewBtn');
+      if (!menu || !btn) return;
+      if (!menu.contains(e.target) && e.target !== btn){
+        menu.style.display = 'none';
+        document.removeEventListener('click', promissoryViewOutside);
+      }
+    }
+    function togglePromissoryColumn(key, show) {
+      const table = document.getElementById('promissoryTable');
+      const th = table.querySelector(`thead .col-${key}`);
+      const tds = table.querySelectorAll(`tbody .col-${key}`);
+      const display = show ? '' : 'none';
+      if (th) th.style.display = display;
+      tds.forEach(td => td.style.display = display);
+    }
+
+    (function initPromissoryTableUI(){
+      const tbody = document.querySelector('#promissoryTable tbody');
+      const allRows = Array.from(tbody.querySelectorAll('tr.promissory-row'));
+      const searchInput = document.getElementById('promissorySearch');
+      const rowsPerSelect = document.getElementById('promissoryRowsPerPage');
+      const pageInfo = document.getElementById('promissoryPageInfo');
+      const prevBtn = document.getElementById('promissoryPrev');
+      const nextBtn = document.getElementById('promissoryNext');
+
+      let filtered = allRows.slice();
+      let currentPage = 1;
+      let rowsPerPage = parseRowsPer(rowsPerSelect.value);
+      function parseRowsPer(v){ return v === 'all' ? Infinity : parseInt(v,10); }
+
+      function render(){
+        allRows.forEach(r => r.style.display = 'none');
+        const total = filtered.length;
+        const totalPages = Math.max(1, Math.ceil(total / (rowsPerPage || Infinity)));
+        if (currentPage > totalPages) currentPage = totalPages;
+        const start = (currentPage-1) * (rowsPerPage || Infinity);
+        const end = rowsPerPage === Infinity ? total : start + rowsPerPage;
+        filtered.slice(start, end).forEach(r => r.style.display = '');
+        if (pageInfo) pageInfo.textContent = `Page ${total===0?0:currentPage} of ${total===0?0:totalPages}`;
+        if (prevBtn) prevBtn.disabled = currentPage <= 1 || total === 0;
+        if (nextBtn) nextBtn.disabled = currentPage >= totalPages || total === 0;
+      }
+
+      function applySearch(){
+        const q = (searchInput.value||'').toLowerCase();
+        if (!q) filtered = allRows.slice();
+        else {
+          filtered = allRows.filter(r => {
+            const hrn = (r.querySelector('.col-hrn')?.textContent||'').toLowerCase();
+            const name = (r.querySelector('.col-name')?.textContent||'').toLowerCase();
+            return hrn.includes(q) || name.includes(q);
+          });
+        }
+        currentPage = 1; render();
+      }
+
+      searchInput?.addEventListener('input', applySearch);
+      rowsPerSelect?.addEventListener('change', ()=>{ rowsPerPage = parseRowsPer(rowsPerSelect.value); currentPage=1; render(); });
+      prevBtn?.addEventListener('click', ()=>{ if(currentPage>1){ currentPage--; render(); }});
+      nextBtn?.addEventListener('click', ()=>{ currentPage++; render(); });
+
+      applySearch();
+    })();
+  </script>
+</body>
+</html>

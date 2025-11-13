@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Discharged Patients</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+   <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f8fb;
+      margin: 0;
+      color: #222;
+      font-size: 15px;
+    }
+    /* SIDEBAR & NAV ONLY */
+    .sidebar {
+      width: 250px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding-top: 10px;
+      padding: 12px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      overflow-y: auto;
+      border-left: 4px solid #0891b2;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      border-radius: 10px;
+      margin: 8px 10px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.25s ease;
+      position: relative;
+      text-decoration: none;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      background: #e6f7fa;
+      color: #0891b2;
+      border-color: #b3e5ef;
+      box-shadow: 0 3px 8px rgba(8,145,178,0.1);
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #0891b2; /* OsLAM title color */
+      border-radius: 4px 0 0 4px;
+      box-shadow: 0 0 0 1px #0891b2;
+    }
+  </style>
+</head>
+<body>
+   <!-- FLOATING SIDEBAR -->
+  <aside class="sidebar">
+    <div style="display:flex;align-items:center;gap:12px;padding:24px 20px 12px 20px;">
+      <img src="/logo.png" style="width:44px;height:44px;border-radius:8px;object-fit:contain;">
+      <div>
+        <div style="font-size:20px;font-weight:700;color:#0891b2;">OsLAM</div>
+        <div style="font-size:13px;color:#666;">Admission</div>
+      </div>
+    </div>
+     <nav style="margin-top:10px;">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="/admissiondashboard" class="nav-link"><i class="bi bi-grid"></i> Dashboard</a></li>
+        <li><a href="/admissionrecords" class="nav-link"><i class="bi bi-journal-medical"></i> Admission Records</a></li>
+        <li><a href="/admittedpatient" class="nav-link"><i class="bi bi-person-check"></i> Admitted Patients</a></li>
+        <li><a href="/dischargedpatients" class="nav-link"><i class="bi bi-person-dash"></i> Discharged Patients</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div style="margin-left: 260px; background:#f5f7fa; min-height:100vh;">
+    <div class="container" style="max-width:1100px; margin:40px auto; background:#fff; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.08); padding:32px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 16px;">
+        <h1 style="margin:0;">Discharged Patients</h1>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div style="position:relative;" id="dischargedViewWrapper">
+            <button id="dischargedViewBtn" onclick="toggleDischargedViewMenu(event)" style="padding:6px 12px; cursor:pointer; border:1px solid #ccc; background:white; border-radius:4px;">
+              <i class="bi bi-eye"></i> View
+            </button>
+            <div id="dischargedViewMenu" style="display:none; position:absolute; right:0; top:100%; margin-top:4px; background:white; border:1px solid #ccc; border-radius:4px; box-shadow:0 2px 8px rgba(0,0,0,0.15); min-width:200px; z-index:1000;">
+              <div style="padding:8px 12px; border-bottom:1px solid #eee; font-weight:600; font-size:13px;">Show Columns</div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()">
+                <input type="checkbox" id="colToggle-admitting" checked onchange="toggleDischargedColumn('admitting', this.checked)">
+                <label for="colToggle-admitting">Admitting ID</label>
+              </div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()">
+              <input type="checkbox" id="colToggle-hrn" checked onchange="toggleDischargedColumn('hrn', this.checked)">
+              <label for="colToggle-hrn">HRN</label>
+            </div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()">
+              <input type="checkbox" id="colToggle-name" checked onchange="toggleDischargedColumn('name', this.checked)">
+              <label for="colToggle-name">Full Name</label>
+            </div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()">
+              <input type="checkbox" id="colToggle-dept" checked onchange="toggleDischargedColumn('dept', this.checked)">
+              <label for="colToggle-dept">Department</label>
+            </div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()">
+              <input type="checkbox" id="colToggle-admitted" checked onchange="toggleDischargedColumn('admitted', this.checked)">
+              <label for="colToggle-admitted">Admitted At</label>
+            </div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()">
+              <input type="checkbox" id="colToggle-discharged" checked onchange="toggleDischargedColumn('discharged', this.checked)">
+              <label for="colToggle-discharged">Discharged At</label>
+            </div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()">
+              <input type="checkbox" id="colToggle-by" checked onchange="toggleDischargedColumn('by', this.checked)">
+              <label for="colToggle-by">Discharged By</label>
+            </div>
+          </div>
+        </div>
+        <input id="dischargedSearch" type="text" placeholder="Search HRN or name" style="border:1px solid #ccc; border-radius:4px; padding:6px 10px; font-size:13px; width:200px;">
+        <div style="display:flex; align-items:center; gap:6px; font-size:13px;">
+          Rows per page
+          <select id="dischargedRowsPerPage" style="border:1px solid #ccc; border-radius:4px; padding:4px 8px;">
+            <option>10</option>
+            <option>25</option>
+            <option>50</option>
+            <option>100</option>
+            <option value="all">All</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <table id="dischargedTable">
+      <thead>
+        <tr>
+            <th class="col-admitting">Admitting ID</th>
+            <th class="col-hrn">HRN</th>
+            <th class="col-name">Full Name</th>
+            <th class="col-dept">Department</th>
+            <th class="col-admitted">Admitted At</th>
+            <th class="col-discharged">Discharged At</th>
+            <th class="col-by">Discharged By</th>
+            <th class="col-view">View</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% (discharged || []).forEach(function(d){ %>
+            <tr class="discharged-row">
+              <td class="col-admitting"><%= d.admittingId %></td>
+              <td class="col-hrn"><%= d.patientId %></td>
+              <td class="col-name"><%= d.fullName || '' %></td>
+              <td class="col-dept"><%= d.department || '' %></td>
+              <td class="col-admitted"><%= d.admittedAt ? new Date(d.admittedAt).toLocaleString() : '' %></td>
+              <td class="col-discharged"><%= d.dischargedAt ? new Date(d.dischargedAt).toLocaleString() : '' %></td>
+              <td class="col-by"><%= d.dischargedBy || '' %></td>
+              <td class="col-view">
+                <a href="/patients/<%= d.patientId %>/view" title="View Details" style="color:#0891b2;text-decoration:none;font-size:15px;font-weight:500;">
+                  View
+                </a>
+              </td>
+            </tr>
+          <% }) %>
+      </tbody>
+    </table>
+    
+    <div id="dischargedPager" style="display:flex; align-items:center; justify-content:flex-end; gap:10px; margin-top:10px; font-size:13px; color:#666;">
+      <span id="dischargedPageInfo">Page 1 of 1</span>
+      <button id="dischargedPrev" style="padding:4px 8px; cursor:pointer;">&laquo;</button>
+      <button id="dischargedNext" style="padding:4px 8px; cursor:pointer;">&raquo;</button>
+    </div>
+  </div>
+
+  <script>
+    // Discharged Table Controls
+    (function initDischargedTableUI() {
+      const table = document.getElementById('dischargedTable');
+      if (!table) return;
+
+      const tbody = table.querySelector('tbody');
+      const allRows = Array.from(tbody.querySelectorAll('.discharged-row'));
+      const searchInput = document.getElementById('dischargedSearch');
+      const rowsPerPageSelect = document.getElementById('dischargedRowsPerPage');
+      const pageInfo = document.getElementById('dischargedPageInfo');
+      const prevBtn = document.getElementById('dischargedPrev');
+      const nextBtn = document.getElementById('dischargedNext');
+
+      let state = {
+        search: '',
+        perPage: parseRowsPerPage(rowsPerPageSelect?.value || '10'),
+        page: 1
+      };
+
+      function parseRowsPerPage(val){
+        return (val === 'all') ? Infinity : Math.max(1, parseInt(val || '10', 10));
+      }
+
+      function rowMatches(row, term){
+        if (!term) return true;
+        const hrn = (row.querySelector('.col-hrn')?.textContent || '').toLowerCase();
+        const name = (row.querySelector('.col-name')?.textContent || '').toLowerCase();
+        return hrn.includes(term) || name.includes(term);
+      }
+
+      function apply(){
+        const term = state.search.trim().toLowerCase();
+        const filtered = allRows.filter(r => rowMatches(r, term));
+
+        const total = filtered.length;
+        const perPage = state.perPage === Infinity ? total || 1 : state.perPage;
+        const totalPages = Math.max(1, Math.ceil(total / perPage));
+        state.page = Math.min(Math.max(1, state.page), totalPages);
+
+        allRows.forEach(r => r.style.display = 'none');
+
+        const startIdx = (state.page - 1) * perPage;
+        const endIdx = state.perPage === Infinity ? total : Math.min(startIdx + perPage, total);
+        for (let i = startIdx; i < endIdx; i++) {
+          const row = filtered[i];
+          if (row) row.style.display = '';
+        }
+
+        if (pageInfo) pageInfo.textContent = `Page ${state.page} of ${totalPages}`;
+        if (prevBtn) prevBtn.disabled = state.page <= 1;
+        if (nextBtn) nextBtn.disabled = state.page >= totalPages;
+      }
+
+      if (searchInput) searchInput.addEventListener('input', () => {
+        state.search = searchInput.value || '';
+        state.page = 1;
+        apply();
+      });
+
+      if (rowsPerPageSelect) rowsPerPageSelect.addEventListener('change', () => {
+        state.perPage = parseRowsPerPage(rowsPerPageSelect.value);
+        state.page = 1;
+        apply();
+      });
+
+      if (prevBtn) prevBtn.addEventListener('click', () => { state.page--; apply(); });
+      if (nextBtn) nextBtn.addEventListener('click', () => { state.page++; apply(); });
+
+      apply();
+    })();
+
+    // View dropdown
+    function toggleDischargedViewMenu(event){
+      const menu = document.getElementById('dischargedViewMenu');
+      if (!menu) return;
+      const isShown = menu.style.display === 'block';
+      menu.style.display = isShown ? 'none' : 'block';
+      if (!isShown){
+        setTimeout(()=>document.addEventListener('click', dischargedViewOutside), 0);
+      }
+      event.stopPropagation();
+    }
+
+    function dischargedViewOutside(e){
+      const menu = document.getElementById('dischargedViewMenu');
+      const btn = document.getElementById('dischargedViewBtn');
+      if (!menu || !btn) return;
+      if (!menu.contains(e.target) && e.target !== btn){
+        menu.style.display = 'none';
+        document.removeEventListener('click', dischargedViewOutside);
+      }
+    }
+
+    function toggleDischargedColumn(key, show){
+      const th = document.querySelector(`#dischargedTable thead .col-${key}`);
+      const tds = document.querySelectorAll(`#dischargedTable tbody .col-${key}`);
+      const display = show ? '' : 'none';
+      if (th) th.style.display = display;
+      tds.forEach(td => td.style.display = display);
+    }
+  </script>
+</body>
+</html>

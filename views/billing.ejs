@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Billing</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f8fb;
+      margin: 0;
+      color: #222;
+      font-size: 15px;
+    }
+    /* SIDEBAR & NAV ONLY */
+    .sidebar {
+      width: 250px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding-top: 10px;
+      padding: 12px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      overflow-y: auto;
+      border-left: 4px solid #0891b2;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      border-radius: 10px;
+      margin: 8px 10px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.25s ease;
+      position: relative;
+      text-decoration: none;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      background: #e6f7fa;
+      color: #0891b2;
+      border-color: #b3e5ef;
+      box-shadow: 0 3px 8px rgba(8,145,178,0.1);
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #0891b2; /* OsLAM title color */
+      border-radius: 4px 0 0 4px;
+      box-shadow: 0 0 0 1px #0891b2;
+    }
+  </style>
+</head>
+<body>
+   <!-- FLOATING SIDEBAR -->
+  <aside class="sidebar">
+    <div style="display:flex;align-items:center;gap:12px;padding:24px 20px 12px 20px;">
+      <img src="/logo.png" style="width:44px;height:44px;border-radius:8px;object-fit:contain;">
+      <div>
+        <div style="font-size:20px;font-weight:700;color:#0891b2;">OsLAM</div>
+        <div style="font-size:13px;color:#666;">Billing</div>
+      </div>
+    </div>
+    <nav style="margin-top:10px;">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="/billingdashboard" class="nav-link"><i class="bi bi-grid"></i> Dashboard</a></li>
+        <li><a href="/billing" class="nav-link"><i class="bi bi-clock-history"></i> Pending Bills</a></li>
+        <li><a href="/billing/payments" class="nav-link"><i class="bi bi-receipt"></i> Billing Records</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div style="margin-left:260px; min-height:100vh; background:#f5f7fa; padding:36px 32px 32px 32px;">
+    <div class="container" style="max-width:1100px; margin:40px auto; background:#fff; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.08); padding:32px;">
+      <div class="page-header" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:18px;">
+  <h1 style="margin:0; font-size:2rem; font-weight:700; color:#222;">Pending Bills</h1>
+        <div class="notif-wrapper">
+          <div id="notif-bell">
+            <i class="bi bi-bell-fill"></i>
+            <span class="badge" id="notificationBadge"></span>
+          </div>
+          <div id="notif-dropdown"></div> 
+        </div>
+      </div>
+      <div class="toast" id="toast" style="margin-bottom:18px;">New billing added!</div>
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 16px;">
+        <h2 style="margin:0;"></h2>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div style="position:relative;" id="billingViewWrapper">
+            <button id="billingViewBtn" onclick="toggleBillingViewMenu(event)" style="padding:6px 12px; cursor:pointer; border:1px solid #ccc; background:white; border-radius:4px;">
+              <i class="bi bi-eye"></i> View
+            </button>
+            <div id="billingViewMenu" style="display:none; position:absolute; right:0; top:100%; margin-top:4px; background:white; border:1px solid #ccc; border-radius:4px; box-shadow:0 2px 8px rgba(0,0,0,0.15); min-width:220px; z-index:1000;">
+              <div style="padding:8px 12px; border-bottom:1px solid #eee; font-weight:600; font-size:13px;">Show Columns</div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="billingToggle-hrn" checked onchange="toggleBillingColumn('hrn', this.checked)"> <label for="billingToggle-hrn">HRN</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="billingToggle-name" checked onchange="toggleBillingColumn('name', this.checked)"> <label for="billingToggle-name">Full Name</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="billingToggle-birthday" checked onchange="toggleBillingColumn('birthday', this.checked)"> <label for="billingToggle-birthday">Birthday</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="billingToggle-total" checked onchange="toggleBillingColumn('total', this.checked)"> <label for="billingToggle-total">Total Amount</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="billingToggle-promissory" checked onchange="toggleBillingColumn('promissory', this.checked)"> <label for="billingToggle-promissory">Promissory Status</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="billingToggle-covered" checked onchange="toggleBillingColumn('covered', this.checked)"> <label for="billingToggle-covered">Covered</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="billingToggle-date" checked onchange="toggleBillingColumn('date', this.checked)"> <label for="billingToggle-date">Date</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="billingToggle-action" checked onchange="toggleBillingColumn('action', this.checked)"> <label for="billingToggle-action">Action</label></div>
+            </div>
+          </div>
+          <input id="billingSearch" type="text" placeholder="Search HRN or name" style="border:1px solid #ccc; border-radius:4px; padding:6px 10px; font-size:13px; width:200px;">
+          <div style="display:flex; align-items:center; gap:6px; font-size:13px;">
+            Rows per page
+            <select id="billingRowsPerPage" style="border:1px solid #ccc; border-radius:4px; padding:4px 8px;">
+              <option>10</option>
+              <option>25</option>
+              <option>50</option>
+              <option>100</option>
+              <option value="all">All</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <table id="billingTable">
+        <thead>
+          <tr>
+            <th class="col-hrn">HRN</th>
+            <th class="col-name">Full Name</th>
+            <th class="col-birthday">Birthday</th>
+            <th class="col-total">Total Amount</th>
+            <th class="col-promissory">Promissory Status</th>
+            <th class="col-covered">Covered</th>
+            <th class="col-thumbnails">Date</th>
+            <th class="col-date">Thumbnails</th>
+            <th class="col-action">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (patients.length === 0) { %>
+            <tr>
+              <td colspan="8" style="text-align: center;">No pending transactions</td>
+            </tr>
+          <% } else { %>
+            <% patients.forEach(patient => { %>
+              <tr class="billing-row" data-patient-id="<%= patient.patientId %>" data-hrn="<%= patient.hrn %>">
+                <td class="col-hrn"><%= patient.hrn %></td>
+                <td class="col-name"><%= patient.fullName %></td>
+                <td class="col-birthday"><%= new Date(patient.birthday).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) %></td>
+                <td class="col-total">₱<%= patient.totalAmount.toFixed(2) %></td>
+                <td class="col-promissory">
+                <% if (patient.promissoryStatus) { %>
+                  <span><%= patient.promissoryStatus %></span>
+                <% } else { %>
+                  -
+                <% } %>
+              </td>
+            <td class="col-covered">
+              <% if (typeof patient.covered === 'number') { %>
+                ₱<%= patient.covered.toFixed(2) %>
+              <% } else if (patient.rejectionReason) { %>
+                <a href="javascript:void(0)" onclick="showRejectionDetails('<%= patient.rejectionReason.replace(/'/g, "\\'") %>', '<%= patient.patientId %>', '<%= patient.hrn %>', '<%= patient.fullName %>', <%= patient.totalAmount %>)" style="color:#f44336;cursor:pointer;text-decoration:underline;">Details</a>
+              <% } else if (!patient.promissoryStatus || patient.promissoryStatus === 'Settled') { %>
+                <span class="promissory-link" onclick="openPromissoryUpload('<%= patient.patientId %>', '<%= patient.hrn %>', '<%= patient.fullName %>', <%= patient.totalAmount %>)" style="color:#007bff;cursor:pointer;text-decoration:underline;">Submit Promissory</span>
+              <% } else { %>
+                -
+              <% } %>
+            </td>
+            <td class="col-date"><%= new Date(patient.latestDate).toLocaleString() %></td>
+            <td class="col-thumbnails" style="text-align:center;">
+              <% if (patient.promissoryImage) { %>
+                <i class="bi bi-image" style="font-size:22px;color:#222;"></i>
+              <% } else { %>
+                <i class="bi bi-image" style="font-size:22px;color:#bbb;opacity:0.3;"></i>
+              <% } %>
+            </td>
+            <td class="col-action">
+                  <a href="/billing/print/<%= patient.patientId %>" class="view-btn">View Invoice</a>
+            </td>
+          </tr>
+        <% }) %>
+      <% } %>
+    </tbody>
+  </table>
+
+  <div id="billingPager" style="display:flex; align-items:center; justify-content:flex-end; gap:10px; margin-top:10px; font-size:13px; color:#666;">
+    <span id="billingPageInfo">Page 1 of 1</span>
+    <button id="billingPrev" style="padding:4px 8px; cursor:pointer;">&laquo;</button>
+    <button id="billingNext" style="padding:4px 8px; cursor:pointer;">&raquo;</button>
+  </div>
+</div>
+
+  <!-- Rejection Details Modal -->
+  <div id="rejectionModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;align-items:center;justify-content:center;">
+    <div style="background:white;padding:30px;border-radius:8px;max-width:500px;width:90%;box-shadow:0 4px 6px rgba(0,0,0,0.1);">
+      <h3 style="margin-top:0;color:#f44336;">Promissory Note Rejected</h3>
+      <p style="color:#666;margin-bottom:10px;"><strong>Rejection Reason:</strong></p>
+      <div id="rejectionReasonContent" style="padding:15px;background:#f5f5f5;border-left:4px solid #f44336;border-radius:4px;color:#333;line-height:1.5;"></div>
+      <div style="margin-top:20px;text-align:right;">
+        <button onclick="submitNewPromissory()" style="background:#4CAF50;color:white;padding:10px 20px;border:none;border-radius:4px;cursor:pointer;margin-right:10px;">Submit Promissory</button>
+        <button onclick="closeRejectionModal()" style="background:#2196F3;color:white;padding:10px 20px;border:none;border-radius:4px;cursor:pointer;">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    // Store patient data for rejection modal
+    let rejectionModalPatientData = null;
+
+    // Rejection details modal functions
+    function showRejectionDetails(reason, patientId, hrn, fullName, totalAmount) {
+      document.getElementById('rejectionReasonContent').textContent = reason;
+      document.getElementById('rejectionModal').style.display = 'flex';
+      // Store patient data for Submit Promissory button
+      rejectionModalPatientData = { patientId, hrn, fullName, totalAmount };
+    }
+
+    function closeRejectionModal() {
+      document.getElementById('rejectionModal').style.display = 'none';
+      rejectionModalPatientData = null;
+    }
+
+    function submitNewPromissory() {
+      console.log('Submit clicked, patient data:', rejectionModalPatientData);
+      if (rejectionModalPatientData) {
+        // Store the data before closing modal
+        const patientData = { ...rejectionModalPatientData };
+        closeRejectionModal();
+        // Use setTimeout to ensure modal is fully closed before opening file dialog
+        setTimeout(() => {
+          openPromissoryUpload(
+            patientData.patientId,
+            patientData.hrn,
+            patientData.fullName,
+            patientData.totalAmount
+          );
+        }, 100);
+      } else {
+        alert('No patient data found. Please try again.');
+      }
+    }
+
+    // Notification logic with dropdown
+    async function fetchNotifications() {
+      try {
+        const res = await axios.get('/notifications/billing');
+        const notifs = res.data || [];
+        const unreadCount = notifs.filter(n => !n.read).length;
+        const badge = document.getElementById('notificationBadge');
+        if (unreadCount > 0) {
+          badge.textContent = unreadCount;
+          badge.style.display = 'block';
+        } else {
+          badge.textContent = '';
+          badge.style.display = 'none';
+        }
+        
+        const dropdown = document.getElementById('notif-dropdown');
+        dropdown.innerHTML = notifs.map(n => `<div class="notif-item${n.read ? '' : ' unread'}" data-hrn="${n.patientId}">${n.message} (${timeAgo(n.createdAt)})</div>`).join('');
+      } catch (err) {
+        console.error('Error fetching notifications:', err);
+      }
+    }
+    setInterval(fetchNotifications, 3000);
+    fetchNotifications();
+
+    // Toggle dropdown on bell click
+    document.getElementById('notif-bell').onclick = function() {
+      const dd = document.getElementById('notif-dropdown');
+      dd.style.display = dd.style.display === 'block' ? 'none' : 'block';
+    };
+
+    // Navigate to patient row and highlight on notification click
+    document.getElementById('notif-dropdown').addEventListener('click', function(e) {
+      if (e.target.classList.contains('notif-item')) {
+        const hrn = e.target.getAttribute('data-hrn');
+        const row = document.querySelector(`tr[data-hrn='${hrn}']`);
+        if (row) {
+          // Scroll to the row
+          row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          
+          // Highlight the row with gray (stays until clicked)
+          row.classList.add('highlight-row');
+          
+          // Hide dropdown
+          document.getElementById('notif-dropdown').style.display = 'none';
+          
+          // Mark notification as read
+          axios.post('/notifications/read', { patientId: hrn, department: 'Billing' });
+          fetchNotifications();
+        }
+      }
+    });
+
+    // Remove highlight when row is clicked
+    document.querySelector('#billingTable tbody').addEventListener('click', function(e) {
+      const row = e.target.closest('tr');
+      if (row && row.classList.contains('highlight-row')) {
+        row.classList.remove('highlight-row');
+      }
+    });
+
+    // Time-ago helper for notification timestamps
+    function timeAgo(timestamp) {
+      if (!timestamp) return '';
+      const t = new Date(timestamp).getTime();
+      if (isNaN(t)) return '';
+      const now = Date.now();
+      const diff = now - t;
+      const minutes = Math.floor(diff / 60000);
+      const hours = Math.floor(diff / 3600000);
+      const days = Math.floor(diff / 86400000);
+      if (minutes < 1) return 'just now';
+      if (minutes < 60) return `${minutes} min ago`;
+      if (hours < 24) return `${hours} hr${hours > 1 ? 's' : ''} ago`;
+      return `${days} day${days > 1 ? 's' : ''} ago`;
+    }
+
+    // Socket.IO for real-time updates
+  const socket = typeof io !== 'undefined' ? io() : null;
+    const notificationBadge = document.getElementById('notificationBadge');
+    const toast = document.getElementById('toast');
+    const billingTable = document.getElementById('billingTable').querySelector('tbody');
+
+  if (socket) socket.on('newBilling', (data) => {
+      console.log('New billing received:', data);
+
+      // Show toast notification
+      toast.style.display = 'block';
+      setTimeout(() => {
+        toast.style.display = 'none';
+      }, 3000);
+
+      // Refresh notifications
+      fetchNotifications();
+
+      // Reload the page to update the table
+      setTimeout(() => {
+        window.location.reload();
+      }, 1500);
+    });
+
+    // Refresh table when backend signals a billing refresh (e.g., on-hold converted)
+  if (socket) socket.on('billingRefresh', () => {
+      console.log('Billing refresh event received');
+      // Show a quick toast before reloading
+      const t = document.getElementById('toast');
+      if (t) {
+        t.textContent = 'Patient updated — refreshing…';
+        t.style.display = 'block';
+      }
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+    });
+
+    if (socket) socket.on('connect', () => {
+      console.log('Connected to billing notifications');
+    });
+
+    // ================= Table UI: View/Search/Pagination =================
+    // View dropdown (copied style/behavior)
+    function toggleBillingViewMenu(event){
+      const menu = document.getElementById('billingViewMenu');
+      if (!menu) return;
+      const isShown = menu.style.display === 'block';
+      menu.style.display = isShown ? 'none' : 'block';
+      if (!isShown){
+        setTimeout(()=>document.addEventListener('click', billingViewOutside), 0);
+      }
+      event.stopPropagation();
+    }
+
+    function billingViewOutside(e){
+      const menu = document.getElementById('billingViewMenu');
+      const btn = document.getElementById('billingViewBtn');
+      if (!menu || !btn) return;
+      if (!menu.contains(e.target) && e.target !== btn){
+        menu.style.display = 'none';
+        document.removeEventListener('click', billingViewOutside);
+      }
+    }
+
+    function toggleBillingColumn(key, show){
+      const table = document.getElementById('billingTable');
+      const th = table.querySelector(`thead .col-${key}`);
+      const tds = table.querySelectorAll(`tbody .col-${key}`);
+      const display = show ? '' : 'none';
+      if (th) th.style.display = display;
+      tds.forEach(td => td.style.display = display);
+    }
+
+    // Patient-style filter/pagination, adapted for billing
+    (function initBillingTableUI(){
+      const table = document.getElementById('billingTable');
+      if (!table) return;
+      const tbody = table.querySelector('tbody');
+      const allRows = Array.from(tbody.querySelectorAll('.billing-row'));
+      const searchInput = document.getElementById('billingSearch');
+      const rowsPerPageSelect = document.getElementById('billingRowsPerPage');
+      const pageInfo = document.getElementById('billingPageInfo');
+      const prevBtn = document.getElementById('billingPrev');
+      const nextBtn = document.getElementById('billingNext');
+
+      let state = {
+        search: '',
+        perPage: parseRowsPerPage(rowsPerPageSelect?.value || '10'),
+        page: 1
+      };
+
+      function parseRowsPerPage(val){
+        return (val === 'all') ? Infinity : Math.max(1, parseInt(val || '10', 10));
+      }
+
+      function rowMatches(row, term){
+        if (!term) return true;
+        const hrn = (row.querySelector('.col-hrn')?.textContent || '').toLowerCase();
+        const name = (row.querySelector('.col-name')?.textContent || '').toLowerCase();
+        return hrn.includes(term) || name.includes(term);
+      }
+
+      function apply(){
+        const term = state.search.trim().toLowerCase();
+        const filtered = allRows.filter(r => rowMatches(r, term));
+
+        const total = filtered.length;
+        const perPage = state.perPage === Infinity ? total || 1 : state.perPage;
+        const totalPages = Math.max(1, Math.ceil(total / perPage));
+        state.page = Math.min(Math.max(1, state.page), totalPages);
+
+        allRows.forEach(r => r.style.display = 'none');
+
+        const startIdx = (state.page - 1) * perPage;
+        const endIdx = state.perPage === Infinity ? total : Math.min(startIdx + perPage, total);
+        for (let i = startIdx; i < endIdx; i++) {
+          const row = filtered[i];
+          if (row) row.style.display = '';
+        }
+
+        if (pageInfo) pageInfo.textContent = `Page ${state.page} of ${totalPages}`;
+        if (prevBtn) prevBtn.disabled = state.page <= 1;
+        if (nextBtn) nextBtn.disabled = state.page >= totalPages;
+      }
+
+      if (searchInput) searchInput.addEventListener('input', () => { state.search = searchInput.value || ''; state.page = 1; apply(); });
+      if (rowsPerPageSelect) rowsPerPageSelect.addEventListener('change', () => { state.perPage = parseRowsPerPage(rowsPerPageSelect.value); state.page = 1; apply(); });
+      if (prevBtn) prevBtn.addEventListener('click', () => { state.page--; apply(); });
+      if (nextBtn) nextBtn.addEventListener('click', () => { state.page++; apply(); });
+
+      apply();
+    })();
+
+    // Promissory submission logic
+    let currentPatientData = null;
+
+    function openPromissoryUpload(patientId, hrn, fullName, totalAmount) {
+      currentPatientData = { patientId, hrn, fullName, totalAmount };
+      showPromissoryForm();
+    }
+
+  function showPromissoryForm() {
+      // Create modal/form for promissory details (match Nurse modal styles)
+      const modal = document.createElement('div');
+      modal.className = 'modal';
+      modal.id = 'promissoryModal';
+
+      // Helper: capitalize first letter of each word
+      const toStartCase = (s) => {
+        if (!s) return '';
+        return String(s)
+          .toLowerCase()
+          .replace(/\b\w/g, (c) => c.toUpperCase());
+      };
+      const displayName = toStartCase(currentPatientData && currentPatientData.fullName ? currentPatientData.fullName : '');
+
+      modal.innerHTML = `
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="promissoryModalTitle">
+          <button class="modal-close" onclick="closePromissoryModal()" aria-label="Close">&times;</button>
+          <h3 id="promissoryModalTitle" style="margin-top:0;">Submit Promissory Note</h3>
+
+          <div class="patient-info" style="margin-bottom: 12px;">
+            <div><strong>HRN:</strong> ${currentPatientData.hrn}</div>
+            <div><strong>Patient Name:</strong> ${displayName}</div>
+            <div><strong>Total Bill Amount:</strong> ₱${currentPatientData.totalAmount.toFixed(2)}</div>
+          </div>
+
+          <div class="form-grid grid-1">
+            <div class="form-field">
+              <label for="coveredAmount"><strong>Amount Hospital Will Cover</strong></label>
+              <input type="number" id="coveredAmount" step="0.01" min="0" max="${currentPatientData.totalAmount}" placeholder="Enter amount" required />
+            </div>
+            <div class="form-field">
+              <label for="paymentExpected"><strong>Date Promise to Pay</strong></label>
+              <input type="date" id="paymentExpected" required />
+            </div>
+            <div class="form-field">
+              <label for="promissoryImage"><strong>Upload Image (optional)</strong></label>
+              <input type="file" id="promissoryImage" accept="image/*" />
+            </div>
+          </div>
+
+          <div class="modal-actions">
+            <button type="button" class="btn btn-cancel" onclick="closePromissoryModal()">Cancel</button>
+            <button type="button" class="btn btn-primary" onclick="submitPromissory()">Submit</button>
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(modal);
+      // Show modal (flex)
+      modal.style.display = 'flex';
+
+      // Close when clicking outside content
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) closePromissoryModal();
+      });
+
+      // Close on Escape key
+      window.addEventListener('keydown', function escHandler(ev) {
+        if (ev.key === 'Escape') {
+          closePromissoryModal();
+          window.removeEventListener('keydown', escHandler);
+        }
+      });
+    }
+
+    function closePromissoryModal() {
+      const modal = document.getElementById('promissoryModal');
+      if (modal) {
+        document.body.removeChild(modal);
+      }
+      currentPatientData = null;
+    }
+
+    async function submitPromissory() {
+  const amount = document.getElementById('coveredAmount').value;
+      const paymentExpected = document.getElementById('paymentExpected').value;
+      
+  const imageFile = document.getElementById('promissoryImage').files[0];
+      if (!amount || parseFloat(amount) <= 0) {
+        alert('Please enter a valid covered amount');
+        return;
+      }
+      
+      if (parseFloat(amount) > currentPatientData.totalAmount) {
+        alert('Covered amount cannot exceed total bill amount');
+        return;
+      }
+      
+      
+      if (!paymentExpected) {
+        alert('Please select the date you promise to pay');
+          return;
+        }
+      
+      // Create FormData for file upload
+      const formData = new FormData();
+      if (imageFile) {
+        formData.append('image', imageFile);
+      }
+      formData.append('patientId', currentPatientData.patientId);
+  formData.append('amount', amount);
+      formData.append('paymentExpected', paymentExpected);
+  // notes removed from UI; omit from payload
+      
+      try {
+        const response = await fetch('/promissory/submit', {
+          method: 'POST',
+          body: formData
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          alert('Promissory note submitted successfully!');
+          closePromissoryModal();
+          // Refresh billing page to show updated status
+          window.location.reload();
+        } else {
+          alert('Error: ' + (result.error || 'Failed to submit promissory note'));
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Error submitting promissory note');
+      }
+    }
+  </script>
+</body>
+</html>

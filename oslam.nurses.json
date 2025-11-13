@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "683bbcba6d2cf86135f4b40e"
+  },
+  "nurseId": "NUR20250001",
+  "firstName": "hopya",
+  "middleInitial": "A",
+  "lastName": "Roni",
+  "birthday": {
+    "$date": "2003-09-08T00:00:00.000Z"
+  },
+  "gender": "Male",
+  "contact": "0978787878",
+  "address": "tasbi",
+  "email": "hopeniro@gmail.com",
+  "departments": [
+    "Emergency"
+  ],
+  "duties": [
+    "Night Shift"
+  ],
+  "__v": 0,
+  "status": "active"
+},
+{
+  "_id": {
+    "$oid": "69040962a8ba624aaf1f4446"
+  },
+  "nurseId": "NUR20250002",
+  "firstName": "Dondon",
+  "middleInitial": "E",
+  "lastName": "kembot",
+  "birthday": {
+    "$date": "1988-04-23T00:00:00.000Z"
+  },
+  "gender": "Male",
+  "contact": "09628247558",
+  "address": "dyanlang",
+  "email": "jhsdhadhj@gmail.com",
+  "departments": [
+    null
+  ],
+  "duties": [
+    null
+  ],
+  "licenseNumber": "1234567",
+  "validUntil": {
+    "$date": "2028-03-12T00:00:00.000Z"
+  },
+  "status": "active",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69075c23a4bdda3562ead9f9"
+  },
+  "nurseId": "NUR20250003",
+  "firstName": "hkjh",
+  "middleInitial": "j",
+  "lastName": "hjhhkjj",
+  "birthday": {
+    "$date": "1992-01-12T00:00:00.000Z"
+  },
+  "gender": "Female",
+  "contact": "01615151321",
+  "address": "Purok 8 Brgy Militar",
+  "email": "admin@gmail.com",
+  "departments": [],
+  "duties": [],
+  "licenseNumber": "1316513",
+  "validUntil": {
+    "$date": "2028-06-22T00:00:00.000Z"
+  },
+  "status": "active",
+  "__v": 0
+}]

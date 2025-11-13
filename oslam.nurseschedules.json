@@ -1,0 +1,213 @@
+[{
+  "_id": {
+    "$oid": "683bbe416d2cf86135f4b442"
+  },
+  "nurseId": "NUR20250001",
+  "date": "Sun",
+  "startTime": "08:00",
+  "endTime": "17:39",
+  "departments": [
+    "Emergency"
+  ],
+  "duties": [
+    null
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690388058ef829994c75c855"
+  },
+  "nurseId": "NUR20250001",
+  "date": "Thu",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "departments": [
+    "Emergency"
+  ],
+  "duties": [
+    null
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69039712b2fab79be7a0adee"
+  },
+  "nurseId": "NUR20250001",
+  "date": "Fri",
+  "startTime": "00:49",
+  "endTime": "06:55",
+  "departments": [
+    "Emergency"
+  ],
+  "duties": [
+    null
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69041f970b5654bbe0d8bae4"
+  },
+  "nurseId": "NUR20250002",
+  "date": "2025-10-31",
+  "startTime": "05:00",
+  "endTime": "16:00",
+  "department": "OPD",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690442aecd7beb9883e83075"
+  },
+  "nurseId": "NUR20250001",
+  "date": "2025-10-31",
+  "startTime": "20:00",
+  "endTime": "17:00",
+  "department": "Emergency",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905ce4f0f058b6a16195f8f"
+  },
+  "nurseId": "NUR20250002",
+  "date": "2025-11-01",
+  "startTime": "11:59",
+  "endTime": "23:59",
+  "department": "OPD",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905d35f19a8865eac4f7459"
+  },
+  "nurseId": "NUR20250002",
+  "date": "2025-11-01",
+  "startTime": "11:30",
+  "endTime": "23:31",
+  "department": "Emergency",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69069440f5b743e6eb8c997e"
+  },
+  "nurseId": "NUR20250002",
+  "date": "2025-11-02",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "department": "Emergency",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906ba071cc79678cf2e3146"
+  },
+  "nurseId": "NUR20250001",
+  "date": "2025-11-03",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "department": "OPD",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906ba071cc79678cf2e3148"
+  },
+  "nurseId": "NUR20250001",
+  "date": "2025-11-04",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "department": "OPD",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906ba071cc79678cf2e314a"
+  },
+  "nurseId": "NUR20250001",
+  "date": "2025-11-05",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "department": "OPD",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906ba071cc79678cf2e314c"
+  },
+  "nurseId": "NUR20250001",
+  "date": "2025-11-06",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "department": "OPD",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906ba071cc79678cf2e314e"
+  },
+  "nurseId": "NUR20250001",
+  "date": "2025-11-02",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "department": "OPD",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69080cf0e66e61bb0e283dfd"
+  },
+  "nurseId": "NUR20250002",
+  "date": "2025-11-03",
+  "startTime": "08:01",
+  "endTime": "22:01",
+  "department": "Emergency",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690935bee7eca93a3d33b257"
+  },
+  "nurseId": "NUR20250002",
+  "date": "2025-11-04",
+  "startTime": "08:07",
+  "endTime": "19:07",
+  "department": "Emergency",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a30b557534f57316a5dbe"
+  },
+  "nurseId": "NUR20250002",
+  "date": "2025-11-05",
+  "startTime": "01:57",
+  "endTime": "06:58",
+  "department": "Emergency",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c3097eea75267ee39d193"
+  },
+  "nurseId": "NUR20250002",
+  "date": "2025-11-06",
+  "startTime": "08:22",
+  "endTime": "18:22",
+  "department": "Emergency",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff76b0bafd470e29e0844"
+  },
+  "nurseId": "NUR20250003",
+  "date": "2025-11-09",
+  "startTime": "07:07",
+  "endTime": "22:07",
+  "department": "Emergency",
+  "__v": 0
+}]

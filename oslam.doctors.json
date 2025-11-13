@@ -1,0 +1,74 @@
+[{
+  "_id": {
+    "$oid": "683bbc5b6d2cf86135f4b3f1"
+  },
+  "doctorId": "DOC2025T26IC",
+  "firstName": "Hope",
+  "middleName": "A",
+  "lastName": "Niro",
+  "birthday": {
+    "$date": "2003-09-08T00:00:00.000Z"
+  },
+  "address": "bitas",
+  "gender": "Female",
+  "specialties": [
+    "Physician"
+  ],
+  "services": [
+    "Consultation"
+  ],
+  "email": "hopeniro@gmail.com",
+  "contact": "0978787878",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690385a38ef829994c75c815"
+  },
+  "doctorId": "DOC2025H1I2D",
+  "firstName": "kwak",
+  "middleName": "k",
+  "lastName": "kwaker",
+  "birthday": {
+    "$date": "1983-03-11T00:00:00.000Z"
+  },
+  "address": "dyanlang",
+  "gender": "Male",
+  "specialties": [
+    "Physician"
+  ],
+  "services": [
+    "Consultation"
+  ],
+  "email": "jhsdhadhj@gmail.com",
+  "contact": "09628247558",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69041605a8d664f7c712cd8e"
+  },
+  "doctorId": "DOC2025LJLZ0",
+  "firstName": "eman",
+  "middleName": "s",
+  "lastName": "suka",
+  "birthday": {
+    "$date": "1981-05-25T00:00:00.000Z"
+  },
+  "address": "dyanlang",
+  "gender": "Male",
+  "specialties": [
+    "Physician"
+  ],
+  "services": [
+    "Surgery"
+  ],
+  "email": "jhsdhadhj@gmail.com",
+  "contact": "09628247558",
+  "licenseNumber": "1234567",
+  "validUntil": {
+    "$date": "2028-08-14T00:00:00.000Z"
+  },
+  "status": "active",
+  "__v": 0
+}]

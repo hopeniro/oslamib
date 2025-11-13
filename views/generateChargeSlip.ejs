@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generate Charge Slip - <%= category.name %></title>
+  <style>
+    .patient-info {
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+    }
+    .patient-info p {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+    .transaction-row {
+      margin: 10px 0;
+    }
+    .transaction-row select, .transaction-row input {
+      margin-right: 10px;
+      padding: 5px;
+      width: 200px;
+    }
+  </style>
+  <script type="text/javascript">
+    let transactionIndex = 0;
+    const transactionTypes = <% if (transactionTypes) { %><%- JSON.stringify(transactionTypes) %><% } else { %>[]<% } %>;
+
+    function addTransactionRow() {
+      const container = document.getElementById("transaction-container");
+
+      const row = document.createElement("div");
+      row.className = "transaction-row";
+
+      // Transaction Type dropdown
+      const typeSelect = document.createElement("select");
+      typeSelect.name = `transactions[${transactionIndex}][type]`;
+      typeSelect.required = true;
+      typeSelect.onchange = function () {
+        updateServiceDropdown(this, serviceSelect, procedureAmountInput, itemUsedInput, itemAmountInput, baseAmountInput, totalAmountInput);
+      };
+
+      typeSelect.innerHTML = '<option value="">Select Transaction Type</option>';
+      transactionTypes.forEach(tt => {
+        const option = document.createElement("option");
+        option.value = tt.type;
+        option.textContent = tt.type;
+        typeSelect.appendChild(option);
+      });
+
+      // Service dropdown
+      const serviceSelect = document.createElement("select");
+      serviceSelect.name = `transactions[${transactionIndex}][description]`;
+      serviceSelect.required = true;
+      serviceSelect.innerHTML = '<option value="">Select Service</option>';
+      serviceSelect.onchange = function () {
+        updateAmounts(typeSelect.value, this.value, procedureAmountInput, itemUsedInput, itemAmountInput, baseAmountInput, totalAmountInput);
+      };
+
+      // Hidden inputs for amounts
+      const procedureAmountInput = document.createElement("input");
+      procedureAmountInput.type = "hidden";
+      procedureAmountInput.name = `transactions[${transactionIndex}][procedureAmount]`;
+
+      const itemUsedInput = document.createElement("input");
+      itemUsedInput.type = "hidden";
+      itemUsedInput.name = `transactions[${transactionIndex}][itemUsed]`;
+
+      const itemAmountInput = document.createElement("input");
+      itemAmountInput.type = "hidden";
+      itemAmountInput.name = `transactions[${transactionIndex}][itemAmount]`;
+
+      // Hidden field to store base service amount (for qty calculation)
+      const baseAmountInput = document.createElement("input");
+      baseAmountInput.type = "hidden";
+      baseAmountInput.name = `transactions[${transactionIndex}][baseAmount]`;
+      baseAmountInput.className = "base-amount-input";
+
+      // Quantity input
+      const qtyInput = document.createElement("input");
+      qtyInput.type = "number";
+      qtyInput.name = `transactions[${transactionIndex}][qty]`;
+      qtyInput.placeholder = "Qty";
+      qtyInput.min = "1";
+      qtyInput.value = "1";
+      qtyInput.style.width = "60px";
+      qtyInput.onchange = function() {
+        updateTotalAmount(this, baseAmountInput, totalAmountInput);
+      };
+
+      const totalAmountInput = document.createElement("input");
+      totalAmountInput.type = "number";
+      totalAmountInput.name = `transactions[${transactionIndex}][amount]`;
+      totalAmountInput.placeholder = "Total Amount";
+      totalAmountInput.readOnly = true;
+      totalAmountInput.style.width = "120px";
+
+      // Remove button
+      const removeBtn = document.createElement("button");
+      removeBtn.type = "button";
+      removeBtn.textContent = "✖";
+      removeBtn.style.backgroundColor = "red";
+      removeBtn.style.color = "white";
+      removeBtn.onclick = function() {
+        row.remove();
+        updateTotal();
+      };
+
+      row.appendChild(typeSelect);
+      row.appendChild(serviceSelect);
+      row.appendChild(qtyInput);
+      row.appendChild(totalAmountInput);
+      row.appendChild(removeBtn);
+      row.appendChild(procedureAmountInput);
+      row.appendChild(itemUsedInput);
+      row.appendChild(itemAmountInput);
+      row.appendChild(baseAmountInput);
+
+      container.appendChild(row);
+
+      transactionIndex++;
+    }
+
+    function updateServiceDropdown(typeSelect, serviceSelect, procedureAmountInput, itemUsedInput, itemAmountInput, baseAmountInput, totalAmountInput) {
+      const selectedType = typeSelect.value;
+      const transactionType = transactionTypes.find(tt => tt.type === selectedType);
+
+      serviceSelect.innerHTML = '<option value="">Select Service</option>';
+      procedureAmountInput.value = "";
+      itemUsedInput.value = "";
+      itemAmountInput.value = "";
+      baseAmountInput.value = "";
+      totalAmountInput.value = "";
+
+      if (transactionType && transactionType.services) {
+        transactionType.services.forEach(service => {
+          const option = document.createElement("option");
+          option.value = service.description;
+          option.textContent = service.description;
+          serviceSelect.appendChild(option);
+        });
+      }
+      updateTotal();
+    }
+
+    function updateAmounts(typeName, description, procedureAmountInput, itemUsedInput, itemAmountInput, baseAmountInput, totalAmountInput) {
+      const transactionType = transactionTypes.find(tt => tt.type === typeName);
+      if (transactionType) {
+        const service = transactionType.services.find(s => s.description === description);
+        if (service) {
+          procedureAmountInput.value = service.procedureAmount || "";
+          itemUsedInput.value = service.itemUsed || "";
+          itemAmountInput.value = service.itemAmount || "";
+          
+          // Store base amount and get quantity to calculate total
+          const baseAmount = service.amount || 0;
+          baseAmountInput.value = baseAmount;
+          
+          const row = totalAmountInput.closest('.transaction-row');
+          const qtyInput = row.querySelector('input[name$="[qty]"]');
+          const qty = qtyInput ? parseInt(qtyInput.value) || 1 : 1;
+          totalAmountInput.value = (baseAmount * qty).toFixed(2);
+        }
+      }
+      updateTotal();
+    }
+
+    function updateTotalAmount(qtyInput, baseAmountInput, totalAmountInput) {
+      const qty = parseInt(qtyInput.value) || 1;
+      const baseAmount = parseFloat(baseAmountInput.value) || 0;
+      totalAmountInput.value = (baseAmount * qty).toFixed(2);
+      updateTotal();
+    }
+
+    function updateTotal() {
+      const amounts = document.querySelectorAll("input[name$='[amount]']");
+      let total = 0;
+      amounts.forEach(input => {
+        const val = parseFloat(input.value);
+        if (!isNaN(val)) total += val;
+      });
+      document.getElementById("total").textContent = "Total: ₱" + total.toFixed(2);
+    }
+
+    window.onload = function () {
+      addTransactionRow(); // Load first row by default
+    };
+
+    function prepareTransactionsJSON() {
+      try {
+        const transactions = [];
+        const typeInputs = document.querySelectorAll('select[name^="transactions"][name$="[type]"]');
+        typeInputs.forEach(typeEl => {
+          const match = typeEl.name.match(/transactions\[(\d+)\]\[type\]/);
+          if (!match) return;
+          const idx = match[1];
+          const q = suffix => document.querySelector(`[name="transactions[${idx}]${suffix}"]`);
+
+          const descriptionEl = q('[description]');
+          const procedureAmountEl = q('[procedureAmount]');
+          const itemUsedEl = q('[itemUsed]');
+          const itemAmountEl = q('[itemAmount]');
+          const qtyEl = q('[qty]');
+          const totalAmountEl = q('[amount]');
+
+          const type = typeEl.value || '';
+          const description = descriptionEl ? descriptionEl.value : '';
+          if (!type || !description) return; // skip incomplete rows
+
+          const procedureAmount = procedureAmountEl && procedureAmountEl.value !== '' ? parseFloat(procedureAmountEl.value) : null;
+          const itemUsed = itemUsedEl ? (itemUsedEl.value || '') : '';
+          const itemAmount = itemAmountEl && itemAmountEl.value !== '' ? parseFloat(itemAmountEl.value) : null;
+          const qty = qtyEl && qtyEl.value !== '' ? parseInt(qtyEl.value) : 1;
+          const amount = totalAmountEl && totalAmountEl.value !== '' ? parseFloat(totalAmountEl.value) : 0;
+
+          transactions.push({ type, description, procedureAmount, itemUsed, itemAmount, qty, amount });
+        });
+
+        document.getElementById('transactionsJson').value = JSON.stringify(transactions);
+        return true; // allow submit
+      } catch (e) {
+        alert('Failed to prepare charge slip data.');
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Generate Charge Slip - <%= category.name %></h1>
+
+  <div class="patient-info">
+    <p><strong>HRN:</strong> <%= patient.patientId %></p>
+    <p><strong>Patient Name:</strong> <%= patient.firstName %> <%= patient.middleInitial || '' %> <%= patient.lastName %></p>
+  </div>
+
+  <form action="/<%= category.name === 'Emergency' ? 'emergency' : 'opd' %>/charge-slip" method="POST" onsubmit="return prepareTransactionsJSON()">
+    <input type="hidden" name="admissionId" value="<%= admissionId %>">
+    <input type="hidden" name="patientId" value="<%= patientId %>">
+    <input type="hidden" name="categoryId" value="<%= category._id %>">
+
+  <div id="transaction-container"></div>
+
+  <!-- Hidden JSON payload for robust backend parsing -->
+  <input type="hidden" name="transactionsJson" id="transactionsJson" value="">
+
+    <button type="button" onclick="addTransactionRow()">Add Another Transaction</button>
+
+    <p id="total">Total: ₱0.00</p>
+
+    <button type="submit">Submit Charge Slip</button>
+  </form>
+</body>
+</html>

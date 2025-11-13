@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "683bbc0f6d2cf86135f4b3e2"
+  },
+  "service": "Consultation",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683bbc156d2cf86135f4b3e7"
+  },
+  "service": "Surgery",
+  "__v": 0
+}]

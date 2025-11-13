@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admitted Patients</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+     <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f8fb;
+      margin: 0;
+      color: #222;
+      font-size: 15px;
+    }
+    /* SIDEBAR & NAV ONLY */
+    .sidebar {
+      width: 250px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding-top: 10px;
+      padding: 12px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      overflow-y: auto;
+      border-left: 4px solid #0891b2;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      border-radius: 10px;
+      margin: 8px 10px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.25s ease;
+      position: relative;
+      text-decoration: none;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      background: #e6f7fa;
+      color: #0891b2;
+      border-color: #b3e5ef;
+      box-shadow: 0 3px 8px rgba(8,145,178,0.1);
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #0891b2; /* OsLAM title color */
+      border-radius: 4px 0 0 4px;
+      box-shadow: 0 0 0 1px #0891b2;
+    }
+  </style>
+</head>
+<body>
+   <!-- FLOATING SIDEBAR -->
+  <aside class="sidebar">
+    <div style="display:flex;align-items:center;gap:12px;padding:24px 20px 12px 20px;">
+      <img src="/logo.png" style="width:44px;height:44px;border-radius:8px;object-fit:contain;">
+      <div>
+        <div style="font-size:20px;font-weight:700;color:#0891b2;">OsLAM</div>
+        <div style="font-size:13px;color:#666;">Admission</div>
+      </div>
+    </div>
+     <nav style="margin-top:10px;">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="/admissiondashboard" class="nav-link"><i class="bi bi-grid"></i> Dashboard</a></li>
+        <li><a href="/admissionrecords" class="nav-link"><i class="bi bi-journal-medical"></i> Admission Records</a></li>
+        <li><a href="/admittedpatient" class="nav-link"><i class="bi bi-person-check"></i> Admitted Patients</a></li>
+        <li><a href="/dischargedpatients" class="nav-link"><i class="bi bi-person-dash"></i> Discharged Patients</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div style="margin-left: 260px; background:#f5f7fa; min-height:100vh;">
+    <div class="container" style="max-width:1100px; margin:40px auto; background:#fff; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.08); padding:32px;">
+      <div class="toast" id="ap-toast">Updating refreshing</div>
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 16px;">
+        <h1 style="margin:0;">Admitted Patients</h1>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div style="position:relative;" id="admittedViewWrapper">
+            <button id="admittedViewBtn" onclick="toggleAdmittedViewMenu(event)" style="padding:6px 12px; cursor:pointer; border:1px solid #ccc; background:white; border-radius:4px;">
+              <i class="bi bi-eye"></i> View
+            </button>
+            <div id="admittedViewMenu" style="display:none; position:absolute; right:0; top:100%; margin-top:4px; background:white; border:1px solid #ccc; border-radius:4px; box-shadow:0 2px 8px rgba(0,0,0,0.15); min-width:180px; z-index:1000;">
+              <div style="padding:8px 12px; border-bottom:1px solid #eee; font-weight:600; font-size:13px;">Show Columns</div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()">
+                <input type="checkbox" id="colToggle-hrn" checked onchange="toggleAdmittedColumn('hrn', this.checked)">
+                <label for="colToggle-hrn">Patient HRN</label>
+              </div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()">
+              <input type="checkbox" id="colToggle-name" checked onchange="toggleAdmittedColumn('name', this.checked)">
+              <label for="colToggle-name">Full Name</label>
+            </div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()">
+              <input type="checkbox" id="colToggle-birth" checked onchange="toggleAdmittedColumn('birth', this.checked)">
+              <label for="colToggle-birth">Birthdate</label>
+            </div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()">
+              <input type="checkbox" id="colToggle-dept" checked onchange="toggleAdmittedColumn('dept', this.checked)">
+              <label for="colToggle-dept">Department</label>
+            </div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()">
+              <input type="checkbox" id="colToggle-date" checked onchange="toggleAdmittedColumn('date', this.checked)">
+              <label for="colToggle-date">Date</label>
+            </div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()">
+              <input type="checkbox" id="colToggle-time" checked onchange="toggleAdmittedColumn('time', this.checked)">
+              <label for="colToggle-time">Time</label>
+            </div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()">
+              <input type="checkbox" id="colToggle-by" checked onchange="toggleAdmittedColumn('by', this.checked)">
+              <label for="colToggle-by">Admitted By</label>
+            </div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()">
+              <input type="checkbox" id="colToggle-discharge" checked onchange="toggleAdmittedColumn('discharge', this.checked)">
+              <label for="colToggle-discharge">Discharge By</label>
+            </div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()">
+              <input type="checkbox" id="colToggle-action" checked onchange="toggleAdmittedColumn('action', this.checked)">
+              <label for="colToggle-action">Action</label>
+            </div>
+          </div>
+        </div>
+        <input id="admittedSearch" type="text" placeholder="Search HRN or name" style="border:1px solid #ccc; border-radius:4px; padding:6px 10px; font-size:13px; width:200px;">
+        <div style="display:flex; align-items:center; gap:6px; font-size:13px;">
+          Rows per page
+          <select id="admittedRowsPerPage" style="border:1px solid #ccc; border-radius:4px; padding:4px 8px;">
+            <option>10</option>
+            <option>25</option>
+            <option>50</option>
+            <option>100</option>
+            <option value="all">All</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <table class="table table-bordered table-hover mt-4" id="admittedTable">
+      <thead>
+        <tr>
+          <th class="col-hrn">Patient HRN</th>
+          <th class="col-name">Full Name</th>
+          <th class="col-birth">Birthdate</th>
+          <th class="col-dept">Department</th>
+          <th class="col-date">Date</th>
+          <th class="col-time">Time</th>
+          <th class="col-by">Admitted By</th>
+          <th class="col-discharge">Discharge By</th>
+          <th class="col-action">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% admittedPatients.forEach(function(admission) { %>
+          <tr class="admitted-row">
+            <td class="col-hrn"><%= admission.patientId %></td>
+            <td class="col-name"><%= admission.fullName %></td>
+            <td class="col-birth"><%= new Date(admission.birthdate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) %></td>
+            <td class="col-dept"><%= admission.category === 'Out Patient Department' ? 'OPD' : admission.category %></td>
+            <td class="col-date"><%= new Date(admission.admittedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) %></td>
+            <td class="col-time"><%= new Date(admission.admittedAt).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }) %></td>
+            <td class="col-by"><%= admission.admittedBy || '—' %></td>
+            <td class="col-discharge"><%= admission.autoDischargeNurse %></td>
+            <td class="col-action">
+              <% if (admission.isCleared) { %>
+                <button class="btn btn-sm" style="background-color:#28a745;color:#fff;" data-discharge-id="<%= admission._id %>">Discharge</button>
+              <% } else if (admission.hasProcessing) { %>
+                <button class="btn btn-sm btn-disabled" disabled>Discharge</button>
+              <% } else { %>
+                <button class="btn btn-sm btn-cancel cancel-btn" data-admission-id="<%= admission._id %>">
+                  Cancel Admission
+                </button>
+              <% } %>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    
+    <div id="admittedPager" style="display:flex; align-items:center; justify-content:flex-end; gap:10px; margin-top:10px; font-size:13px; color:#666;">
+      <span id="admittedPageInfo">Page 1 of 1</span>
+      <button id="admittedPrev" style="padding:4px 8px; cursor:pointer;">&laquo;</button>
+      <button id="admittedNext" style="padding:4px 8px; cursor:pointer;">&raquo;</button>
+    </div>
+  </div>
+
+  <script>
+    // Admitted Table Controls
+    (function initAdmittedTableUI() {
+      const table = document.getElementById('admittedTable');
+      if (!table) return;
+
+      const tbody = table.querySelector('tbody');
+      const allRows = Array.from(tbody.querySelectorAll('.admitted-row'));
+      const searchInput = document.getElementById('admittedSearch');
+      const rowsPerPageSelect = document.getElementById('admittedRowsPerPage');
+      const pageInfo = document.getElementById('admittedPageInfo');
+      const prevBtn = document.getElementById('admittedPrev');
+      const nextBtn = document.getElementById('admittedNext');
+
+      let state = {
+        search: '',
+        perPage: parseRowsPerPage(rowsPerPageSelect?.value || '10'),
+        page: 1
+      };
+
+      function parseRowsPerPage(val){
+        return (val === 'all') ? Infinity : Math.max(1, parseInt(val || '10', 10));
+      }
+
+      function rowMatches(row, term){
+        if (!term) return true;
+        const hrn = (row.querySelector('.col-hrn')?.textContent || '').toLowerCase();
+        const name = (row.querySelector('.col-name')?.textContent || '').toLowerCase();
+        return hrn.includes(term) || name.includes(term);
+      }
+
+      function apply(){
+        const term = state.search.trim().toLowerCase();
+        const filtered = allRows.filter(r => rowMatches(r, term));
+
+        const total = filtered.length;
+        const perPage = state.perPage === Infinity ? total || 1 : state.perPage;
+        const totalPages = Math.max(1, Math.ceil(total / perPage));
+        state.page = Math.min(Math.max(1, state.page), totalPages);
+
+        allRows.forEach(r => r.style.display = 'none');
+
+        const startIdx = (state.page - 1) * perPage;
+        const endIdx = state.perPage === Infinity ? total : Math.min(startIdx + perPage, total);
+        for (let i = startIdx; i < endIdx; i++) {
+          const row = filtered[i];
+          if (row) row.style.display = '';
+        }
+
+        if (pageInfo) pageInfo.textContent = `Page ${state.page} of ${totalPages}`;
+        if (prevBtn) prevBtn.disabled = state.page <= 1;
+        if (nextBtn) nextBtn.disabled = state.page >= totalPages;
+      }
+
+      if (searchInput) searchInput.addEventListener('input', () => {
+        state.search = searchInput.value || '';
+        state.page = 1;
+        apply();
+      });
+
+      if (rowsPerPageSelect) rowsPerPageSelect.addEventListener('change', () => {
+        state.perPage = parseRowsPerPage(rowsPerPageSelect.value);
+        state.page = 1;
+        apply();
+      });
+
+      if (prevBtn) prevBtn.addEventListener('click', () => { state.page--; apply(); });
+      if (nextBtn) nextBtn.addEventListener('click', () => { state.page++; apply(); });
+
+      apply();
+    })();
+
+    // View dropdown
+    function toggleAdmittedViewMenu(event){
+      const menu = document.getElementById('admittedViewMenu');
+      if (!menu) return;
+      const isShown = menu.style.display === 'block';
+      menu.style.display = isShown ? 'none' : 'block';
+      if (!isShown){
+        setTimeout(()=>document.addEventListener('click', admittedViewOutside), 0);
+      }
+      event.stopPropagation();
+    }
+
+    function admittedViewOutside(e){
+      const menu = document.getElementById('admittedViewMenu');
+      const btn = document.getElementById('admittedViewBtn');
+      if (!menu || !btn) return;
+      if (!menu.contains(e.target) && e.target !== btn){
+        menu.style.display = 'none';
+        document.removeEventListener('click', admittedViewOutside);
+      }
+    }
+
+    function toggleAdmittedColumn(key, show){
+      const th = document.querySelector(`#admittedTable thead .col-${key}`);
+      const tds = document.querySelectorAll(`#admittedTable tbody .col-${key}`);
+      const display = show ? '' : 'none';
+      if (th) th.style.display = display;
+      tds.forEach(td => td.style.display = display);
+    }
+
+    // Auto-refresh when admissions data changes (e.g., unidentified converted)
+    const socket = io();
+    socket.on('admissionsRefresh', () => {
+      const t = document.getElementById('ap-toast');
+      if (t) {
+        t.style.display = 'block';
+      }
+      setTimeout(() => window.location.reload(), 1000);
+    });
+
+    // Cancel Admission button handler
+    document.querySelectorAll('.cancel-btn').forEach(function(btn) {
+      btn.addEventListener('click', async function() {
+        const admissionId = btn.getAttribute('data-admission-id');
+        
+        if (!confirm('Are you sure you want to cancel this admission?')) {
+          return;
+        }
+        
+        try {
+          const res = await axios.post('/admittedpatient/cancel', { admissionId });
+          
+          if (res.data.success) {
+            alert('Admission cancelled successfully');
+            // Remove the row from the table
+            btn.closest('tr').remove();
+          }
+        } catch (err) {
+          const errorMsg = err.response?.data?.error || 'Failed to cancel admission';
+          alert(errorMsg);
+          console.error(err);
+        }
+      });
+    });
+  </script>
+  <script>
+    // Discharge button handler
+    document.querySelectorAll('[data-discharge-id]').forEach(function(btn){
+      btn.addEventListener('click', async function(){
+        const admissionId = btn.getAttribute('data-discharge-id');
+        if (!confirm('Proceed to discharge this patient?')) return;
+        try {
+          const res = await axios.post('/admittedpatient/complete-discharge', { admissionId });
+          if (res.data && res.data.success) {
+            // Optimistically remove row
+            btn.closest('tr').remove();
+          }
+        } catch (err) {
+          alert(err.response?.data?.error || 'Failed to discharge');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

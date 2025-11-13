@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Promissory Invoice</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <style>
+    @media print {
+      body { 
+        margin: 0;
+        padding-top: 10px;
+      }
+      .no-print { display: none; }
+      .invoice-container {
+        margin: 0 auto;
+        padding: 10px 20px;
+      }
+      .header {
+        margin-bottom: 10px;
+      }
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      font-size: 12px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .header h2 {
+      margin: 5px 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .header p {
+      margin: 2px 0;
+      font-size: 11px;
+    }
+    .invoice-container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+    }
+    .promissory-image-large {
+      max-width: 100%;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      margin: 20px 0;
+    }
+    .info-section {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #000;
+    }
+    .info-section h3 {
+      margin: 0 0 10px 0;
+      font-size: 13px;
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+    .info-row {
+      margin: 5px 0;
+      font-size: 11px;
+    }
+    .info-row p {
+      margin: 5px 0;
+    }
+    .info-label {
+      font-weight: bold;
+      color: #000;
+      display: inline-block;
+      width: 180px;
+    }
+    .signature-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .signature-line {
+      border-bottom: 1px solid #000;
+      width: 250px;
+      margin: 30px auto 5px auto;
+    }
+    .signature-label {
+      font-size: 11px;
+      font-weight: bold;
+    }
+    .action-buttons {
+      margin: 20px 0;
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid #ddd;
+    }
+    .action-btn {
+      padding: 12px 24px;
+      margin: 5px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .btn-approve { background: #4CAF50; color: white; }
+    .btn-edit { background: #2196F3; color: white; }
+    .btn-settle { background: #9C27B0; color: white; }
+    .btn-overdue { background: #f44336; color: white; }
+    .btn-back { background: #9E9E9E; color: white; }
+    .btn-print { background: #FF9800; color: white; }
+  </style>
+</head>
+<body>
+  <div class="invoice-container">
+    <div class="header" style="text-transform: uppercase;">
+      <p style="margin:2px 0;">Republic of the Philippines</p>
+      <p style="margin:2px 0;">Province of Nueva Ecija</p>
+      <p style="margin:2px 0;">Science City of Muñoz</p>
+      <h2 style="margin:8px 0 2px 0; font-size: 16px; font-weight: 800;">OSPITAL NG LUNGSOD AGHAM NG MUÑOZ</h2>
+      <p style="margin:0 0 8px 0;">(Primary Care Facility – Infirmary)</p>
+      <div style="border:1px solid #000; display:flex; justify-content:space-between; padding:6px 10px; font-size:11px;">
+        <div>Form No.: <strong>OSLAM-FIN-PN 23-001</strong></div>
+        <div>Page No.: <strong>1</strong></div>
+  <div>Effectivity date: <strong>November 2026</strong></div>
+        <div>Revision No.: <strong>-</strong></div>
+      </div>
+    </div>
+
+    <h2 style="text-align:center; letter-spacing:1px;">PROMISSORY NOTE</h2>
+
+    <div style="margin:12px 0; font-size:12px; line-height:1.6;">
+      <div style="margin:10px 0;">Petsa: <span style="display:inline-block;min-width:220px;border-bottom:1px solid #000; text-align:center;">
+        <%= new Date(promissory.dateIssued).toLocaleDateString('en-PH', { month:'long', day:'numeric', year:'numeric' }) %>
+      </span></div>
+
+      <div style="margin:10px 0;">Ako si <span style="display:inline-block;min-width:260px;border-bottom:1px solid #000; font-weight:600; text-align:center;">
+        <%= patientName %>
+      </span>, nasa wastong edad, na naninirahan sa 
+      <span style="display:inline-block;min-width:320px;border-bottom:1px solid #000; text-align:center;">
+        <%= patientAddress || '____________________________' %>
+      </span>, ay
+      nangangakong magbabalik sa Ospital ng Lungsod Agham ng Muñoz, (OSLAM) upang magbayad ng aking
+      Hospital bill/Medical Expenses na nagkakahalaga ng (Php 
+      <span style="display:inline-block;min-width:180px;border-bottom:1px solid #000; font-weight:700; text-align:center;">
+        <%= promissory.amount.toFixed(2) %>
+      </span>) sa ika - 
+      <span style="display:inline-block;min-width:220px;border-bottom:1px solid #000; text-align:center;">
+        <%= new Date(promissory.paymentExpected).toLocaleDateString('en-PH', { month:'long', day:'numeric', year:'numeric' }) %>
+      </span>.
+      </div>
+
+      <div style="margin:10px 0;">Ito ay aking nilagdaan ngayong ika- 
+        <span style="display:inline-block;min-width:220px;border-bottom:1px solid #000; text-align:center;">
+          <%= new Date(promissory.dateIssued).toLocaleDateString('en-PH', { month:'long', day:'numeric', year:'numeric' }) %>
+        </span> sa Ospital ng Lungsod Agham ng Muñoz (OSLAM), Brgy. Rizal, Science City of Muñoz, Nueva Ecija.
+      </div>
+    </div>
+
+    <% if (promissory.status === 'Rejected' && promissory.rejectionReason) { %>
+      <div style="margin:10px 0; padding:10px; border:1px solid #f44336; color:#b71c1c;">
+        Rejection Reason: <strong><%= promissory.rejectionReason %></strong>
+      </div>
+    <% } %>
+
+    <% if (promissory.imagePath) { %>
+      <div style="margin-top:10px;">
+        <p style="margin:0 0 6px 0; font-weight:bold;">Attached Promissory Image:</p>
+        <img src="<%= promissory.imagePath %>" class="promissory-image-large" alt="Promissory Note">
+      </div>
+    <% } %>
+
+    <div style="display:flex; justify-content:space-around; margin-top:40px;">
+      <div style="text-align:center;">
+        <div class="signature-line" style="width:260px;"></div>
+        <div class="signature-label">Printed Name & Signature of Promisor</div>
+      </div>
+      <div style="text-align:center;">
+        <div class="signature-line" style="width:220px;"></div>
+        <div class="signature-label">Date</div>
+      </div>
+    </div>
+
+    <div class="action-buttons no-print">
+      <button class="action-btn btn-print" onclick="window.print()">Print</button>
+      <% if (promissory.status === 'Pending') { %>
+        <button class="action-btn btn-approve" onclick="updateStatus('Approved')">Approve</button>
+        <button class="action-btn btn-overdue" onclick="showRejectModal()">Reject</button>
+      <% } %>
+    </div>
+  </div>
+
+  <!-- Rejection Reason Modal -->
+  <div id="rejectModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;align-items:center;justify-content:center;">
+    <div style="background:white;padding:30px;border-radius:8px;max-width:500px;width:90%;box-shadow:0 4px 6px rgba(0,0,0,0.1);">
+      <h3 style="margin-top:0;">Rejection Reason</h3>
+      <p style="color:#666;">Please provide a reason for rejecting this promissory note:</p>
+      <textarea id="rejectionReasonText" rows="4" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:4px;font-size:14px;resize:vertical;" placeholder="Enter rejection reason..."></textarea>
+      <div style="margin-top:20px;text-align:right;">
+        <button onclick="closeRejectModal()" style="background:#9E9E9E;color:white;padding:10px 20px;border:none;border-radius:4px;cursor:pointer;margin-right:10px;">Cancel</button>
+        <button onclick="confirmReject()" style="background:#f44336;color:white;padding:10px 20px;border:none;border-radius:4px;cursor:pointer;">Reject</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const promissoryId = '<%= promissory._id %>';
+    const currentAmount = <%= promissory.amount %>;
+
+    function showRejectModal() {
+      document.getElementById('rejectModal').style.display = 'flex';
+    }
+
+    function closeRejectModal() {
+      document.getElementById('rejectModal').style.display = 'none';
+      document.getElementById('rejectionReasonText').value = '';
+    }
+
+    async function confirmReject() {
+      const reason = document.getElementById('rejectionReasonText').value.trim();
+      
+      if (!reason) {
+        alert('Please provide a rejection reason');
+        return;
+      }
+
+      try {
+        const response = await axios.post('/promissory/update-status', {
+          promissoryId,
+          status: 'Rejected',
+          rejectionReason: reason
+        });
+
+        if (response.data.success) {
+          alert('Promissory note rejected successfully!');
+          window.location.reload();
+        } else {
+          alert('Error: ' + (response.data.error || 'Failed to reject'));
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Error rejecting promissory note');
+      }
+    }
+
+    async function updateStatus(status) {
+      if (!confirm(`Are you sure you want to mark this promissory note as ${status}?`)) {
+        return;
+      }
+
+      try {
+        const response = await axios.post('/promissory/update-status', {
+          promissoryId,
+          status
+        });
+
+        if (response.data.success) {
+          alert('Status updated successfully!');
+          window.location.reload();
+        } else {
+          alert('Error: ' + (response.data.error || 'Failed to update status'));
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Error updating status');
+      }
+    }
+
+    async function editAmount() {
+      const newAmount = prompt(`Enter new amount (current: ₱${currentAmount.toFixed(2)}):`, currentAmount);
+      
+      if (newAmount === null) return;
+      
+      const amount = parseFloat(newAmount);
+      if (isNaN(amount) || amount <= 0) {
+        alert('Invalid amount');
+        return;
+      }
+
+      try {
+        const response = await axios.post('/promissory/update-amount', {
+          promissoryId,
+          amount
+        });
+
+        if (response.data.success) {
+          alert('Amount updated successfully!');
+          window.location.reload();
+        } else {
+          alert('Error: ' + (response.data.error || 'Failed to update amount'));
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Error updating amount');
+      }
+    }
+  </script>
+</body>
+</html>

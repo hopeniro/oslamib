@@ -1,0 +1,261 @@
+[{
+  "_id": {
+    "$oid": "683c69edcbcbc61b3313db36"
+  },
+  "categoryId": {
+    "$oid": "683c62cd41ea51974b44bf13"
+  },
+  "transactions": [
+    {
+      "transactionTypeId": {
+        "$oid": "683c22c1ca77ee4bd1256baf"
+      },
+      "type": "Medicines",
+      "_id": {
+        "$oid": "683c69edcbcbc61b3313db37"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "683c6a42cbcbc61b3313ddfe"
+  },
+  "categoryId": {
+    "$oid": "683c631641ea51974b44bf27"
+  },
+  "transactions": [
+    {
+      "transactionTypeId": {
+        "$oid": "683c22c1ca77ee4bd1256baf"
+      },
+      "type": "Medicines",
+      "_id": {
+        "$oid": "683c6a42cbcbc61b3313ddff"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "683c6a73cbcbc61b3313e176"
+  },
+  "categoryId": {
+    "$oid": "683c62ed41ea51974b44bf1d"
+  },
+  "transactions": [
+    {
+      "transactionTypeId": {
+        "$oid": "683c1b10ca77ee4bd1256b9c"
+      },
+      "type": "Equipment Use",
+      "_id": {
+        "$oid": "683c6a73cbcbc61b3313e177"
+      }
+    },
+    {
+      "transactionTypeId": {
+        "$oid": "683c206bca77ee4bd1256bad"
+      },
+      "type": "Medical Supplies",
+      "_id": {
+        "$oid": "683c6a73cbcbc61b3313e178"
+      }
+    },
+    {
+      "transactionTypeId": {
+        "$oid": "683c22c1ca77ee4bd1256baf"
+      },
+      "type": "Medicines",
+      "_id": {
+        "$oid": "683c6a73cbcbc61b3313e179"
+      }
+    },
+    {
+      "transactionTypeId": {
+        "$oid": "683c5309ca77ee4bd1256bb8"
+      },
+      "type": "ER-Procedures",
+      "_id": {
+        "$oid": "683c6a73cbcbc61b3313e17a"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "683c6aa0cbcbc61b3313e4e5"
+  },
+  "categoryId": {
+    "$oid": "683c62e341ea51974b44bf18"
+  },
+  "transactions": [
+    {
+      "transactionTypeId": {
+        "$oid": "683c1b10ca77ee4bd1256b9c"
+      },
+      "type": "Equipment Use",
+      "_id": {
+        "$oid": "683c6aa0cbcbc61b3313e4e6"
+      }
+    },
+    {
+      "transactionTypeId": {
+        "$oid": "683c206bca77ee4bd1256bad"
+      },
+      "type": "Medical Supplies",
+      "_id": {
+        "$oid": "683c6aa0cbcbc61b3313e4e7"
+      }
+    },
+    {
+      "transactionTypeId": {
+        "$oid": "683c22c1ca77ee4bd1256baf"
+      },
+      "type": "Medicines",
+      "_id": {
+        "$oid": "683c6aa0cbcbc61b3313e4e8"
+      }
+    },
+    {
+      "transactionTypeId": {
+        "$oid": "683c55b1bf86acefa4e0b92c"
+      },
+      "type": "OPD",
+      "_id": {
+        "$oid": "683c6aa0cbcbc61b3313e4e9"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "683c6ab9cbcbc61b3313e70e"
+  },
+  "categoryId": {
+    "$oid": "683c630a41ea51974b44bf22"
+  },
+  "transactions": [
+    {
+      "transactionTypeId": {
+        "$oid": "683c1c13ca77ee4bd1256ba0"
+      },
+      "type": "Hematology",
+      "_id": {
+        "$oid": "683c6ab9cbcbc61b3313e70f"
+      }
+    },
+    {
+      "transactionTypeId": {
+        "$oid": "683c1c90ca77ee4bd1256ba2"
+      },
+      "type": "Clinical Microscopy",
+      "_id": {
+        "$oid": "683c6ab9cbcbc61b3313e710"
+      }
+    },
+    {
+      "transactionTypeId": {
+        "$oid": "683c1cb6ca77ee4bd1256ba4"
+      },
+      "type": "Microbiology",
+      "_id": {
+        "$oid": "683c6ab9cbcbc61b3313e711"
+      }
+    },
+    {
+      "transactionTypeId": {
+        "$oid": "683c1d08ca77ee4bd1256ba6"
+      },
+      "type": "Serology",
+      "_id": {
+        "$oid": "683c6ab9cbcbc61b3313e712"
+      }
+    },
+    {
+      "transactionTypeId": {
+        "$oid": "683c1d4aca77ee4bd1256ba8"
+      },
+      "type": "Clinical Chemistry",
+      "_id": {
+        "$oid": "683c6ab9cbcbc61b3313e713"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "683c6ac9cbcbc61b3313eb0b"
+  },
+  "categoryId": {
+    "$oid": "683c6ac2cbcbc61b3313e900"
+  },
+  "transactions": [
+    {
+      "transactionTypeId": {
+        "$oid": "683c1b88ca77ee4bd1256b9e"
+      },
+      "type": "Radiology",
+      "_id": {
+        "$oid": "683c6ac9cbcbc61b3313eb0c"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68f459a3e2129d88ca02db91"
+  },
+  "categoryId": {
+    "$oid": "683c62ed41ea51974b44bf1d"
+  },
+  "transactions": [
+    {
+      "transactionTypeId": {
+        "$oid": "683c1b88ca77ee4bd1256b9e"
+      },
+      "type": "Radiology",
+      "_id": {
+        "$oid": "68f459a3e2129d88ca02db92"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68f45a2ee2129d88ca02e494"
+  },
+  "categoryId": {
+    "$oid": "683c62ed41ea51974b44bf1d"
+  },
+  "transactions": [
+    {
+      "transactionTypeId": {
+        "$oid": "683c1b88ca77ee4bd1256b9e"
+      },
+      "type": "Radiology",
+      "_id": {
+        "$oid": "68f45a2ee2129d88ca02e495"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68f45bb70ccadc6c20f1a086"
+  },
+  "categoryId": {
+    "$oid": "683c62ed41ea51974b44bf1d"
+  },
+  "transactions": [
+    {
+      "transactionTypeId": {
+        "$oid": "683c1b88ca77ee4bd1256b9e"
+      },
+      "type": "Radiology",
+      "_id": {
+        "$oid": "68f45bb70ccadc6c20f1a087"
+      }
+    }
+  ]
+}]

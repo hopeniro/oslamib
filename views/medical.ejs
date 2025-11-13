@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Form</title>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+ <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f8fb;
+      margin: 0;
+      color: #222;
+      font-size: 15px;
+    }
+    /* SIDEBAR & NAV ONLY */
+    .sidebar {
+      width: 250px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding-top: 10px;
+      padding: 12px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      overflow-y: auto;
+      border-left: 4px solid #0891b2;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      border-radius: 10px;
+      margin: 8px 10px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.25s ease;
+      position: relative;
+      text-decoration: none;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      background: #e6f7fa;
+      color: #0891b2;
+      border-color: #b3e5ef;
+      box-shadow: 0 3px 8px rgba(8,145,178,0.1);
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #0891b2; /* OsLAM title color */
+      border-radius: 4px 0 0 4px;
+      box-shadow: 0 0 0 1px #0891b2;
+    }
+  </style>
+</head>
+<body>
+   <!-- FLOATING SIDEBAR -->
+  <aside class="sidebar">
+    <div style="display:flex;align-items:center;gap:12px;padding:24px 20px 12px 20px;">
+      <img src="/logo.png" style="width:44px;height:44px;border-radius:8px;object-fit:contain;">
+      <div>
+        <div style="font-size:20px;font-weight:700;color:#0891b2;">OsLAM</div>
+        <div style="font-size:13px;color:#666;">Admission</div>
+      </div>
+    </div>
+     <nav style="margin-top:10px;">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="/admissiondashboard" class="nav-link"><i class="bi bi-grid"></i> Dashboard</a></li>
+        <li><a href="/admissionrecords" class="nav-link"><i class="bi bi-journal-medical"></i> Admission Records</a></li>
+        <li><a href="/admittedpatient" class="nav-link"><i class="bi bi-person-check"></i> Admitted Patients</a></li>
+        <li><a href="/dischargedpatients" class="nav-link"><i class="bi bi-person-dash"></i> Discharged Patients</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <div style="margin-left: 320px;">
+    <h2 style="margin-bottom: 16px;">Medical Information</h2>
+    
+    <div id="medicalFormSection">
+      <div id="patientInfoBlock" class="patient-info"></div>
+      
+      <div class="form-section">
+        <form id="save">
+          <input type="hidden" name="patientId" id="hiddenPatientId">
+          <input type="hidden" name="name" id="hiddenPatientName">
+          <input type="hidden" name="medicalId" id="medicalId">
+
+          <!-- Flags -->
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="isPWD" id="isPWD" value="1"> PWD</label>
+            <label><input type="checkbox" name="isIPS" id="isIPS" value="1"> IPS</label>
+            <label><input type="checkbox" name="isSC" id="isSC" value="1"> SC</label>
+            <label><input type="checkbox" name="isPregnant" id="isPregnant" value="1"> Pregnant</label>
+          </div>
+
+          <!-- Family / Contact -->
+          <div class="form-grid grid-2">
+            <div class="form-field">
+              <label for="spouseName">Spouse Name:</label>
+              <input type="text" name="spouseName" id="spouseName">
+            </div>
+
+            <div class="form-field">
+              <label for="contactNumber">Contact Number:</label>
+              <input type="tel" name="contactNumber" id="contactNumber" required pattern="[0-9]{11}" maxlength="11" minlength="11" inputmode="numeric" placeholder="09171234567">
+            </div>
+
+            <div class="form-field">
+              <label for="fatherName">Father Name:</label>
+              <input type="text" name="fatherName" id="fatherName">
+            </div>
+
+            <div class="form-field">
+              <label for="motherName">Mother Name:</label>
+              <input type="text" name="motherName" id="motherName">
+            </div>
+
+            <div class="form-field full">
+              <label for="allergicTo">Allergic to:</label>
+              <input type="text" name="allergicTo" id="allergicTo">
+            </div>
+          </div>
+
+          <div class="actions" style="display:flex; align-items:center; gap:10px; margin-top:20px;">
+            <button type="submit" id="updateBtn" class="btn btn-white" style="padding:8px 16px; cursor:pointer; border:1px solid #ccc; background:white; border-radius:4px;">Save</button>
+            <button type="button" id="admitBtn" class="btn btn-white" style="padding:8px 16px; cursor:pointer; border:1px solid #ccc; border-radius:4px; background: <%= isProcessed ? '#28a745' : '#6c757d' %>; color:white;" <%= !isProcessed ? 'disabled title="Patient must be processed in Admit List first"' : '' %>>Admit</button>
+            <div id="admissionStatus" style="padding:6px 12px; border-radius:4px; font-size:13px; display:none;"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admission Modal -->
+  <div id="admission-modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="admissionModalTitle">
+      <button class="modal-close" onclick="closeAdmissionModal()" aria-label="Close">&times;</button>
+      <h3 id="admissionModalTitle" style="margin-top: 0;">Admit Patient</h3>
+      
+      <div id="admitPatientInfo" style="background: #e3f2fd; padding: 15px; border-radius: 6px; margin-bottom: 20px; border-left: 4px solid #2196F3;">
+        <p style="margin: 5px 0;"><strong>Loading patient information...</strong></p>
+      </div>
+
+      <form id="admissionForm">
+        <input type="hidden" name="patientId" id="admitPatientId">
+        <input type="hidden" name="fullName" id="admitFullName">
+
+        <div class="form-field">
+          <label for="admissionType">Choose Admission Type</label>
+          <select name="admissionType" id="admissionType" required>
+            <option value="">-- Select --</option>
+            <option value="Emergency">Emergency</option>
+            <option value="Out Patient Department">Out Patient Department</option>
+          </select>
+        </div>
+
+        <div class="form-field" style="margin-top: 15px; text-align: left;">
+          <div style="display: flex; align-items: center; gap: 8px; justify-content: flex-start;">
+            <input type="checkbox" name="walkIn" id="walkIn" style="cursor: pointer; margin: 0; width: auto;">
+            <label for="walkIn" style="margin: 0; font-size: 14px; font-weight: 500; cursor: pointer;">Walk-in</label>
+          </div>
+        </div>
+
+        <div class="form-field" style="margin-top: 15px;">
+          <label for="referredBy">Referred By</label>
+          <input type="text" name="referredBy" id="referredBy">
+        </div>
+
+        <div style="display: flex; gap: 10px; margin-top: 20px;">
+          <button type="submit" class="btn btn-primary" style="flex: 1; padding: 10px; cursor: pointer; border: none; background: #2196F3; color: white; border-radius: 4px; font-weight: 500;">Admit Patient</button>
+          <button type="button" onclick="closeAdmissionModal()" class="btn btn-secondary" style="flex: 1; padding: 10px; cursor: pointer; border: 1px solid #ccc; background: white; color: #333; border-radius: 4px;">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+  // Modal functions
+  function openAdmissionModal() {
+    const patientId = document.getElementById('hiddenPatientId').value;
+    const patientName = document.getElementById('hiddenPatientName').value;
+    
+    if (!patientId) {
+      alert('No patient selected.');
+      return;
+    }
+    
+    // Set patient info in modal
+    document.getElementById('admitPatientId').value = patientId;
+    document.getElementById('admitFullName').value = patientName;
+    
+    // Display simplified patient info in modal (only HRN and Name)
+    document.getElementById('admitPatientInfo').innerHTML = `
+      <div style="margin: 5px 0;"><strong>HRN:</strong> ${patientId}</div>
+      <div style="margin: 5px 0;"><strong>Full Name:</strong> ${patientName}</div>
+    `;
+    
+    // Show modal
+    document.getElementById('admission-modal').style.display = 'flex';
+  }
+
+  function closeAdmissionModal() {
+    document.getElementById('admission-modal').style.display = 'none';
+    document.getElementById('admissionForm').reset();
+  }
+
+  // Close modal when clicking outside
+  window.addEventListener('click', function(e) {
+    const modal = document.getElementById('admission-modal');
+    if (e.target === modal) {
+      closeAdmissionModal();
+    }
+  });
+
+  // Enable/disable "Referred By" based on Walk-in checkbox
+  document.getElementById('walkIn').addEventListener('change', function() {
+    const referredByInput = document.getElementById('referredBy');
+    if (this.checked) {
+      referredByInput.disabled = true;
+      referredByInput.value = '';
+    } else {
+      referredByInput.disabled = false;
+    }
+  });
+
+  // Admission form submission
+  document.getElementById('admissionForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+    
+    try {
+      const res = await axios.post('/admission/admit', data);
+      alert('Patient admitted successfully!');
+      closeAdmissionModal();
+      
+      // Reload page to update admission status
+      window.location.reload();
+    } catch (err) {
+      const errorMsg = err.response?.data?.error || 'Failed to admit patient.';
+      alert(errorMsg);
+      console.error(err);
+    }
+  });
+
+  // Check if patient is already admitted
+  async function checkAdmissionStatus(patientId) {
+    try {
+      const response = await axios.get(`/api/admission-status/${patientId}`);
+      const admitBtn = document.getElementById('admitBtn');
+      const statusDiv = document.getElementById('admissionStatus');
+      
+      if (response.data.isAdmitted) {
+        // Hide the Admit button
+        admitBtn.style.display = 'none';
+        
+        // Show admission status with tooltip
+        const info = response.data.admissionInfo;
+        const dateStr = new Date(info.dateAdmitted).toLocaleDateString('en-US', { 
+          month: 'short', 
+          day: 'numeric', 
+          year: 'numeric' 
+        });
+        
+        statusDiv.innerHTML = `✓ Admitted to ${info.category} - ${dateStr}`;
+        statusDiv.style.display = 'inline-block';
+        statusDiv.title = `Admission ID: ${info.admittingId}\nDepartment: ${info.category}\nDate: ${dateStr}`;
+      } else {
+        // Show the Admit button
+        admitBtn.style.display = 'inline-block';
+        statusDiv.style.display = 'none';
+      }
+    } catch (err) {
+      console.error('Error checking admission status:', err);
+      // On error, keep button enabled to not block workflow
+    }
+  }
+
+  // If patientId is present in URL, fetch patient and medical data
+  function getQueryParam(name) {
+    const url = new URL(window.location.href);
+    return url.searchParams.get(name);
+  }
+
+  async function loadPatientAndMedical() {
+    const patientId = getQueryParam('patientId');
+    if (!patientId) return;
+    // Fetch patient info
+    let patient = null;
+    let medical = null;
+    try {
+      const pres = await axios.get(`/api/patients/${patientId}`);
+      patient = pres.data;
+    } catch {}
+    try {
+      const mres = await axios.get(`/api/medical/${patientId}`);
+      medical = mres.data;
+    } catch {}
+
+    // Display patient info at top
+    if (patient) {
+      document.getElementById('patientInfoBlock').innerHTML = `
+        <div><strong>HRN:</strong> ${patient.patientId}</div>
+        <div><strong>Full Name:</strong> ${patient.lastName.charAt(0).toUpperCase() + patient.lastName.slice(1).toLowerCase()}, ${patient.firstName.charAt(0).toUpperCase() + patient.firstName.slice(1).toLowerCase()} ${patient.middleInitial ? patient.middleInitial.toUpperCase() : ''}</div>
+        <div><strong>Birthdate:</strong> ${new Date(patient.birthDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</div>
+        <div><strong>Gender:</strong> ${patient.gender}</div>
+        <div><strong>Address:</strong> ${patient.address}</div>
+      `;
+      document.getElementById('hiddenPatientId').value = patient.patientId;
+      document.getElementById('hiddenPatientName').value = patient.firstName + ' ' + patient.lastName;
+      
+      // If archived: hide buttons and reuse the admissionStatus area with red style; else proceed with admission status
+      if (patient.isArchived) {
+        const upd = document.getElementById('updateBtn');
+        if (upd) upd.style.display = 'none';
+        const ab = document.getElementById('admitBtn');
+        if (ab) ab.style.display = 'none';
+        const statusDiv = document.getElementById('admissionStatus');
+        if (statusDiv) {
+          const d = patient.archivedAt ? new Date(patient.archivedAt) : null;
+          const dateStr = d ? d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+          statusDiv.innerHTML = `Archived from Triage — ${dateStr}`;
+          statusDiv.style.background = '#fdecea';
+          statusDiv.style.borderColor = '#f44336';
+          statusDiv.style.color = '#c62828';
+          statusDiv.style.display = 'inline-block';
+          statusDiv.title = '';
+        }
+      } else {
+        // Check admission status only for non-archived patients
+        checkAdmissionStatus(patient.patientId);
+      }
+    }
+
+    // Update button text based on whether medical data exists
+    const updateBtn = document.getElementById('updateBtn');
+    if (medical && medical._id) {
+      // Medical data exists - populate fields and set button to "Update"
+      document.getElementById('medicalId').value = medical._id || '';
+      document.getElementById('isPWD').checked = medical.isPWD === '1';
+      document.getElementById('isIPS').checked = medical.isIPS === '1';
+      document.getElementById('isSC').checked = medical.isSC === '1';
+      document.getElementById('isPregnant').checked = medical.isPregnant === '1';
+      document.getElementById('spouseName').value = medical.spouseName || '';
+      document.getElementById('contactNumber').value = medical.contactNumber || '';
+      document.getElementById('fatherName').value = medical.fatherName || '';
+      document.getElementById('motherName').value = medical.motherName || '';
+      document.getElementById('allergicTo').value = medical.allergicTo || '';
+      // Medical data exists, button should say "Update"
+      updateBtn.textContent = 'Update';
+    } else {
+      // No medical data exists, button should say "Save"
+      updateBtn.textContent = 'Save';
+    }
+  }
+  loadPatientAndMedical();
+
+  // Form submission with contact number validation (11 digits)
+  document.getElementById("save").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    // Validate contact number is 11 digits
+    const contactEl = document.getElementById('contactNumber');
+    if (contactEl) {
+      const val = (contactEl.value || '').trim();
+      const m = val.match(/^\d{11}$/);
+      if (!m) {
+        alert('Contact number must be exactly 11 digits (e.g. 09171234567).');
+        contactEl.focus();
+        return;
+      }
+    }
+
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      await axios.post('/medical/update', data);
+      const updateBtn = document.getElementById('updateBtn');
+      alert(updateBtn.textContent === 'Save' ? "Medical record saved!" : "Medical record updated!");
+      // Reload medical data to update button text
+      loadPatientAndMedical();
+    } catch (err) {
+      alert("Failed to save/update.");
+      console.error(err);
+    }
+  });
+
+  // Admit button click handler - open modal instead of redirect
+  document.getElementById('admitBtn').addEventListener('click', function() {
+    openAdmissionModal();
+  });
+</script>
+
+</body>
+</html>

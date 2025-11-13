@@ -1,0 +1,203 @@
+[{
+  "_id": {
+    "$oid": "6909ab61bac074e339edb408"
+  },
+  "staffId": "STF-250001",
+  "firstName": "Manny",
+  "middleName": "Tango",
+  "lastName": "Pasquio",
+  "dateOfBirth": {
+    "$date": "1988-01-12T00:00:00.000Z"
+  },
+  "gender": "Male",
+  "civilStatus": "Single",
+  "nationality": "Filipino",
+  "contactNumber": "09628247558",
+  "emailAddress": "raycharlesvalino1993@gmail.com",
+  "homeAddress": "Purok 8 Brgy Militar",
+  "status": "active",
+  "createdAt": {
+    "$date": "2025-11-04T07:29:37.831Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T08:20:46.974Z"
+  },
+  "__v": 0,
+  "category": "Triage",
+  "password": "$2b$10$a4iyiLmhaFDm6Plg7pQaNubdiAmjrk6bT.Tf1OW8wac0GzW1UCAbG",
+  "username": "triage.demo"
+},
+{
+  "_id": {
+    "$oid": "6909c219b113827c18118bd3"
+  },
+  "staffId": "STF-250002",
+  "firstName": "Jinky",
+  "middleName": "Echos",
+  "lastName": "Pacquio",
+  "dateOfBirth": {
+    "$date": "1986-12-02T00:00:00.000Z"
+  },
+  "gender": "Female",
+  "civilStatus": "Married",
+  "nationality": "Filipino",
+  "contactNumber": "09627247558",
+  "emailAddress": "raycharlesvalino1993@gmail.com",
+  "homeAddress": "Purok 8 Brgy Militar",
+  "category": "Admission",
+  "username": "admission.demo",
+  "password": "$2b$10$Dz5wG0UbW69i.xGmjGs6Qu4BFuVEVJbIBJevzlgYXUCb8Jp3mVkhG",
+  "status": "active",
+  "createdAt": {
+    "$date": "2025-11-04T09:06:33.724Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T09:08:55.707Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909c37b4a1aaaf044e3d499"
+  },
+  "staffId": "STF-250003",
+  "firstName": "Pacqiou",
+  "middleName": "Franchia",
+  "lastName": "Franchise",
+  "dateOfBirth": {
+    "$date": "1981-09-01T00:00:00.000Z"
+  },
+  "gender": "Male",
+  "civilStatus": "Married",
+  "nationality": "Filipino",
+  "contactNumber": "09627247558",
+  "emailAddress": "raycharlesvalino1993@gmail.com",
+  "homeAddress": "Purok 8 Brgy Militar",
+  "category": "Emergency Department",
+  "username": "emergency.demo",
+  "password": "$2b$10$p6m2bbbjeJAJmP0/10.wvueNZ9dJjjdpS/n8NQXajiB2t7PxHMT46",
+  "status": "active",
+  "createdAt": {
+    "$date": "2025-11-04T09:12:27.161Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T12:41:15.903Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909c4074a1aaaf044e3d4a0"
+  },
+  "staffId": "STF-250004",
+  "firstName": "Estros",
+  "middleName": "Ernaes",
+  "lastName": "Orores",
+  "dateOfBirth": {
+    "$date": "1982-03-11T00:00:00.000Z"
+  },
+  "gender": "Female",
+  "civilStatus": "Divorced",
+  "nationality": "Filipino",
+  "contactNumber": "09628247558",
+  "emailAddress": "raycharlesvalino1993@gmail.com",
+  "homeAddress": "Purok 8 Brgy Militar",
+  "category": "Out Patient Department",
+  "username": "opd.demo",
+  "password": "$2b$10$M4o7Ybdx7LTkoFeAhIIrfedo9OXzDGJxUvZyP9e5oYpURFjpxOAIO",
+  "status": "active",
+  "createdAt": {
+    "$date": "2025-11-04T09:14:47.438Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T12:07:07.152Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909c45c4a1aaaf044e3d4a4"
+  },
+  "staffId": "STF-250005",
+  "firstName": "Billy",
+  "middleName": "Bills",
+  "lastName": "biiled",
+  "dateOfBirth": {
+    "$date": "1975-09-28T00:00:00.000Z"
+  },
+  "gender": "Female",
+  "civilStatus": "Single",
+  "nationality": "Filipino",
+  "contactNumber": "09628247558",
+  "emailAddress": "raycharlesvalino1993@gmail.com",
+  "homeAddress": "Purok 8 Brgy Militar",
+  "category": "Billing",
+  "username": "billing.demo",
+  "password": "$2b$10$LeKDQKjIeNa09/WQtUR00eVemznIjF6m2YU.CO0b/NtAZiI48p0U6",
+  "status": "active",
+  "createdAt": {
+    "$date": "2025-11-04T09:16:12.735Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T09:16:39.540Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909c4ed4a1aaaf044e3d4ab"
+  },
+  "staffId": "STF-250006",
+  "firstName": "Ceachan",
+  "middleName": "Centos",
+  "lastName": "Centabos",
+  "dateOfBirth": {
+    "$date": "1986-03-01T00:00:00.000Z"
+  },
+  "gender": "Female",
+  "civilStatus": "Single",
+  "nationality": "Filipino",
+  "contactNumber": "09628245665",
+  "emailAddress": "raycharlesvalino1993@gmail.com",
+  "homeAddress": "Purok 8 Brgy Militar",
+  "category": "Cashier",
+  "username": "cashier.demo",
+  "password": "$2b$10$AJwZ2EOFBSUv3c0Lq56aFuo3pxicPTAyOkqe8AQvErVh0P81YWBIq",
+  "status": "active",
+  "createdAt": {
+    "$date": "2025-11-04T09:18:37.749Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T10:39:24.644Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909c5434a1aaaf044e3d4af"
+  },
+  "staffId": "STF-250007",
+  "firstName": "Adam",
+  "middleName": "Adasmus",
+  "lastName": "Aid",
+  "dateOfBirth": {
+    "$date": "1980-05-02T00:00:00.000Z"
+  },
+  "gender": "Male",
+  "civilStatus": "Single",
+  "nationality": "Filipino",
+  "contactNumber": "+639628247885",
+  "emailAddress": "raycharlesvalino1993@gmail.com",
+  "homeAddress": "Purok 8 Brgy Militar",
+  "category": "Admin",
+  "username": "superadmin.demo",
+  "password": "$2b$10$Set10LWx5MxgLzgCIrloVeBkFfgHn.wk8ulO/bbqJh5iinSYw/93C",
+  "status": "active",
+  "createdAt": {
+    "$date": "2025-11-04T09:20:03.541Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T09:20:28.883Z"
+  },
+  "__v": 0
+}]

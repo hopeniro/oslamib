@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Deleted Diagnose - Emergency</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f8fb;
+      margin: 0;
+      color: #222;
+      font-size: 15px;
+    }
+    /* SIDEBAR & NAV ONLY */
+    .sidebar {
+      width: 250px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding-top: 10px;
+      padding: 12px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      overflow-y: auto;
+      border-left: 4px solid #0891b2;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      border-radius: 10px;
+      margin: 8px 10px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.25s ease;
+      position: relative;
+      text-decoration: none;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      background: #e6f7fa;
+      color: #0891b2;
+      border-color: #b3e5ef;
+      box-shadow: 0 3px 8px rgba(8,145,178,0.1);
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #0891b2; /* OsLAM title color */
+      border-radius: 4px 0 0 4px;
+      box-shadow: 0 0 0 1px #0891b2;
+    }
+  </style>
+</head>
+<body>
+  <!-- FLOATING SIDEBAR -->
+  <aside class="sidebar">
+    <div style="display:flex;align-items:center;gap:12px;padding:24px 20px 12px 20px;">
+      <img src="/logo.png" style="width:44px;height:44px;border-radius:8px;object-fit:contain;">
+      <div>
+        <div style="font-size:20px;font-weight:700;color:#0891b2;">OsLAM</div>
+        <div style="font-size:13px;color:#666;">Emergency</div>
+      </div>
+    </div>
+    <nav style="margin-top:10px;">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="/emergencydashboard" class="nav-link"><i class="bi bi-grid"></i> Dashboard</a></li>
+        <li><a href="/emergency" class="nav-link"><i class="bi bi-hospital"></i> Emergency</a></li>
+        <li><a href="/emergency/voided" class="nav-link"><i class="bi bi-x-circle"></i> Void Transaction</a></li>
+        <li><a href="/emergency/deleted-diagnoses" class="nav-link"><i class="bi bi-trash"></i> Deleted Diagnose</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div style="margin-left: 260px; background:#f5f7fa; min-height:100vh;">
+    <div class="container" style="max-width:1100px; margin:40px auto; background:#fff; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.08); padding:32px;">
+      <div class="page-header">
+        <div style="display: flex; align-items: center; justify-content:flex-end; width: 100%; margin-bottom: 16px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="position: relative;">
+              <button onclick="toggleEmergencyDeletedViewMenu()" style="padding: 5px 10px; cursor: pointer; display: flex; align-items: center; gap: 5px; background: white; border: 1px solid #ccc; border-radius: 4px;">
+                <i class="bi bi-eye"></i> View
+              </button>
+              <div id="emergencyDeletedViewMenu" style="display: none; position: absolute; top: 100%; right: 0; background: white; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); min-width: 150px; z-index: 1000; margin-top: 2px;">
+                <div style="padding: 8px 12px; font-weight: 600; border-bottom: 1px solid #eee;">Show Columns</div>
+                <label style="display: block; padding: 6px 12px; cursor: pointer; user-select: none;">
+                  <input type="checkbox" checked onchange="toggleEmergencyDeletedColumn('col-hrn', this)"> HRN
+                </label>
+                <label style="display: block; padding: 6px 12px; cursor: pointer; user-select: none;">
+                  <input type="checkbox" checked onchange="toggleEmergencyDeletedColumn('col-name', this)"> Full Name
+                </label>
+                <label style="display: block; padding: 6px 12px; cursor: pointer; user-select: none;">
+                  <input type="checkbox" checked onchange="toggleEmergencyDeletedColumn('col-complaint', this)"> Complaint
+                </label>
+                <label style="display: block; padding: 6px 12px; cursor: pointer; user-select: none;">
+                  <input type="checkbox" checked onchange="toggleEmergencyDeletedColumn('col-order', this)"> Doctor Order
+                </label>
+                <label style="display: block; padding: 6px 12px; cursor: pointer; user-select: none;">
+                  <input type="checkbox" checked onchange="toggleEmergencyDeletedColumn('col-reason', this)"> Delete Reason
+                </label>
+                <label style="display: block; padding: 6px 12px; cursor: pointer; user-select: none;">
+                  <input type="checkbox" checked onchange="toggleEmergencyDeletedColumn('col-date', this)"> Delete Date
+                </label>
+                <label style="display: block; padding: 6px 12px; cursor: pointer; user-select: none;">
+                  <input type="checkbox" checked onchange="toggleEmergencyDeletedColumn('col-deletedby', this)"> Deleted By
+                </label>
+              </div>
+            </div>
+          <input type="text" id="emergencyDeletedSearch" placeholder="Search by HRN or Name" style="padding: 5px 10px; width: 200px; border: 1px solid #ccc; border-radius: 4px;">
+          <select id="emergencyDeletedRowsPerPage" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <option value="10">10 rows</option>
+            <option value="25">25 rows</option>
+            <option value="50">50 rows</option>
+            <option value="100">100 rows</option>
+            <option value="all">all</option>
+          </select>
+        </div>
+      </div>
+      <div class="notif-wrapper">
+        <div id="notif-bell">
+          <i class="bi bi-bell-fill"></i>
+          <span class="badge" id="notif-count"></span>
+        </div>
+        <div id="notif-dropdown"></div>
+      </div>
+    </div>
+
+    <% if (deletedDiagnoses && deletedDiagnoses.length > 0) { %>
+      <table id="emergencyDeletedTable">
+        <thead>
+          <tr>
+            <th class="col-hrn">HRN</th>
+            <th class="col-name">Full Name</th>
+            <th class="col-complaint">Complaint</th>
+            <th class="col-order">Doctor Order</th>
+            <th class="col-reason">Delete Reason</th>
+            <th class="col-date">Delete Date</th>
+            <th class="col-deletedby">Deleted By</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% deletedDiagnoses.forEach(function(dd) { %>
+            <tr>
+              <td class="col-hrn"><%= dd.patientId?.patientId || '—' %></td>
+              <td class="col-name">
+                <% 
+                  const patient = dd.patientId;
+                  let fullName = '—';
+                  if (patient) {
+                    if (patient.fullName && patient.fullName.trim().length > 0) {
+                      fullName = patient.fullName;
+                    } else if (patient.lastName && patient.firstName) {
+                      const lastName = patient.lastName.charAt(0).toUpperCase() + patient.lastName.slice(1).toLowerCase();
+                      const firstName = patient.firstName.charAt(0).toUpperCase() + patient.firstName.slice(1).toLowerCase();
+                      const middleInitial = patient.middleInitial ? patient.middleInitial.toUpperCase() : '';
+                      fullName = `${lastName}, ${firstName} ${middleInitial}`.trim();
+                    }
+                  }
+                %>
+                <%= fullName %>
+              </td>
+              <td class="col-complaint"><%= dd.diagnose?.complaint || '—' %></td>
+              <td class="col-order"><%= dd.diagnose?.doctor_order || '—' %></td>
+              <td class="col-reason"><%= dd.deleteReason || '—' %></td>
+              <td class="col-date"><%= dd.deletedAt ? new Date(dd.deletedAt).toLocaleString() : '—' %></td>
+              <td class="col-deletedby"><%= dd.deletedBy || '—' %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <div id="emergencyDeletedPager" style="display:flex; align-items:center; justify-content:flex-end; gap:10px; margin-top:10px; font-size:13px; color:#666;">
+        <div id="emergencyDeletedPageInfo"></div>
+        <button id="emergencyDeletedPrevBtn" style="padding: 5px 15px; cursor: pointer; border: 1px solid #ccc; background: white; border-radius: 4px;">&laquo;</button>
+        <button id="emergencyDeletedNextBtn" style="padding: 5px 15px; cursor: pointer; border: 1px solid #ccc; background: white; border-radius: 4px;">&raquo;</button>
+      </div>
+    <% } else { %>
+      <p class="muted">No deleted diagnoses found.</p>
+    <% } %>
+
+    <script>
+      function toggleEmergencyDeletedViewMenu() {
+        const menu = document.getElementById('emergencyDeletedViewMenu');
+        menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+      }
+
+      function toggleEmergencyDeletedColumn(colClass, checkbox) {
+        const cells = document.querySelectorAll('.' + colClass);
+        cells.forEach(cell => {
+          cell.style.display = checkbox.checked ? '' : 'none';
+        });
+      }
+
+      window.addEventListener('click', function(e) {
+        const menu = document.getElementById('emergencyDeletedViewMenu');
+        const btn = e.target.closest('button');
+        if (!menu.contains(e.target) && (!btn || btn.onclick !== toggleEmergencyDeletedViewMenu)) {
+          menu.style.display = 'none';
+        }
+      });
+
+      (function() {
+        const table = document.getElementById('emergencyDeletedTable');
+        if (!table) return;
+
+        const tbody = table.querySelector('tbody');
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        const searchInput = document.getElementById('emergencyDeletedSearch');
+        const rowsPerPageSelect = document.getElementById('emergencyDeletedRowsPerPage');
+        const pageInfo = document.getElementById('emergencyDeletedPageInfo');
+        const prevBtn = document.getElementById('emergencyDeletedPrevBtn');
+        const nextBtn = document.getElementById('emergencyDeletedNextBtn');
+
+        let state = { search: '', perPage: 10, page: 1 };
+
+        function filterRows() {
+          const term = state.search.toLowerCase();
+          return rows.filter(row => {
+            if (!term) return true;
+            const hrn = row.children[0]?.textContent.toLowerCase() || '';
+            const name = row.children[1]?.textContent.toLowerCase() || '';
+            return hrn.includes(term) || name.includes(term);
+          });
+        }
+
+        function render() {
+          const filtered = filterRows();
+          const perPage = state.perPage === Infinity ? filtered.length : state.perPage;
+          const totalPages = Math.ceil(filtered.length / perPage) || 1;
+          if (state.page > totalPages) state.page = totalPages;
+
+          rows.forEach(r => r.style.display = 'none');
+          const start = (state.page - 1) * perPage;
+          const end = start + perPage;
+          filtered.slice(start, end).forEach(r => r.style.display = '');
+
+          pageInfo.textContent = `Page ${state.page} of ${totalPages}`;
+          prevBtn.disabled = state.page <= 1;
+          nextBtn.disabled = state.page >= totalPages;
+        }
+
+        searchInput.addEventListener('input', e => {
+          state.search = e.target.value;
+          state.page = 1;
+          render();
+        });
+
+        rowsPerPageSelect.addEventListener('change', e => {
+          state.perPage = e.target.value === 'all' ? Infinity : parseInt(e.target.value, 10);
+          state.page = 1;
+          render();
+        });
+
+        prevBtn.addEventListener('click', () => {
+          if (state.page > 1) { state.page--; render(); }
+        });
+
+        nextBtn.addEventListener('click', () => {
+          const filtered = filterRows();
+          const perPage = state.perPage === Infinity ? filtered.length : state.perPage;
+          const totalPages = Math.ceil(filtered.length / perPage) || 1;
+          if (state.page < totalPages) { state.page++; render(); }
+        });
+
+        render();
+      })();
+
+      // Time-ago helper for notification timestamps
+      function timeAgo(ts) {
+        if (!ts) return '';
+        const t = new Date(ts).getTime();
+        if (isNaN(t)) return '';
+        const now = Date.now();
+        const minutes = Math.floor((now - t) / 60000);
+        const hours = Math.floor((now - t) / 3600000);
+        const days = Math.floor((now - t) / 86400000);
+        if (minutes < 1) return 'just now';
+        if (minutes < 60) return `${minutes} min ago`;
+        if (hours < 24) return `${hours} hr${hours > 1 ? 's' : ''} ago`;
+        return `${days} day${days > 1 ? 's' : ''} ago`;
+      }
+
+      async function fetchNotifications() {
+        try {
+          const res = await axios.get('/notifications/emergency');
+          const notifs = res.data || [];
+          const unreadCount = notifs.filter(n => !n.read).length;
+          const badge = document.getElementById('notif-count');
+          if (unreadCount > 0) { badge.textContent = unreadCount; badge.style.display = 'block'; }
+          else { badge.textContent = ''; badge.style.display = 'none'; }
+          const dd = document.getElementById('notif-dropdown');
+          dd.innerHTML = notifs.map(n => `<div class="notif-item${n.read ? '' : ' unread'}" data-hrn="${n.patientId}">${n.message} (${timeAgo(n.createdAt)})</div>`).join('');
+        } catch (e) { /* silent */ }
+      }
+      setInterval(fetchNotifications, 3000);
+      fetchNotifications();
+
+      document.getElementById('notif-bell').onclick = function() {
+        const dd = document.getElementById('notif-dropdown');
+        dd.style.display = dd.style.display === 'block' ? 'none' : 'block';
+      };
+
+      document.getElementById('notif-dropdown').addEventListener('click', function(e) {
+        if (e.target.classList.contains('notif-item')) {
+          const hrn = e.target.getAttribute('data-hrn');
+          axios.post('/notifications/read', { patientId: hrn, department: 'Emergency' });
+          document.getElementById('notif-dropdown').style.display = 'none';
+          fetchNotifications();
+        }
+      });
+    </script>
+  </div>
+</body>
+</html>

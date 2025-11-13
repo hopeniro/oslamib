@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Billing Statement - <%= patient.patientId %></title>
+  <style>
+    @media print {
+      body { margin: 0; }
+      .no-print { display: none; }
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      font-size: 12px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .header h2 {
+      margin: 5px 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .header p {
+      margin: 2px 0;
+      font-size: 11px;
+    }
+    .logo {
+      position: absolute;
+      top: 0;
+      width: 60px;
+      height: 60px;
+    }
+    .logo-left { left: 20px; }
+    .logo-right { right: 20px; }
+    .bill-info {
+      text-align: right;
+      font-size: 11px;
+      margin-bottom: 10px;
+    }
+    .patient-section {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      border: 1px solid #000;
+      padding: 10px;
+    }
+    .patient-col {
+      width: 48%;
+    }
+    .patient-col p {
+      margin: 5px 0;
+      font-size: 11px;
+    }
+    .patient-col strong {
+      display: inline-block;
+      width: 140px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 5px;
+      text-align: left;
+      font-size: 11px;
+    }
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    .text-center { text-align: center; }
+    .text-right { text-align: right; }
+    .summary {
+      margin-top: 20px;
+      float: right;
+      width: 300px;
+    }
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 0;
+      font-size: 11px;
+    }
+    .summary-row.total {
+      font-weight: bold;
+      border-top: 2px solid #000;
+      padding-top: 5px;
+    }
+    .discount-section {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    .discount-section label {
+      display: block;
+      margin: 5px 0;
+      font-size: 11px;
+    }
+    .footer {
+      clear: both;
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .signature-line {
+      border-bottom: 1px solid #000;
+      width: 250px;
+      margin-bottom: 5px;
+    }
+    .footer-left, .footer-right {
+      font-size: 11px;
+    }
+    .footer-note {
+      font-style: italic;
+      font-size: 10px;
+      margin-top: 10px;
+    }
+    .print-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    .print-btn:hover {
+      background-color: #45a049;
+    }
+    .action-buttons {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .action-buttons button {
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 14px;
+      margin: 0 10px;
+    }
+    .action-buttons button:hover {
+      background-color: #0b7dda;
+    }
+    .action-buttons .payment-btn {
+      background-color: #4CAF50;
+    }
+    .action-buttons .payment-btn:hover {
+      background-color: #45a049;
+    }
+    .action-buttons .cancel-btn {
+      background-color: #f44336;
+    }
+    .action-buttons .cancel-btn:hover {
+      background-color: #da190b;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <!-- Placeholder for logos - add your logo images here -->
+    <div class="logo logo-left" style="background: #ddd; border-radius: 50%;"></div>
+    <div class="logo logo-right" style="background: #ddd; border-radius: 50%;"></div>
+    
+    <h2>OSPITAL NG LUNGSOD AGHAM NG MUÑOZ</h2>
+    <p>(Primary Care Facility – Infirmary)</p>
+    <p>Brgy Rizal, Science City of Muñoz, Nueva Ecija</p>
+    <p><strong>OSPITAL NG LUNGSOD AGHAM NG MUÑOZ</strong></p>
+    <p><strong>Billing and Claims Unit</strong></p>
+  </div>
+
+  <div class="bill-info">
+    <p>OSLAM-FIN-23-003</p>
+    <p><strong>No.</strong> <%= billNumber %></p>
+    <p><strong>Date:</strong> <%= currentDate.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: '2-digit' }) %></p>
+  </div>
+
+  <div class="patient-section">
+    <div class="patient-col" style="width: 55%;">
+      <p><strong>Name of Patient:</strong> <%= patient.firstName %> <%= patient.middleInitial || '' %> <%= patient.lastName %></p>
+      <p><strong>Address:</strong> <%= patient.address || 'N/A' %></p>
+      <p><strong>Date of Admission:</strong> <%= admission ? new Date(admission.dateAdmitted).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true }) : 'N/A' %></p>
+      <p><strong>Admission Diagnosis:</strong> _______________</p>
+      <p><strong>Final Diagnosis:</strong> _______________</p>
+    </div>
+    <div class="patient-col" style="width: 40%;">
+      <p><strong style="width: 120px;">Chart No./HRN:</strong> <%= patient.patientId %></p>
+      <p><strong style="width: 120px;">Age/Gender:</strong> <%= age %> / <%= patient.gender || 'N/A' %></p>
+      <p><strong style="width: 120px;">Discharge:</strong> _______________</p>
+      <p><strong style="width: 120px;">Ward:</strong> _______________</p>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="text-center" style="width: 5%;">Ref.</th>
+        <th style="width: 15%;">Transaction Type</th>
+        <th style="width: 15%;">Dep't/Unit</th>
+        <th style="width: 35%;">Description</th>
+        <th class="text-center" style="width: 8%;">Qty</th>
+        <th class="text-right" style="width: 11%;">Unit Price</th>
+        <th class="text-right" style="width: 11%;">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (services.length === 0) { %>
+        <tr>
+          <td colspan="7" class="text-center">No services recorded</td>
+        </tr>
+      <% } else { %>
+        <% services.forEach(service => { %>
+          <tr>
+            <td class="text-center"><%= service.ref %></td>
+            <td><%= service.transactionType %></td>
+            <td><%= service.transactionType %></td>
+            <td><%= service.description %></td>
+            <td class="text-center"><%= service.qty %></td>
+            <td class="text-right">₱<%= service.unitPrice.toFixed(2) %></td>
+            <td class="text-right">₱<%= service.amount.toFixed(2) %></td>
+          </tr>
+        <% }) %>
+        <!-- Add empty rows for spacing -->
+        <% for(let i = services.length; i < 10; i++) { %>
+          <tr>
+            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        <% } %>
+      <% } %>
+    </tbody>
+  </table>
+
+  <div class="summary">
+    <div class="summary-row">
+      <span>Subtotal:</span>
+      <span>₱<%= subtotal.toFixed(2) %></span>
+    </div>
+    
+    <div class="discount-section">
+      <strong>Discount:</strong>
+      <label><input type="checkbox" id="seniorCitizen" onchange="calculateDiscount()"> Senior Citizen (20%)</label>
+      <label><input type="checkbox" id="pwd" onchange="calculateDiscount()"> PWD (20%)</label>
+      <label><input type="checkbox" id="resident" onchange="calculateDiscount()"> Resident Citizen (10%)</label>
+      <p style="font-size: 10px; color: #666; margin: 5px 0;">Maximum discount: 30% (can combine multiple discounts)</p>
+      
+      <div class="summary-row" style="margin-top: 10px;">
+        <span>Discount %:</span>
+        <span id="discountPercent">0.0%</span>
+      </div>
+      <div class="summary-row">
+        <span>Discount Amount:</span>
+        <span id="discountAmount">-</span>
+      </div>
+    </div>
+
+    <!-- Promissory Covered Amount (outside discount box) -->
+    <% if (typeof promissoryAmount !== 'undefined' && promissoryAmount > 0) { %>
+    <div class="summary-row" style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+      <span>Promissory Covered Amount:</span>
+      <span>₱<%= promissoryAmount.toFixed(2) %></span>
+    </div>
+    <% } %>
+
+    <div class="summary-row total">
+      <span>TOTAL:</span>
+      <span id="finalTotal">₱<%= (subtotal - (typeof promissoryAmount !== 'undefined' ? promissoryAmount : 0)).toFixed(2) %></span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">
+      <div class="signature-line"></div>
+      <p><strong>Billing and Claims</strong></p>
+      <p class="footer-note">(Paki tignan po ng mabuti ang inyong Hospital Bill bago magbayad. Maraming Salamat Po.)</p>
+    </div>
+    
+    <div class="footer-right">
+      <p><strong>Breakdown by Department:</strong></p>
+      <% 
+        const breakdown = {};
+        services.forEach(s => {
+          if (!breakdown[s.transactionType]) breakdown[s.transactionType] = 0;
+          breakdown[s.transactionType] += s.amount;
+        });
+      %>
+      <% Object.keys(breakdown).forEach(type => { %>
+        <p><%= type %>: ₱<%= breakdown[type].toFixed(2) %></p>
+      <% }) %>
+      <p style="border-top: 1px solid #000; margin-top: 5px; padding-top: 5px;"><strong>TOTAL: ₱<span id="footerTotal"><%= (subtotal - (typeof promissoryAmount !== 'undefined' ? promissoryAmount : 0)).toFixed(2) %></span></strong></p>
+    </div>
+  </div>
+
+  <div class="action-buttons no-print">
+    <button onclick="window.print()">Print as PDF</button>
+    <button class="payment-btn" id="paymentBtn" onclick="toggleSendToCashier()">Payment</button>
+  </div>
+
+  <script>
+    const subtotal = <%= subtotal %>;
+    const promissoryAmount = <%= typeof promissoryAmount !== 'undefined' ? promissoryAmount : 0 %>;
+    const transactionIds = <%- JSON.stringify(transactionIds) %>;
+    const hasPendingPayment = <%= hasPendingPayment ? 'true' : 'false' %>;
+    let isSentToCashier = hasPendingPayment;
+
+    // Initialize button state on load to persist after refresh
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('paymentBtn');
+      if (isSentToCashier) {
+        btn.textContent = 'Cancel';
+        btn.className = 'cancel-btn';
+      } else {
+        btn.textContent = 'Payment';
+        btn.className = 'payment-btn';
+      }
+    });
+
+    function calculateDiscount() {
+      const seniorCitizen = document.getElementById('seniorCitizen').checked;
+      const pwd = document.getElementById('pwd').checked;
+      const resident = document.getElementById('resident').checked;
+
+      let discountRate = 0;
+      if (seniorCitizen) discountRate += 0.20;
+      if (pwd) discountRate += 0.20;
+      if (resident) discountRate += 0.10;
+      
+      // Cap at 30% maximum discount
+      if (discountRate > 0.30) discountRate = 0.30;
+
+      const discountAmount = subtotal * discountRate;
+      const afterDiscount = subtotal - discountAmount;
+      const finalTotal = afterDiscount - promissoryAmount;
+
+      document.getElementById('discountPercent').textContent = (discountRate * 100).toFixed(1) + '%';
+      document.getElementById('discountAmount').textContent = discountAmount > 0 ? '-₱' + discountAmount.toFixed(2) : '-';
+      document.getElementById('finalTotal').textContent = '₱' + finalTotal.toFixed(2);
+      document.getElementById('footerTotal').textContent = finalTotal.toFixed(2);
+    }
+
+    async function toggleSendToCashier() {
+      const btn = document.getElementById('paymentBtn');
+      
+      if (!isSentToCashier) {
+        // Collect current discount selections
+        const seniorCitizen = document.getElementById('seniorCitizen').checked;
+        const pwd = document.getElementById('pwd').checked;
+        const resident = document.getElementById('resident').checked;
+
+        const discountTypes = [];
+        let discountRate = 0;
+        if (seniorCitizen) {
+          discountTypes.push('Senior Citizen');
+          discountRate += 0.20;
+        }
+        if (pwd) {
+          discountTypes.push('PWD');
+          discountRate += 0.20;
+        }
+        if (resident) {
+          discountTypes.push('Resident Citizen');
+          discountRate += 0.10;
+        }
+        
+        // Cap at 30%
+        if (discountRate > 0.30) discountRate = 0.30;
+
+        const discountAmount = subtotal * discountRate;
+        const afterDiscount = subtotal - discountAmount;
+        const finalTotal = afterDiscount - promissoryAmount;
+
+        // Send to cashier with payment details
+        try {
+          const response = await fetch('/billing/confirm', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ 
+              transactionIds,
+              subtotal,
+              discountTypes,
+              discountRate,
+              discountAmount,
+              promissoryAmount,
+              finalTotal,
+              billNumber: '<%= billNumber %>'
+            })
+          });
+
+          const result = await response.json();
+
+          if (result.success) {
+            isSentToCashier = true;
+            btn.textContent = 'Cancel';
+            btn.className = 'cancel-btn';
+            alert('Successfully sent to cashier!');
+          } else {
+            alert('Error: ' + (result.error || 'Failed to send to cashier'));
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          alert('Error sending to cashier');
+        }
+      } else {
+        // Cancel - revert back to "For Billing"
+        if (!confirm('Cancel sending to cashier? This will revert the status back to "For Billing".')) {
+          return;
+        }
+
+        try {
+          const response = await fetch('/billing/cancel-confirm', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ transactionIds })
+          });
+
+          const result = await response.json();
+
+          if (result.success) {
+            isSentToCashier = false;
+            btn.textContent = 'Payment';
+            btn.className = 'payment-btn';
+            alert('Cancelled successfully!');
+          } else {
+            alert('Error: ' + (result.error || 'Failed to cancel'));
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          alert('Error cancelling');
+        }
+      }
+    }
+  </script>
+</body>
+</html>

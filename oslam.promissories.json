@@ -1,0 +1,746 @@
+[{
+  "_id": {
+    "$oid": "69064498d2ca113f78205d19"
+  },
+  "patientId": "25-00-00-23",
+  "transactionIds": [
+    "AA5457EB"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-15T00:00:00.000Z"
+  },
+  "status": "Approved",
+  "type": "Partial",
+  "amount": 300,
+  "notes": "",
+  "imagePath": "/uploads/promissory/promissory-1762018455995-89419337.jpg",
+  "dateIssued": {
+    "$date": "2025-11-01T17:34:16.018Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-01T18:18:44.243Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69064ffa29c2cfa1022f414a"
+  },
+  "patientId": "25-00-00-24",
+  "transactionIds": [
+    "DDC6DF7A"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-25T00:00:00.000Z"
+  },
+  "status": "Approved",
+  "type": "Partial",
+  "amount": 20,
+  "notes": "",
+  "imagePath": "/uploads/promissory/promissory-1762021370384-158113712.jpg",
+  "dateIssued": {
+    "$date": "2025-11-01T18:22:50.400Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-01T18:23:38.520Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69069e392250f06cdb0adb40"
+  },
+  "patientId": "25-00-00-22",
+  "transactionIds": [
+    "C859A91C"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-20T00:00:00.000Z"
+  },
+  "status": "Rejected",
+  "type": "Partial",
+  "amount": 700,
+  "notes": "",
+  "imagePath": "/uploads/promissory/promissory-1762041401459-184250139.webp",
+  "dateIssued": {
+    "$date": "2025-11-01T23:56:41.498Z"
+  },
+  "__v": 0,
+  "dateRejected": {
+    "$date": "2025-11-02T00:35:26.996Z"
+  },
+  "rejectedBy": "Admin",
+  "rejectionReason": "partial payment is too low"
+},
+{
+  "_id": {
+    "$oid": "6906aad60ff26134cd830f5b"
+  },
+  "patientId": "25-00-00-22",
+  "transactionIds": [
+    "C859A91C"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-13T00:00:00.000Z"
+  },
+  "status": "Rejected",
+  "type": "Partial",
+  "amount": 1000,
+  "notes": "",
+  "imagePath": "/uploads/promissory/promissory-1762044630565-52443152.jpg",
+  "dateIssued": {
+    "$date": "2025-11-02T00:50:30.593Z"
+  },
+  "__v": 0,
+  "dateRejected": {
+    "$date": "2025-11-02T00:50:53.261Z"
+  },
+  "rejectedBy": "Admin",
+  "rejectionReason": "ayaw nga"
+},
+{
+  "_id": {
+    "$oid": "6906abf10f8ccbda91660a6b"
+  },
+  "patientId": "25-00-00-22",
+  "transactionIds": [
+    "C859A91C"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-20T00:00:00.000Z"
+  },
+  "status": "Approved",
+  "type": "Partial",
+  "amount": 1500,
+  "notes": "",
+  "imagePath": "/uploads/promissory/promissory-1762044913634-344074709.jpeg",
+  "dateIssued": {
+    "$date": "2025-11-02T00:55:13.654Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-02T00:56:26.220Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6906ba951cc79678cf2e31e3"
+  },
+  "patientId": "25-00-00-21",
+  "transactionIds": [
+    "D6FF708C"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-20T00:00:00.000Z"
+  },
+  "status": "Approved",
+  "amount": 2000,
+  "notes": "",
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-02T01:57:41.502Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-02T02:08:07.089Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690701b02ed5baf0371dc0fe"
+  },
+  "patientId": "25-00-00-06",
+  "transactionIds": [
+    "6D9AC808"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-19T00:00:00.000Z"
+  },
+  "status": "Approved",
+  "amount": 500,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-02T07:01:04.031Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-02T07:02:37.265Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6907024f2ed5baf0371dc190"
+  },
+  "patientId": "25-00-00-04",
+  "transactionIds": [
+    "F7AFB284"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-21T00:00:00.000Z"
+  },
+  "status": "Rejected",
+  "amount": 500,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-02T07:03:43.413Z"
+  },
+  "__v": 0,
+  "dateRejected": {
+    "$date": "2025-11-02T07:04:00.576Z"
+  },
+  "rejectedBy": "Admin",
+  "rejectionReason": "ayaw"
+},
+{
+  "_id": {
+    "$oid": "69073921691fa9aae11d1554"
+  },
+  "patientId": "25-00-00-26",
+  "transactionIds": [
+    "90E0A237"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-20T00:00:00.000Z"
+  },
+  "status": "Settled",
+  "amount": 500,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-02T10:57:37.029Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-02T10:57:53.678Z"
+  },
+  "settledAt": {
+    "$date": "2025-11-02T12:06:45.769Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69073c798cb13e087f215004"
+  },
+  "patientId": "25-00-00-27",
+  "transactionIds": [
+    "E197E2C1"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-20T00:00:00.000Z"
+  },
+  "status": "Settled",
+  "amount": 500,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-02T11:11:53.457Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-02T11:12:02.135Z"
+  },
+  "settledAt": {
+    "$date": "2025-11-02T11:12:50.966Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69073f85e432796c1be4de69"
+  },
+  "patientId": "25-00-00-28",
+  "transactionIds": [
+    "2A5D7F29"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-19T00:00:00.000Z"
+  },
+  "status": "Settled",
+  "amount": 500,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-02T11:24:53.377Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-02T11:25:00.699Z"
+  },
+  "settledAt": {
+    "$date": "2025-11-02T11:25:32.448Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69074284a3835bbfd50cbc3a"
+  },
+  "patientId": "25-00-00-29",
+  "transactionIds": [
+    "31890718"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-20T00:00:00.000Z"
+  },
+  "status": "Settled",
+  "amount": 5000,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-02T11:37:40.978Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-02T11:38:05.058Z"
+  },
+  "settledAt": {
+    "$date": "2025-11-02T11:38:42.223Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690745872e79bc8b2110001d"
+  },
+  "patientId": "25-00-00-30",
+  "transactionIds": [
+    "6E9BF7A4"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-20T00:00:00.000Z"
+  },
+  "status": "Settled",
+  "amount": 700,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-02T11:50:31.167Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-02T11:50:38.729Z"
+  },
+  "settledAt": {
+    "$date": "2025-11-02T11:51:02.419Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690747b5503e0bc85aed6b1b"
+  },
+  "patientId": "25-00-00-27",
+  "transactionIds": [
+    "0AF97231"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-12T00:00:00.000Z"
+  },
+  "status": "Settled",
+  "amount": 500,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-02T11:59:49.179Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-02T11:59:57.185Z"
+  },
+  "settledAt": {
+    "$date": "2025-11-02T12:32:20.511Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69074fbac94545ce343cad05"
+  },
+  "patientId": "25-00-00-27",
+  "transactionIds": [
+    "0AF97231",
+    "DC14EECA"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-20T00:00:00.000Z"
+  },
+  "status": "Rejected",
+  "amount": 10,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-02T12:34:02.176Z"
+  },
+  "__v": 0,
+  "dateRejected": {
+    "$date": "2025-11-02T12:34:29.741Z"
+  },
+  "rejectedBy": "Admin",
+  "rejectionReason": "ayaw"
+},
+{
+  "_id": {
+    "$oid": "69079840f8cba577fa8f808f"
+  },
+  "patientId": "25-00-00-31",
+  "transactionIds": [
+    "1D5111D0"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-20T00:00:00.000Z"
+  },
+  "status": "Settled",
+  "amount": 4000,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-02T17:43:28.090Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-02T17:43:54.907Z"
+  },
+  "settledAt": {
+    "$date": "2025-11-02T17:45:37.741Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690804f5e66e61bb0e283b61"
+  },
+  "patientId": "25-00-00-32",
+  "transactionIds": [
+    "F8290B0A"
+  ],
+  "paymentExpected": {
+    "$date": "2025-12-25T00:00:00.000Z"
+  },
+  "status": "Settled",
+  "amount": 50,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-03T01:27:17.593Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-03T01:28:05.266Z"
+  },
+  "settledAt": {
+    "$date": "2025-11-03T01:30:56.306Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69080d64e66e61bb0e283ecc"
+  },
+  "patientId": "25-00-00-32",
+  "transactionIds": [
+    "2B6134B8"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-29T00:00:00.000Z"
+  },
+  "status": "Settled",
+  "amount": 250,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-03T02:03:16.501Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-03T02:03:44.157Z"
+  },
+  "settledAt": {
+    "$date": "2025-11-03T02:04:35.503Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69097656bdf42b59308a09ef"
+  },
+  "patientId": "25-00-00-37",
+  "transactionIds": [
+    "D66395FF"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-13T00:00:00.000Z"
+  },
+  "status": "Settled",
+  "amount": 200,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-04T03:43:18.709Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-04T03:43:44.190Z"
+  },
+  "settledAt": {
+    "$date": "2025-11-04T03:46:54.304Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690a261cb150dc5e48283dac"
+  },
+  "patientId": "25-00-00-40",
+  "transactionIds": [
+    "6DDA2AAA"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-07T00:00:00.000Z"
+  },
+  "status": "Rejected",
+  "amount": 20,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-04T16:13:16.763Z"
+  },
+  "__v": 0,
+  "dateRejected": {
+    "$date": "2025-11-04T16:21:29.556Z"
+  },
+  "rejectedBy": "Admin",
+  "rejectionReason": "ayaw"
+},
+{
+  "_id": {
+    "$oid": "690a28417a16ccfe98cd4f0f"
+  },
+  "patientId": "25-00-00-40",
+  "transactionIds": [
+    "6DDA2AAA"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-07T00:00:00.000Z"
+  },
+  "status": "Rejected",
+  "amount": 300,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-04T16:22:25.718Z"
+  },
+  "__v": 0,
+  "dateRejected": {
+    "$date": "2025-11-04T16:26:41.365Z"
+  },
+  "rejectedBy": "Admin",
+  "rejectionReason": "asd"
+},
+{
+  "_id": {
+    "$oid": "690a284a7a16ccfe98cd4f1f"
+  },
+  "patientId": "25-00-00-40",
+  "transactionIds": [
+    "6DDA2AAA"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-07T00:00:00.000Z"
+  },
+  "status": "Approved",
+  "amount": 300,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-04T16:22:34.735Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-04T16:26:53.981Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690a2a657a6e32e9844038cc"
+  },
+  "patientId": "25-00-00-14",
+  "transactionIds": [
+    "C8D33ECE"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-15T00:00:00.000Z"
+  },
+  "status": "Approved",
+  "amount": 200,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-04T16:31:33.378Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-05T02:50:05.857Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690a2dc9af19ce91339081eb"
+  },
+  "patientId": "25-00-00-37",
+  "transactionIds": [
+    "1979D3AF"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-13T00:00:00.000Z"
+  },
+  "status": "Approved",
+  "amount": 100,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-04T16:46:01.205Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-05T02:50:19.688Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690a315bc093ae9d94fb02f4"
+  },
+  "patientId": "25-00-00-35",
+  "transactionIds": [
+    "ED90A37E"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-06T00:00:00.000Z"
+  },
+  "status": "Approved",
+  "amount": 300,
+  "imagePath": "/uploads/promissory/promissory-1762275675368-760043939.jpg",
+  "dateIssued": {
+    "$date": "2025-11-04T17:01:15.396Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-05T12:09:45.099Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690a35ab334e19b998dbcc45"
+  },
+  "patientId": "25-00-00-38",
+  "transactionIds": [
+    "EC9C2414"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-21T00:00:00.000Z"
+  },
+  "status": "Pending",
+  "amount": 150,
+  "imagePath": "/uploads/promissory/promissory-1762276779212-909497226.png",
+  "dateIssued": {
+    "$date": "2025-11-04T17:19:39.244Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b37ab2f6bb4d5c69c0efd"
+  },
+  "patientId": "25-00-00-41",
+  "transactionIds": [
+    "F597CEC2"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-14T00:00:00.000Z"
+  },
+  "status": "Settled",
+  "amount": 300,
+  "imagePath": "/uploads/promissory/promissory-1762342827095-845496955.png",
+  "dateIssued": {
+    "$date": "2025-11-05T11:40:27.121Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-05T11:41:55.824Z"
+  },
+  "settledAt": {
+    "$date": "2025-11-05T11:44:13.970Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690c31a7eea75267ee39d327"
+  },
+  "patientId": "25-00-00-43",
+  "transactionIds": [
+    "96A177EB"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-11T00:00:00.000Z"
+  },
+  "status": "Settled",
+  "amount": 200,
+  "imagePath": "/uploads/promissory/promissory-1762406823112-387306930.png",
+  "dateIssued": {
+    "$date": "2025-11-06T05:27:03.175Z"
+  },
+  "__v": 0,
+  "approvedBy": "superadmin.demo",
+  "dateApproved": {
+    "$date": "2025-11-06T05:28:33.416Z"
+  },
+  "settledAt": {
+    "$date": "2025-11-06T05:30:32.355Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690c479a3cca6e3f4e10d692"
+  },
+  "patientId": "25-00-00-44",
+  "transactionIds": [
+    "BAC85726"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-14T00:00:00.000Z"
+  },
+  "status": "Settled",
+  "amount": 100,
+  "imagePath": null,
+  "dateIssued": {
+    "$date": "2025-11-06T07:00:42.396Z"
+  },
+  "__v": 0,
+  "approvedBy": "Admin",
+  "dateApproved": {
+    "$date": "2025-11-06T07:01:00.692Z"
+  },
+  "settledAt": {
+    "$date": "2025-11-06T07:01:58.619Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690c4df93cca6e3f4e10da06"
+  },
+  "patientId": "25-00-00-45",
+  "transactionIds": [
+    "E8CD34A2"
+  ],
+  "paymentExpected": {
+    "$date": "2025-11-10T00:00:00.000Z"
+  },
+  "status": "Settled",
+  "amount": 100,
+  "imagePath": "/uploads/promissory/promissory-1762414073371-606688425.png",
+  "dateIssued": {
+    "$date": "2025-11-06T07:27:53.391Z"
+  },
+  "__v": 0,
+  "approvedBy": "triage.demo",
+  "dateApproved": {
+    "$date": "2025-11-06T07:28:26.666Z"
+  },
+  "settledAt": {
+    "$date": "2025-11-06T07:31:13.925Z"
+  }
+}]

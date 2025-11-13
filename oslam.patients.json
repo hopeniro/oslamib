@@ -1,0 +1,1336 @@
+[{
+  "_id": {
+    "$oid": "683bb69c6d2cf86135f4b3ba"
+  },
+  "patientId": "vara2025hehxa",
+  "firstName": "ray charles ",
+  "lastName": "valino",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1993-03-10T16:00:00.000Z"
+  },
+  "gender": "male",
+  "contactInfo": "09628247558",
+  "address": "fort magsaysay",
+  "emergencyContactName": "mama",
+  "emergencyContactNumber": "0988878988",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683bdaaa3a5be11b9ae47625"
+  },
+  "patientId": "blma2025aaslu",
+  "firstName": "maha",
+  "lastName": "blanca",
+  "middleInitial": "t",
+  "birthDate": {
+    "$date": "1999-12-07T16:00:00.000Z"
+  },
+  "gender": "male",
+  "contactInfo": "09628247558",
+  "address": "Beijing",
+  "emergencyContactName": "mama",
+  "emergencyContactNumber": "0988878988",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68f45d5a0ccadc6c20f1a2a3"
+  },
+  "patientId": "gota20259vz8d",
+  "firstName": "tangol",
+  "lastName": "gol",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1995-05-11T16:00:00.000Z"
+  },
+  "gender": "male",
+  "contactInfo": "1156511651616",
+  "address": "fgffhf",
+  "emergencyContactName": "gfghfhgffg",
+  "emergencyContactNumber": "5464651451",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6901f7d03046dd02cf1c0285"
+  },
+  "patientId": "vany2025f3r5o",
+  "firstName": "nyok nyok",
+  "lastName": "vayino",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1995-03-11T16:00:00.000Z"
+  },
+  "gender": "male",
+  "contactInfo": "111651165165",
+  "address": "kjhkjkjjbjb",
+  "emergencyContactName": "nknlknkn",
+  "emergencyContactNumber": "021651616",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6901fd7288de4808173bb1d5"
+  },
+  "patientId": "25-00-00-01",
+  "firstName": "john",
+  "lastName": "gonzales",
+  "middleInitial": "varga",
+  "birthDate": {
+    "$date": "1987-05-06T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "38",
+  "civilStatus": "M",
+  "address": "bitas",
+  "contactInfo": "09628247558",
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-10-29T11:41:38.674Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6902085388de4808173bb1e5"
+  },
+  "patientId": "25-00-00-05",
+  "firstName": "pating",
+  "lastName": "tingpapa",
+  "middleInitial": "r",
+  "birthDate": {
+    "$date": "1995-11-29T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "29",
+  "civilStatus": "",
+  "address": "Purok 8 Brgy Militar",
+  "religion": "r-catolic",
+  "bp": "",
+  "hr": "",
+  "rr": "",
+  "temp": "",
+  "spo2": "",
+  "height": "",
+  "weight": "",
+  "registrationDate": {
+    "$date": "2025-10-29T12:28:03.864Z"
+  },
+  "__v": 0,
+  "archiveReason": null,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "isArchived": false
+},
+{
+  "_id": {
+    "$oid": "690209fb88de4808173bb1e9"
+  },
+  "patientId": "25-00-00-06",
+  "firstName": "jhong",
+  "lastName": "hilario",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1988-07-30T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "37",
+  "civilStatus": "M",
+  "address": "Purok 8 Brgy Militar",
+  "religion": "r-catolic",
+  "bp": "",
+  "hr": "",
+  "rr": "",
+  "temp": "",
+  "spo2": "",
+  "height": "",
+  "weight": "",
+  "registrationDate": {
+    "$date": "2025-10-29T12:35:07.927Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69020ac788de4808173bb1ed"
+  },
+  "patientId": "25-00-00-07",
+  "firstName": "bong",
+  "lastName": "nabaro",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1975-08-28T16:00:00.000Z"
+  },
+  "gender": "female",
+  "edad": "50",
+  "civilStatus": "M",
+  "address": "Purok 8 Brgy Militar",
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-10-29T12:38:31.159Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690225e1166c1762c945474f"
+  },
+  "patientId": "25-00-00-08",
+  "firstName": "lambot",
+  "lastName": "tibay",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1987-08-23T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "38",
+  "civilStatus": "M",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09628245555",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-10-29T14:34:09.755Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69022edc20108e5204a19fab"
+  },
+  "patientId": "25-00-00-13",
+  "firstName": "zonzon",
+  "lastName": "bronzon",
+  "middleInitial": "r",
+  "birthDate": {
+    "$date": "1996-08-24T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "29",
+  "civilStatus": "M",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09628245555",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-10-29T15:12:28.410Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69022f7c20108e5204a19fb8"
+  },
+  "patientId": "25-00-00-14",
+  "firstName": "charapcharap",
+  "lastName": "chacha",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "2005-12-17T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "19",
+  "civilStatus": "M",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09628245555",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-10-29T15:15:08.183Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6904a84dacdd9a79c6acaeac"
+  },
+  "patientId": "25-00-00-15",
+  "firstName": "manie",
+  "lastName": "pakyawan",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1980-11-24T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "44",
+  "civilStatus": "",
+  "address": "dyanlang",
+  "contactInfo": "03265656565",
+  "onHoldStatus": [],
+  "religion": "catholic",
+  "bp": "180/90",
+  "hr": "67",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-10-31T12:15:09.580Z"
+  },
+  "__v": 0,
+  "archiveReason": "umalis",
+  "archivedAt": {
+    "$date": "2025-11-01T04:37:14.304Z"
+  },
+  "archivedBy": "admin",
+  "archivedFrom": "Triage",
+  "isArchived": true
+},
+{
+  "_id": {
+    "$oid": "6904b291917afa7955c1309c"
+  },
+  "patientId": "25-00-00-16",
+  "firstName": "unidentified",
+  "lastName": "25-00-00-16",
+  "middleInitial": "",
+  "gender": "unknown",
+  "edad": "12",
+  "civilStatus": "",
+  "address": "",
+  "contactInfo": "",
+  "clothes": "pink",
+  "onHoldStatus": [
+    "Mild Injuries",
+    "PWD",
+    "Alcohol Influence",
+    "Severe Illness"
+  ],
+  "foundLocation": "dgat",
+  "religion": "",
+  "bp": "",
+  "hr": "",
+  "rr": "",
+  "temp": "",
+  "spo2": "",
+  "height": "",
+  "weight": "",
+  "registrationDate": {
+    "$date": "2025-10-31T12:58:39.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6904b974afed471700e9f002"
+  },
+  "patientId": "25-00-00-17",
+  "firstName": "unidentified",
+  "lastName": "25-00-00-17",
+  "middleInitial": "",
+  "gender": "unknown",
+  "edad": "25",
+  "civilStatus": "",
+  "address": "",
+  "contactInfo": "",
+  "clothes": "green",
+  "onHoldStatus": [
+    "Unconscious",
+    "Severe Injuries",
+    "Mild Injuries",
+    "Seizure"
+  ],
+  "foundLocation": "kanal",
+  "religion": "",
+  "bp": "",
+  "hr": "",
+  "rr": "",
+  "temp": "",
+  "spo2": "",
+  "height": "",
+  "weight": "",
+  "registrationDate": {
+    "$date": "2025-10-31T13:28:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6904c19345a9b17130c2c216"
+  },
+  "patientId": "25-00-00-19",
+  "firstName": "johny",
+  "lastName": "siangko",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1984-12-10T16:00:00.000Z"
+  },
+  "gender": "female",
+  "edad": "40",
+  "civilStatus": "S",
+  "address": "dyanlang",
+  "contactInfo": "03265656565",
+  "onHoldStatus": [],
+  "religion": "catholic",
+  "bp": "180/90",
+  "hr": "67",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-10-31T14:02:59.584Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69057d9aa9ac9b44a00cbf19"
+  },
+  "patientId": "25-00-00-20",
+  "firstName": "ofthe down",
+  "lastName": "system",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1981-11-22T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "43",
+  "civilStatus": "Single",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09628245555",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-01T03:25:14.082Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archiveReason": null,
+  "__v": 0,
+  "archivedFrom": null
+},
+{
+  "_id": {
+    "$oid": "6905a36688b477825c3320ac"
+  },
+  "patientId": "25-00-00-21",
+  "firstName": "kubak",
+  "lastName": "bala",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": {
+      "$numberLong": "-246528000000"
+    }
+  },
+  "gender": "male",
+  "edad": "63",
+  "civilStatus": "Single",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "03265656565",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-01T06:06:30.368Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905a71ec86ed778ba847688"
+  },
+  "patientId": "25-00-00-22",
+  "firstName": "manson",
+  "lastName": "mercury",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1989-01-25T16:00:00.000Z"
+  },
+  "gender": "female",
+  "edad": "36",
+  "civilStatus": "Married",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "03265656565",
+  "onHoldStatus": [],
+  "religion": "iglesha",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-01T06:22:22.930Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905a8c63bac6e20e9b2214e"
+  },
+  "patientId": "25-00-00-23",
+  "firstName": "bacon",
+  "lastName": "samgy",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1985-11-29T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "39",
+  "civilStatus": "Married",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09254684654",
+  "onHoldStatus": [],
+  "religion": "iglesha",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-01T06:29:26.936Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906911ef5b743e6eb8c98e6"
+  },
+  "patientId": "25-00-00-25",
+  "firstName": "unidentified",
+  "lastName": "",
+  "middleInitial": "",
+  "gender": "unknown",
+  "edad": "56",
+  "civilStatus": "",
+  "address": "",
+  "contactInfo": "",
+  "clothes": "whiteshirt",
+  "onHoldStatus": [
+    "Unconscious",
+    "Alcohol Influence"
+  ],
+  "foundLocation": "ilog",
+  "religion": "",
+  "bp": "",
+  "hr": "",
+  "rr": "",
+  "temp": "",
+  "spo2": "",
+  "height": "",
+  "weight": "",
+  "registrationDate": {
+    "$date": "2025-11-01T23:00:33.000Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690738b9691fa9aae11d14a4"
+  },
+  "patientId": "25-00-00-26",
+  "firstName": "raycharlesess",
+  "lastName": "valino",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1993-03-10T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "32",
+  "civilStatus": "Single",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09254684654",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-02T10:55:53.472Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073c298cb13e087f214f7c"
+  },
+  "patientId": "25-00-00-27",
+  "firstName": "tangtang",
+  "lastName": "tengteng",
+  "middleInitial": "t",
+  "birthDate": {
+    "$date": "1986-03-02T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "39",
+  "civilStatus": "Single",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09254684654",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-02T11:10:33.724Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073f2ce432796c1be4ddba"
+  },
+  "patientId": "25-00-00-28",
+  "firstName": "ram",
+  "lastName": "ram",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1999-02-10T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "26",
+  "civilStatus": "Single",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09254684654",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-02T11:23:24.548Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69074232a3835bbfd50cbba6"
+  },
+  "patientId": "25-00-00-29",
+  "firstName": "kokiis",
+  "lastName": "kakis",
+  "middleInitial": "k",
+  "birthDate": {
+    "$date": "1986-05-22T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "39",
+  "civilStatus": "Single",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09254684654",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-02T11:36:18.141Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690745472e79bc8b210fff95"
+  },
+  "patientId": "25-00-00-30",
+  "firstName": "lololololo",
+  "lastName": "lololo",
+  "middleInitial": "l",
+  "birthDate": {
+    "$date": "1992-02-01T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "33",
+  "civilStatus": "Single",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09254684654",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-02T11:49:27.272Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69079656858f4f4a0a84b64a"
+  },
+  "patientId": "25-00-00-31",
+  "firstName": "bago",
+  "lastName": "newnew",
+  "middleInitial": "n",
+  "birthDate": {
+    "$date": "1986-08-09T16:00:00.000Z"
+  },
+  "gender": "female",
+  "edad": "39",
+  "civilStatus": "Widowed",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09254684654",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-02T17:35:18.286Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690802d8e66e61bb0e2839e3"
+  },
+  "patientId": "25-00-00-32",
+  "firstName": "mary hope",
+  "lastName": "niro",
+  "middleInitial": "asis",
+  "birthDate": {
+    "$date": "2003-09-07T16:00:00.000Z"
+  },
+  "gender": "female",
+  "edad": "22",
+  "civilStatus": "Single",
+  "address": "Bitas",
+  "contactInfo": "09954082029",
+  "onHoldStatus": [],
+  "religion": "Catholic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "lmp": {
+    "$date": "2025-10-03T00:00:00.000Z"
+  },
+  "registrationDate": {
+    "$date": "2025-11-03T01:18:16.370Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690934e5e7eca93a3d33b15d"
+  },
+  "patientId": "25-00-00-33",
+  "firstName": "pangke",
+  "lastName": "crema",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1988-12-14T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "36",
+  "civilStatus": "Married",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09954082029",
+  "onHoldStatus": [],
+  "religion": "iglesha",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-03T23:04:05.511Z"
+  },
+  "isArchived": true,
+  "archivedAt": {
+    "$date": "2025-11-03T23:28:32.805Z"
+  },
+  "archivedBy": "admin",
+  "archivedFrom": "Triage",
+  "archiveReason": "sxs",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69093b203731d02365187da5"
+  },
+  "patientId": "25-00-00-35",
+  "firstName": "cobbychi",
+  "lastName": "coby",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1989-08-10T16:00:00.000Z"
+  },
+  "gender": "female",
+  "edad": "36",
+  "civilStatus": "Single",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09954082029",
+  "onHoldStatus": [],
+  "religion": "iglesha",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-03T23:30:40.297Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69093f72e99367926f5df92d"
+  },
+  "patientId": "25-00-00-36",
+  "firstName": "gnito",
+  "lastName": "inko",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1989-02-28T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "36",
+  "civilStatus": "Married",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09954082029",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-03T23:49:06.451Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690975e4bdf42b59308a08dc"
+  },
+  "patientId": "25-00-00-37",
+  "firstName": "tinay",
+  "lastName": "tniy",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1991-12-24T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "33",
+  "civilStatus": "Married",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09954082029",
+  "onHoldStatus": [],
+  "religion": "iglesha",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-04T03:41:24.648Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69098125e31874b2d3fad656"
+  },
+  "patientId": "25-00-00-38",
+  "firstName": "kuleti",
+  "lastName": "kulet",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1989-08-11T16:00:00.000Z"
+  },
+  "gender": "female",
+  "edad": "36",
+  "civilStatus": "Married",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09954082029",
+  "onHoldStatus": [],
+  "religion": "iglesha",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-04T04:29:25.780Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690982f890343d833da9acb4"
+  },
+  "patientId": "25-00-00-39",
+  "firstName": "alan",
+  "lastName": "corbadura",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1989-12-25T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "35",
+  "civilStatus": "Married",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09954082029",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-04T04:37:12.224Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909846222ef0bfb50114f4f"
+  },
+  "patientId": "25-00-00-40",
+  "firstName": "micheal",
+  "lastName": "jackson",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1991-01-11T16:00:00.000Z"
+  },
+  "gender": "female",
+  "edad": "34",
+  "civilStatus": "Single",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09954082029",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-04T04:43:14.526Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b36662f6bb4d5c69c0cbb"
+  },
+  "patientId": "25-00-00-41",
+  "firstName": "mcjim",
+  "lastName": "dolente",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1986-08-24T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "39",
+  "civilStatus": "Married",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09954082029",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-05T11:35:02.666Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b44d7b75e2e453857c3d3"
+  },
+  "patientId": "25-00-00-42",
+  "firstName": "corazon",
+  "lastName": "aliaga",
+  "middleInitial": "s",
+  "birthDate": {
+    "$date": "1975-09-24T16:00:00.000Z"
+  },
+  "gender": "female",
+  "edad": "50",
+  "civilStatus": "Widowed",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09954082029",
+  "onHoldStatus": [],
+  "religion": "iglesha",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-05T12:36:39.929Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c2ec2eea75267ee39d049"
+  },
+  "patientId": "25-00-00-43",
+  "firstName": "alex",
+  "lastName": "sabangan",
+  "middleInitial": "d",
+  "birthDate": {
+    "$date": "2004-05-05T16:00:00.000Z"
+  },
+  "gender": "female",
+  "edad": "21",
+  "civilStatus": "Single",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09954082029",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-06T05:14:42.766Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c45af3cca6e3f4e10d49b"
+  },
+  "patientId": "25-00-00-44",
+  "firstName": "edmar",
+  "lastName": "kalambang",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1982-12-11T16:00:00.000Z"
+  },
+  "gender": "female",
+  "edad": "42",
+  "civilStatus": "Single",
+  "address": "brgy militar",
+  "contactInfo": "09628247558",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-06T06:52:31.127Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c4c9a3cca6e3f4e10d8b4"
+  },
+  "patientId": "25-00-00-45",
+  "firstName": "angelossddd",
+  "lastName": "pecananana",
+  "middleInitial": "t",
+  "birthDate": {
+    "$date": "2003-03-31T16:00:00.000Z"
+  },
+  "gender": "female",
+  "edad": "22",
+  "civilStatus": "Single",
+  "address": "brgy militar",
+  "contactInfo": "09628247558",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-06T07:22:02.156Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f299cd6bc6de1771956f4"
+  },
+  "patientId": "25-00-00-46",
+  "firstName": "vic",
+  "lastName": "sotto ",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": "1975-08-30T16:00:00.000Z"
+  },
+  "gender": "male",
+  "edad": "50",
+  "civilStatus": "Single",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09954082029",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-08T11:29:32.731Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff4c5423db8d7ba9c891a"
+  },
+  "patientId": "25-00-00-47",
+  "firstName": "pasig",
+  "lastName": "anak",
+  "middleInitial": "e",
+  "birthDate": {
+    "$date": {
+      "$numberLong": "-247392000000"
+    }
+  },
+  "gender": "female",
+  "edad": "63",
+  "civilStatus": "Married",
+  "address": "Purok 8 Brgy Militar",
+  "contactInfo": "09954082029",
+  "onHoldStatus": [],
+  "religion": "r-catolic",
+  "bp": "100/80",
+  "hr": "69",
+  "rr": "17",
+  "temp": "36.4",
+  "spo2": "98",
+  "height": "164",
+  "weight": "72",
+  "registrationDate": {
+    "$date": "2025-11-09T01:56:21.273Z"
+  },
+  "isArchived": false,
+  "archivedAt": null,
+  "archivedBy": null,
+  "archivedFrom": null,
+  "archiveReason": null,
+  "__v": 0
+}]

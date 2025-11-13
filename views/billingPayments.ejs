@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Records</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f8fb;
+      margin: 0;
+      color: #222;
+      font-size: 15px;
+    }
+    /* SIDEBAR & NAV ONLY */
+    .sidebar {
+      width: 250px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding-top: 10px;
+      padding: 12px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      overflow-y: auto;
+      border-left: 4px solid #0891b2;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      border-radius: 10px;
+      margin: 8px 10px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.25s ease;
+      position: relative;
+      text-decoration: none;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      background: #e6f7fa;
+      color: #0891b2;
+      border-color: #b3e5ef;
+      box-shadow: 0 3px 8px rgba(8,145,178,0.1);
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #0891b2; /* OsLAM title color */
+      border-radius: 4px 0 0 4px;
+      box-shadow: 0 0 0 1px #0891b2;
+    }
+  </style>
+</head>
+<body>
+   <!-- FLOATING SIDEBAR -->
+  <aside class="sidebar">
+    <div style="display:flex;align-items:center;gap:12px;padding:24px 20px 12px 20px;">
+      <img src="/logo.png" style="width:44px;height:44px;border-radius:8px;object-fit:contain;">
+      <div>
+        <div style="font-size:20px;font-weight:700;color:#0891b2;">OsLAM</div>
+        <div style="font-size:13px;color:#666;">Billing</div>
+      </div>
+    </div>
+   <nav style="margin-top:10px;">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="/billingdashboard" class="nav-link"><i class="bi bi-grid"></i> Dashboard</a></li>
+        <li><a href="/billing" class="nav-link"><i class="bi bi-clock-history"></i> Pending Bills</a></li>
+        <li><a href="/billing/payments" class="nav-link"><i class="bi bi-receipt"></i> Billing Records</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div style="margin-left:260px; min-height:100vh; background:#f5f7fa; padding:36px 32px 32px 32px;">
+  <div class="container" style="max-width:1100px; margin:40px auto; background:#fff; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.08); padding:32px;">
+      <h1 style="margin:0 0 18px 0; font-size:2rem; font-weight:700; color:#222;">Payment Records</h1>
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 16px;">
+        <h2 style="margin:0;"></h2>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div style="position:relative;" id="paymentsViewWrapper">
+            <button id="paymentsViewBtn" onclick="togglePaymentsViewMenu(event)" style="padding:6px 12px; cursor:pointer; border:1px solid #ccc; background:white; border-radius:4px;">
+              <i class="bi bi-eye"></i> View
+            </button>
+            <div id="paymentsViewMenu" style="display:none; position:absolute; right:0; top:100%; margin-top:4px; background:white; border:1px solid #ccc; border-radius:4px; box-shadow:0 2px 8px rgba(0,0,0,0.15); min-width:240px; z-index:1000;">
+              <div style="padding:8px 12px; border-bottom:1px solid #eee; font-weight:600; font-size:13px;">Show Columns</div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="paymentsToggle-bill" checked onchange="togglePaymentsColumn('bill', this.checked)"> <label for="paymentsToggle-bill">Bill Number</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="paymentsToggle-hrn" checked onchange="togglePaymentsColumn('hrn', this.checked)"> <label for="paymentsToggle-hrn">HRN</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="paymentsToggle-name" checked onchange="togglePaymentsColumn('name', this.checked)"> <label for="paymentsToggle-name">Patient Name</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="paymentsToggle-subtotal" checked onchange="togglePaymentsColumn('subtotal', this.checked)"> <label for="paymentsToggle-subtotal">Subtotal</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="paymentsToggle-discounts" checked onchange="togglePaymentsColumn('discounts', this.checked)"> <label for="paymentsToggle-discounts">Discounts</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="paymentsToggle-promissory" checked onchange="togglePaymentsColumn('promissory', this.checked)"> <label for="paymentsToggle-promissory">Promissory</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="paymentsToggle-final" checked onchange="togglePaymentsColumn('final', this.checked)"> <label for="paymentsToggle-final">Final Total</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="paymentsToggle-status" checked onchange="togglePaymentsColumn('status', this.checked)"> <label for="paymentsToggle-status">Status</label></div>
+              <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="paymentsToggle-date" checked onchange="togglePaymentsColumn('date', this.checked)"> <label for="paymentsToggle-date">Date</label></div>
+            </div>
+          </div>
+          <input id="paymentsSearch" type="text" placeholder="Search HRN or name" style="border:1px solid #ccc; border-radius:4px; padding:6px 10px; font-size:13px; width:200px;">
+          <div style="display:flex; align-items:center; gap:6px; font-size:13px;">
+            Rows per page
+            <select id="paymentsRowsPerPage" style="border:1px solid #ccc; border-radius:4px; padding:4px 8px;">
+              <option>10</option>
+              <option>25</option>
+              <option>50</option>
+              <option>100</option>
+              <option value="all">All</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <table id="paymentsTable" class="table">
+        <thead>
+          <tr>
+            <th class="col-bill">Bill Number</th>
+            <th class="col-hrn">HRN</th>
+            <th class="col-name">Patient Name</th>
+            <th class="col-subtotal">Subtotal</th>
+            <th class="col-discounts">Discounts</th>
+            <th class="col-promissory">Promissory</th>
+            <th class="col-final">Final Total</th>
+            <th class="col-status">Status</th>
+            <th class="col-date">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (payments && payments.length === 0) { %>
+            <tr>
+              <td colspan="10" style="text-align: center;">No payment records</td>
+            </tr>
+          <% } else if (payments) { %>
+            <% payments.forEach(payment => { %>
+              <tr>
+                <td class="col-bill"><strong><%= payment.billNumber %></strong></td>
+                <td class="col-hrn"><%= payment.patientHRN %></td>
+                <td class="col-name"><%= payment.patientName %></td>
+                <td class="col-subtotal">₱<%= payment.subtotal.toFixed(2) %></td>
+                <td class="col-discounts">
+                  <% if (payment.discountAmount > 0) { %>
+                    -₱<%= payment.discountAmount.toFixed(2) %>
+                  <% } else { %>
+                    -
+                  <% } %>
+                </td>
+                <td class="col-promissory">
+                  <% if (payment.promissoryAmount > 0) { %>
+                    -₱<%= payment.promissoryAmount.toFixed(2) %>
+                  <% } else { %>
+                    -
+                  <% } %>
+                </td>
+                <td class="col-final"><strong>₱<%= payment.finalTotal.toFixed(2) %></strong></td>
+                <td class="col-status">
+                  <% if (payment.status === 'Paid') { %>
+                    <span style="background: #d4edda; color: #155724; padding: 4px 12px; border-radius: 12px; font-size: 12px;">Paid</span>
+                  <% } else if (payment.status === 'Pending') { %>
+                    <span style="background: #fff3cd; color: #856404; padding: 4px 12px; border-radius: 12px; font-size: 12px;">Pending</span>
+                  <% } else { %>
+                    <span style="background: #f8d7da; color: #721c24; padding: 4px 12px; border-radius: 12px; font-size: 12px;"><%= payment.status %></span>
+                  <% } %>
+                </td>
+                <td class="col-date"><%= new Date(payment.createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) %></td>
+              </tr>
+            <% }) %>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script>
+    function togglePaymentsColumn(colClass, visible) {
+      const table = document.getElementById('paymentsTable');
+      const cells = table.querySelectorAll('.' + colClass);
+      cells.forEach(c => { c.style.display = visible ? '' : 'none'; });
+    }
+
+    function togglePaymentsViewMenu(event){
+      const menu = document.getElementById('paymentsViewMenu');
+      if (!menu) return;
+      const isShown = menu.style.display === 'block';
+      menu.style.display = isShown ? 'none' : 'block';
+      if (!isShown){
+        setTimeout(()=>document.addEventListener('click', paymentsViewOutside), 0);
+      }
+      event.stopPropagation();
+    }
+
+    function paymentsViewOutside(e){
+      const menu = document.getElementById('paymentsViewMenu');
+      const btn = document.getElementById('paymentsViewBtn');
+      if (!menu || !btn) return;
+      if (!menu.contains(e.target) && e.target !== btn){
+        menu.style.display = 'none';
+        document.removeEventListener('click', paymentsViewOutside);
+      }
+    }
+
+    (function initPaymentsTableUI(){
+      const tbody = document.querySelector('#paymentsTable tbody');
+      const allRows = Array.from(tbody.querySelectorAll('tr'));
+      const searchInput = document.getElementById('paymentsSearch');
+      const rowsPerSelect = document.getElementById('paymentsRowsPerPage');
+      // Pager copied from All Patient List
+      // We'll append it after the table to match the position
+
+      // Create pager if not exists
+      let pager = document.getElementById('paymentsPager');
+      if (!pager){
+        pager = document.createElement('div');
+        pager.id = 'paymentsPager';
+        pager.style.cssText = 'display:flex; align-items:center; justify-content:flex-end; gap:10px; margin-top:10px; font-size:13px; color:#666;';
+        pager.innerHTML = '<span id="paymentsPageInfo">Page 1 of 1</span> <button id="paymentsPrev" style="padding:4px 8px; cursor:pointer;">&laquo;</button> <button id="paymentsNext" style="padding:4px 8px; cursor:pointer;">&raquo;</button>';
+        const tbl = document.getElementById('paymentsTable');
+        tbl.parentNode.insertBefore(pager, tbl.nextSibling);
+      }
+
+      const pageInfo = document.getElementById('paymentsPageInfo');
+      const prevBtn = document.getElementById('paymentsPrev');
+      const nextBtn = document.getElementById('paymentsNext');
+
+      let filtered = allRows.slice();
+      let currentPage = 1;
+      let rowsPerPage = parseRowsPer(rowsPerSelect.value);
+      function parseRowsPer(v){ return v === 'all' ? Infinity : parseInt(v,10); }
+
+      function render(){
+        allRows.forEach(r => r.style.display = 'none');
+        const total = filtered.length;
+        const totalPages = Math.max(1, Math.ceil(total / (rowsPerPage || Infinity)));
+        if (currentPage > totalPages) currentPage = totalPages;
+        const start = (currentPage-1) * (rowsPerPage || Infinity);
+        const end = rowsPerPage === Infinity ? total : start + rowsPerPage;
+        filtered.slice(start, end).forEach(r => r.style.display = '');
+        if (pageInfo) pageInfo.textContent = `Page ${total===0?0:currentPage} of ${total===0?0:totalPages}`;
+        if (prevBtn) prevBtn.disabled = currentPage <= 1 || total === 0;
+        if (nextBtn) nextBtn.disabled = currentPage >= totalPages || total === 0;
+      }
+
+      function applySearch(){
+        const q = (searchInput.value||'').toLowerCase();
+        if (!q) filtered = allRows.slice();
+        else {
+          filtered = allRows.filter(r => {
+            const hrn = (r.querySelector('.col-hrn')?.textContent||'').toLowerCase();
+            const name = (r.querySelector('.col-name')?.textContent||'').toLowerCase();
+            return hrn.includes(q) || name.includes(q);
+          });
+        }
+        currentPage = 1; render();
+      }
+
+      searchInput.addEventListener('input', applySearch);
+      rowsPerSelect.addEventListener('change', ()=>{ rowsPerPage = parseRowsPer(rowsPerSelect.value); currentPage=1; render(); });
+      prevBtn?.addEventListener('click', ()=>{ if(currentPage>1){ currentPage--; render(); }});
+      nextBtn?.addEventListener('click', ()=>{ currentPage++; render(); });
+
+      applySearch();
+    })();
+  </script>
+</body>
+</html>

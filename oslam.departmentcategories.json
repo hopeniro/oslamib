@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "683c62cd41ea51974b44bf13"
+  },
+  "name": "Medical Records",
+  "departmentId": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683c62e341ea51974b44bf18"
+  },
+  "name": "Out Patient Department",
+  "departmentId": 2,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683c62ed41ea51974b44bf1d"
+  },
+  "name": "Emergency",
+  "departmentId": 3,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683c630a41ea51974b44bf22"
+  },
+  "name": "Laboratory",
+  "departmentId": 4,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683c631641ea51974b44bf27"
+  },
+  "name": "Pharmacy",
+  "departmentId": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683c6ac2cbcbc61b3313e900"
+  },
+  "name": "Radiology",
+  "departmentId": 6,
+  "__v": 0
+}]

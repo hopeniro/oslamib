@@ -1,0 +1,1513 @@
+[{
+  "_id": {
+    "$oid": "6906d54c392bfee264c12f4f"
+  },
+  "paymentId": {
+    "$oid": "6906c90d63075a146740a9cf"
+  },
+  "patientId": {
+    "$oid": "6905a36688b477825c3320ac"
+  },
+  "transactionIds": [
+    "D6FF708C"
+  ],
+  "subtotal": 3000,
+  "discountTypes": [
+    "Senior Citizen"
+  ],
+  "discountRate": 0.2,
+  "discountAmount": 600,
+  "promissoryAmount": 2000,
+  "finalTotal": 400,
+  "billNumber": "2025-33798",
+  "paymentDate": {
+    "$date": "2025-11-02T03:51:40.995Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "bala, kubak",
+  "patientHRN": "25-00-00-21",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T03:51:40.998Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T03:51:40.999Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906dc13a2b69a06fd77620f"
+  },
+  "paymentId": {
+    "$oid": "6906d993b69a2e723cad5991"
+  },
+  "patientId": {
+    "$oid": "6905a71ec86ed778ba847688"
+  },
+  "transactionIds": [
+    "C859A91C"
+  ],
+  "subtotal": 2100,
+  "discountTypes": [
+    "Senior Citizen",
+    "PWD"
+  ],
+  "discountRate": 0.3,
+  "discountAmount": 630,
+  "promissoryAmount": 1500,
+  "finalTotal": -30,
+  "billNumber": "2025-75966",
+  "paymentDate": {
+    "$date": "2025-11-02T04:20:35.318Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "mercury, manson",
+  "patientHRN": "25-00-00-22",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T04:20:35.321Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T04:20:35.322Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906df0ee16a895880e2345e"
+  },
+  "paymentId": {
+    "$oid": "6906dedce16a895880e23435"
+  },
+  "patientId": {
+    "$oid": "6905a8c63bac6e20e9b2214e"
+  },
+  "transactionIds": [
+    "AA5457EB"
+  ],
+  "subtotal": 606,
+  "discountTypes": [
+    "Resident Citizen"
+  ],
+  "discountRate": 0.1,
+  "discountAmount": 60.6,
+  "promissoryAmount": 300,
+  "finalTotal": 245.39999999999998,
+  "billNumber": "2025-46032",
+  "paymentDate": {
+    "$date": "2025-11-02T04:33:18.087Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "samgy, bacon",
+  "patientHRN": "25-00-00-23",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T04:33:18.088Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T04:33:18.089Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906f14d9d48e1627cce98d1"
+  },
+  "paymentId": {
+    "$oid": "6906dc43a2b69a06fd776230"
+  },
+  "patientId": {
+    "$oid": "6905eb0ec3fe3d62bc6fa54a"
+  },
+  "transactionIds": [
+    "DDC6DF7A"
+  ],
+  "subtotal": 52,
+  "discountTypes": [
+    "Resident Citizen"
+  ],
+  "discountRate": 0.1,
+  "discountAmount": 5.2,
+  "promissoryAmount": 20,
+  "finalTotal": 26.799999999999997,
+  "billNumber": "2025-87862",
+  "paymentDate": {
+    "$date": "2025-11-02T05:51:09.649Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "icecream, latte",
+  "patientHRN": "25-00-00-24",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T05:51:09.652Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T05:51:09.654Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690703542ed5baf0371dc2be"
+  },
+  "paymentId": {
+    "$oid": "690702d62ed5baf0371dc20e"
+  },
+  "patientId": {
+    "$oid": "690209fb88de4808173bb1e9"
+  },
+  "transactionIds": [
+    "6D9AC808"
+  ],
+  "subtotal": 1000,
+  "discountTypes": [
+    "PWD"
+  ],
+  "discountRate": 0.2,
+  "discountAmount": 200,
+  "promissoryAmount": 500,
+  "finalTotal": 300,
+  "billNumber": "2025-62593",
+  "paymentDate": {
+    "$date": "2025-11-02T07:08:04.474Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "hilario, jhong",
+  "patientHRN": "25-00-00-06",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T07:08:04.475Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T07:08:04.476Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69070a66859f2c8d827a0b8a"
+  },
+  "paymentId": {
+    "$oid": "69070a29859f2c8d827a0b69"
+  },
+  "patientId": {
+    "$oid": "690206e588de4808173bb1e1"
+  },
+  "transactionIds": [
+    "F7AFB284"
+  ],
+  "subtotal": 1100,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 0,
+  "finalTotal": 1100,
+  "billNumber": "2025-93544",
+  "paymentDate": {
+    "$date": "2025-11-02T07:38:14.320Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "kolbu, bukol",
+  "patientHRN": "25-00-00-04",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T07:38:14.321Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T07:38:14.323Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69070ae4859f2c8d827a0c21"
+  },
+  "paymentId": {
+    "$oid": "69070ace859f2c8d827a0c0d"
+  },
+  "patientId": {
+    "$oid": "6901fd7288de4808173bb1d5"
+  },
+  "transactionIds": [
+    "FAFCCB68"
+  ],
+  "subtotal": 300,
+  "discountTypes": [
+    "Senior Citizen",
+    "Resident Citizen"
+  ],
+  "discountRate": 0.3,
+  "discountAmount": 90,
+  "promissoryAmount": 0,
+  "finalTotal": 210,
+  "billNumber": "2025-13924",
+  "paymentDate": {
+    "$date": "2025-11-02T07:40:20.942Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "gonzales, john",
+  "patientHRN": "25-00-00-01",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T07:40:20.943Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T07:40:20.943Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907243eb2f80724d7dd4ba7"
+  },
+  "paymentId": {
+    "$oid": "69072430b2f80724d7dd4b93"
+  },
+  "patientId": {
+    "$oid": "69022f7c20108e5204a19fb8"
+  },
+  "transactionIds": [
+    "A9A77D63"
+  ],
+  "subtotal": 300,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 0,
+  "finalTotal": 300,
+  "billNumber": "2025-71393",
+  "paymentDate": {
+    "$date": "2025-11-02T09:28:30.327Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "chacha, charapcharap",
+  "patientHRN": "25-00-00-14",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T09:28:30.328Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T09:28:30.329Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690727636dda33cb2ea194f8"
+  },
+  "paymentId": {
+    "$oid": "690727516dda33cb2ea194dd"
+  },
+  "patientId": {
+    "$oid": "69022f7c20108e5204a19fb8"
+  },
+  "transactionIds": [
+    "C45F4DE4"
+  ],
+  "subtotal": 1500,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 0,
+  "finalTotal": 1500,
+  "billNumber": "2025-06178",
+  "paymentDate": {
+    "$date": "2025-11-02T09:41:55.482Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "chacha, charapcharap",
+  "patientHRN": "25-00-00-14",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T09:41:55.483Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T09:41:55.484Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907282e6dda33cb2ea19605"
+  },
+  "paymentId": {
+    "$oid": "690728186dda33cb2ea195ef"
+  },
+  "patientId": {
+    "$oid": "69022f7c20108e5204a19fb8"
+  },
+  "transactionIds": [
+    "1999584E"
+  ],
+  "subtotal": 3000,
+  "discountTypes": [
+    "Senior Citizen"
+  ],
+  "discountRate": 0.2,
+  "discountAmount": 600,
+  "promissoryAmount": 0,
+  "finalTotal": 2400,
+  "billNumber": "2025-62248",
+  "paymentDate": {
+    "$date": "2025-11-02T09:45:18.128Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "chacha, charapcharap",
+  "patientHRN": "25-00-00-14",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T09:45:18.128Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T09:45:18.129Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690737a8cb1d6201c8688757"
+  },
+  "paymentId": {
+    "$oid": "69073757cb1d6201c868873e"
+  },
+  "patientId": {
+    "$oid": "6905a71ec86ed778ba847688"
+  },
+  "transactionIds": [
+    "24C19962"
+  ],
+  "subtotal": 300,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 1500,
+  "finalTotal": -1200,
+  "billNumber": "2025-97121",
+  "paymentDate": {
+    "$date": "2025-11-02T10:51:20.270Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "mercury, manson",
+  "patientHRN": "25-00-00-22",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T10:51:20.272Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T10:51:20.273Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073961691fa9aae11d15ba"
+  },
+  "paymentId": {
+    "$oid": "69073942691fa9aae11d15a2"
+  },
+  "patientId": {
+    "$oid": "690738b9691fa9aae11d14a4"
+  },
+  "transactionIds": [
+    "90E0A237"
+  ],
+  "subtotal": 1500,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 500,
+  "finalTotal": 1000,
+  "billNumber": "2025-60865",
+  "paymentDate": {
+    "$date": "2025-11-02T10:58:41.628Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "valino, raycharlesess",
+  "patientHRN": "25-00-00-26",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T10:58:41.628Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T10:58:41.629Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073cb28cb13e087f215069"
+  },
+  "paymentId": {
+    "$oid": "69073ca28cb13e087f215053"
+  },
+  "patientId": {
+    "$oid": "69073c298cb13e087f214f7c"
+  },
+  "transactionIds": [
+    "E197E2C1"
+  ],
+  "subtotal": 2700,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 500,
+  "finalTotal": 2200,
+  "billNumber": "2025-03675",
+  "paymentDate": {
+    "$date": "2025-11-02T11:12:50.970Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "tengteng, tangtang",
+  "patientHRN": "25-00-00-27",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T11:12:50.971Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T11:12:50.971Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073face432796c1be4ded1"
+  },
+  "paymentId": {
+    "$oid": "69073f9ce432796c1be4deb9"
+  },
+  "patientId": {
+    "$oid": "69073f2ce432796c1be4ddba"
+  },
+  "transactionIds": [
+    "2A5D7F29"
+  ],
+  "subtotal": 2100,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 500,
+  "finalTotal": 1600,
+  "billNumber": "2025-69244",
+  "paymentDate": {
+    "$date": "2025-11-02T11:25:32.452Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "ram, ram",
+  "patientHRN": "25-00-00-28",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T11:25:32.453Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T11:25:32.454Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690742c2a3835bbfd50cbcb1"
+  },
+  "paymentId": {
+    "$oid": "690742a9a3835bbfd50cbc91"
+  },
+  "patientId": {
+    "$oid": "69074232a3835bbfd50cbba6"
+  },
+  "transactionIds": [
+    "31890718"
+  ],
+  "subtotal": 13500,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 5000,
+  "finalTotal": 8500,
+  "billNumber": "2025-54071",
+  "paymentDate": {
+    "$date": "2025-11-02T11:38:42.228Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "kakis, kokiis",
+  "patientHRN": "25-00-00-29",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T11:38:42.229Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T11:38:42.230Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690745a62e79bc8b21100073"
+  },
+  "paymentId": {
+    "$oid": "690745992e79bc8b2110005d"
+  },
+  "patientId": {
+    "$oid": "690745472e79bc8b210fff95"
+  },
+  "transactionIds": [
+    "6E9BF7A4"
+  ],
+  "subtotal": 1650,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 700,
+  "finalTotal": 950,
+  "billNumber": "2025-71908",
+  "paymentDate": {
+    "$date": "2025-11-02T11:51:02.424Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "lololo, lololololo",
+  "patientHRN": "25-00-00-30",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T11:51:02.425Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T11:51:02.426Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69074955c94545ce343cab21"
+  },
+  "paymentId": {
+    "$oid": "69074943c94545ce343cab07"
+  },
+  "patientId": {
+    "$oid": "690738b9691fa9aae11d14a4"
+  },
+  "transactionIds": [
+    "CDC27EA4"
+  ],
+  "subtotal": 1200,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 500,
+  "finalTotal": 700,
+  "billNumber": "2025-63261",
+  "paymentDate": {
+    "$date": "2025-11-02T12:06:45.778Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "valino, raycharlesess",
+  "patientHRN": "25-00-00-26",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T12:06:45.779Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T12:06:45.780Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69074f54c94545ce343cac8c"
+  },
+  "paymentId": {
+    "$oid": "69074f45c94545ce343cac73"
+  },
+  "patientId": {
+    "$oid": "69073c298cb13e087f214f7c"
+  },
+  "transactionIds": [
+    "0AF97231"
+  ],
+  "subtotal": 1200,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 500,
+  "finalTotal": 700,
+  "billNumber": "2025-30521",
+  "paymentDate": {
+    "$date": "2025-11-02T12:32:20.516Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "tengteng, tangtang",
+  "patientHRN": "25-00-00-27",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T12:32:20.517Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T12:32:20.517Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69077a03c305a47222123598"
+  },
+  "paymentId": {
+    "$oid": "690773700f8d70e4e34387ee"
+  },
+  "patientId": {
+    "$oid": "69073c298cb13e087f214f7c"
+  },
+  "transactionIds": [
+    "DC14EECA"
+  ],
+  "subtotal": 300,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 0,
+  "finalTotal": 300,
+  "billNumber": "2025-74374",
+  "paymentDate": {
+    "$date": "2025-11-02T15:34:27.362Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "tengteng, tangtang",
+  "patientHRN": "25-00-00-27",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T15:34:27.365Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T15:34:27.367Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690792efa87f905a1126c08e"
+  },
+  "paymentId": {
+    "$oid": "690792d7a87f905a1126c077"
+  },
+  "patientId": {
+    "$oid": "69074232a3835bbfd50cbba6"
+  },
+  "transactionIds": [
+    "F78432AE",
+    "1D87839C"
+  ],
+  "subtotal": 6300,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 0,
+  "finalTotal": 6300,
+  "billNumber": "2025-18157",
+  "paymentDate": {
+    "$date": "2025-11-02T17:20:47.739Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "kakis, kokiis",
+  "patientHRN": "25-00-00-29",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T17:20:47.740Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T17:20:47.740Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690798c1f8cba577fa8f81b0"
+  },
+  "paymentId": {
+    "$oid": "69079879f8cba577fa8f80ea"
+  },
+  "patientId": {
+    "$oid": "69079656858f4f4a0a84b64a"
+  },
+  "transactionIds": [
+    "1D5111D0"
+  ],
+  "subtotal": 4400,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 4000,
+  "finalTotal": 400,
+  "billNumber": "2025-46502",
+  "paymentDate": {
+    "$date": "2025-11-02T17:45:37.746Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "newnew, bago",
+  "patientHRN": "25-00-00-31",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-02T17:45:37.747Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T17:45:37.748Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690805d0e66e61bb0e283c68"
+  },
+  "paymentId": {
+    "$oid": "69080558e66e61bb0e283bf9"
+  },
+  "patientId": {
+    "$oid": "690802d8e66e61bb0e2839e3"
+  },
+  "transactionIds": [
+    "F8290B0A"
+  ],
+  "subtotal": 202,
+  "discountTypes": [
+    "Resident Citizen"
+  ],
+  "discountRate": 0.1,
+  "discountAmount": 20.200000000000003,
+  "promissoryAmount": 50,
+  "finalTotal": 131.8,
+  "billNumber": "2025-50772",
+  "paymentDate": {
+    "$date": "2025-11-03T01:30:56.309Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "niro, mary hope",
+  "patientHRN": "25-00-00-32",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-03T01:30:56.310Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T01:30:56.311Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69080db3e66e61bb0e283f53"
+  },
+  "paymentId": {
+    "$oid": "69080d95e66e61bb0e283f39"
+  },
+  "patientId": {
+    "$oid": "690802d8e66e61bb0e2839e3"
+  },
+  "transactionIds": [
+    "2B6134B8"
+  ],
+  "subtotal": 500,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 250,
+  "finalTotal": 250,
+  "billNumber": "2025-09435",
+  "paymentDate": {
+    "$date": "2025-11-03T02:04:35.506Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "niro, mary hope",
+  "patientHRN": "25-00-00-32",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-03T02:04:35.506Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T02:04:35.507Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69086aa6d018131c649fe9a6"
+  },
+  "paymentId": {
+    "$oid": "69086a93d018131c649fe991"
+  },
+  "patientId": {
+    "$oid": "690802d8e66e61bb0e2839e3"
+  },
+  "transactionIds": [
+    "04B9A0CF"
+  ],
+  "subtotal": 2500,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 0,
+  "finalTotal": 2500,
+  "billNumber": "2025-49721",
+  "paymentDate": {
+    "$date": "2025-11-03T08:41:10.163Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "niro, mary hope",
+  "patientHRN": "25-00-00-32",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-03T08:41:10.163Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T08:41:10.164Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69086f2c027afa57517c83e7"
+  },
+  "paymentId": {
+    "$oid": "69086f1d027afa57517c83d1"
+  },
+  "patientId": {
+    "$oid": "690738b9691fa9aae11d14a4"
+  },
+  "transactionIds": [
+    "63246ED8",
+    "E1D0C973"
+  ],
+  "subtotal": 4800,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 0,
+  "finalTotal": 4800,
+  "billNumber": "2025-24758",
+  "paymentDate": {
+    "$date": "2025-11-03T09:00:28.612Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "valino, raycharlesess",
+  "patientHRN": "25-00-00-26",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-03T09:00:28.613Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T09:00:28.615Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909360fe7eca93a3d33b393"
+  },
+  "paymentId": {
+    "$oid": "690935ffe7eca93a3d33b37c"
+  },
+  "patientId": {
+    "$oid": "690934e5e7eca93a3d33b15d"
+  },
+  "transactionIds": [
+    "E5B9DCD4"
+  ],
+  "subtotal": 750,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 0,
+  "finalTotal": 750,
+  "billNumber": "2025-41478",
+  "paymentDate": {
+    "$date": "2025-11-03T23:09:03.521Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "crema, pangke",
+  "patientHRN": "25-00-00-33",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-03T23:09:03.522Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T23:09:03.523Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69095d48d4bd76fdf3bedc63"
+  },
+  "paymentId": {
+    "$oid": "69095d3ad4bd76fdf3bedc4d"
+  },
+  "patientId": {
+    "$oid": "690802d8e66e61bb0e2839e3"
+  },
+  "transactionIds": [
+    "441ACEBF"
+  ],
+  "subtotal": 3000,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 0,
+  "finalTotal": 3000,
+  "billNumber": "2025-20407",
+  "paymentDate": {
+    "$date": "2025-11-04T01:56:24.300Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "niro, mary hope",
+  "patientHRN": "25-00-00-32",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-04T01:56:24.301Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T01:56:24.302Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690962bc7938b889fe638b32"
+  },
+  "paymentId": {
+    "$oid": "6909629a7938b889fe638ad9"
+  },
+  "patientId": {
+    "$oid": "690745472e79bc8b210fff95"
+  },
+  "transactionIds": [
+    "57AA1690"
+  ],
+  "subtotal": 150,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 0,
+  "finalTotal": 150,
+  "billNumber": "2025-91389",
+  "paymentDate": {
+    "$date": "2025-11-04T02:19:40.139Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "lololo, lololololo",
+  "patientHRN": "25-00-00-30",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-04T02:19:40.139Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:19:40.141Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690962f67938b889fe638c88"
+  },
+  "paymentId": {
+    "$oid": "690962eb7938b889fe638c73"
+  },
+  "patientId": {
+    "$oid": "69073f2ce432796c1be4ddba"
+  },
+  "transactionIds": [
+    "ECD2BCC6"
+  ],
+  "subtotal": 1000,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 0,
+  "finalTotal": 1000,
+  "billNumber": "2025-65848",
+  "paymentDate": {
+    "$date": "2025-11-04T02:20:38.340Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "ram, ram",
+  "patientHRN": "25-00-00-28",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-04T02:20:38.341Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:20:38.341Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690965267938b889fe639067"
+  },
+  "paymentId": {
+    "$oid": "690965157938b889fe639051"
+  },
+  "patientId": {
+    "$oid": "69057d9aa9ac9b44a00cbf19"
+  },
+  "transactionIds": [
+    "1DB08CE2"
+  ],
+  "subtotal": 300,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 0,
+  "finalTotal": 300,
+  "billNumber": "2025-64785",
+  "paymentDate": {
+    "$date": "2025-11-04T02:29:58.652Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "system, ofthe down",
+  "patientHRN": "25-00-00-20",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-04T02:29:58.653Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:29:58.654Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909772eb7519306a1d22d8a"
+  },
+  "paymentId": {
+    "$oid": "69097683bdf42b59308a0a6b"
+  },
+  "patientId": {
+    "$oid": "690975e4bdf42b59308a08dc"
+  },
+  "transactionIds": [
+    "D66395FF"
+  ],
+  "subtotal": 650,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 200,
+  "finalTotal": 450,
+  "billNumber": "2025-46629",
+  "paymentDate": {
+    "$date": "2025-11-04T03:46:54.310Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "tniy, tinay",
+  "patientHRN": "25-00-00-37",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-04T03:46:54.312Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T03:46:54.314Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909826f90343d833da9abf0"
+  },
+  "paymentId": {
+    "$oid": "6909825e90343d833da9abcf"
+  },
+  "patientId": {
+    "$oid": "69098125e31874b2d3fad656"
+  },
+  "transactionIds": [
+    "EBC813C3"
+  ],
+  "subtotal": 900,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 0,
+  "finalTotal": 900,
+  "billNumber": "2025-38578",
+  "paymentDate": {
+    "$date": "2025-11-04T04:34:55.453Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "kulet, kuleti",
+  "patientHRN": "25-00-00-38",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-04T04:34:55.454Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T04:34:55.456Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a0cd2b9e75b454b62ea05"
+  },
+  "paymentId": {
+    "$oid": "690a0c959ba0853af10c04aa"
+  },
+  "patientId": {
+    "$oid": "690975e4bdf42b59308a08dc"
+  },
+  "transactionIds": [
+    "3CCF5BB7"
+  ],
+  "subtotal": 1000,
+  "discountTypes": [
+    "Senior Citizen",
+    "Resident Citizen"
+  ],
+  "discountRate": 0.3,
+  "discountAmount": 300,
+  "promissoryAmount": 0,
+  "finalTotal": 700,
+  "billNumber": "2025-27626",
+  "paymentDate": {
+    "$date": "2025-11-04T14:25:22.753Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "tniy, tinay",
+  "patientHRN": "25-00-00-37",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-04T14:25:22.757Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T14:25:22.759Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b388d2f6bb4d5c69c1061"
+  },
+  "paymentId": {
+    "$oid": "690b382e2f6bb4d5c69c1001"
+  },
+  "patientId": {
+    "$oid": "690b36662f6bb4d5c69c0cbb"
+  },
+  "transactionIds": [
+    "F597CEC2"
+  ],
+  "subtotal": 1200,
+  "discountTypes": [
+    "Resident Citizen"
+  ],
+  "discountRate": 0.1,
+  "discountAmount": 120,
+  "promissoryAmount": 300,
+  "finalTotal": 780,
+  "billNumber": "2025-09801",
+  "paymentDate": {
+    "$date": "2025-11-05T11:44:13.973Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "dolente, mcjim",
+  "patientHRN": "25-00-00-41",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-05T11:44:13.974Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-05T11:44:13.975Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c3278eea75267ee39d49e"
+  },
+  "paymentId": {
+    "$oid": "690c3243eea75267ee39d443"
+  },
+  "patientId": {
+    "$oid": "690c2ec2eea75267ee39d049"
+  },
+  "transactionIds": [
+    "96A177EB"
+  ],
+  "subtotal": 575,
+  "discountTypes": [
+    "Resident Citizen"
+  ],
+  "discountRate": 0.1,
+  "discountAmount": 57.5,
+  "promissoryAmount": 200,
+  "finalTotal": 317.5,
+  "billNumber": "2025-50983",
+  "paymentDate": {
+    "$date": "2025-11-06T05:30:32.358Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "sabangan, alex",
+  "patientHRN": "25-00-00-43",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-06T05:30:32.359Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-06T05:30:32.360Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c47e63cca6e3f4e10d732"
+  },
+  "paymentId": {
+    "$oid": "690c47c43cca6e3f4e10d70a"
+  },
+  "patientId": {
+    "$oid": "690c45af3cca6e3f4e10d49b"
+  },
+  "transactionIds": [
+    "BAC85726"
+  ],
+  "subtotal": 800,
+  "discountTypes": [
+    "Resident Citizen"
+  ],
+  "discountRate": 0.1,
+  "discountAmount": 80,
+  "promissoryAmount": 100,
+  "finalTotal": 620,
+  "billNumber": "2025-36983",
+  "paymentDate": {
+    "$date": "2025-11-06T07:01:58.622Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "kalambang, edmar",
+  "patientHRN": "25-00-00-44",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-06T07:01:58.622Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-06T07:01:58.623Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c4ec13cca6e3f4e10db03"
+  },
+  "paymentId": {
+    "$oid": "690c4e593cca6e3f4e10dac2"
+  },
+  "patientId": {
+    "$oid": "690c4c9a3cca6e3f4e10d8b4"
+  },
+  "transactionIds": [
+    "E8CD34A2"
+  ],
+  "subtotal": 215,
+  "discountTypes": [
+    "PWD"
+  ],
+  "discountRate": 0.2,
+  "discountAmount": 43,
+  "promissoryAmount": 100,
+  "finalTotal": 72,
+  "billNumber": "2025-18583",
+  "paymentDate": {
+    "$date": "2025-11-06T07:31:13.930Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "pecana, angelo",
+  "patientHRN": "25-00-00-45",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-06T07:31:13.931Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-06T07:31:13.932Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff80e0bafd470e29e0a1d"
+  },
+  "paymentId": {
+    "$oid": "690ff7e40bafd470e29e09b7"
+  },
+  "patientId": {
+    "$oid": "690ff4c5423db8d7ba9c891a"
+  },
+  "transactionIds": [
+    "D7EE4B1D"
+  ],
+  "subtotal": 300,
+  "discountTypes": [],
+  "discountRate": 0,
+  "discountAmount": 0,
+  "promissoryAmount": 0,
+  "finalTotal": 300,
+  "billNumber": "2025-46672",
+  "paymentDate": {
+    "$date": "2025-11-09T02:10:22.750Z"
+  },
+  "processedBy": "Cashier",
+  "patientName": "anak, pasig",
+  "patientHRN": "25-00-00-47",
+  "paymentMethod": "Cash",
+  "referenceNumber": null,
+  "amountReceived": null,
+  "changeGiven": null,
+  "notes": null,
+  "createdAt": {
+    "$date": "2025-11-09T02:10:22.751Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-09T02:10:22.752Z"
+  },
+  "__v": 0
+}]

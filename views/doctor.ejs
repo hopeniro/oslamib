@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Doctor Management</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+  <style>
+    body {
+      background: #f5f7fa;
+    }
+    .promissory-image {
+      max-width: 200px;
+      max-height: 200px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .status-badge {
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .status-pending { background: #FFC107; color: #000; }
+    .status-approved { background: #4CAF50; color: #fff; }
+    .status-settled { background: #2196F3; color: #fff; }
+    .status-overdue { background: #f44336; color: #fff; }
+  .status-rejected { background: #9E9E9E; color: #fff; }
+    .action-btn {
+      padding: 6px 12px;
+      margin: 2px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .btn-approve { background: #4CAF50; color: white; }
+    .btn-edit { background: #2196F3; color: white; }
+    .btn-settle { background: #9C27B0; color: white; }
+    .btn-overdue { background: #f44336; color: white; }
+  </style>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f8fb;
+      margin: 0;
+      color: #222;
+      font-size: 15px;
+    }
+    /* SIDEBAR & NAV ONLY */
+    .sidebar {
+      width: 250px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding-top: 10px;
+      padding: 12px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      overflow-y: auto;
+      border-left: 4px solid #0891b2;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      border-radius: 10px;
+      margin: 8px 10px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.25s ease;
+      position: relative;
+      text-decoration: none;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      background: #e6f7fa;
+      color: #0891b2;
+      border-color: #b3e5ef;
+      box-shadow: 0 3px 8px rgba(8,145,178,0.1);
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #0891b2; /* OsLAM title color */
+      border-radius: 4px 0 0 4px;
+      box-shadow: 0 0 0 1px #0891b2;
+    }
+  </style>
+</head>
+<body>
+   <!-- FLOATING SIDEBAR -->
+  <aside class="sidebar">
+    <div style="display:flex;align-items:center;gap:12px;padding:24px 20px 12px 20px;">
+      <img src="/logo.png" style="width:44px;height:44px;border-radius:8px;object-fit:contain;">
+      <div>
+        <div style="font-size:20px;font-weight:700;color:#0891b2;">OsLAM</div>
+        <div style="font-size:13px;color:#666;">Billing</div>
+      </div>
+    </div>
+    <nav style="margin-top:10px;">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="/dashboard" class="nav-link"><i class="bi bi-grid"></i> Dashboard</a></li>
+        <li><a href="/promissory" class="nav-link"><i class="bi bi-file-earmark-text"></i> Promissory Notes</a></li>
+        <li><a href="/services" class="nav-link"><i class="bi bi-tools"></i> Services</a></li>
+         <li><a href="/doctor" class="nav-link"><i class="bi bi-person-badge"></i> Doctors</a></li>
+        <li><a href="/nurse" class="nav-link"><i class="bi bi-person-lines-fill"></i> Nurses</a></li>
+         <li><a href="/doctorscheduling" class="nav-link"><i class="bi bi-calendar-event"></i> Doctor Schedule</a></li>
+        <li><a href="/nursescheduling" class="nav-link"><i class="bi bi-calendar-event"></i> Nurse Schedule</a></li>
+         <li><a href="/staff" class="nav-link"><i class="bi bi-people"></i> Staff</a></li>
+        <li><a href="/audittrail" class="nav-link"><i class="bi bi-shield-check"></i> Audit Trail</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+
+  <div style="margin-left: 270px;">
+  <!-- Removed outer wrap box, only main content remains -->
+  <div class="form-section main-content-box">
+    <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 15px;">
+      <div class="tab-group">
+        <button type="button" class="btn btn-white btn-tab" data-tab="specialty" onclick="openSpecialtyModal()">Add Specialty</button>
+        <button type="button" class="btn btn-white btn-tab" data-tab="service" onclick="openServiceModal()">Add Service</button>
+        <button type="button" class="btn btn-primary btn-tab" data-tab="doctor" onclick="openDoctorModal()">Add Doctor</button>
+      </div>
+    </div>
+
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 16px;">
+      <h2 style="margin:0;">Doctors</h2>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <div style="position:relative;" id="doctorViewWrapper">
+          <button id="doctorViewBtn" onclick="toggleDoctorViewMenu(event)" style="padding:6px 12px; cursor:pointer; border:1px solid #ccc; background:white; border-radius:4px;">
+            <i class="bi bi-eye"></i> View
+          </button>
+          <div id="doctorViewMenu" style="display:none; position:absolute; right:0; top:100%; margin-top:4px; background:white; border:1px solid #ccc; border-radius:4px; box-shadow:0 2px 8px rgba(0,0,0,0.15); min-width:220px; z-index:1000;">
+            <div style="padding:8px 12px; border-bottom:1px solid #eee; font-weight:600; font-size:13px;">Show Columns</div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="doctorToggle-name" checked onchange="toggleDoctorColumn('name', this.checked)"> <label for="doctorToggle-name">Name</label></div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="doctorToggle-birth" checked onchange="toggleDoctorColumn('birth', this.checked)"> <label for="doctorToggle-birth">Birthdate</label></div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="doctorToggle-gender" checked onchange="toggleDoctorColumn('gender', this.checked)"> <label for="doctorToggle-gender">Gender</label></div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="doctorToggle-contact" checked onchange="toggleDoctorColumn('contact', this.checked)"> <label for="doctorToggle-contact">Contact</label></div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="doctorToggle-email" checked onchange="toggleDoctorColumn('email', this.checked)"> <label for="doctorToggle-email">Email</label></div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="doctorToggle-license" checked onchange="toggleDoctorColumn('license', this.checked)"> <label for="doctorToggle-license">License Number</label></div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="doctorToggle-valid" checked onchange="toggleDoctorColumn('valid', this.checked)"> <label for="doctorToggle-valid">Valid Until</label></div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="doctorToggle-status" checked onchange="toggleDoctorColumn('status', this.checked)"> <label for="doctorToggle-status">Status</label></div>
+          </div>
+        </div>
+        <input id="doctorSearch" type="text" placeholder="Search name or email" style="border:1px solid #ccc; border-radius:4px; padding:6px 10px; font-size:13px; width:200px;">
+        <div style="display:flex; align-items:center; gap:6px; font-size:13px;">
+          Rows per page
+          <select id="doctorRowsPerPage" style="border:1px solid #ccc; border-radius:4px; padding:4px 8px;">
+            <option>10</option>
+            <option>25</option>
+            <option>50</option>
+            <option>100</option>
+            <option value="all">All</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <table id="doctorTable">
+      <thead>
+      <tr>
+        <th class="col-name">Name</th>
+        <th class="col-birth">Birthdate</th>
+        <th class="col-gender">Gender</th>
+        <th class="col-contact">Contact</th>
+        <th class="col-email">Email</th>
+        <th class="col-license">License Number</th>
+        <th class="col-valid">Valid Until</th>
+        <th class="col-status">Status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% doctors.forEach(doc => { %>
+        <tr class="doctor-row">
+          <td class="col-name"><%= doc.lastName %>, <%= doc.firstName %> <%= doc.middleName ? doc.middleName + '.' : '' %></td>
+          <td class="col-birth"><%= new Date(doc.birthday).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) %></td>
+          <td class="col-gender"><%= doc.gender %></td>
+          <td class="col-contact"><%= doc.contact %></td>
+          <td class="col-email"><%= doc.email %></td>
+          <td class="col-license"><%= doc.licenseNumber || '—' %></td>
+          <td class="col-valid">
+            <% if (doc.validUntil) { %>
+              <%= new Date(doc.validUntil).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) %>
+            <% } else { %>
+              —
+            <% } %>
+          </td>
+          <td class="col-status">
+            <% if (doc.effectiveStatus === 'expired') { %>
+              <span class="status-expired">⚠️ Expired License</span>
+            <% } else { %>
+              <select class="status-select" onchange="toggleDoctorStatus('<%= doc.doctorId %>', this.value)" <%= !doc.canChangeStatus ? 'disabled' : '' %>>
+                <option value="active" <%= doc.status === 'active' ? 'selected' : '' %>>✓ Active</option>
+                <option value="inactive" <%= doc.status === 'inactive' ? 'selected' : '' %>>— Inactive</option>
+              </select>
+            <% } %>
+          </td>
+        </tr>
+      <% }) %>
+      </tbody>
+    </table>
+
+    <div id="doctorPager" style="display:flex; align-items:center; justify-content:flex-end; gap:10px; margin-top:10px; font-size:13px; color:#666;">
+      <span id="doctorPageInfo">Page 1 of 1</span>
+      <button id="doctorPrev" style="padding:4px 8px; cursor:pointer;">&laquo;</button>
+      <button id="doctorNext" style="padding:4px 8px; cursor:pointer;">&raquo;</button>
+    </div>
+  </div>
+
+  <!-- Doctor Registration Modal -->
+  <div id="doctor-modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="doctorModalTitle">
+      <button class="modal-close" onclick="closeDoctorModal()" aria-label="Close">&times;</button>
+      <h3 id="doctorModalTitle" style="margin-top: 0;">Register Doctor</h3>
+      <form id="doctorForm" action="/register-doctor" method="POST">
+        <div class="form-grid grid-2">
+          <div class="form-field">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+          <div class="form-field">
+            <label for="middleName">Middle Initial</label>
+            <input type="text" id="middleName" name="middleName" maxlength="1" required>
+          </div>
+
+          <div class="form-field">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+          <div class="form-field">
+            <label for="birthday">Birthday</label>
+            <input type="date" id="birthday" name="birthday" required>
+          </div>
+
+          <div class="form-field">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+              <option value="">-- Select Gender --</option>
+              <option>Male</option><option>Female</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="contact">Contact</label>
+            <input type="tel" id="contact" name="contact" required inputmode="numeric" pattern="\d{11}" minlength="11" maxlength="11" title="Enter exactly 11 digits (e.g., 09123456789)">
+            <div class="help-text">11-digit number (e.g., 09123456789)</div>
+          </div>
+
+          <div class="form-field full">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+          </div>
+
+          <div class="form-field full">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required title="Enter a valid email address (e.g., user@example.com)">
+          </div>
+
+          <div class="form-field">
+            <label for="licenseNumber">License Number</label>
+            <input type="text" id="licenseNumber" name="licenseNumber" required>
+          </div>
+          <div class="form-field">
+            <label for="validUntil">License Valid Until</label>
+            <input type="date" id="validUntil" name="validUntil" required>
+          </div>
+
+          <div class="form-field full">
+            <label>Specialties</label>
+            <div class="dropdown-checkbox">
+              <% specialties.forEach(s => { %>
+                <label><input type="checkbox" name="specialties" value="<%= s.specialty %>"> <%= s.specialty %></label>
+              <% }) %>
+            </div>
+          </div>
+
+          <div class="form-field full">
+            <label>Services</label>
+            <div class="dropdown-checkbox">
+              <% services.forEach(s => { %>
+                <label><input type="checkbox" name="services" value="<%= s.service %>"> <%= s.service %></label>
+              <% }) %>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-cancel" onclick="closeDoctorModal()">Cancel</button>
+          <button type="submit" class="btn btn-white">Register Doctor</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+    <!-- Add Specialty Modal -->
+    <div id="specialty-modal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="specialtyModalTitle">
+        <button class="modal-close" onclick="closeSpecialtyModal()" aria-label="Close">&times;</button>
+        <h3 id="specialtyModalTitle" style="margin-top:0;">Add Specialty</h3>
+        <form action="/add-specialty" method="POST">
+          <div class="form-field">
+            <label for="specialtyInput">Specialty Name</label>
+            <input type="text" id="specialtyInput" name="specialty" required>
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn btn-cancel" onclick="closeSpecialtyModal()">Cancel</button>
+            <button type="submit" class="btn btn-white">Add Specialty</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  <!-- Add Service Modal -->
+  <div id="service-modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="serviceModalTitle">
+      <button class="modal-close" onclick="closeServiceModal()" aria-label="Close">&times;</button>
+      <h3 id="serviceModalTitle" style="margin-top: 0;">Add Service</h3>
+      <form action="/add-doctor-service" method="POST">
+        <div class="form-field">
+          <label for="serviceInput">Service Name</label>
+          <input type="text" id="serviceInput" name="service" required>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-cancel" onclick="closeServiceModal()">Cancel</button>
+          <button type="submit" class="btn btn-white">Add Service</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // ================= Table UI: View/Search/Pagination =================
+  function toggleDoctorViewMenu(event){
+    const menu = document.getElementById('doctorViewMenu');
+    if (!menu) return;
+    const isShown = menu.style.display === 'block';
+    menu.style.display = isShown ? 'none' : 'block';
+    if (!isShown){
+      setTimeout(()=>document.addEventListener('click', doctorViewOutside), 0);
+    }
+    event.stopPropagation();
+  }
+  function doctorViewOutside(e){
+    const menu = document.getElementById('doctorViewMenu');
+    const btn = document.getElementById('doctorViewBtn');
+    if (!menu || !btn) return;
+    if (!menu.contains(e.target) && e.target !== btn){
+      menu.style.display = 'none';
+      document.removeEventListener('click', doctorViewOutside);
+    }
+  }
+  function toggleDoctorColumn(key, show) {
+    const table = document.getElementById('doctorTable');
+    const th = table.querySelector(`thead .col-${key}`);
+    const tds = table.querySelectorAll(`tbody .col-${key}`);
+    const display = show ? '' : 'none';
+    if (th) th.style.display = display;
+    tds.forEach(td => td.style.display = display);
+  }
+
+  (function initDoctorTableUI(){
+    const tbody = document.querySelector('#doctorTable tbody');
+    const allRows = Array.from(tbody.querySelectorAll('tr.doctor-row'));
+    const searchInput = document.getElementById('doctorSearch');
+    const rowsPerSelect = document.getElementById('doctorRowsPerPage');
+    const pageInfo = document.getElementById('doctorPageInfo');
+    const prevBtn = document.getElementById('doctorPrev');
+    const nextBtn = document.getElementById('doctorNext');
+
+    let filtered = allRows.slice();
+    let currentPage = 1;
+    let rowsPerPage = parseRowsPer(rowsPerSelect.value);
+    function parseRowsPer(v){ return v === 'all' ? Infinity : parseInt(v,10); }
+
+    function render(){
+      allRows.forEach(r => r.style.display = 'none');
+      const total = filtered.length;
+      const totalPages = Math.max(1, Math.ceil(total / (rowsPerPage || Infinity)));
+      if (currentPage > totalPages) currentPage = totalPages;
+      const start = (currentPage-1) * (rowsPerPage || Infinity);
+      const end = rowsPerPage === Infinity ? total : start + rowsPerPage;
+      filtered.slice(start, end).forEach(r => r.style.display = '');
+      if (pageInfo) pageInfo.textContent = `Page ${total===0?0:currentPage} of ${total===0?0:totalPages}`;
+      if (prevBtn) prevBtn.disabled = currentPage <= 1 || total === 0;
+      if (nextBtn) nextBtn.disabled = currentPage >= totalPages || total === 0;
+    }
+
+    function applySearch(){
+      const q = (searchInput.value||'').toLowerCase();
+      if (!q) filtered = allRows.slice();
+      else {
+        filtered = allRows.filter(r => {
+          const name = (r.querySelector('.col-name')?.textContent||'').toLowerCase();
+          const email = (r.querySelector('.col-email')?.textContent||'').toLowerCase();
+          return name.includes(q) || email.includes(q);
+        });
+      }
+      currentPage = 1; render();
+    }
+
+    searchInput?.addEventListener('input', applySearch);
+    rowsPerSelect?.addEventListener('change', ()=>{ rowsPerPage = parseRowsPer(rowsPerSelect.value); currentPage=1; render(); });
+    prevBtn?.addEventListener('click', ()=>{ if(currentPage>1){ currentPage--; render(); }});
+    nextBtn?.addEventListener('click', ()=>{ currentPage++; render(); });
+
+    applySearch();
+  })();
+
+  async function toggleDoctorStatus(doctorId, newStatus) {
+    try {
+      const response = await axios.post('/toggle-doctor-status', {
+        doctorId: doctorId,
+        status: newStatus
+      });
+      
+      if (response.data.success) {
+        alert('Doctor status updated successfully!');
+        location.reload();
+      }
+    } catch (err) {
+      alert(err.response?.data?.error || 'Failed to update status');
+      location.reload();
+    }
+  }
+
+  // Modal open/close handlers
+  function setActiveTab(name) {
+    const tabs = document.querySelectorAll('.btn-tab');
+    tabs.forEach(b => b.classList.remove('is-active'));
+    const btn = document.querySelector(`.btn-tab[data-tab="${name}"]`);
+    if (btn) btn.classList.add('is-active');
+  }
+
+  function clearActiveTabs() {
+    document.querySelectorAll('.btn-tab').forEach(b => b.classList.remove('is-active'));
+  }
+
+  function openDoctorModal() {
+    const modal = document.getElementById('doctor-modal');
+    modal.style.display = 'flex';
+    modal.setAttribute('aria-hidden', 'false');
+    const first = modal.querySelector('input[name="firstName"]');
+    if (first) { setTimeout(() => first.focus(), 0); }
+    setActiveTab('doctor');
+  }
+
+  function closeDoctorModal() {
+    const modal = document.getElementById('doctor-modal');
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+    clearActiveTabs();
+  }
+
+  function openSpecialtyModal() {
+    const modal = document.getElementById('specialty-modal');
+    modal.style.display = 'flex';
+    modal.setAttribute('aria-hidden', 'false');
+    const first = modal.querySelector('#specialtyInput');
+    if (first) { setTimeout(() => first.focus(), 0); }
+    setActiveTab('specialty');
+  }
+
+  function closeSpecialtyModal() {
+    const modal = document.getElementById('specialty-modal');
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+    clearActiveTabs();
+  }
+
+  function openServiceModal() {
+    const modal = document.getElementById('service-modal');
+    modal.style.display = 'flex';
+    modal.setAttribute('aria-hidden', 'false');
+    const first = modal.querySelector('#serviceInput');
+    if (first) { setTimeout(() => first.focus(), 0); }
+    setActiveTab('service');
+  }
+
+  function closeServiceModal() {
+    const modal = document.getElementById('service-modal');
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+    clearActiveTabs();
+  }
+
+  // Close when clicking outside the modal content
+  window.addEventListener('click', function(event) {
+    const doctorModal = document.getElementById('doctor-modal');
+    const specialtyModal = document.getElementById('specialty-modal');
+    const serviceModal = document.getElementById('service-modal');
+    
+    if (event.target === doctorModal) {
+      closeDoctorModal();
+    }
+    if (event.target === specialtyModal) {
+      closeSpecialtyModal();
+    }
+    if (event.target === serviceModal) {
+      closeServiceModal();
+    }
+  });
+
+  // Close on Escape key
+  window.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      const doctorModal = document.getElementById('doctor-modal');
+      const specialtyModal = document.getElementById('specialty-modal');
+      const serviceModal = document.getElementById('service-modal');
+      
+      if (doctorModal && doctorModal.style.display === 'flex') {
+        closeDoctorModal();
+      }
+      if (specialtyModal && specialtyModal.style.display === 'flex') {
+        closeSpecialtyModal();
+      }
+      if (serviceModal && serviceModal.style.display === 'flex') {
+        closeServiceModal();
+      }
+    }
+  });
+
+  // Enforce numeric-only and 11-digit limit on contact field
+  (function () {
+    const contactInput = document.getElementById('contact');
+    if (contactInput) {
+      contactInput.addEventListener('input', function () {
+        this.value = this.value.replace(/\D/g, '').slice(0, 11);
+      });
+    }
+  })();
+</script>
+</body>
+</html>

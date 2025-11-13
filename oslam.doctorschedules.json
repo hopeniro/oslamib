@@ -1,0 +1,348 @@
+[{
+  "_id": {
+    "$oid": "683bbcf46d2cf86135f4b414"
+  },
+  "doctorId": "DOC2025T26IC",
+  "date": "Sun",
+  "startTime": "10:37",
+  "endTime": "23:59",
+  "specialties": [
+    "Physician"
+  ],
+  "services": [
+    null
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690385e68ef829994c75c81e"
+  },
+  "doctorId": "DOC2025H1I2D",
+  "date": "Mon",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "specialties": [
+    "Physician"
+  ],
+  "services": [
+    "Consultation"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690385e68ef829994c75c820"
+  },
+  "doctorId": "DOC2025H1I2D",
+  "date": "Tue",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "specialties": [
+    "Physician"
+  ],
+  "services": [
+    "Consultation"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690385e68ef829994c75c822"
+  },
+  "doctorId": "DOC2025H1I2D",
+  "date": "Wed",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "specialties": [
+    "Physician"
+  ],
+  "services": [
+    "Consultation"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690385e68ef829994c75c826"
+  },
+  "doctorId": "DOC2025H1I2D",
+  "date": "Fri",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "specialties": [
+    "Physician"
+  ],
+  "services": [
+    "Consultation"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6903869e8ef829994c75c843"
+  },
+  "doctorId": "DOC2025H1I2D",
+  "date": "Thu",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "specialties": [
+    "Physician"
+  ],
+  "services": [
+    null
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69038e61c0f944aa88b4b7c4"
+  },
+  "doctorId": "DOC2025T26IC",
+  "date": "2025-11-03",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "specialties": [
+    "Physician"
+  ],
+  "services": [
+    "Consultation"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69038e8cc0f944aa88b4b7c7"
+  },
+  "doctorId": "DOC2025T26IC",
+  "date": "2025-10-31",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "specialties": [
+    "Physician"
+  ],
+  "services": [
+    "Consultation"
+  ],
+  "__v": 0,
+  "department": "Emergency"
+},
+{
+  "_id": {
+    "$oid": "690419f75857b361797506ee"
+  },
+  "doctorId": "DOC2025T26IC",
+  "date": "2025-11-01",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "specialties": [],
+  "services": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69041ad45857b361797506f5"
+  },
+  "doctorId": "DOC2025LJLZ0",
+  "date": "2025-10-31",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "specialties": [],
+  "services": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69041f4b0b5654bbe0d8bad3"
+  },
+  "doctorId": "DOC2025LJLZ0",
+  "date": "2025-10-31",
+  "startTime": "05:00",
+  "endTime": "16:00",
+  "department": "OPD",
+  "specialties": [],
+  "services": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69042511c937858c36e67d96"
+  },
+  "doctorId": "DOC2025LJLZ0",
+  "date": "2025-11-01",
+  "startTime": "10:55",
+  "endTime": "22:55",
+  "department": "OPD",
+  "specialties": [],
+  "services": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69042699180f86ee1085fc64"
+  },
+  "doctorId": "DOC2025LJLZ0",
+  "date": "2025-11-04",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "department": "OPD",
+  "specialties": [],
+  "services": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69042699180f86ee1085fc66"
+  },
+  "doctorId": "DOC2025LJLZ0",
+  "date": "2025-11-05",
+  "startTime": "20:00",
+  "endTime": "05:00",
+  "department": "Emergency",
+  "specialties": [],
+  "services": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69042699180f86ee1085fc68"
+  },
+  "doctorId": "DOC2025LJLZ0",
+  "date": "2025-11-06",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "department": "OPD",
+  "specialties": [],
+  "services": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69042699180f86ee1085fc6a"
+  },
+  "doctorId": "DOC2025LJLZ0",
+  "date": "2025-11-07",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "department": "OPD",
+  "specialties": [],
+  "services": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905d34519a8865eac4f7454"
+  },
+  "doctorId": "DOC2025LJLZ0",
+  "date": "2025-11-01",
+  "startTime": "11:30",
+  "endTime": "23:30",
+  "department": "Emergency",
+  "specialties": [],
+  "services": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69069426f5b743e6eb8c9979"
+  },
+  "doctorId": "DOC2025LJLZ0",
+  "date": "2025-11-02",
+  "startTime": "08:13",
+  "endTime": "17:00",
+  "department": "Emergency",
+  "specialties": [],
+  "services": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906b9ec1cc79678cf2e313d"
+  },
+  "doctorId": "DOC2025H1I2D",
+  "date": "2025-11-05",
+  "startTime": "01:00",
+  "endTime": "17:00",
+  "department": "Emergency",
+  "specialties": [],
+  "services": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906b9ec1cc79678cf2e313f"
+  },
+  "doctorId": "DOC2025H1I2D",
+  "date": "2025-11-06",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "department": "OPD",
+  "specialties": [],
+  "services": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906b9ec1cc79678cf2e3141"
+  },
+  "doctorId": "DOC2025H1I2D",
+  "date": "2025-11-07",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "department": "OPD",
+  "specialties": [],
+  "services": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906ba1e1cc79678cf2e3153"
+  },
+  "doctorId": "DOC2025H1I2D",
+  "date": "2025-11-02",
+  "startTime": "08:00",
+  "endTime": "17:00",
+  "department": "OPD",
+  "specialties": [],
+  "services": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690935a8e7eca93a3d33b252"
+  },
+  "doctorId": "DOC2025H1I2D",
+  "date": "2025-11-04",
+  "startTime": "08:07",
+  "endTime": "19:07",
+  "department": "Emergency",
+  "specialties": [],
+  "services": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c3072eea75267ee39d18e"
+  },
+  "doctorId": "DOC2025T26IC",
+  "date": "2025-11-06",
+  "startTime": "20:21",
+  "endTime": "18:21",
+  "department": "Emergency",
+  "specialties": [],
+  "services": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff74d0bafd470e29e083e"
+  },
+  "doctorId": "DOC2025LJLZ0",
+  "date": "2025-11-09",
+  "startTime": "07:06",
+  "endTime": "20:07",
+  "department": "Emergency",
+  "specialties": [],
+  "services": [],
+  "__v": 0
+}]

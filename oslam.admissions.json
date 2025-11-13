@@ -1,0 +1,130 @@
+[{
+  "_id": {
+    "$oid": "69098c8c6ca0e378373b392b"
+  },
+  "admittingId": "ADMT1762233484070",
+  "patientType": "regular",
+  "patientId": "25-00-00-40",
+  "fullName": "micheal jackson",
+  "birthdate": {
+    "$date": "1991-01-11T16:00:00.000Z"
+  },
+  "category": "Out Patient Department",
+  "walkIn": false,
+  "referredBy": "",
+  "admittedBy": "",
+  "dischargeBy": "",
+  "isCleared": false,
+  "discharged": false,
+  "dateAdmitted": {
+    "$date": "2025-11-04T05:18:04.071Z"
+  },
+  "admittedAt": {
+    "$date": "2025-11-04T05:18:04.071Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a29c03a26d71f0006887d"
+  },
+  "admittingId": "ADMT1762273728934",
+  "patientType": "regular",
+  "patientId": "25-00-00-14",
+  "fullName": "charapcharap chacha",
+  "birthdate": {
+    "$date": "2005-12-17T16:00:00.000Z"
+  },
+  "category": "Out Patient Department",
+  "walkIn": false,
+  "referredBy": "",
+  "admittedBy": "",
+  "dischargeBy": "",
+  "isCleared": false,
+  "discharged": false,
+  "dateAdmitted": {
+    "$date": "2025-11-04T16:28:48.947Z"
+  },
+  "admittedAt": {
+    "$date": "2025-11-04T16:28:48.947Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a2d1daeaebd1cd6c4961f"
+  },
+  "admittingId": "ADMT1762274589893",
+  "patientType": "regular",
+  "patientId": "25-00-00-37",
+  "fullName": "tinay tniy",
+  "birthdate": {
+    "$date": "1991-12-24T16:00:00.000Z"
+  },
+  "category": "Out Patient Department",
+  "walkIn": false,
+  "referredBy": "",
+  "admittedBy": "",
+  "dischargeBy": "",
+  "isCleared": false,
+  "discharged": false,
+  "dateAdmitted": {
+    "$date": "2025-11-04T16:43:09.898Z"
+  },
+  "admittedAt": {
+    "$date": "2025-11-04T16:43:09.898Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a2fd24a1f640d6d55008d"
+  },
+  "admittingId": "ADMT1762275282674",
+  "patientType": "regular",
+  "patientId": "25-00-00-35",
+  "fullName": "cobbychi coby",
+  "birthdate": {
+    "$date": "1989-08-10T16:00:00.000Z"
+  },
+  "category": "Emergency",
+  "walkIn": false,
+  "referredBy": "",
+  "admittedBy": "",
+  "dischargeBy": "",
+  "isCleared": false,
+  "discharged": false,
+  "dateAdmitted": {
+    "$date": "2025-11-04T16:54:42.675Z"
+  },
+  "admittedAt": {
+    "$date": "2025-11-04T16:54:42.675Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a352f4270929110479002"
+  },
+  "admittingId": "ADMT1762276655553",
+  "patientType": "regular",
+  "patientId": "25-00-00-38",
+  "fullName": "kuleti kulet",
+  "birthdate": {
+    "$date": "1989-08-11T16:00:00.000Z"
+  },
+  "category": "Emergency",
+  "walkIn": false,
+  "referredBy": "",
+  "admittedBy": "",
+  "dischargeBy": "",
+  "isCleared": false,
+  "discharged": false,
+  "dateAdmitted": {
+    "$date": "2025-11-04T17:17:35.568Z"
+  },
+  "admittedAt": {
+    "$date": "2025-11-04T17:17:35.568Z"
+  },
+  "__v": 0
+}]

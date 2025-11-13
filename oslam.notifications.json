@@ -1,0 +1,6248 @@
+[{
+  "_id": {
+    "$oid": "6903408171a9614359f040a2"
+  },
+  "patientId": "25-00-00-14",
+  "message": "Patient 25-00-00-14 processed for admission.",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-30T10:40:01.810Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6903456fd27a60c5c168d4bd"
+  },
+  "patientId": "25-00-00-13",
+  "message": "Patient 25-00-00-13 processed for admission.",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-30T11:01:03.997Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6903498c49504eaf8089846a"
+  },
+  "patientId": "25-00-00-08",
+  "message": "Patient 25-00-00-08 processed for admission.",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-30T11:18:36.055Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690352dcff8262e4a2e1f423"
+  },
+  "patientId": "25-00-00-07",
+  "message": "Patient 25-00-00-07 processed for admission.",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-30T11:58:20.375Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6903530fff8262e4a2e1f437"
+  },
+  "patientId": "25-00-00-01",
+  "message": "Patient 25-00-00-01 processed for admission.",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-30T11:59:11.024Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69035311ff8262e4a2e1f43a"
+  },
+  "patientId": "vany2025f3r5o",
+  "message": "Patient vany2025f3r5o processed for admission.",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-30T11:59:13.417Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69035314ff8262e4a2e1f43d"
+  },
+  "patientId": "25-00-00-04",
+  "message": "Patient 25-00-00-04 processed for admission.",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-30T11:59:16.626Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69035374ff8262e4a2e1f452"
+  },
+  "patientId": "vara2025hehxa",
+  "message": "Patient vara2025hehxa processed for admission.",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-30T12:00:52.356Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6903742c1b5055317259233e"
+  },
+  "patientId": "25-00-00-14",
+  "message": "Patient 25-00-00-14 - Chacha, Charapcharap E admitted to Emergency.",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-30T14:20:28.108Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6903938cbd2e7f5d8195ddb9"
+  },
+  "patientId": "25-00-00-13",
+  "message": "Patient 25-00-00-13 - Bronzon, Zonzon R admitted to Out Patient Department.",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-30T16:34:20.638Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6903f1cc81f0a0da2a0c5f2f"
+  },
+  "patientId": "temp374520",
+  "message": "Patient temp374520 processed for admission.",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-30T23:16:28.822Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6904839c8e4ae4f8973c7057"
+  },
+  "patientId": "25-00-00-13",
+  "message": "New charge slip for zonzon bronzon - ₱450.00",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-31T09:38:36.885Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6904873d23a3d377d45a9704"
+  },
+  "patientId": "25-00-00-13",
+  "message": "New charge slip for zonzon bronzon - ₱1500.00",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-31T09:54:05.331Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690489fe21d0aaa420658362"
+  },
+  "patientId": "25-00-00-14",
+  "message": "New charge slip for charapcharap chacha - ₱1000.00",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-31T10:05:50.401Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69048badf9a1b00d1f083a65"
+  },
+  "patientId": "25-00-00-14",
+  "message": "New charge slip for charapcharap chacha - ₱900.00",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-31T10:13:01.446Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69048d05f9a1b00d1f083a96"
+  },
+  "patientId": "25-00-00-09",
+  "message": "Patient 25-00-00-09 processed for admission.",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-31T10:18:45.733Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690493e376f8a16668cd92ba"
+  },
+  "patientId": "25-00-00-06",
+  "message": "Patient 25-00-00-06 processed for admission.",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-31T10:48:03.581Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6904a326e75a69388321e82a"
+  },
+  "patientId": "25-00-00-09",
+  "message": "Patient 25-00-00-09 - Doe, John  admitted to Emergency.",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-31T11:53:10.430Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6904a5c4b0089200cd2e2b59"
+  },
+  "patientId": "25-00-00-09",
+  "message": "New charge slip for John Doe - ₱900.00",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-10-31T12:04:20.217Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6904b2b0917afa7955c130a4"
+  },
+  "patientId": "25-00-00-16",
+  "message": "Patient 25-00-00-16 processed for admission.",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-31T12:59:28.347Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6904b2f2917afa7955c130b5"
+  },
+  "patientId": "25-00-00-16",
+  "message": "Patient 25-00-00-16 - 25-00-00-16, Unidentified  admitted to Emergency.",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-31T13:00:34.153Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6904b304917afa7955c130e9"
+  },
+  "patientId": "25-00-00-16",
+  "message": "New charge slip for unidentified 25-00-00-16 - ₱2000.00",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-31T13:00:52.940Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6904b998afed471700e9f00c"
+  },
+  "patientId": "25-00-00-17",
+  "message": "Patient 25-00-00-17 processed for admission.",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-31T13:28:56.846Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6904c1bb45a9b17130c2c22b"
+  },
+  "patientId": "25-00-00-19",
+  "message": "Patient 25-00-00-19 processed for admission.",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-31T14:03:39.949Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6904c1cf45a9b17130c2c238"
+  },
+  "patientId": "25-00-00-19",
+  "message": "Patient 25-00-00-19 - Siangko, Johny E admitted to Emergency.",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-31T14:03:59.306Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6904c3e05d9d49c0a94cdd3a"
+  },
+  "patientId": "25-00-00-19",
+  "message": "New charge slip for johny siangko - ₱3700.00",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-10-31T14:12:48.975Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905661821b665cdbefc3a6d"
+  },
+  "patientId": "gota20259vz8d",
+  "message": "Patient gota20259vz8d processed for admission.",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T01:44:56.667Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69058e7a6fc5a47f2c1c582a"
+  },
+  "patientId": "25-00-00-15",
+  "message": "HRN 25-00-00-15 has been archived",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T04:37:14.327Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905a09e3c371e74d75537c1"
+  },
+  "patientId": "25-00-00-20",
+  "message": "Patient 25-00-00-20 processed for admission.",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T05:54:38.516Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905a36b88b477825c3320b3"
+  },
+  "patientId": "25-00-00-21",
+  "message": "Patient 25-00-00-21 processed for admission.",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T06:06:35.015Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905a5d583f0e722d51d4fef"
+  },
+  "patientId": "25-00-00-05",
+  "message": "25-00-00-05, undefined - for Admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T06:16:53.139Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905a724c86ed778ba847692"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "mercury, manson e",
+  "message": "Patient HRN 25-00-00-22 mercury, manson e for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T06:22:28.379Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905a8cb3bac6e20e9b22156"
+  },
+  "patientId": "25-00-00-23",
+  "fullName": "Samgy, Bacon",
+  "message": "Patient HRN 25-00-00-23 Samgy, Bacon for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T06:29:31.407Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905ae8a1038c9482a6c4c85"
+  },
+  "patientId": "25-00-00-23",
+  "fullName": "Samgy, Bacon",
+  "message": "Patient HRN 25-00-00-23 Samgy, Bacon for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T06:54:02.148Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905b05315fb971dfa0bc0f6"
+  },
+  "patientId": "25-00-00-19",
+  "fullName": "Siangko, Johny",
+  "message": "Patient HRN 25-00-00-19 Siangko, Johny Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T07:01:39.804Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905b0bc15fb971dfa0bc14a"
+  },
+  "patientId": "25-00-00-23",
+  "fullName": "Samgy, Bacon",
+  "message": "Patient HRN 25-00-00-23 Samgy, Bacon Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T07:03:24.903Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905b1fa15fb971dfa0bc1be"
+  },
+  "patientId": "25-00-00-20",
+  "fullName": "System, Ofthe down",
+  "message": "Patient HRN 25-00-00-20 System, Ofthe down for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T07:08:42.484Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905b772bed806018462251b"
+  },
+  "patientId": "vara2025hehxa",
+  "fullName": "Valino, Ray charles",
+  "message": "Patient HRN vara2025hehxa Valino, Ray charles Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T07:32:02.744Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905bfc7d429930e192603f5"
+  },
+  "patientId": "25-00-00-08",
+  "fullName": "Tibay, Lambot",
+  "message": "Patient HRN 25-00-00-08 Tibay, Lambot for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T08:07:35.261Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905c5c065ae88cb549529fd"
+  },
+  "patientId": "25-00-00-06",
+  "fullName": "Hilario, Jhong",
+  "message": "Patient HRN 25-00-00-06 Hilario, Jhong for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T08:33:04.211Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905c7cf4b9c774fc9ed7c6d"
+  },
+  "patientId": "gota20259vz8d",
+  "fullName": "Gol, Tangol",
+  "message": "Patient HRN gota20259vz8d Gol, Tangol Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T08:41:51.384Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905c7d04b9c774fc9ed7c72"
+  },
+  "patientId": "vany2025f3r5o",
+  "fullName": "Vayino, Nyok nyok",
+  "message": "Patient HRN vany2025f3r5o Vayino, Nyok nyok Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T08:41:52.090Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905c7d14b9c774fc9ed7c77"
+  },
+  "patientId": "25-00-00-04",
+  "fullName": "Kolbu, Bukol",
+  "message": "Patient HRN 25-00-00-04 Kolbu, Bukol Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T08:41:53.065Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905c7d14b9c774fc9ed7c7c"
+  },
+  "patientId": "25-00-00-05",
+  "fullName": "Tingpapa, Pating",
+  "message": "Patient HRN 25-00-00-05 Tingpapa, Pating Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T08:41:53.546Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905c7d24b9c774fc9ed7c81"
+  },
+  "patientId": "25-00-00-07",
+  "fullName": "Nabaro, Bong",
+  "message": "Patient HRN 25-00-00-07 Nabaro, Bong Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T08:41:54.960Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905c7d44b9c774fc9ed7c86"
+  },
+  "patientId": "25-00-00-17",
+  "fullName": "25-00-00-17, Unidentified",
+  "message": "Patient HRN 25-00-00-17 25-00-00-17, Unidentified Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T08:41:56.600Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905c7d54b9c774fc9ed7c8b"
+  },
+  "patientId": "25-00-00-21",
+  "fullName": "Bala, Kubak",
+  "message": "Patient HRN 25-00-00-21 Bala, Kubak Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T08:41:57.440Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905c7d64b9c774fc9ed7c90"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "Mercury, Manson",
+  "message": "Patient HRN 25-00-00-22 Mercury, Manson Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T08:41:58.144Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905cdc00f058b6a16195f4d"
+  },
+  "patientId": "25-00-00-01",
+  "fullName": "Gonzales, John",
+  "message": "Patient HRN 25-00-00-01 Gonzales, John for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T09:07:12.246Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905cde10f058b6a16195f66"
+  },
+  "patientId": "25-00-00-01",
+  "fullName": "Gonzales, John",
+  "message": "Patient HRN 25-00-00-01 Gonzales, John for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T09:07:45.221Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905d16f19a8865eac4f7337"
+  },
+  "patientId": "25-00-00-06",
+  "fullName": "Hilario, Jhong",
+  "message": "Patient HRN 25-00-00-06 Hilario, Jhong Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T09:22:55.593Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905d17019a8865eac4f733c"
+  },
+  "patientId": "25-00-00-08",
+  "fullName": "Tibay, Lambot",
+  "message": "Patient HRN 25-00-00-08 Tibay, Lambot Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T09:22:56.857Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905d17119a8865eac4f7341"
+  },
+  "patientId": "25-00-00-16",
+  "fullName": "25-00-00-16, Unidentified",
+  "message": "Patient HRN 25-00-00-16 25-00-00-16, Unidentified Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T09:22:57.671Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905d17219a8865eac4f7346"
+  },
+  "patientId": "25-00-00-20",
+  "fullName": "System, Ofthe down",
+  "message": "Patient HRN 25-00-00-20 System, Ofthe down Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T09:22:58.311Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905d17319a8865eac4f734b"
+  },
+  "patientId": "25-00-00-23",
+  "fullName": "Samgy, Bacon",
+  "message": "Patient HRN 25-00-00-23 Samgy, Bacon Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T09:22:59.135Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905d28919a8865eac4f73ad"
+  },
+  "patientId": "25-00-00-04",
+  "fullName": "Kolbu, Bukol",
+  "message": "Patient HRN 25-00-00-04 Kolbu, Bukol for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T09:27:37.050Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905d2b719a8865eac4f73c7"
+  },
+  "patientId": "25-00-00-04",
+  "fullName": "Kolbu, Bukol",
+  "message": "Patient HRN 25-00-00-04 Kolbu, Bukol for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T09:28:23.538Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905d2ea19a8865eac4f740f"
+  },
+  "patientId": "25-00-00-04",
+  "fullName": "Kolbu, Bukol",
+  "message": "Patient HRN 25-00-00-04 Kolbu, Bukol Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T09:29:14.752Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905d48319a8865eac4f74c7"
+  },
+  "patientId": "25-00-00-06",
+  "fullName": "Hilario, Jhong",
+  "message": "Patient HRN 25-00-00-06 Hilario, Jhong for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T09:36:03.975Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905d49319a8865eac4f74d7"
+  },
+  "patientId": "25-00-00-06",
+  "fullName": "Hilario, Jhong",
+  "message": "Patient HRN 25-00-00-06 Hilario, Jhong for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T09:36:19.408Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905d53c19a8865eac4f7558"
+  },
+  "patientId": "25-00-00-06",
+  "fullName": "Hilario, Jhong",
+  "message": "Patient HRN 25-00-00-06 Hilario, Jhong for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T09:39:08.448Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905e2628daff2f3211bc1ac"
+  },
+  "patientId": "25-00-00-05",
+  "fullName": "Tingpapa, Pating",
+  "message": "Patient HRN 25-00-00-05 Tingpapa, Pating for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T10:35:14.679Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905e2898daff2f3211bc1c1"
+  },
+  "patientId": "25-00-00-05",
+  "fullName": "Tingpapa, Pating",
+  "message": "Patient HRN 25-00-00-05 Tingpapa, Pating Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T10:35:53.254Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905e2948daff2f3211bc1ca"
+  },
+  "patientId": "25-00-00-05",
+  "message": "HRN 25-00-00-05 has been archived",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T10:36:04.348Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905eb1fc3fe3d62bc6fa553"
+  },
+  "patientId": "25-00-00-24",
+  "fullName": "Icecream, Latte",
+  "message": "Patient HRN 25-00-00-24 Icecream, Latte for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T11:12:31.115Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905eb33c3fe3d62bc6fa563"
+  },
+  "patientId": "25-00-00-24",
+  "fullName": "Icecream, Latte",
+  "message": "Patient HRN 25-00-00-24 Icecream, Latte Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T11:12:51.220Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905eb3fc3fe3d62bc6fa570"
+  },
+  "patientId": "25-00-00-24",
+  "fullName": "Icecream, Latte",
+  "message": "Patient HRN 25-00-00-24 Icecream, Latte for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T11:13:03.070Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905eba4c3fe3d62bc6fa5d1"
+  },
+  "patientId": "25-00-00-24",
+  "fullName": "Icecream, Latte",
+  "message": "Patient HRN 25-00-00-24 Icecream, Latte for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T11:14:44.375Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905ebedc3fe3d62bc6fa621"
+  },
+  "patientId": "25-00-00-24",
+  "fullName": "Icecream, Latte",
+  "message": "Patient HRN 25-00-00-24 Icecream, Latte for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T11:15:57.303Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905ec27c3fe3d62bc6fa68e"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T11:16:55.262Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905ec87c3fe3d62bc6fa717"
+  },
+  "patientId": "25-00-00-24",
+  "fullName": "Icecream, Latte",
+  "message": "Patient HRN 25-00-00-24 Icecream, Latte Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T11:18:31.143Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905f651d398eeb122a91382"
+  },
+  "patientId": "25-00-00-01",
+  "fullName": "Gonzales, John",
+  "message": "Patient HRN 25-00-00-01 Gonzales, John Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T12:00:17.556Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905f890ab7e385d28cd1d6e"
+  },
+  "patientId": "25-00-00-01",
+  "fullName": "Gonzales, John",
+  "message": "Patient HRN 25-00-00-01 Gonzales, John Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T12:09:52.070Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6905f953d3b4a0fa7c801772"
+  },
+  "patientId": "25-00-00-01",
+  "fullName": "Gonzales, John",
+  "message": "Patient HRN 25-00-00-01 Gonzales, John Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T12:13:07.148Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69060265b916b57774096230"
+  },
+  "patientId": "25-00-00-01",
+  "fullName": "Gonzales, John",
+  "message": "Patient HRN 25-00-00-01 Gonzales, John Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T12:51:49.960Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690602d6b916b577740962b2"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T12:53:42.376Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69061e7f213e659dded808ab"
+  },
+  "patientId": "25-00-00-07",
+  "fullName": "Nabaro, Bong",
+  "message": "Patient HRN 25-00-00-07 Nabaro, Bong for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T14:51:43.393Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69061eb6213e659dded8097a"
+  },
+  "patientId": "25-00-00-07",
+  "fullName": "Nabaro, Bong",
+  "message": "Patient HRN 25-00-00-07 Nabaro, Bong for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T14:52:38.083Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69061f47213e659dded80a1d"
+  },
+  "patientId": "25-00-00-07",
+  "fullName": "Nabaro, Bong",
+  "message": "Patient HRN 25-00-00-07 Nabaro, Bong Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-01T14:55:03.586Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906227d3e2e998f98b6818a"
+  },
+  "patientId": "25-00-00-07",
+  "fullName": "Nabaro, Bong",
+  "message": "Patient HRN 25-00-00-07 Nabaro, Bong Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-01T15:08:45.944Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690625e96bc61e2b86a17dc7"
+  },
+  "patientId": "25-00-00-01",
+  "fullName": "Gonzales, John",
+  "message": "Patient HRN 25-00-00-01 Gonzales, John Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T15:23:21.383Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690625e96bc61e2b86a17dcc"
+  },
+  "patientId": "25-00-00-04",
+  "fullName": "Kolbu, Bukol",
+  "message": "Patient HRN 25-00-00-04 Kolbu, Bukol Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T15:23:21.874Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690625ea6bc61e2b86a17dd1"
+  },
+  "patientId": "25-00-00-06",
+  "fullName": "Hilario, Jhong",
+  "message": "Patient HRN 25-00-00-06 Hilario, Jhong Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T15:23:22.325Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690625ea6bc61e2b86a17dd6"
+  },
+  "patientId": "25-00-00-07",
+  "fullName": "Nabaro, Bong",
+  "message": "Patient HRN 25-00-00-07 Nabaro, Bong Admission Cancelled",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-01T15:23:22.865Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690625eb6bc61e2b86a17ddb"
+  },
+  "patientId": "25-00-00-13",
+  "fullName": "Bronzon, Zonzon",
+  "message": "Patient HRN 25-00-00-13 Bronzon, Zonzon Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T15:23:23.588Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690625ec6bc61e2b86a17de0"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T15:23:24.001Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690625ed6bc61e2b86a17de5"
+  },
+  "patientId": "25-00-00-19",
+  "fullName": "Siangko, Johny",
+  "message": "Patient HRN 25-00-00-19 Siangko, Johny Admission Cancelled",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-01T15:23:25.524Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690625ee6bc61e2b86a17dea"
+  },
+  "patientId": "25-00-00-24",
+  "fullName": "Icecream, Latte",
+  "message": "Patient HRN 25-00-00-24 Icecream, Latte Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T15:23:26.964Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690625fd6bc61e2b86a17dee"
+  },
+  "patientId": "25-00-00-24",
+  "fullName": "Icecream, Latte",
+  "message": "Patient HRN 25-00-00-24 Icecream, Latte for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T15:23:41.761Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690626166bc61e2b86a17dff"
+  },
+  "patientId": "25-00-00-24",
+  "fullName": "Icecream, Latte",
+  "message": "Patient HRN 25-00-00-24 Icecream, Latte for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T15:24:06.297Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906265a6bc61e2b86a17e5d"
+  },
+  "patientId": "25-00-00-24",
+  "fullName": "Icecream, Latte",
+  "message": "Patient HRN 25-00-00-24 Icecream, Latte Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T15:25:14.859Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906266e6bc61e2b86a17e6b"
+  },
+  "patientId": "25-00-00-23",
+  "fullName": "Samgy, Bacon",
+  "message": "Patient HRN 25-00-00-23 Samgy, Bacon for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T15:25:34.970Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690626956bc61e2b86a17e85"
+  },
+  "patientId": "25-00-00-23",
+  "fullName": "Samgy, Bacon",
+  "message": "Patient HRN 25-00-00-23 Samgy, Bacon for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T15:26:13.449Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690626c26bc61e2b86a17eaa"
+  },
+  "patientId": "25-00-00-23",
+  "fullName": "Samgy, Bacon",
+  "message": "Patient HRN 25-00-00-23 Samgy, Bacon for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T15:26:58.172Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690626eb6bc61e2b86a17f02"
+  },
+  "patientId": "25-00-00-23",
+  "fullName": "Samgy, Bacon",
+  "message": "Patient HRN 25-00-00-23 Samgy, Bacon Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T15:27:39.096Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690631835ea54f6e9fe53e18"
+  },
+  "patientId": "25-00-00-24",
+  "fullName": "latte e icecream",
+  "message": "Billing confirmed - ready for payment",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T16:12:51.583Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69063284f8d52342a6b792d4"
+  },
+  "patientId": "25-00-00-23",
+  "fullName": "samgy, bacon",
+  "message": "Patient HRN 25-00-00-23 samgy, bacon for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T16:17:08.274Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69063a40f8d52342a6b79321"
+  },
+  "patientId": "25-00-00-23",
+  "fullName": "samgy, bacon",
+  "message": "Patient HRN 25-00-00-23 samgy, bacon for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T16:50:08.841Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690693c4f5b743e6eb8c993f"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "Mercury, Manson",
+  "message": "Patient HRN 25-00-00-22 Mercury, Manson for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T23:12:04.464Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690693e4f5b743e6eb8c9956"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "Mercury, Manson",
+  "message": "Patient HRN 25-00-00-22 Mercury, Manson for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T23:12:36.201Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906948af5b743e6eb8c99d3"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "Mercury, Manson",
+  "message": "Patient HRN 25-00-00-22 Mercury, Manson Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T23:15:22.123Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69069e392250f06cdb0adb42"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "mercury, manson",
+  "message": "Patient HRN 25-00-00-22 mercury, manson submit promissory",
+  "department": "Promissory",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-01T23:56:41.521Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906a74f65f844835b694a59"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "mercury, manson",
+  "message": "Patient HRN 25-00-00-22 mercury, manson promissory rejected",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T00:35:27.022Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906aad60ff26134cd830f5d"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "mercury, manson",
+  "message": "Patient HRN 25-00-00-22 mercury, manson submit promissory",
+  "department": "Promissory",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T00:50:30.613Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906aaed0ff26134cd830f73"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "mercury, manson",
+  "message": "Patient HRN 25-00-00-22 mercury, manson promissory rejected",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T00:50:53.272Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906abf10f8ccbda91660a6d"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "mercury, manson",
+  "message": "Patient HRN 25-00-00-22 mercury, manson submit promissory",
+  "department": "Promissory",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T00:55:13.677Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906ac3a0f8ccbda91660ab2"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "mercury, manson",
+  "message": "Patient HRN 25-00-00-22 mercury, manson promissory approved",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T00:56:26.238Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906b94a1cc79678cf2e30f1"
+  },
+  "patientId": "25-00-00-21",
+  "fullName": "Bala, Kubak",
+  "message": "Patient HRN 25-00-00-21 Bala, Kubak for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T01:52:10.727Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906b95d1cc79678cf2e3108"
+  },
+  "patientId": "25-00-00-21",
+  "fullName": "Bala, Kubak",
+  "message": "Patient HRN 25-00-00-21 Bala, Kubak for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T01:52:29.490Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906ba5c1cc79678cf2e31bd"
+  },
+  "patientId": "25-00-00-21",
+  "fullName": "Bala, Kubak",
+  "message": "Patient HRN 25-00-00-21 Bala, Kubak Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T01:56:44.265Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906ba951cc79678cf2e31e5"
+  },
+  "patientId": "25-00-00-21",
+  "fullName": "bala, kubak",
+  "message": "Patient HRN 25-00-00-21 bala, kubak submit promissory",
+  "department": "Promissory",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T01:57:41.510Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906bd07ca63390cec78d963"
+  },
+  "patientId": "25-00-00-21",
+  "fullName": "bala, kubak",
+  "message": "Patient HRN 25-00-00-21 bala, kubak promissory approved",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T02:08:07.110Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906bf79592be43c5d13fa48"
+  },
+  "patientId": "25-00-00-21",
+  "fullName": "bala, kubak",
+  "message": "Patient HRN 25-00-00-21 bala, kubak for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T02:18:33.146Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906c90d63075a146740a9d1"
+  },
+  "patientId": "25-00-00-21",
+  "fullName": "bala, kubak",
+  "message": "Patient HRN 25-00-00-21 bala, kubak for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T02:59:25.407Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906dc43a2b69a06fd776232"
+  },
+  "patientId": "25-00-00-24",
+  "fullName": "icecream, latte",
+  "message": "Patient HRN 25-00-00-24 icecream, latte for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T04:21:23.259Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906dedce16a895880e23437"
+  },
+  "patientId": "25-00-00-23",
+  "fullName": "samgy, bacon",
+  "message": "Patient HRN 25-00-00-23 samgy, bacon for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T04:32:28.314Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906f5010a5a88e32c69cf64"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "Mercury, Manson",
+  "message": "Patient HRN 25-00-00-22 Mercury, Manson Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T06:06:57.797Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906fa392af722f877c44d6c"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "Mercury, Manson",
+  "message": "Patient HRN 25-00-00-22 Mercury, Manson Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T06:29:13.159Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906fcc0afa184f3abf3d2fd"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "Mercury, Manson",
+  "message": "Patient HRN 25-00-00-22 Mercury, Manson Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T06:40:00.153Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906fe49b96a3ea479a8b4ff"
+  },
+  "patientId": "25-00-00-01",
+  "fullName": "Gonzales, John",
+  "message": "Patient HRN 25-00-00-01 Gonzales, John for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T06:46:33.985Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906fe5ab96a3ea479a8b50f"
+  },
+  "patientId": "25-00-00-01",
+  "fullName": "Gonzales, John",
+  "message": "Patient HRN 25-00-00-01 Gonzales, John for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T06:46:50.132Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6906fe89b96a3ea479a8b575"
+  },
+  "patientId": "25-00-00-01",
+  "fullName": "Gonzales, John",
+  "message": "Patient HRN 25-00-00-01 Gonzales, John Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T06:47:37.954Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690700e62ed5baf0371dbf83"
+  },
+  "patientId": "25-00-00-04",
+  "fullName": "Kolbu, Bukol",
+  "message": "Patient HRN 25-00-00-04 Kolbu, Bukol for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T06:57:42.687Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690700f22ed5baf0371dbf93"
+  },
+  "patientId": "25-00-00-04",
+  "fullName": "Kolbu, Bukol",
+  "message": "Patient HRN 25-00-00-04 Kolbu, Bukol for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T06:57:54.547Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907010f2ed5baf0371dbfe9"
+  },
+  "patientId": "25-00-00-04",
+  "fullName": "Kolbu, Bukol",
+  "message": "Patient HRN 25-00-00-04 Kolbu, Bukol Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T06:58:23.030Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690701502ed5baf0371dc065"
+  },
+  "patientId": "25-00-00-06",
+  "fullName": "Hilario, Jhong",
+  "message": "Patient HRN 25-00-00-06 Hilario, Jhong for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T06:59:28.110Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690701652ed5baf0371dc07c"
+  },
+  "patientId": "25-00-00-06",
+  "fullName": "Hilario, Jhong",
+  "message": "Patient HRN 25-00-00-06 Hilario, Jhong for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T06:59:49.119Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907017e2ed5baf0371dc0c9"
+  },
+  "patientId": "25-00-00-06",
+  "fullName": "Hilario, Jhong",
+  "message": "Patient HRN 25-00-00-06 Hilario, Jhong Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T07:00:14.779Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690701b02ed5baf0371dc100"
+  },
+  "patientId": "25-00-00-06",
+  "fullName": "hilario, jhong",
+  "message": "Patient HRN 25-00-00-06 hilario, jhong submit promissory",
+  "department": "Promissory",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T07:01:04.038Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907020d2ed5baf0371dc145"
+  },
+  "patientId": "25-00-00-06",
+  "fullName": "hilario, jhong",
+  "message": "Patient HRN 25-00-00-06 hilario, jhong promissory approved",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T07:02:37.284Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907024f2ed5baf0371dc192"
+  },
+  "patientId": "25-00-00-04",
+  "fullName": "kolbu, bukol",
+  "message": "Patient HRN 25-00-00-04 kolbu, bukol submit promissory",
+  "department": "Promissory",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T07:03:43.418Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690702602ed5baf0371dc1ba"
+  },
+  "patientId": "25-00-00-04",
+  "fullName": "kolbu, bukol",
+  "message": "Patient HRN 25-00-00-04 kolbu, bukol promissory rejected",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T07:04:00.582Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690702d62ed5baf0371dc210"
+  },
+  "patientId": "25-00-00-06",
+  "fullName": "hilario, jhong",
+  "message": "Patient HRN 25-00-00-06 hilario, jhong for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T07:05:58.617Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690703042ed5baf0371dc25a"
+  },
+  "patientId": "25-00-00-06",
+  "fullName": "Hilario, Jhong",
+  "message": "Patient HRN 25-00-00-06 Hilario, Jhong Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T07:06:44.007Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69070a29859f2c8d827a0b6b"
+  },
+  "patientId": "25-00-00-04",
+  "fullName": "kolbu, bukol",
+  "message": "Patient HRN 25-00-00-04 kolbu, bukol for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T07:37:13.932Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69070abd859f2c8d827a0bf5"
+  },
+  "patientId": "25-00-00-01",
+  "fullName": "Gonzales, John",
+  "message": "Patient HRN 25-00-00-01 Gonzales, John Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T07:39:41.915Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69070ace859f2c8d827a0c0f"
+  },
+  "patientId": "25-00-00-01",
+  "fullName": "gonzales, john",
+  "message": "Patient HRN 25-00-00-01 gonzales, john for Payments",
+  "department": "Cashier",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T07:39:58.908Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690712f293a811e13bf6eccf"
+  },
+  "patientId": "25-00-00-24",
+  "fullName": "Icecream, Latte",
+  "message": "Patient HRN 25-00-00-24 Icecream, Latte for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T08:14:42.035Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907130193a811e13bf6ece1"
+  },
+  "patientId": "25-00-00-24",
+  "fullName": "Icecream, Latte",
+  "message": "Patient HRN 25-00-00-24 Icecream, Latte for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T08:14:57.256Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907135f93a811e13bf6ed12"
+  },
+  "patientId": "25-00-00-04",
+  "fullName": "Kolbu, Bukol",
+  "message": "Patient HRN 25-00-00-04 Kolbu, Bukol for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T08:16:31.375Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907136993a811e13bf6ed24"
+  },
+  "patientId": "25-00-00-04",
+  "fullName": "Kolbu, Bukol",
+  "message": "Patient HRN 25-00-00-04 Kolbu, Bukol for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T08:16:41.601Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907139093a811e13bf6ed45"
+  },
+  "patientId": "25-00-00-20",
+  "fullName": "System, Ofthe down",
+  "message": "Patient HRN 25-00-00-20 System, Ofthe down for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T08:17:20.557Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690713d093a811e13bf6ed87"
+  },
+  "patientId": "25-00-00-20",
+  "fullName": "System, Ofthe down",
+  "message": "Patient HRN 25-00-00-20 System, Ofthe down for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T08:18:24.786Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907175b06137144b0aa6a95"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T08:33:31.670Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907177d06137144b0aa6aaa"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T08:34:05.373Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907178206137144b0aa6aae"
+  },
+  "patientId": "25-00-00-23",
+  "fullName": "Samgy, Bacon",
+  "message": "Patient HRN 25-00-00-23 Samgy, Bacon for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T08:34:10.603Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907179006137144b0aa6ac0"
+  },
+  "patientId": "25-00-00-23",
+  "fullName": "Samgy, Bacon",
+  "message": "Patient HRN 25-00-00-23 Samgy, Bacon for Outpatient Consultation",
+  "department": "OPD",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T08:34:24.479Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690719143c9a6167a84de0a3"
+  },
+  "patientId": "25-00-00-23",
+  "fullName": "Samgy, Bacon",
+  "message": "Patient HRN 25-00-00-23 Samgy, Bacon Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T08:40:52.588Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69071a9e202b85a2009542ac"
+  },
+  "patientId": "25-00-00-08",
+  "fullName": "Tibay, Lambot",
+  "message": "Patient HRN 25-00-00-08 Tibay, Lambot for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T08:47:26.492Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69071ab0202b85a2009542bd"
+  },
+  "patientId": "25-00-00-08",
+  "fullName": "Tibay, Lambot",
+  "message": "Patient HRN 25-00-00-08 Tibay, Lambot Admission Cancelled",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T08:47:44.989Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69071ab5202b85a2009542c1"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T08:47:49.777Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69071ac4202b85a2009542d2"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T08:48:04.420Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69071ac6202b85a2009542d6"
+  },
+  "patientId": "25-00-00-16",
+  "fullName": "25-00-00-16, Unidentified",
+  "message": "Patient HRN 25-00-00-16 25-00-00-16, Unidentified for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T08:48:06.929Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69071ad6202b85a2009542e8"
+  },
+  "patientId": "25-00-00-16",
+  "fullName": "25-00-00-16, Unidentified",
+  "message": "Patient HRN 25-00-00-16 25-00-00-16, Unidentified Admission Cancelled",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T08:48:22.916Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69071adc202b85a2009542ec"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "Mercury, Manson",
+  "message": "Patient HRN 25-00-00-22 Mercury, Manson for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T08:48:28.635Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69071aeb202b85a2009542fd"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "Mercury, Manson",
+  "message": "Patient HRN 25-00-00-22 Mercury, Manson for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T08:48:43.515Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907212954f27bf25dffc1dc"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "Mercury, Manson",
+  "message": "Patient HRN 25-00-00-22 Mercury, Manson Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T09:15:21.450Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690723ebb2f80724d7dd4b0f"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T09:27:07.709Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69072401b2f80724d7dd4b26"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T09:27:29.020Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907241cb2f80724d7dd4b73"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T09:27:56.405Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69072430b2f80724d7dd4b95"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "chacha, charapcharap",
+  "message": "Patient HRN 25-00-00-14 chacha, charapcharap for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T09:28:16.059Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690727076dda33cb2ea19449"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T09:40:23.057Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690727176dda33cb2ea1946e"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T09:40:39.183Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907273b6dda33cb2ea194c0"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T09:41:15.534Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690727516dda33cb2ea194df"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "chacha, charapcharap",
+  "message": "Patient HRN 25-00-00-14 chacha, charapcharap for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T09:41:37.599Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690727c76dda33cb2ea19567"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T09:43:35.666Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690727d26dda33cb2ea19577"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T09:43:46.779Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690727fd6dda33cb2ea195c7"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T09:44:29.431Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690728186dda33cb2ea195f1"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "chacha, charapcharap",
+  "message": "Patient HRN 25-00-00-14 chacha, charapcharap for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T09:44:56.288Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69072d220a9abe437a00d270"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "mercury, manson",
+  "message": "For Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T10:06:26.837Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69072dbe58c615b7707dc245"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "mercury, manson",
+  "message": "Patient HRN 25-00-00-22 mercury, manson for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T10:09:02.281Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073757cb1d6201c8688740"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "mercury, manson",
+  "message": "Patient HRN 25-00-00-22 mercury, manson for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T10:49:59.585Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690737fd691fa9aae11d1458"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "Mercury, Manson",
+  "message": "Patient HRN 25-00-00-22 Mercury, Manson for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T10:52:45.728Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073810691fa9aae11d146a"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "Mercury, Manson",
+  "message": "Patient HRN 25-00-00-22 Mercury, Manson for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T10:53:04.995Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690738c1691fa9aae11d14af"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "Valino, Raycharlesess",
+  "message": "Patient HRN 25-00-00-26 Valino, Raycharlesess for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T10:56:01.309Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690738d7691fa9aae11d14c7"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "Valino, Raycharlesess",
+  "message": "Patient HRN 25-00-00-26 Valino, Raycharlesess for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T10:56:23.630Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073905691fa9aae11d1539"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "Valino, Raycharlesess",
+  "message": "Patient HRN 25-00-00-26 Valino, Raycharlesess Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T10:57:09.131Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073921691fa9aae11d1556"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "valino, raycharlesess",
+  "message": "Patient HRN 25-00-00-26 valino, raycharlesess submit promissory",
+  "department": "Promissory",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T10:57:37.044Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073931691fa9aae11d157e"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "valino, raycharlesess",
+  "message": "Patient HRN 25-00-00-26 valino, raycharlesess promissory approved",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T10:57:53.694Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073942691fa9aae11d15a4"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "valino, raycharlesess",
+  "message": "Patient HRN 25-00-00-26 valino, raycharlesess for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T10:58:10.798Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073995691fa9aae11d161c"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "Valino, Raycharlesess",
+  "message": "Patient HRN 25-00-00-26 Valino, Raycharlesess for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T10:59:33.315Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690739a4691fa9aae11d162c"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "Valino, Raycharlesess",
+  "message": "Patient HRN 25-00-00-26 Valino, Raycharlesess for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T10:59:48.681Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690739d8691fa9aae11d168b"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "Valino, Raycharlesess",
+  "message": "Patient HRN 25-00-00-26 Valino, Raycharlesess Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:00:40.145Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073b724b9793f42d8b8258"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "Valino, Raycharlesess",
+  "message": "Patient HRN 25-00-00-26 Valino, Raycharlesess Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:07:30.046Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073bae4b9793f42d8b82c3"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "Valino, Raycharlesess",
+  "message": "Patient HRN 25-00-00-26 Valino, Raycharlesess for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:08:30.836Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073bdb4b9793f42d8b832d"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "Valino, Raycharlesess",
+  "message": "Patient HRN 25-00-00-26 Valino, Raycharlesess Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:09:15.987Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073c348cb13e087f214f85"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:10:44.744Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073c518cb13e087f214f9c"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:11:13.469Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073c6b8cb13e087f214ff0"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:11:39.670Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073c798cb13e087f215006"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "tengteng, tangtang",
+  "message": "Patient HRN 25-00-00-27 tengteng, tangtang submit promissory",
+  "department": "Promissory",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:11:53.471Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073c828cb13e087f215028"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "tengteng, tangtang",
+  "message": "Patient HRN 25-00-00-27 tengteng, tangtang promissory approved",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:12:02.155Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073ca28cb13e087f215055"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "tengteng, tangtang",
+  "message": "Patient HRN 25-00-00-27 tengteng, tangtang for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:12:34.217Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073cc68cb13e087f2150c6"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:13:10.536Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073cd78cb13e087f2150d6"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang for Outpatient Consultation",
+  "department": "OPD",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T11:13:27.882Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073cf08cb13e087f215129"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:13:52.160Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073ea4e432796c1be4dd16"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "Valino, Raycharlesess",
+  "message": "Patient HRN 25-00-00-26 Valino, Raycharlesess for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:21:08.287Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073ed1e432796c1be4dd67"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "Valino, Raycharlesess",
+  "message": "Patient HRN 25-00-00-26 Valino, Raycharlesess Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:21:53.272Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073f32e432796c1be4ddc3"
+  },
+  "patientId": "25-00-00-28",
+  "fullName": "Ram, Ram",
+  "message": "Patient HRN 25-00-00-28 Ram, Ram for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:23:30.061Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073f44e432796c1be4ddda"
+  },
+  "patientId": "25-00-00-28",
+  "fullName": "Ram, Ram",
+  "message": "Patient HRN 25-00-00-28 Ram, Ram for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:23:48.273Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073f77e432796c1be4de54"
+  },
+  "patientId": "25-00-00-28",
+  "fullName": "Ram, Ram",
+  "message": "Patient HRN 25-00-00-28 Ram, Ram Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:24:39.105Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073f85e432796c1be4de6b"
+  },
+  "patientId": "25-00-00-28",
+  "fullName": "ram, ram",
+  "message": "Patient HRN 25-00-00-28 ram, ram submit promissory",
+  "department": "Promissory",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:24:53.390Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073f8ce432796c1be4de8f"
+  },
+  "patientId": "25-00-00-28",
+  "fullName": "ram, ram",
+  "message": "Patient HRN 25-00-00-28 ram, ram promissory approved",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:25:00.713Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073f9ce432796c1be4debb"
+  },
+  "patientId": "25-00-00-28",
+  "fullName": "ram, ram",
+  "message": "Patient HRN 25-00-00-28 ram, ram for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:25:16.588Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073fd6e432796c1be4df31"
+  },
+  "patientId": "25-00-00-28",
+  "fullName": "Ram, Ram",
+  "message": "Patient HRN 25-00-00-28 Ram, Ram for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:26:14.951Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69073fe6e432796c1be4df41"
+  },
+  "patientId": "25-00-00-28",
+  "fullName": "Ram, Ram",
+  "message": "Patient HRN 25-00-00-28 Ram, Ram for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T11:26:30.558Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69074007e432796c1be4dfab"
+  },
+  "patientId": "25-00-00-28",
+  "fullName": "Ram, Ram",
+  "message": "Patient HRN 25-00-00-28 Ram, Ram Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T11:27:03.527Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69074237a3835bbfd50cbbaf"
+  },
+  "patientId": "25-00-00-29",
+  "fullName": "Kakis, Kokiis",
+  "message": "Patient HRN 25-00-00-29 Kakis, Kokiis for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:36:23.336Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69074255a3835bbfd50cbbcb"
+  },
+  "patientId": "25-00-00-29",
+  "fullName": "Kakis, Kokiis",
+  "message": "Patient HRN 25-00-00-29 Kakis, Kokiis for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:36:53.786Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907426ea3835bbfd50cbc1f"
+  },
+  "patientId": "25-00-00-29",
+  "fullName": "Kakis, Kokiis",
+  "message": "Patient HRN 25-00-00-29 Kakis, Kokiis Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:37:18.466Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69074284a3835bbfd50cbc3c"
+  },
+  "patientId": "25-00-00-29",
+  "fullName": "kakis, kokiis",
+  "message": "Patient HRN 25-00-00-29 kakis, kokiis submit promissory",
+  "department": "Promissory",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:37:40.984Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907429da3835bbfd50cbc65"
+  },
+  "patientId": "25-00-00-29",
+  "fullName": "kakis, kokiis",
+  "message": "Patient HRN 25-00-00-29 kakis, kokiis promissory approved",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:38:05.069Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690742a9a3835bbfd50cbc93"
+  },
+  "patientId": "25-00-00-29",
+  "fullName": "kakis, kokiis",
+  "message": "Patient HRN 25-00-00-29 kakis, kokiis for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:38:17.832Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690742d5a3835bbfd50cbd17"
+  },
+  "patientId": "25-00-00-29",
+  "fullName": "Kakis, Kokiis",
+  "message": "Patient HRN 25-00-00-29 Kakis, Kokiis for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:39:01.476Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690742e2a3835bbfd50cbd27"
+  },
+  "patientId": "25-00-00-29",
+  "fullName": "Kakis, Kokiis",
+  "message": "Patient HRN 25-00-00-29 Kakis, Kokiis for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T11:39:14.046Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690742fda3835bbfd50cbd7a"
+  },
+  "patientId": "25-00-00-29",
+  "fullName": "Kakis, Kokiis",
+  "message": "Patient HRN 25-00-00-29 Kakis, Kokiis Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T11:39:41.004Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907451a2e79bc8b210fff88"
+  },
+  "patientId": "25-00-00-21",
+  "fullName": "Bala, Kubak",
+  "message": "Patient HRN 25-00-00-21 Bala, Kubak for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:48:42.169Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907454d2e79bc8b210fff9e"
+  },
+  "patientId": "25-00-00-30",
+  "fullName": "Lololo, Lololololo",
+  "message": "Patient HRN 25-00-00-30 Lololo, Lololololo for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:49:33.103Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907455f2e79bc8b210fffb5"
+  },
+  "patientId": "25-00-00-30",
+  "fullName": "Lololo, Lololololo",
+  "message": "Patient HRN 25-00-00-30 Lololo, Lololololo for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:49:51.514Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690745742e79bc8b210ffffd"
+  },
+  "patientId": "25-00-00-30",
+  "fullName": "Lololo, Lololololo",
+  "message": "Patient HRN 25-00-00-30 Lololo, Lololololo Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:50:12.554Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690745872e79bc8b2110001f"
+  },
+  "patientId": "25-00-00-30",
+  "fullName": "lololo, lololololo",
+  "message": "Patient HRN 25-00-00-30 lololo, lololololo submit promissory",
+  "department": "Promissory",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:50:31.173Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907458e2e79bc8b21100038"
+  },
+  "patientId": "25-00-00-30",
+  "fullName": "lololo, lololololo",
+  "message": "Patient HRN 25-00-00-30 lololo, lololololo promissory approved",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:50:38.739Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690745992e79bc8b2110005f"
+  },
+  "patientId": "25-00-00-30",
+  "fullName": "lololo, lololololo",
+  "message": "Patient HRN 25-00-00-30 lololo, lololololo for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:50:49.369Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690745bc2e79bc8b211000dc"
+  },
+  "patientId": "25-00-00-30",
+  "fullName": "Lololo, Lololololo",
+  "message": "Patient HRN 25-00-00-30 Lololo, Lololololo for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T11:51:24.736Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690745ce2e79bc8b211000ec"
+  },
+  "patientId": "25-00-00-30",
+  "fullName": "Lololo, Lololololo",
+  "message": "Patient HRN 25-00-00-30 Lololo, Lololololo for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T11:51:42.642Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690746162e79bc8b21100150"
+  },
+  "patientId": "25-00-00-30",
+  "fullName": "Lololo, Lololololo",
+  "message": "Patient HRN 25-00-00-30 Lololo, Lololololo Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T11:52:54.003Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690747b5503e0bc85aed6b1d"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "tengteng, tangtang",
+  "message": "Patient HRN 25-00-00-27 tengteng, tangtang submit promissory",
+  "department": "Promissory",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T11:59:49.198Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690747bd503e0bc85aed6b46"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "tengteng, tangtang",
+  "message": "Patient HRN 25-00-00-27 tengteng, tangtang promissory approved",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T11:59:57.198Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69074943c94545ce343cab09"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "valino, raycharlesess",
+  "message": "Patient HRN 25-00-00-26 valino, raycharlesess for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T12:06:27.695Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69074973c94545ce343cab8b"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "Valino, Raycharlesess",
+  "message": "Patient HRN 25-00-00-26 Valino, Raycharlesess for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T12:07:15.983Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907498cc94545ce343cab9b"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "Valino, Raycharlesess",
+  "message": "Patient HRN 25-00-00-26 Valino, Raycharlesess for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T12:07:40.831Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690749a9c94545ce343cabf9"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "Valino, Raycharlesess",
+  "message": "Patient HRN 25-00-00-26 Valino, Raycharlesess Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T12:08:09.017Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69074f45c94545ce343cac75"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "tengteng, tangtang",
+  "message": "Patient HRN 25-00-00-27 tengteng, tangtang for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T12:32:05.983Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69074fa0c94545ce343cace6"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T12:33:36.523Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69074fbac94545ce343cad07"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "tengteng, tangtang",
+  "message": "Patient HRN 25-00-00-27 tengteng, tangtang submit promissory",
+  "department": "Promissory",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T12:34:02.181Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69074fd5c94545ce343cad27"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "tengteng, tangtang",
+  "message": "Patient HRN 25-00-00-27 tengteng, tangtang promissory rejected",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T12:34:29.748Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690773700f8d70e4e34387f0"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "tengteng, tangtang",
+  "message": "Patient HRN 25-00-00-27 tengteng, tangtang for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T15:06:24.456Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078bdd2f7e5b48b402cd81"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:37.258Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078bdf2f7e5b48b402cd88"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:39.522Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078bdf2f7e5b48b402cd90"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:39.721Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078bdf2f7e5b48b402cd97"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:39.897Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be02f7e5b48b402cd9e"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:40.745Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be12f7e5b48b402cda5"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:41.087Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be32f7e5b48b402cdba"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:43.235Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be32f7e5b48b402cdbd"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:43.241Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be32f7e5b48b402cdc0"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:43.248Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be32f7e5b48b402cdc2"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:43.260Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be32f7e5b48b402cdcb"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:43.280Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be32f7e5b48b402cdd0"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:43.289Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be32f7e5b48b402cdd2"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:43.291Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be32f7e5b48b402cdde"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:43.480Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be42f7e5b48b402cde5"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:44.702Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be42f7e5b48b402cdec"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:44.895Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be52f7e5b48b402cdf4"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:45.729Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be52f7e5b48b402cdfb"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:45.993Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be62f7e5b48b402ce02"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:46.503Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be62f7e5b48b402ce09"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:46.534Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be62f7e5b48b402ce10"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:46.743Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be72f7e5b48b402ce17"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:47.448Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be72f7e5b48b402ce1e"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:47.630Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be72f7e5b48b402ce25"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:47.799Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be82f7e5b48b402ce2c"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:48.263Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be82f7e5b48b402ce33"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:48.534Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be82f7e5b48b402ce3b"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:48.720Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078be82f7e5b48b402ce42"
+  },
+  "patientId": "25-00-00-27",
+  "fullName": "Tengteng, Tangtang",
+  "message": "Patient HRN 25-00-00-27 Tengteng, Tangtang Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:50:48.912Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078cb02d5a2c522c00ae39"
+  },
+  "patientId": "25-00-00-28",
+  "fullName": "Ram, Ram",
+  "message": "Patient HRN 25-00-00-28 Ram, Ram Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:54:08.047Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078cb22d5a2c522c00ae41"
+  },
+  "patientId": "25-00-00-28",
+  "fullName": "Ram, Ram",
+  "message": "Patient HRN 25-00-00-28 Ram, Ram Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:54:10.934Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078cb42d5a2c522c00ae49"
+  },
+  "patientId": "25-00-00-28",
+  "fullName": "Ram, Ram",
+  "message": "Patient HRN 25-00-00-28 Ram, Ram Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:54:12.406Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078cb42d5a2c522c00ae50"
+  },
+  "patientId": "25-00-00-28",
+  "fullName": "Ram, Ram",
+  "message": "Patient HRN 25-00-00-28 Ram, Ram Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:54:12.881Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078cb52d5a2c522c00ae57"
+  },
+  "patientId": "25-00-00-28",
+  "fullName": "Ram, Ram",
+  "message": "Patient HRN 25-00-00-28 Ram, Ram Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:54:13.080Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078cb52d5a2c522c00ae5e"
+  },
+  "patientId": "25-00-00-28",
+  "fullName": "Ram, Ram",
+  "message": "Patient HRN 25-00-00-28 Ram, Ram Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:54:13.455Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078cb52d5a2c522c00ae65"
+  },
+  "patientId": "25-00-00-28",
+  "fullName": "Ram, Ram",
+  "message": "Patient HRN 25-00-00-28 Ram, Ram Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:54:13.704Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078d172d5a2c522c00ae87"
+  },
+  "patientId": "25-00-00-28",
+  "fullName": "Ram, Ram",
+  "message": "Patient HRN 25-00-00-28 Ram, Ram Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:55:51.977Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078dab30efb91d1328ba1d"
+  },
+  "patientId": "25-00-00-30",
+  "fullName": "Lololo, Lololololo",
+  "message": "Patient HRN 25-00-00-30 Lololo, Lololololo Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T16:58:19.852Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078e9a504fc89423238783"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "Valino, Raycharlesess",
+  "message": "Patient HRN 25-00-00-26 Valino, Raycharlesess Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T17:02:18.975Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078fc30215dffcba2f4d86"
+  },
+  "patientId": "25-00-00-30",
+  "fullName": "Lololo, Lololololo",
+  "message": "Patient HRN 25-00-00-30 Lololo, Lololololo Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T17:07:15.342Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69078fdf0215dffcba2f4dc9"
+  },
+  "patientId": "25-00-00-30",
+  "fullName": "Lololo, Lololololo",
+  "message": "Patient HRN 25-00-00-30 Lololo, Lololololo Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T17:07:43.672Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690791a3a87f905a1126bfb4"
+  },
+  "patientId": "25-00-00-29",
+  "fullName": "Kakis, Kokiis",
+  "message": "Patient HRN 25-00-00-29 Kakis, Kokiis Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T17:15:15.998Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690792d7a87f905a1126c079"
+  },
+  "patientId": "25-00-00-29",
+  "fullName": "kakis, kokiis",
+  "message": "Patient HRN 25-00-00-29 kakis, kokiis for Payments",
+  "department": "Cashier",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T17:20:23.820Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907950c53c26857c3c77dd6"
+  },
+  "patientId": "25-00-00-30",
+  "fullName": "Lololo, Lololololo",
+  "message": "Patient HRN 25-00-00-30 Lololo, Lololololo Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T17:29:48.191Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690797a4f8cba577fa8f7fa3"
+  },
+  "patientId": "25-00-00-31",
+  "fullName": "Newnew, Bago",
+  "message": "Patient HRN 25-00-00-31 Newnew, Bago for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T17:40:52.964Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690797dbf8cba577fa8f7fbd"
+  },
+  "patientId": "25-00-00-31",
+  "fullName": "Newnew, Bago",
+  "message": "Patient HRN 25-00-00-31 Newnew, Bago for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T17:41:47.457Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69079811f8cba577fa8f8038"
+  },
+  "patientId": "25-00-00-31",
+  "fullName": "Newnew, Bago",
+  "message": "Patient HRN 25-00-00-31 Newnew, Bago Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T17:42:41.214Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69079840f8cba577fa8f8091"
+  },
+  "patientId": "25-00-00-31",
+  "fullName": "newnew, bago",
+  "message": "Patient HRN 25-00-00-31 newnew, bago submit promissory",
+  "department": "Promissory",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T17:43:28.097Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6907985af8cba577fa8f80c3"
+  },
+  "patientId": "25-00-00-31",
+  "fullName": "newnew, bago",
+  "message": "Patient HRN 25-00-00-31 newnew, bago promissory approved",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-02T17:43:54.927Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69079879f8cba577fa8f80ec"
+  },
+  "patientId": "25-00-00-31",
+  "fullName": "newnew, bago",
+  "message": "Patient HRN 25-00-00-31 newnew, bago for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-02T17:44:25.586Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69080319e66e61bb0e2839ec"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "Niro, Mary hope",
+  "message": "Patient HRN 25-00-00-32 Niro, Mary hope for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T01:19:21.270Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690803abe66e61bb0e283a0e"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "Niro, Mary hope",
+  "message": "Patient HRN 25-00-00-32 Niro, Mary hope for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T01:21:47.711Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69080483e66e61bb0e283afa"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "Niro, Mary hope",
+  "message": "Patient HRN 25-00-00-32 Niro, Mary hope Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T01:25:23.110Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690804f5e66e61bb0e283b63"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "niro, mary hope",
+  "message": "Patient HRN 25-00-00-32 niro, mary hope submit promissory",
+  "department": "Promissory",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T01:27:17.613Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69080525e66e61bb0e283bbd"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "niro, mary hope",
+  "message": "Patient HRN 25-00-00-32 niro, mary hope promissory approved",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T01:28:05.276Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69080558e66e61bb0e283bfb"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "niro, mary hope",
+  "message": "Patient HRN 25-00-00-32 niro, mary hope for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T01:28:56.726Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6908061be66e61bb0e283d19"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "Niro, Mary hope",
+  "message": "Patient HRN 25-00-00-32 Niro, Mary hope for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T01:32:11.439Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6908061ee66e61bb0e283d1e"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "Niro, Mary hope",
+  "message": "Patient HRN 25-00-00-32 Niro, Mary hope Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T01:32:14.471Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69080c64e66e61bb0e283d94"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "Niro, Mary hope",
+  "message": "Patient HRN 25-00-00-32 Niro, Mary hope for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T01:59:00.931Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69080c82e66e61bb0e283da5"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "Niro, Mary hope",
+  "message": "Patient HRN 25-00-00-32 Niro, Mary hope for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T01:59:30.362Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69080d1fe66e61bb0e283e72"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "Niro, Mary hope",
+  "message": "Patient HRN 25-00-00-32 Niro, Mary hope Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T02:02:07.786Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69080d64e66e61bb0e283ece"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "niro, mary hope",
+  "message": "Patient HRN 25-00-00-32 niro, mary hope submit promissory",
+  "department": "Promissory",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T02:03:16.513Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69080d80e66e61bb0e283f03"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "niro, mary hope",
+  "message": "Patient HRN 25-00-00-32 niro, mary hope promissory approved",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T02:03:44.173Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69080d95e66e61bb0e283f3b"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "niro, mary hope",
+  "message": "Patient HRN 25-00-00-32 niro, mary hope for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T02:04:05.169Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6908696ed018131c649fe670"
+  },
+  "patientId": "25-00-00-04",
+  "fullName": "Kolbu, Bukol",
+  "message": "Patient HRN 25-00-00-04 Kolbu, Bukol for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-03T08:35:58.185Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690869aad018131c649fe74c"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "Niro, Mary hope",
+  "message": "Patient HRN 25-00-00-32 Niro, Mary hope for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T08:36:58.759Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690869bed018131c649fe761"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "Niro, Mary hope",
+  "message": "Patient HRN 25-00-00-32 Niro, Mary hope for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T08:37:18.583Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69086a81d018131c649fe943"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "Niro, Mary hope",
+  "message": "Patient HRN 25-00-00-32 Niro, Mary hope Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T08:40:33.483Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69086a93d018131c649fe993"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "niro, mary hope",
+  "message": "Patient HRN 25-00-00-32 niro, mary hope for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T08:40:51.529Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69086f1d027afa57517c83d3"
+  },
+  "patientId": "25-00-00-26",
+  "fullName": "valino, raycharlesess",
+  "message": "Patient HRN 25-00-00-26 valino, raycharlesess for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T09:00:13.759Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690934f1e7eca93a3d33b166"
+  },
+  "patientId": "25-00-00-33",
+  "fullName": "Crema, Pangke",
+  "message": "Patient HRN 25-00-00-33 Crema, Pangke for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T23:04:17.055Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909350ae7eca93a3d33b17d"
+  },
+  "patientId": "25-00-00-33",
+  "fullName": "Crema, Pangke",
+  "message": "Patient HRN 25-00-00-33 Crema, Pangke for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T23:04:42.199Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690935eee7eca93a3d33b327"
+  },
+  "patientId": "25-00-00-33",
+  "fullName": "Crema, Pangke",
+  "message": "Patient HRN 25-00-00-33 Crema, Pangke Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T23:08:30.317Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690935ffe7eca93a3d33b37e"
+  },
+  "patientId": "25-00-00-33",
+  "fullName": "crema, pangke",
+  "message": "Patient HRN 25-00-00-33 crema, pangke for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T23:08:47.855Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69093aa03731d02365187d83"
+  },
+  "patientId": "25-00-00-33",
+  "message": "HRN 25-00-00-33 has been archived",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T23:28:32.826Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69093bcfe99367926f5df876"
+  },
+  "patientId": "25-00-00-34",
+  "fullName": "Crema, Pangke",
+  "message": "Patient HRN 25-00-00-34 Crema, Pangke for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T23:33:35.982Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69093c21e99367926f5df89d"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "Niro, Mary hope",
+  "message": "Patient HRN 25-00-00-32 Niro, Mary hope for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T23:34:57.198Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69093c2fe99367926f5df8ad"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "Niro, Mary hope",
+  "message": "Patient HRN 25-00-00-32 Niro, Mary hope for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-03T23:35:11.992Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69095d2fd4bd76fdf3bedc00"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "Niro, Mary hope",
+  "message": "Patient HRN 25-00-00-32 Niro, Mary hope Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T01:55:59.762Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69095d3ad4bd76fdf3bedc4f"
+  },
+  "patientId": "25-00-00-32",
+  "fullName": "niro, mary hope",
+  "message": "Patient HRN 25-00-00-32 niro, mary hope for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T01:56:10.940Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909629a7938b889fe638adb"
+  },
+  "patientId": "25-00-00-30",
+  "fullName": "lololo, lololololo",
+  "message": "Patient HRN 25-00-00-30 lololo, lololololo for Payments",
+  "department": "Cashier",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T02:19:06.126Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690962eb7938b889fe638c75"
+  },
+  "patientId": "25-00-00-28",
+  "fullName": "ram, ram",
+  "message": "Patient HRN 25-00-00-28 ram, ram for Payments",
+  "department": "Cashier",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T02:20:27.301Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690963627938b889fe638d75"
+  },
+  "patientId": "25-00-00-24",
+  "fullName": "Icecream, Latte",
+  "message": "Patient HRN 25-00-00-24 Icecream, Latte for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T02:22:26.807Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690964f47938b889fe638f46"
+  },
+  "patientId": "25-00-00-20",
+  "fullName": "System, Ofthe down",
+  "message": "Patient HRN 25-00-00-20 System, Ofthe down for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T02:29:08.576Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909650c7938b889fe63900e"
+  },
+  "patientId": "25-00-00-20",
+  "fullName": "System, Ofthe down",
+  "message": "Patient HRN 25-00-00-20 System, Ofthe down Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T02:29:32.172Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690965157938b889fe639053"
+  },
+  "patientId": "25-00-00-20",
+  "fullName": "system, ofthe down",
+  "message": "Patient HRN 25-00-00-20 system, ofthe down for Payments",
+  "department": "Cashier",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T02:29:41.385Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690975e9bdf42b59308a08e5"
+  },
+  "patientId": "25-00-00-37",
+  "fullName": "Tniy, Tinay",
+  "message": "Patient HRN 25-00-00-37 Tniy, Tinay for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T03:41:29.771Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690975febdf42b59308a08fc"
+  },
+  "patientId": "25-00-00-37",
+  "fullName": "Tniy, Tinay",
+  "message": "Patient HRN 25-00-00-37 Tniy, Tinay for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T03:41:50.096Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69097646bdf42b59308a09a8"
+  },
+  "patientId": "25-00-00-37",
+  "fullName": "Tniy, Tinay",
+  "message": "Patient HRN 25-00-00-37 Tniy, Tinay Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T03:43:02.102Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69097656bdf42b59308a09f1"
+  },
+  "patientId": "25-00-00-37",
+  "fullName": "tniy, tinay",
+  "message": "Patient HRN 25-00-00-37 tniy, tinay submit promissory",
+  "department": "Promissory",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T03:43:18.731Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69097670bdf42b59308a0a3b"
+  },
+  "patientId": "25-00-00-37",
+  "fullName": "tniy, tinay",
+  "message": "Patient HRN 25-00-00-37 tniy, tinay promissory approved",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T03:43:44.201Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69097683bdf42b59308a0a6d"
+  },
+  "patientId": "25-00-00-37",
+  "fullName": "tniy, tinay",
+  "message": "Patient HRN 25-00-00-37 tniy, tinay for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T03:44:03.923Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69098129e31874b2d3fad65f"
+  },
+  "patientId": "25-00-00-38",
+  "fullName": "Kulet, Kuleti",
+  "message": "Patient HRN 25-00-00-38 Kulet, Kuleti for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T04:29:29.800Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909820390343d833da9aaaa"
+  },
+  "patientId": "25-00-00-38",
+  "fullName": "Kulet, Kuleti",
+  "message": "Patient HRN 25-00-00-38 Kulet, Kuleti for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T04:33:07.503Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909825890343d833da9ab8c"
+  },
+  "patientId": "25-00-00-38",
+  "fullName": "Kulet, Kuleti",
+  "message": "Patient HRN 25-00-00-38 Kulet, Kuleti Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T04:34:32.173Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909825e90343d833da9abd1"
+  },
+  "patientId": "25-00-00-38",
+  "fullName": "kulet, kuleti",
+  "message": "Patient HRN 25-00-00-38 kulet, kuleti for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T04:34:38.311Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690982fd90343d833da9acbd"
+  },
+  "patientId": "25-00-00-39",
+  "fullName": "Corbadura, Alan",
+  "message": "Patient HRN 25-00-00-39 Corbadura, Alan for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T04:37:17.467Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69098392ae2830015bd74ada"
+  },
+  "patientId": "25-00-00-39",
+  "fullName": "Corbadura, Alan",
+  "message": "Patient HRN 25-00-00-39 Corbadura, Alan Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T04:39:46.795Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69098395ae2830015bd74ade"
+  },
+  "patientId": "25-00-00-39",
+  "fullName": "Corbadura, Alan",
+  "message": "Patient HRN 25-00-00-39 Corbadura, Alan for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T04:39:49.097Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909847022ef0bfb50114f5e"
+  },
+  "patientId": "25-00-00-39",
+  "fullName": "Corbadura, Alan",
+  "message": "Patient HRN 25-00-00-39 Corbadura, Alan Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T04:43:28.399Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909847122ef0bfb50114f62"
+  },
+  "patientId": "25-00-00-40",
+  "fullName": "Jackson, Micheal",
+  "message": "Patient HRN 25-00-00-40 Jackson, Micheal for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T04:43:29.017Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69098761ac1c2bc222df5e41"
+  },
+  "patientId": "25-00-00-40",
+  "fullName": "Jackson, Micheal",
+  "message": "Patient HRN 25-00-00-40 Jackson, Micheal for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T04:56:01.985Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909878bac1c2bc222df5ee7"
+  },
+  "patientId": "25-00-00-40",
+  "fullName": "Jackson, Micheal",
+  "message": "Patient HRN 25-00-00-40 Jackson, Micheal Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T04:56:43.063Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69098c5a6ca0e378373b3847"
+  },
+  "patientId": "25-00-00-40",
+  "fullName": "Jackson, Micheal",
+  "message": "Patient HRN 25-00-00-40 Jackson, Micheal Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T05:17:14.571Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69098c8c6ca0e378373b392d"
+  },
+  "patientId": "25-00-00-40",
+  "fullName": "Jackson, Micheal",
+  "message": "Patient HRN 25-00-00-40 Jackson, Micheal for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T05:18:04.082Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69098c9f6ca0e378373b399e"
+  },
+  "patientId": "25-00-00-40",
+  "fullName": "Jackson, Micheal",
+  "message": "Patient HRN 25-00-00-40 Jackson, Micheal Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T05:18:23.839Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909f5656d59b84e39f0f83e"
+  },
+  "patientId": "25-00-00-37",
+  "fullName": "Tniy, Tinay",
+  "message": "Patient HRN 25-00-00-37 Tniy, Tinay for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T12:45:25.969Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909f5756d59b84e39f0f84d"
+  },
+  "patientId": "25-00-00-37",
+  "fullName": "Tniy, Tinay",
+  "message": "Patient HRN 25-00-00-37 Tniy, Tinay for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T12:45:41.248Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6909f71e383e122c5e5349ff"
+  },
+  "patientId": "25-00-00-35",
+  "fullName": "Coby, Cobbychi",
+  "message": "Patient HRN 25-00-00-35 Coby, Cobbychi for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T12:52:46.477Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a0c329d22d3a1c8880523"
+  },
+  "patientId": "25-00-00-37",
+  "fullName": "Tniy, Tinay",
+  "message": "Patient HRN 25-00-00-37 Tniy, Tinay Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T14:22:42.767Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a0c959ba0853af10c04ac"
+  },
+  "patientId": "25-00-00-37",
+  "fullName": "tniy, tinay",
+  "message": "Patient HRN 25-00-00-37 tniy, tinay for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T14:24:21.061Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a261cb150dc5e48283dae"
+  },
+  "patientId": "25-00-00-40",
+  "fullName": "jackson, micheal",
+  "message": "Patient HRN 25-00-00-40 jackson, micheal submit promissory",
+  "department": "Promissory",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T16:13:16.790Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a2809c33fd0528279326d"
+  },
+  "patientId": "25-00-00-40",
+  "fullName": "jackson, micheal",
+  "message": "Patient HRN 25-00-00-40 jackson, micheal promissory rejected",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T16:21:29.580Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a28417a16ccfe98cd4f11"
+  },
+  "patientId": "25-00-00-40",
+  "fullName": "jackson, micheal",
+  "message": "Patient HRN 25-00-00-40 jackson, micheal submit promissory",
+  "department": "Promissory",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T16:22:25.740Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a284a7a16ccfe98cd4f21"
+  },
+  "patientId": "25-00-00-40",
+  "fullName": "jackson, micheal",
+  "message": "Patient HRN 25-00-00-40 jackson, micheal submit promissory",
+  "department": "Promissory",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T16:22:34.741Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a28bacbfd44eed89d50b7"
+  },
+  "patientId": "25-00-00-40",
+  "fullName": "Jackson, Micheal",
+  "message": "Patient HRN 25-00-00-40 Jackson, Micheal Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T16:24:26.830Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a29414812d44c15855a02"
+  },
+  "patientId": "25-00-00-40",
+  "fullName": "jackson, micheal",
+  "message": "Patient HRN 25-00-00-40 jackson, micheal promissory rejected",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T16:26:41.384Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a294d4812d44c15855a27"
+  },
+  "patientId": "25-00-00-40",
+  "fullName": "jackson, micheal",
+  "message": "Patient HRN 25-00-00-40 jackson, micheal promissory approved",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T16:26:53.999Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a29828bae93e93c6adc77"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T16:27:46.329Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a29c03a26d71f0006887f"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T16:28:48.962Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a2a29e6218003947d71d3"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "Chacha, Charapcharap",
+  "message": "Patient HRN 25-00-00-14 Chacha, Charapcharap Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T16:30:33.831Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a2a657a6e32e9844038ce"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "chacha, charapcharap",
+  "message": "Patient HRN 25-00-00-14 chacha, charapcharap submit promissory",
+  "department": "Promissory",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T16:31:33.401Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a2cea6525e7b9d3f52a42"
+  },
+  "patientId": "25-00-00-37",
+  "fullName": "Tniy, Tinay",
+  "message": "Patient HRN 25-00-00-37 Tniy, Tinay for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T16:42:18.890Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a2d1daeaebd1cd6c49621"
+  },
+  "patientId": "25-00-00-37",
+  "fullName": "Tniy, Tinay",
+  "message": "Patient HRN 25-00-00-37 Tniy, Tinay for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T16:43:09.913Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a2d8c70a28fbae04b7296"
+  },
+  "patientId": "25-00-00-37",
+  "fullName": "Tniy, Tinay",
+  "message": "Patient HRN 25-00-00-37 Tniy, Tinay Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T16:45:00.279Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a2dc9af19ce91339081ed"
+  },
+  "patientId": "25-00-00-37",
+  "fullName": "tniy, tinay",
+  "message": "Patient HRN 25-00-00-37 tniy, tinay submit promissory",
+  "department": "Promissory",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T16:46:01.226Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a2fd24a1f640d6d55008f"
+  },
+  "patientId": "25-00-00-35",
+  "fullName": "Coby, Cobbychi",
+  "message": "Patient HRN 25-00-00-35 Coby, Cobbychi for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T16:54:42.681Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a3107b2f451b548347439"
+  },
+  "patientId": "25-00-00-35",
+  "fullName": "Coby, Cobbychi",
+  "message": "Patient HRN 25-00-00-35 Coby, Cobbychi Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T16:59:51.928Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a315bc093ae9d94fb02f6"
+  },
+  "patientId": "25-00-00-35",
+  "fullName": "coby, cobbychi",
+  "message": "Patient HRN 25-00-00-35 coby, cobbychi submit promissory",
+  "department": "Promissory",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T17:01:15.415Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a34eb6c738451aced6ef0"
+  },
+  "patientId": "25-00-00-38",
+  "fullName": "Kulet, Kuleti",
+  "message": "Patient HRN 25-00-00-38 Kulet, Kuleti for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-04T17:16:27.266Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a352f4270929110479004"
+  },
+  "patientId": "25-00-00-38",
+  "fullName": "Kulet, Kuleti",
+  "message": "Patient HRN 25-00-00-38 Kulet, Kuleti for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T17:17:35.585Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a35534270929110479075"
+  },
+  "patientId": "25-00-00-38",
+  "fullName": "Kulet, Kuleti",
+  "message": "Patient HRN 25-00-00-38 Kulet, Kuleti Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T17:18:11.828Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690a35ab334e19b998dbcc47"
+  },
+  "patientId": "25-00-00-38",
+  "fullName": "kulet, kuleti",
+  "message": "Patient HRN 25-00-00-38 kulet, kuleti submit promissory",
+  "department": "Promissory",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-04T17:19:39.260Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690abb5d215dedf2c161cea0"
+  },
+  "patientId": "25-00-00-14",
+  "fullName": "chacha, charapcharap",
+  "message": "Patient HRN 25-00-00-14 chacha, charapcharap promissory approved",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-05T02:50:05.879Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690abb6b215dedf2c161cecd"
+  },
+  "patientId": "25-00-00-37",
+  "fullName": "tniy, tinay",
+  "message": "Patient HRN 25-00-00-37 tniy, tinay promissory approved",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-05T02:50:19.698Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ac004c844fb6ea11b0ada"
+  },
+  "patientId": "25-00-00-39",
+  "fullName": "Corbadura, Alan",
+  "message": "Patient HRN 25-00-00-39 Corbadura, Alan for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-05T03:09:56.291Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ac28d0643cc9086a9c956"
+  },
+  "patientId": "25-00-00-39",
+  "fullName": "Corbadura, Alan",
+  "message": "Patient HRN 25-00-00-39 Corbadura, Alan for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-05T03:20:45.866Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b23d17aa695acb7eb4df5"
+  },
+  "patientId": "25-00-00-23",
+  "fullName": "Samgy, Bacon",
+  "message": "Patient HRN 25-00-00-23 Samgy, Bacon Admission Cancelled",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-05T10:15:45.529Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b23d27aa695acb7eb4dfa"
+  },
+  "patientId": "25-00-00-22",
+  "fullName": "Mercury, Manson",
+  "message": "Patient HRN 25-00-00-22 Mercury, Manson Admission Cancelled",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-05T10:15:46.003Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b23d27aa695acb7eb4dff"
+  },
+  "patientId": "25-00-00-21",
+  "fullName": "Bala, Kubak",
+  "message": "Patient HRN 25-00-00-21 Bala, Kubak Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-05T10:15:46.531Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b23da7aa695acb7eb4e03"
+  },
+  "patientId": "25-00-00-36",
+  "fullName": "Inko, Gnito",
+  "message": "Patient HRN 25-00-00-36 Inko, Gnito for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-05T10:15:54.243Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b2571e629a7687a8de852"
+  },
+  "patientId": "25-00-00-36",
+  "fullName": "Inko, Gnito",
+  "message": "Patient HRN 25-00-00-36 Inko, Gnito for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-05T10:22:41.113Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b26665472e7e27fc4c07d"
+  },
+  "patientId": "25-00-00-36",
+  "fullName": "Inko, Gnito",
+  "message": "Patient HRN 25-00-00-36 Inko, Gnito for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-05T10:26:46.434Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b36a62f6bb4d5c69c0d41"
+  },
+  "patientId": "25-00-00-41",
+  "fullName": "Dolente, Mcjim",
+  "message": "Patient HRN 25-00-00-41 Dolente, Mcjim for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-05T11:36:06.763Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b36e62f6bb4d5c69c0d93"
+  },
+  "patientId": "25-00-00-41",
+  "fullName": "Dolente, Mcjim",
+  "message": "Patient HRN 25-00-00-41 Dolente, Mcjim for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-05T11:37:10.892Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b37562f6bb4d5c69c0e63"
+  },
+  "patientId": "25-00-00-41",
+  "fullName": "Dolente, Mcjim",
+  "message": "Patient HRN 25-00-00-41 Dolente, Mcjim Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-05T11:39:02.367Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b37ab2f6bb4d5c69c0eff"
+  },
+  "patientId": "25-00-00-41",
+  "fullName": "dolente, mcjim",
+  "message": "Patient HRN 25-00-00-41 dolente, mcjim submit promissory",
+  "department": "Promissory",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-05T11:40:27.128Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b38032f6bb4d5c69c0f80"
+  },
+  "patientId": "25-00-00-41",
+  "fullName": "dolente, mcjim",
+  "message": "Patient HRN 25-00-00-41 dolente, mcjim promissory approved",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-05T11:41:55.836Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b382e2f6bb4d5c69c1003"
+  },
+  "patientId": "25-00-00-41",
+  "fullName": "dolente, mcjim",
+  "message": "Patient HRN 25-00-00-41 dolente, mcjim for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-05T11:42:38.140Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690b3e8959a9760945cbca88"
+  },
+  "patientId": "25-00-00-35",
+  "fullName": "coby, cobbychi",
+  "message": "Patient HRN 25-00-00-35 coby, cobbychi promissory approved",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-05T12:09:45.123Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c2ed5eea75267ee39d052"
+  },
+  "patientId": "25-00-00-43",
+  "fullName": "Sabangan, Alex",
+  "message": "Patient HRN 25-00-00-43 Sabangan, Alex for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-06T05:15:01.067Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c2f4feea75267ee39d0b2"
+  },
+  "patientId": "25-00-00-43",
+  "fullName": "Sabangan, Alex",
+  "message": "Patient HRN 25-00-00-43 Sabangan, Alex for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-06T05:17:03.789Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c30feeea75267ee39d259"
+  },
+  "patientId": "25-00-00-43",
+  "fullName": "Sabangan, Alex",
+  "message": "Patient HRN 25-00-00-43 Sabangan, Alex Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-06T05:24:14.090Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c31a7eea75267ee39d329"
+  },
+  "patientId": "25-00-00-43",
+  "fullName": "sabangan, alex",
+  "message": "Patient HRN 25-00-00-43 sabangan, alex submit promissory",
+  "department": "Promissory",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-06T05:27:03.182Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c3201eea75267ee39d3b8"
+  },
+  "patientId": "25-00-00-43",
+  "fullName": "sabangan, alex",
+  "message": "Patient HRN 25-00-00-43 sabangan, alex promissory approved",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-06T05:28:33.437Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c3243eea75267ee39d445"
+  },
+  "patientId": "25-00-00-43",
+  "fullName": "sabangan, alex",
+  "message": "Patient HRN 25-00-00-43 sabangan, alex for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-06T05:29:39.454Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c454d3cca6e3f4e10d444"
+  },
+  "patientId": "25-00-00-38",
+  "fullName": "Kulet, Kuleti",
+  "message": "Patient HRN 25-00-00-38 Kulet, Kuleti Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-06T06:50:53.900Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c45ba3cca6e3f4e10d4e6"
+  },
+  "patientId": "25-00-00-44",
+  "fullName": "Kalambang, Edmar",
+  "message": "Patient HRN 25-00-00-44 Kalambang, Edmar for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-06T06:52:42.810Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c45da3cca6e3f4e10d4fe"
+  },
+  "patientId": "25-00-00-44",
+  "fullName": "Kalambang, Edmar",
+  "message": "Patient HRN 25-00-00-44 Kalambang, Edmar for Outpatient Consultation",
+  "department": "OPD",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-06T06:53:14.552Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c46383cca6e3f4e10d5a5"
+  },
+  "patientId": "25-00-00-44",
+  "fullName": "Kalambang, Edmar",
+  "message": "Patient HRN 25-00-00-44 Kalambang, Edmar Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-06T06:54:48.918Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c479a3cca6e3f4e10d694"
+  },
+  "patientId": "25-00-00-44",
+  "fullName": "kalambang, edmar",
+  "message": "Patient HRN 25-00-00-44 kalambang, edmar submit promissory",
+  "department": "Promissory",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-06T07:00:42.402Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c47ac3cca6e3f4e10d6dc"
+  },
+  "patientId": "25-00-00-44",
+  "fullName": "kalambang, edmar",
+  "message": "Patient HRN 25-00-00-44 kalambang, edmar promissory approved",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-06T07:01:00.708Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c47c43cca6e3f4e10d70c"
+  },
+  "patientId": "25-00-00-44",
+  "fullName": "kalambang, edmar",
+  "message": "Patient HRN 25-00-00-44 kalambang, edmar for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-06T07:01:24.307Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c4cbe3cca6e3f4e10d8c5"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecana, Angelo",
+  "message": "Patient HRN 25-00-00-45 Pecana, Angelo for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-06T07:22:38.930Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c4d313cca6e3f4e10d8e9"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecana, Angelo",
+  "message": "Patient HRN 25-00-00-45 Pecana, Angelo for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-06T07:24:33.168Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c4dae3cca6e3f4e10d98a"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecana, Angelo",
+  "message": "Patient HRN 25-00-00-45 Pecana, Angelo Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-06T07:26:38.420Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c4df93cca6e3f4e10da08"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "pecana, angelo",
+  "message": "Patient HRN 25-00-00-45 pecana, angelo submit promissory",
+  "department": "Promissory",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-06T07:27:53.398Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c4e1a3cca6e3f4e10da50"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "pecana, angelo",
+  "message": "Patient HRN 25-00-00-45 pecana, angelo promissory approved",
+  "department": "Billing",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-06T07:28:26.683Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690c4e593cca6e3f4e10dac4"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "pecana, angelo",
+  "message": "Patient HRN 25-00-00-45 pecana, angelo for Payments",
+  "department": "Cashier",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-06T07:29:29.196Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ef75d58782aab5c5a701a"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecananan, Angelost",
+  "message": "Patient HRN 25-00-00-45 Pecananan, Angelost for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-08T07:55:09.266Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ef75e58782aab5c5a701f"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecananan, Angelost",
+  "message": "Patient HRN 25-00-00-45 Pecananan, Angelost Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-08T07:55:10.374Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ef75f58782aab5c5a7023"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecananan, Angelost",
+  "message": "Patient HRN 25-00-00-45 Pecananan, Angelost for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-08T07:55:11.110Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ef75f58782aab5c5a7028"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecananan, Angelost",
+  "message": "Patient HRN 25-00-00-45 Pecananan, Angelost Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-08T07:55:11.576Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ef76058782aab5c5a702c"
+  },
+  "patientId": "25-00-00-44",
+  "fullName": "Kalambang, Edmar",
+  "message": "Patient HRN 25-00-00-44 Kalambang, Edmar for admitting",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T07:55:12.172Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ef76158782aab5c5a7031"
+  },
+  "patientId": "25-00-00-44",
+  "fullName": "Kalambang, Edmar",
+  "message": "Patient HRN 25-00-00-44 Kalambang, Edmar Admission Cancelled",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T07:55:13.306Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f127705301beb39ec3d6b"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecananan, Angelosss",
+  "message": "Patient HRN 25-00-00-45 Pecananan, Angelosss for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-08T09:50:47.699Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f127905301beb39ec3d70"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecananan, Angelosss",
+  "message": "Patient HRN 25-00-00-45 Pecananan, Angelosss Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-08T09:50:49.749Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f127e05301beb39ec3d74"
+  },
+  "patientId": "25-00-00-44",
+  "fullName": "Kalambang, Edmar",
+  "message": "Patient HRN 25-00-00-44 Kalambang, Edmar for admitting",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T09:50:54.079Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f127e05301beb39ec3d79"
+  },
+  "patientId": "25-00-00-44",
+  "fullName": "Kalambang, Edmar",
+  "message": "Patient HRN 25-00-00-44 Kalambang, Edmar Admission Cancelled",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T09:50:54.894Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f128305301beb39ec3d7d"
+  },
+  "patientId": "25-00-00-44",
+  "fullName": "Kalambang, Edmar",
+  "message": "Patient HRN 25-00-00-44 Kalambang, Edmar for admitting",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T09:50:59.505Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f128405301beb39ec3d81"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecananan, Angelosss",
+  "message": "Patient HRN 25-00-00-45 Pecananan, Angelosss for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-08T09:51:00.900Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f128605301beb39ec3d86"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecananan, Angelosss",
+  "message": "Patient HRN 25-00-00-45 Pecananan, Angelosss Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-08T09:51:02.373Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f128705301beb39ec3d8b"
+  },
+  "patientId": "25-00-00-44",
+  "fullName": "Kalambang, Edmar",
+  "message": "Patient HRN 25-00-00-44 Kalambang, Edmar Admission Cancelled",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T09:51:03.156Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f14486251ee398cec27ac"
+  },
+  "patientId": "25-00-00-39",
+  "fullName": "Corbadura, Alan",
+  "message": "Patient HRN 25-00-00-39 Corbadura, Alan for admitting",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T09:58:32.218Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f144b6251ee398cec27b1"
+  },
+  "patientId": "25-00-00-39",
+  "fullName": "Corbadura, Alan",
+  "message": "Patient HRN 25-00-00-39 Corbadura, Alan Admission Cancelled",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T09:58:35.017Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f144c6251ee398cec27b5"
+  },
+  "patientId": "25-00-00-39",
+  "fullName": "Corbadura, Alan",
+  "message": "Patient HRN 25-00-00-39 Corbadura, Alan for admitting",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T09:58:36.696Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f159a31a5fd9ad498f86c"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecananan, Angelosss",
+  "message": "Patient HRN 25-00-00-45 Pecananan, Angelosss for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-08T10:04:10.836Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f159b31a5fd9ad498f871"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecananan, Angelosss",
+  "message": "Patient HRN 25-00-00-45 Pecananan, Angelosss Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-08T10:04:11.748Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f164aade5bb49b6e672ff"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecananan, Angelosss",
+  "message": "Patient HRN 25-00-00-45 Pecananan, Angelosss for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-08T10:07:06.604Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f164bade5bb49b6e67304"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecananan, Angelosss",
+  "message": "Patient HRN 25-00-00-45 Pecananan, Angelosss Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-08T10:07:07.347Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f164cade5bb49b6e67308"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecananan, Angelosss",
+  "message": "Patient HRN 25-00-00-45 Pecananan, Angelosss for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-08T10:07:08.359Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f164dade5bb49b6e6730d"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecananan, Angelosss",
+  "message": "Patient HRN 25-00-00-45 Pecananan, Angelosss Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-08T10:07:09.166Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f372b94c486d7cebe8759"
+  },
+  "patientId": "25-00-00-46",
+  "fullName": "Sotto , Vic",
+  "message": "Patient HRN 25-00-00-46 Sotto , Vic for admitting",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T12:27:23.493Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f372e94c486d7cebe875e"
+  },
+  "patientId": "25-00-00-46",
+  "fullName": "Sotto , Vic",
+  "message": "Patient HRN 25-00-00-46 Sotto , Vic Admission Cancelled",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T12:27:26.100Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f373294c486d7cebe8762"
+  },
+  "patientId": "25-00-00-46",
+  "fullName": "Sotto , Vic",
+  "message": "Patient HRN 25-00-00-46 Sotto , Vic for admitting",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T12:27:30.382Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f373394c486d7cebe8767"
+  },
+  "patientId": "25-00-00-46",
+  "fullName": "Sotto , Vic",
+  "message": "Patient HRN 25-00-00-46 Sotto , Vic Admission Cancelled",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T12:27:31.917Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f38069a7a1ec8e4733db2"
+  },
+  "patientId": "25-00-00-46",
+  "fullName": "Sotto , Vic",
+  "message": "Patient HRN 25-00-00-46 Sotto , Vic for admitting",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T12:31:02.749Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f38d0823e36ae73707dd3"
+  },
+  "patientId": "25-00-00-46",
+  "fullName": "Sotto , Vic",
+  "message": "Patient HRN 25-00-00-46 Sotto , Vic for admitting",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T12:34:24.316Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f38d1823e36ae73707dd8"
+  },
+  "patientId": "25-00-00-46",
+  "fullName": "Sotto , Vic",
+  "message": "Patient HRN 25-00-00-46 Sotto , Vic Admission Cancelled",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T12:34:25.050Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f38d3823e36ae73707ddc"
+  },
+  "patientId": "25-00-00-46",
+  "fullName": "Sotto , Vic",
+  "message": "Patient HRN 25-00-00-46 Sotto , Vic for admitting",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T12:34:27.155Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f3d18a829e02dd20d8b72"
+  },
+  "patientId": "25-00-00-46",
+  "fullName": "Sotto , Vic",
+  "message": "Patient HRN 25-00-00-46 Sotto , Vic for admitting",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T12:52:40.469Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f43cc632fee5631e2e2b3"
+  },
+  "patientId": "25-00-00-46",
+  "fullName": "Sotto , Vic",
+  "message": "Patient HRN 25-00-00-46 Sotto , Vic Admission Cancelled",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T13:21:16.160Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690f43d5632fee5631e2e2bd"
+  },
+  "patientId": "25-00-00-46",
+  "message": "HRN 25-00-00-46 has been archived",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-08T13:21:25.754Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff2b7892fd814fc7ca59e"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecananana, Angelosss",
+  "message": "Patient HRN 25-00-00-45 Pecananana, Angelosss for admitting",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-09T01:47:35.381Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff2b8892fd814fc7ca5a3"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecananana, Angelosss",
+  "message": "Patient HRN 25-00-00-45 Pecananana, Angelosss Admission Cancelled",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-09T01:47:36.133Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff2b9892fd814fc7ca5a7"
+  },
+  "patientId": "25-00-00-44",
+  "fullName": "Kalambang, Edmar",
+  "message": "Patient HRN 25-00-00-44 Kalambang, Edmar for admitting",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-09T01:47:37.844Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff2bb892fd814fc7ca5ab"
+  },
+  "patientId": "25-00-00-43",
+  "fullName": "Sabangan, Alex",
+  "message": "Patient HRN 25-00-00-43 Sabangan, Alex for admitting",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-09T01:47:39.491Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff31b892fd814fc7ca5f3"
+  },
+  "patientId": "25-00-00-45",
+  "fullName": "Pecananana, Angelossddd",
+  "message": "Patient HRN 25-00-00-45 Pecananana, Angelossddd for admitting",
+  "department": "Admission",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-09T01:49:15.606Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff4c8423db8d7ba9c8923"
+  },
+  "patientId": "25-00-00-47",
+  "fullName": "Anak, Pasig",
+  "message": "Patient HRN 25-00-00-47 Anak, Pasig for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-09T01:56:24.907Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff6110bafd470e29e06d0"
+  },
+  "patientId": "25-00-00-47",
+  "fullName": "Anak, Pasig",
+  "message": "Patient HRN 25-00-00-47 Anak, Pasig Admission Cancelled",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-09T02:01:53.837Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff6190bafd470e29e06da"
+  },
+  "patientId": "25-00-00-47",
+  "message": "HRN 25-00-00-47 has been archived",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-09T02:02:01.630Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff6270bafd470e29e06ec"
+  },
+  "patientId": "25-00-00-47",
+  "fullName": "Anak, Pasig",
+  "message": "Patient HRN 25-00-00-47 Anak, Pasig for admitting",
+  "department": "Admission",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-09T02:02:15.154Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff6660bafd470e29e0750"
+  },
+  "patientId": "25-00-00-47",
+  "fullName": "Anak, Pasig",
+  "message": "Patient HRN 25-00-00-47 Anak, Pasig for Emergency Medical Attention",
+  "department": "Emergency",
+  "read": true,
+  "createdAt": {
+    "$date": "2025-11-09T02:03:18.576Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff7bb0bafd470e29e0914"
+  },
+  "patientId": "25-00-00-47",
+  "fullName": "Anak, Pasig",
+  "message": "Patient HRN 25-00-00-47 Anak, Pasig Charge Slip Submitted for Billing",
+  "department": "Billing",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-09T02:08:59.614Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "690ff7e40bafd470e29e09b9"
+  },
+  "patientId": "25-00-00-47",
+  "fullName": "anak, pasig",
+  "message": "Patient HRN 25-00-00-47 anak, pasig for Payments",
+  "department": "Cashier",
+  "read": false,
+  "createdAt": {
+    "$date": "2025-11-09T02:09:40.558Z"
+  },
+  "__v": 0
+}]

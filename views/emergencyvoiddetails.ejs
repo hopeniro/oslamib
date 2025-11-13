@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Emergency Voided Transaction Details</title>
+ <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+   <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f8fb;
+      margin: 0;
+      color: #222;
+      font-size: 15px;
+    }
+    /* SIDEBAR & NAV ONLY */
+    .sidebar {
+      width: 250px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding-top: 10px;
+      padding: 12px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      overflow-y: auto;
+      border-left: 4px solid #0891b2;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      border-radius: 10px;
+      margin: 8px 10px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.25s ease;
+      position: relative;
+      text-decoration: none;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      background: #e6f7fa;
+      color: #0891b2;
+      border-color: #b3e5ef;
+      box-shadow: 0 3px 8px rgba(8,145,178,0.1);
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #0891b2; /* OsLAM title color */
+      border-radius: 4px 0 0 4px;
+      box-shadow: 0 0 0 1px #0891b2;
+    }
+  </style>
+</head>
+<body>
+   <!-- FLOATING SIDEBAR -->
+  <aside class="sidebar">
+    <div style="display:flex;align-items:center;gap:12px;padding:24px 20px 12px 20px;">
+      <img src="/logo.png" style="width:44px;height:44px;border-radius:8px;object-fit:contain;">
+      <div>
+        <div style="font-size:20px;font-weight:700;color:#0891b2;">OsLAM</div>
+        <div style="font-size:13px;color:#666;">Emergency</div>
+      </div>
+    </div>
+    <nav style="margin-top:10px;">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="/emergencydashboard" class="nav-link"><i class="bi bi-grid"></i> Dashboard</a></li>
+        <li><a href="/emergency" class="nav-link"><i class="bi bi-hospital"></i> Emergency</a></li>
+        <li><a href="/emergency/voided" class="nav-link"><i class="bi bi-x-circle"></i> Void Transaction</a></li>
+        <li><a href="/emergency/deleted-diagnoses" class="nav-link"><i class="bi bi-trash"></i> Deleted Diagnose</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div style="margin-left: 310px;">
+    <h1>Voided Transactions - <%= patient.patientId %></h1>
+    <div class="section">
+      <div class="kv"><strong>HRN:</strong> <span><%= patient.patientId %></span></div>
+      <div class="kv"><strong>Full Name:</strong> <span><%= patient.fullName || `${patient.lastName}, ${patient.firstName}` %></span></div>
+    </div>
+    <br>
+    <h2>Voided Services</h2>
+    <% if (voidedTransactions.length === 0) { %>
+      <p>No voided transactions found for this patient.</p>
+    <% } else { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Transaction Type</th>
+            <th>Description</th>
+            <th>Qty</th>
+            <th>Amount</th>
+            <th>Reason</th>
+            <th>Void Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% voidedTransactions.forEach(vt => { %>
+            <tr>
+              <td><%= vt.service.serviceType || '—' %></td>
+              <td><%= vt.service.description || '—' %></td>
+              <td><%= vt.service.qty || 1 %></td>
+              <td>₱<%= (vt.service.amount || 0).toFixed(2) %></td>
+              <td><%= vt.voidReason %></td>
+              <td><%= new Date(vt.voidedAt).toLocaleString('en-US', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <% } %>
+    <br>
+    <a href="/emergency/voided" class="btn">Back to Voided List</a>
+  </div>
+</body>
+</html>

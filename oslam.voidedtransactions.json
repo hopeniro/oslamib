@@ -1,0 +1,2117 @@
+[{
+  "_id": {
+    "$oid": "6905fdccc7ed03cdbf1b3e16"
+  },
+  "originalTransactionId": "2EEA47D1",
+  "admissionId": "ADMT1761988065215",
+  "patientId": "25-00-00-01",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "ECG",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 6,
+    "amount": 900
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T12:32:12.600Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T12:32:12.609Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T12:32:12.609Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6905fdccc7ed03cdbf1b3e1b"
+  },
+  "originalTransactionId": "2EBEC426",
+  "admissionId": "ADMT1761988065215",
+  "patientId": "25-00-00-01",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Doppler",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 5,
+    "amount": 750
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T12:32:12.646Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T12:32:12.647Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T12:32:12.647Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6905fdccc7ed03cdbf1b3e21"
+  },
+  "originalTransactionId": "2CDB9480",
+  "admissionId": "ADMT1761988065215",
+  "patientId": "25-00-00-01",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 3,
+    "amount": 900
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T12:32:12.662Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T12:32:12.663Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T12:32:12.663Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6905fe0bc7ed03cdbf1b3e46"
+  },
+  "originalTransactionId": "2CDB9480",
+  "admissionId": "ADMT1761988065215",
+  "patientId": "25-00-00-01",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Doppler",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 4,
+    "amount": 600
+  },
+  "voidReason": "Change of mind",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T12:33:15.573Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T12:33:15.574Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T12:33:15.574Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6905fe38c7ed03cdbf1b3e77"
+  },
+  "originalTransactionId": "C8780526",
+  "admissionId": "ADMT1761834028082",
+  "patientId": "25-00-00-14",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Apicolordotic View",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 2,
+    "amount": 550
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T12:34:00.066Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T12:34:00.067Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T12:34:00.067Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6905fe38c7ed03cdbf1b3e7a"
+  },
+  "originalTransactionId": "C8780526",
+  "admissionId": "ADMT1761834028082",
+  "patientId": "25-00-00-14",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 4,
+    "amount": 1200
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T12:34:00.078Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T12:34:00.085Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T12:34:00.085Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6905fe38c7ed03cdbf1b3e7f"
+  },
+  "originalTransactionId": "5CCAABDA",
+  "admissionId": "ADMT1761834028082",
+  "patientId": "25-00-00-14",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "ECG",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 6,
+    "amount": 900
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T12:34:00.109Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T12:34:00.110Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T12:34:00.110Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6905fe38c7ed03cdbf1b3e84"
+  },
+  "originalTransactionId": "30CB1E38",
+  "admissionId": "ADMT1761834028082",
+  "patientId": "25-00-00-14",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 2,
+    "amount": 1000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T12:34:00.125Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T12:34:00.125Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T12:34:00.125Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6905fe38c7ed03cdbf1b3e89"
+  },
+  "originalTransactionId": "19CB24B8",
+  "admissionId": "ADMT1761834028082",
+  "patientId": "25-00-00-14",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 1,
+    "amount": 500
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T12:34:00.141Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T12:34:00.142Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T12:34:00.142Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6906028bb916b5777409625a"
+  },
+  "originalTransactionId": "B42DFDEB",
+  "admissionId": "ADMT1761988065215",
+  "patientId": "25-00-00-01",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 1,
+    "amount": 300
+  },
+  "voidReason": "Change of mind",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T12:52:27.059Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T12:52:27.060Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T12:52:27.060Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69061f74213e659dded80a42"
+  },
+  "originalTransactionId": "33792418",
+  "admissionId": "ADMT1762008758068",
+  "patientId": "25-00-00-07",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 2,
+    "amount": 600
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T14:55:48.520Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T14:55:48.521Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T14:55:48.521Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690622c33e2e998f98b681be"
+  },
+  "originalTransactionId": "58AF2A94",
+  "admissionId": "ADMT1762008758068",
+  "patientId": "25-00-00-07",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 2,
+    "amount": 600
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T15:09:55.379Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T15:09:55.381Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T15:09:55.381Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6906240f6bc61e2b86a17bd7"
+  },
+  "originalTransactionId": "927B748C",
+  "admissionId": "ADMT1761842060615",
+  "patientId": "25-00-00-13",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 1,
+    "amount": 1500
+  },
+  "voidReason": "Change of mind",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T15:15:27.711Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T15:15:27.712Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T15:15:27.712Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6906240f6bc61e2b86a17bdd"
+  },
+  "originalTransactionId": "2B3075CD",
+  "admissionId": "ADMT1761842060615",
+  "patientId": "25-00-00-13",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 1,
+    "amount": 300
+  },
+  "voidReason": "Change of mind",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T15:15:27.736Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T15:15:27.737Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T15:15:27.737Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6906240f6bc61e2b86a17bdf"
+  },
+  "originalTransactionId": "2B3075CD",
+  "admissionId": "ADMT1761842060615",
+  "patientId": "25-00-00-13",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Doppler",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 1,
+    "amount": 150
+  },
+  "voidReason": "Change of mind",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T15:15:27.742Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T15:15:27.743Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T15:15:27.743Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690624696bc61e2b86a17c6a"
+  },
+  "originalTransactionId": "807CD6EF",
+  "admissionId": "ADMT1761834028082",
+  "patientId": "25-00-00-14",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Arm AP/L (2 views)",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 4,
+    "amount": 1520
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T15:16:57.709Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T15:16:57.710Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T15:16:57.710Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690624696bc61e2b86a17c70"
+  },
+  "originalTransactionId": "64B73E4A",
+  "admissionId": "ADMT1761834028082",
+  "patientId": "25-00-00-14",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "OPD",
+    "description": "Consultation Fee",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 1,
+    "amount": 52
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T15:16:57.732Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T15:16:57.733Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T15:16:57.733Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690625b76bc61e2b86a17d6c"
+  },
+  "originalTransactionId": "56EBBECF",
+  "admissionId": "ADMT1761995757289",
+  "patientId": "25-00-00-24",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Apicolordotic View",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 3,
+    "amount": 825
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T15:22:31.613Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T15:22:31.614Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T15:22:31.614Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690625b76bc61e2b86a17d6f"
+  },
+  "originalTransactionId": "56EBBECF",
+  "admissionId": "ADMT1761995757289",
+  "patientId": "25-00-00-24",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Doppler",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 6,
+    "amount": 900
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-01T15:22:31.628Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-01T15:22:31.629Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-01T15:22:31.629Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6906fa2a2af722f877c44d33"
+  },
+  "originalTransactionId": "F11FF728",
+  "admissionId": "ADMT1762038756187",
+  "patientId": "25-00-00-22",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 2,
+    "amount": 600
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-02T06:28:58.943Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-02T06:28:58.950Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T06:28:58.950Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6906fc417cb4664e466fb6f0"
+  },
+  "originalTransactionId": "1F8410D0",
+  "admissionId": "ADMT1762038756187",
+  "patientId": "25-00-00-22",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 1,
+    "amount": 300
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-02T06:37:53.735Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-02T06:37:53.744Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T06:37:53.744Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690700842ed5baf0371dbf46"
+  },
+  "originalTransactionId": "E954BB9F",
+  "admissionId": "ADMT1762066010125",
+  "patientId": "25-00-00-01",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 89,
+    "amount": 26700
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-02T06:56:04.839Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-02T06:56:04.848Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T06:56:04.848Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6907039a2ed5baf0371dc2fd"
+  },
+  "originalTransactionId": "1FCD63FA",
+  "admissionId": "ADMT1762066789114",
+  "patientId": "25-00-00-06",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Doppler",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 2,
+    "amount": 300
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-02T07:09:14.261Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-02T07:09:14.261Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T07:09:14.261Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690709dc859f2c8d827a0ae6"
+  },
+  "originalTransactionId": "68BBA752",
+  "admissionId": "ADMT1762038756187",
+  "patientId": "25-00-00-22",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 1,
+    "amount": 300
+  },
+  "voidReason": "Change of mind",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-02T07:35:56.769Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-02T07:35:56.771Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T07:35:56.771Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6907192f3c9a6167a84de0bf"
+  },
+  "originalTransactionId": "07A6E2FA",
+  "admissionId": "ADMT1762072464474",
+  "patientId": "25-00-00-23",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 1,
+    "amount": 300
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-02T08:41:19.288Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-02T08:41:19.289Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T08:41:19.289Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69073b634b9793f42d8b8221"
+  },
+  "originalTransactionId": "EAB98785",
+  "admissionId": "ADMT1762081188669",
+  "patientId": "25-00-00-26",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 8,
+    "amount": 2400
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-02T11:07:15.479Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-02T11:07:15.488Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T11:07:15.488Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69073b944b9793f42d8b8280"
+  },
+  "originalTransactionId": "670FA8CD",
+  "admissionId": "ADMT1762081188669",
+  "patientId": "25-00-00-26",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 5,
+    "amount": 1500
+  },
+  "voidReason": "Change of mind",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-02T11:08:04.486Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-02T11:08:04.487Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T11:08:04.487Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69073e67e432796c1be4dc9b"
+  },
+  "originalTransactionId": "186FED43",
+  "admissionId": "ADMT1762081710822",
+  "patientId": "25-00-00-26",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Apicolordotic View",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 8,
+    "amount": 2200
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-02T11:20:07.331Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-02T11:20:07.338Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-02T11:20:07.338Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690962497938b889fe6388be"
+  },
+  "originalTransactionId": "E7F8B626",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:45.902Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:45.910Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:45.910Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690962497938b889fe6388c3"
+  },
+  "originalTransactionId": "CE7C27AF",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:45.951Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:45.953Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:45.953Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690962497938b889fe6388c8"
+  },
+  "originalTransactionId": "88727B97",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:45.963Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:45.964Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:45.964Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690962497938b889fe6388cd"
+  },
+  "originalTransactionId": "83A25233",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:45.976Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:45.976Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:45.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690962497938b889fe6388d2"
+  },
+  "originalTransactionId": "6F11C9BD",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:45.989Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:45.989Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:45.989Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe6388d7"
+  },
+  "originalTransactionId": "D7142F7A",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.001Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.001Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe6388dc"
+  },
+  "originalTransactionId": "54D9D9EF",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.011Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.012Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.012Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe6388e1"
+  },
+  "originalTransactionId": "D5680613",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.025Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.026Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.026Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe6388e6"
+  },
+  "originalTransactionId": "AAB5C816",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.038Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.039Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.039Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe6388eb"
+  },
+  "originalTransactionId": "C9844A68",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.051Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.052Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.052Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe6388f0"
+  },
+  "originalTransactionId": "FC861996",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.064Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.065Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.065Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe6388f5"
+  },
+  "originalTransactionId": "E0AE0AB9",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.075Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.076Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe6388fa"
+  },
+  "originalTransactionId": "19A6FC34",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.085Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.086Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.086Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe6388ff"
+  },
+  "originalTransactionId": "8EB6E359",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.095Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.096Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.096Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe638904"
+  },
+  "originalTransactionId": "DB5F84BA",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.104Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.105Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.105Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe638909"
+  },
+  "originalTransactionId": "F85E7D71",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.114Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.114Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.114Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe63890e"
+  },
+  "originalTransactionId": "C5A8FD7B",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.123Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.124Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.124Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe638913"
+  },
+  "originalTransactionId": "4F598E0D",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.133Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.133Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.133Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe638918"
+  },
+  "originalTransactionId": "0ABCEED2",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.143Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.144Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.144Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe63891d"
+  },
+  "originalTransactionId": "9CA0EAF0",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.152Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.152Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.152Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe638922"
+  },
+  "originalTransactionId": "51E433C4",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.161Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.161Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.161Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe638927"
+  },
+  "originalTransactionId": "D5E35459",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.171Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.171Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.171Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe63892c"
+  },
+  "originalTransactionId": "D0E9F991",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.180Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.180Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.180Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe638931"
+  },
+  "originalTransactionId": "E47698D6",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.188Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.188Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.188Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe638936"
+  },
+  "originalTransactionId": "0006F158",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.199Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.199Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.199Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe63893b"
+  },
+  "originalTransactionId": "7FFCEFE2",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.207Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.207Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.207Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909624a7938b889fe638940"
+  },
+  "originalTransactionId": "FEB4C687",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:17:46.216Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:17:46.217Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:17:46.217Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909625e7938b889fe63894d"
+  },
+  "originalTransactionId": "C97F4829",
+  "admissionId": "ADMT1762082007869",
+  "patientId": "25-00-00-27",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 4,
+    "amount": 2000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:18:06.382Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:18:06.383Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:18:06.383Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909627c7938b889fe638a3e"
+  },
+  "originalTransactionId": "57AA1690",
+  "admissionId": "ADMT1762084302638",
+  "patientId": "25-00-00-30",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 8,
+    "amount": 2400
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:18:36.860Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:18:36.860Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:18:36.860Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909627c7938b889fe638a45"
+  },
+  "originalTransactionId": "233D350C",
+  "admissionId": "ADMT1762084302638",
+  "patientId": "25-00-00-30",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Cardiac Monitor (Defibrillator)",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 1,
+    "amount": 150
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:18:36.883Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:18:36.884Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:18:36.884Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909627c7938b889fe638a47"
+  },
+  "originalTransactionId": "233D350C",
+  "admissionId": "ADMT1762084302638",
+  "patientId": "25-00-00-30",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 1,
+    "amount": 300
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:18:36.888Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:18:36.888Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:18:36.888Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909627c7938b889fe638a4c"
+  },
+  "originalTransactionId": "63980B81",
+  "admissionId": "ADMT1762084302638",
+  "patientId": "25-00-00-30",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "ECG",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 1,
+    "amount": 150
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:18:36.898Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:18:36.899Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:18:36.899Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909627c7938b889fe638a51"
+  },
+  "originalTransactionId": "1FEFD68D",
+  "admissionId": "ADMT1762084302638",
+  "patientId": "25-00-00-30",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 1,
+    "amount": 300
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:18:36.908Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:18:36.909Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:18:36.909Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6909627c7938b889fe638a56"
+  },
+  "originalTransactionId": "5B47C3AA",
+  "admissionId": "ADMT1762084302638",
+  "patientId": "25-00-00-30",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 9,
+    "amount": 2700
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:18:36.918Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:18:36.918Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:18:36.918Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690962dd7938b889fe638c0b"
+  },
+  "originalTransactionId": "8A37FC2B",
+  "admissionId": "ADMT1762082790545",
+  "patientId": "25-00-00-28",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 2,
+    "amount": 1000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:20:13.768Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:20:13.769Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:20:13.769Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690962dd7938b889fe638c10"
+  },
+  "originalTransactionId": "D250DC3B",
+  "admissionId": "ADMT1762082790545",
+  "patientId": "25-00-00-28",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 2,
+    "amount": 1000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:20:13.789Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:20:13.790Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:20:13.790Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690962dd7938b889fe638c15"
+  },
+  "originalTransactionId": "A026BEAC",
+  "admissionId": "ADMT1762082790545",
+  "patientId": "25-00-00-28",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 2,
+    "amount": 1000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:20:13.800Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:20:13.800Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:20:13.800Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690962dd7938b889fe638c1a"
+  },
+  "originalTransactionId": "9A845DA1",
+  "admissionId": "ADMT1762082790545",
+  "patientId": "25-00-00-28",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 2,
+    "amount": 1000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:20:13.813Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:20:13.813Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:20:13.813Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690962dd7938b889fe638c1f"
+  },
+  "originalTransactionId": "BB0E7690",
+  "admissionId": "ADMT1762082790545",
+  "patientId": "25-00-00-28",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 2,
+    "amount": 1000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:20:13.822Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:20:13.822Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:20:13.822Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690962dd7938b889fe638c24"
+  },
+  "originalTransactionId": "5840A80B",
+  "admissionId": "ADMT1762082790545",
+  "patientId": "25-00-00-28",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 2,
+    "amount": 1000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:20:13.832Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:20:13.833Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:20:13.833Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690962dd7938b889fe638c29"
+  },
+  "originalTransactionId": "C558C251",
+  "admissionId": "ADMT1762082790545",
+  "patientId": "25-00-00-28",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 2,
+    "amount": 1000
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:20:13.842Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:20:13.842Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:20:13.842Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690962dd7938b889fe638c2e"
+  },
+  "originalTransactionId": "ADEBC676",
+  "admissionId": "ADMT1762082790545",
+  "patientId": "25-00-00-28",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 4,
+    "amount": 1200
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T02:20:13.852Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T02:20:13.852Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T02:20:13.852Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690987d4ac1c2bc222df5fc0"
+  },
+  "originalTransactionId": "2101254E",
+  "admissionId": "ADMT1762232161964",
+  "patientId": "25-00-00-40",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Chest AP/L Pedia (2 views)",
+    "procedureAmount": 350,
+    "itemUsed": "xray film",
+    "itemAmount": 150,
+    "qty": 1,
+    "amount": 500
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T04:57:56.727Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T04:57:56.729Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T04:57:56.729Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69098c766ca0e378373b38b8"
+  },
+  "originalTransactionId": "683B5747",
+  "admissionId": "ADMT1762232161964",
+  "patientId": "25-00-00-40",
+  "department": "Emergency",
+  "service": {
+    "serviceType": "Equipment Use",
+    "description": "Defibrillator",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 1,
+    "amount": 300
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "Emergency Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T05:17:42.873Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T05:17:42.875Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T05:17:42.875Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690a28afcbfd44eed89d507f"
+  },
+  "originalTransactionId": "6DDA2AAA",
+  "admissionId": "ADMT1762233484070",
+  "patientId": "25-00-00-40",
+  "department": "OPD",
+  "service": {
+    "serviceType": "Radiology",
+    "description": "Abdomen Upright/Supine (2 views)",
+    "procedureAmount": null,
+    "itemUsed": "",
+    "itemAmount": null,
+    "qty": 1,
+    "amount": 520
+  },
+  "voidReason": "Wrong punch",
+  "voidedBy": "OPD Staff",
+  "voidedAt": {
+    "$date": "2025-11-04T16:24:15.192Z"
+  },
+  "createdAt": {
+    "$date": "2025-11-04T16:24:15.201Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-04T16:24:15.201Z"
+  }
+}]

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manage Services</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+ <style>
+    body {
+      background: #f5f7fa;
+    }
+    .promissory-image {
+      max-width: 200px;
+      max-height: 200px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .status-badge {
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .status-pending { background: #FFC107; color: #000; }
+    .status-approved { background: #4CAF50; color: #fff; }
+    .status-settled { background: #2196F3; color: #fff; }
+    .status-overdue { background: #f44336; color: #fff; }
+  .status-rejected { background: #9E9E9E; color: #fff; }
+    .action-btn {
+      padding: 6px 12px;
+      margin: 2px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .btn-approve { background: #4CAF50; color: white; }
+    .btn-edit { background: #2196F3; color: white; }
+    .btn-settle { background: #9C27B0; color: white; }
+    .btn-overdue { background: #f44336; color: white; }
+  </style>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f8fb;
+      margin: 0;
+      color: #222;
+      font-size: 15px;
+    }
+    /* SIDEBAR & NAV ONLY */
+    .sidebar {
+      width: 250px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding-top: 10px;
+      padding: 12px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      overflow-y: auto;
+      border-left: 4px solid #0891b2;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      border-radius: 10px;
+      margin: 8px 10px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      background: #e6f7fa;
+      color: #0891b2;
+      border-color: #b3e5ef;
+      box-shadow: 0 3px 8px rgba(8,145,178,0.1);
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #0891b2; /* OsLAM title color */
+      border-radius: 4px 0 0 4px;
+      box-shadow: 0 0 0 1px #0891b2;
+    }
+  </style>
+</head>
+<body>
+   <!-- FLOATING SIDEBAR -->
+  <aside class="sidebar">
+    <div style="display:flex;align-items:center;gap:12px;padding:24px 20px 12px 20px;">
+      <img src="/logo.png" style="width:44px;height:44px;border-radius:8px;object-fit:contain;">
+      <div>
+        <div style="font-size:20px;font-weight:700;color:#0891b2;">OsLAM</div>
+        <div style="font-size:13px;color:#666;">Billing</div>
+      </div>
+    </div>
+    <nav style="margin-top:10px;">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="/dashboard" class="nav-link"><i class="bi bi-grid"></i> Dashboard</a></li>
+        <li><a href="/promissory" class="nav-link"><i class="bi bi-file-earmark-text"></i> Promissory Notes</a></li>
+        <li><a href="/services" class="nav-link"><i class="bi bi-tools"></i> Services</a></li>
+         <li><a href="/doctor" class="nav-link"><i class="bi bi-person-badge"></i> Doctors</a></li>
+        <li><a href="/nurse" class="nav-link"><i class="bi bi-person-lines-fill"></i> Nurses</a></li>
+         <li><a href="/doctorscheduling" class="nav-link"><i class="bi bi-calendar-event"></i> Doctor Schedule</a></li>
+        <li><a href="/nursescheduling" class="nav-link"><i class="bi bi-calendar-event"></i> Nurse Schedule</a></li>
+         <li><a href="/staff" class="nav-link"><i class="bi bi-people"></i> Staff</a></li>
+        <li><a href="/audittrail" class="nav-link"><i class="bi bi-shield-check"></i> Audit Trail</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+
+  <div style="margin-left: 260px;">
+    <div class="container" style="max-width: 1100px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 32px;">
+      <h1>Services Management</h1>
+
+      <!-- Top tab buttons -->
+      <div class="tab-group">
+        <button type="button" class="btn btn-white btn-tab" data-tab="tab-type">Transaction Types</button>
+        <button type="button" class="btn btn-white btn-tab" data-tab="tab-add">Add Services</button>
+        <button type="button" class="btn btn-white btn-tab" data-tab="tab-manage">Manage Services</button>
+      </div>
+
+      <div id="tab-type" class="form-section" style="display:none;">
+        <h3>Add Transaction Type</h3>
+        <form action="/add-transaction-type" method="POST">
+          <div class="form-grid grid-2">
+            <div class="form-field">
+              <label for="type">Transaction Type:</label>
+              <input type="text" name="type" id="type" placeholder="e.g., Laboratory" required>
+            </div>
+          </div>
+          <div class="actions">
+            <button type="submit" class="btn btn-primary">Add Type</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="tab-add" class="form-section" style="display:none;">
+        <h3>Add Services to Transaction Type</h3>
+        <form action="/add-service" method="POST">
+          <div class="form-grid grid-2">
+            <div class="form-field">
+              <label for="service-type">Select Transaction Type:</label>
+              <select name="type" id="service-type" required>
+                <% transactionTypes.forEach(t => { %>
+                  <option value="<%= t.type %>"><%= t.type %></option>
+                <% }) %>
+              </select>
+            </div>
+          </div>
+          <div id="service-fields">
+            <div class="service-entry">
+              <div class="form-grid grid-5">
+                <div class="form-field">
+                  <label>Description:</label>
+                  <input type="text" name="descriptions[]" placeholder="Description" required>
+                </div>
+                <div class="form-field">
+                  <label>Item Cost:</label>
+                  <input type="number" name="itemAmounts[]" placeholder="0.00" class="item-cost">
+                </div>
+                <div class="form-field">
+                  <label>Service Cost:</label>
+                  <input type="number" name="procedureAmounts[]" placeholder="0.00" class="procedure-amount">
+                </div>
+                <div class="form-field">
+                  <label>Charge Ratio (%):</label>
+                  <input type="number" name="chargeRatio[]" placeholder="0" class="charge-ratio" readonly style="background:#f3f4f6;">
+                </div>
+                <div class="form-field">
+                  <label>Total Amount:</label>
+                  <input type="number" name="totalAmounts[]" placeholder="0.00" class="total-amount" readonly style="background:#f3f4f6;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="actions">
+            <button type="submit" class="btn btn-primary">Save Service</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="tab-manage" class="form-section">
+        <h3>View and Manage Services</h3>
+        <div class="form-grid grid-2">
+          <div class="form-field">
+            <label for="select-type">Select Transaction Type:</label>
+            <select id="select-type" required>
+              <% transactionTypes.forEach(t => { %>
+                <option value="<%= t.type %>"><%= t.type %></option>
+              <% }) %>
+            </select>
+          </div>
+        </div>
+        <div class="actions">
+          <button onclick="fetchServices()" class="btn btn-primary">Show Services</button>
+        </div>
+      </div>
+
+      <div id="services-table" style="display:none;">
+        <h3>Services for <span id="transaction-type-name"></span></h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Item Cost</th>
+              <th>Service Cost</th>
+              <th>Charge Ratio (%)</th>
+              <th>Total Amount</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="services-list">
+            <!-- Services will be dynamically added here -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Delete Confirmation Modal -->
+      <div id="delete-modal" class="modal">
+        <div class="modal-content">
+          <p>Are you sure you want to delete this service?</p>
+          <button class="btn btn-white" onclick="confirmDelete()">Confirm</button>
+          <button class="btn btn-cancel" onclick="cancelDelete()">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+  <script>
+    // Auto-compute total in add service form
+    document.addEventListener('DOMContentLoaded', function() {
+      function updateTotalAndRatio() {
+        const serviceCost = parseFloat(document.querySelector('.procedure-amount').value) || 0;
+        const itemCost = parseFloat(document.querySelector('.item-cost').value) || 0;
+        const total = serviceCost + itemCost;
+        document.querySelector('.total-amount').value = total.toFixed(2);
+        // Compute charge ratio as percentage of service cost in total
+        let ratio = 0;
+        if (total > 0) {
+          ratio = (serviceCost / total) * 100;
+        }
+        document.querySelector('.charge-ratio').value = ratio.toFixed(2);
+      }
+      document.querySelector('.procedure-amount').addEventListener('input', updateTotalAndRatio);
+      document.querySelector('.item-cost').addEventListener('input', updateTotalAndRatio);
+      updateTotalAndRatio();
+    });
+    // Simple tab switcher (like OPD/Emergency three buttons)
+    (function(){
+      const tabs = ['tab-type','tab-add','tab-manage'];
+      const buttons = Array.from(document.querySelectorAll('.btn-tab'));
+      function show(tabId){
+        tabs.forEach(id=>{
+          const el = document.getElementById(id);
+          if (el) el.style.display = (id===tabId) ? 'block' : 'none';
+        });
+        buttons.forEach(btn=>{
+          if (btn.dataset.tab === tabId) {
+            btn.classList.add('is-active');
+          } else {
+            btn.classList.remove('is-active');
+          }
+        });
+      }
+      buttons.forEach(btn=>{
+        btn.addEventListener('click', ()=> show(btn.dataset.tab));
+      });
+      // Default view
+      show('tab-manage');
+    })();
+
+    let serviceIdToDelete = null;
+
+    function addMore() {
+  // Removed addMore function, not needed for single entry
+}
+
+function removeRow(button) {
+  const entry = button.closest('.service-entry');
+  entry.remove();
+}
+
+    async function fetchServices() {
+    const transactionType = document.getElementById('select-type').value;
+    const response = await fetch(`/services/${transactionType}`);
+    const services = await response.json();
+
+    const tableBody = document.getElementById('services-list');
+    const transactionName = document.getElementById('transaction-type-name');
+
+    // Set the title for the transaction type
+    transactionName.innerText = transactionType;
+
+    // Clear previous data
+    tableBody.innerHTML = '';
+
+    // Populate the table with updated services
+    services.forEach(service => {
+      const row = document.createElement('tr');
+      row.id = service._id; // Add the service ID to the row for later reference
+
+      // Compute charge ratio for display
+      let chargeRatio = 0;
+      const serviceCost = parseFloat(service.procedureAmount) || 0;
+      const itemCost = parseFloat(service.itemAmount) || 0;
+      const total = serviceCost + itemCost;
+      if (total > 0) {
+        chargeRatio = (serviceCost / total) * 100;
+      }
+      row.innerHTML = `
+        <td class="description">${service.description}</td>
+        <td class="item-cost">₱${service.itemAmount || '0'}</td>
+        <td class="service-cost">₱${service.procedureAmount || '0'}</td>
+        <td class="charge-ratio">${chargeRatio.toFixed(2)}%</td>
+        <td class="total-amount">₱${service.amount}</td>
+        <td class="actions">
+          <button class="btn btn-white" onclick="editService('${service._id}', '${service.description}', '${service.procedureAmount || ''}', '${service.itemUsed || ''}', '${service.itemAmount || ''}', '${service.amount}')">Edit</button>
+          <button class="btn btn-cancel" onclick="showDeleteConfirmation('${service._id}')">Delete</button>
+        </td>
+      `;
+      tableBody.appendChild(row);
+    });
+
+    document.getElementById('services-table').style.display = 'block';
+  }
+
+
+  function editService(serviceId, description, amount) {
+    const row = document.querySelector(`button[onclick="editService('${serviceId}', '${description}', '${arguments[2] || ''}', '${arguments[3] || ''}', '${arguments[4] || ''}', '${arguments[5]}')"]`).closest('tr');
+    const cells = row.getElementsByTagName('td');
+    // Replace the current row with editable fields
+    cells[0].innerHTML = `<input type="text" id="edit-description" value="${description}" required>`;
+    cells[1].innerHTML = `<input type="number" id="edit-itemCost" value="${arguments[4] || ''}" placeholder="Item Cost">`;
+    cells[2].innerHTML = `<input type="number" id="edit-serviceCost" value="${arguments[2] || ''}" placeholder="Service Cost">`;
+    // Charge Ratio is read-only and auto-computed
+  cells[3].innerHTML = `<input type="number" id="edit-chargeRatio" value="0" readonly style="background:#f3f4f6;pointer-events:none;">`;
+  // Total is readonly and auto-computed
+  cells[4].innerHTML = `<input type="number" id="edit-amount" value="${arguments[5]}" readonly style="background:#f3f4f6;pointer-events:none;">`;
+    // Replace the buttons with Save and Cancel buttons
+    cells[5].innerHTML = `
+      <button class="btn btn-primary" onclick="saveService('${serviceId}')">Save</button>
+      <button class="btn btn-cancel" onclick="cancelEdit('${serviceId}')">Cancel</button>
+    `;
+    // Add auto-compute for edit row
+    function updateEditTotalAndRatio() {
+      const serviceCost = parseFloat(document.getElementById('edit-serviceCost').value) || 0;
+      const itemCost = parseFloat(document.getElementById('edit-itemCost').value) || 0;
+      const total = serviceCost + itemCost;
+      document.getElementById('edit-amount').value = total.toFixed(2);
+      let ratio = 0;
+      if (total > 0) {
+        ratio = (serviceCost / total) * 100;
+      }
+      document.getElementById('edit-chargeRatio').value = ratio.toFixed(2);
+    }
+    document.getElementById('edit-serviceCost').addEventListener('input', updateEditTotalAndRatio);
+    document.getElementById('edit-itemCost').addEventListener('input', updateEditTotalAndRatio);
+    updateEditTotalAndRatio();
+  }
+
+  function cancelEdit(serviceId) {
+    // Reload the services to reset the table
+    fetchServices();
+  }
+
+  async function saveService(serviceId) {
+  const newDescription = document.getElementById('edit-description').value;
+  const newServiceCost = document.getElementById('edit-serviceCost').value;
+  const newItemCost = document.getElementById('edit-itemCost').value;
+  const newChargeRatio = document.getElementById('edit-chargeRatio').value;
+  const newAmount = document.getElementById('edit-amount').value;
+
+  try {
+    const response = await fetch(`/update-service/${serviceId}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        description: newDescription,
+        procedureAmount: newServiceCost,
+        itemAmount: newItemCost,
+        chargeRatio: newChargeRatio,
+        amount: newAmount
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to update service');
+    }
+
+    // ✅ Force full re-fetch of the services list (like cancel)
+    setTimeout(() => {
+      fetchServices(); // this resets the table completely
+    }, 100); // slight delay to ensure data is saved first
+
+  } catch (err) {
+    console.error('Error saving service:', err);
+  }
+}
+
+    function showDeleteConfirmation(serviceId) {
+      // Show the confirmation modal
+      serviceIdToDelete = serviceId;
+      document.getElementById('delete-modal').style.display = 'flex';
+    }
+
+    function confirmDelete() {
+      fetch(`/delete-service/${serviceIdToDelete}`, {
+        method: 'DELETE'
+      })
+      .then(() => {
+        fetchServices(); // Refresh the list of services
+        closeDeleteModal(); // Close the modal after confirming deletion
+      })
+      .catch(err => console.error(err));
+    }
+
+    function cancelDelete() {
+      closeDeleteModal(); // Just close the modal without deleting
+    }
+
+    function closeDeleteModal() {
+      document.getElementById('delete-modal').style.display = 'none';
+    }
+  </script>
+  </div>
+</body>
+</html>

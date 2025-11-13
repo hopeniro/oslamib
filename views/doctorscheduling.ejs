@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Doctor Scheduling</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    body {
+      background: #f5f7fa;
+    }
+    .container { max-width: 1100px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 32px; }
+    .schedule-section {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px dashed #aaa;
+    }
+    .hidden {
+      display: none;
+    }
+    .calendar-checkboxes label {
+      margin-right: 10px;
+    }
+    .schedule-set {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 15px;
+    }
+  </style>
+<style>
+    body {
+      background: #f5f7fa;
+    }
+    .promissory-image {
+      max-width: 200px;
+      max-height: 200px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .status-badge {
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .status-pending { background: #FFC107; color: #000; }
+    .status-approved { background: #4CAF50; color: #fff; }
+    .status-settled { background: #2196F3; color: #fff; }
+    .status-overdue { background: #f44336; color: #fff; }
+  .status-rejected { background: #9E9E9E; color: #fff; }
+    .action-btn {
+      padding: 6px 12px;
+      margin: 2px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .btn-approve { background: #4CAF50; color: white; }
+    .btn-edit { background: #2196F3; color: white; }
+    .btn-settle { background: #9C27B0; color: white; }
+    .btn-overdue { background: #f44336; color: white; }
+  </style>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f8fb;
+      margin: 0;
+      color: #222;
+      font-size: 15px;
+    }
+    /* SIDEBAR & NAV ONLY */
+    .sidebar {
+      width: 250px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding-top: 10px;
+      padding: 12px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      overflow-y: auto;
+      border-left: 4px solid #0891b2;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      border-radius: 10px;
+      margin: 8px 10px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.25s ease;
+      position: relative;
+      text-decoration: none;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      background: #e6f7fa;
+      color: #0891b2;
+      border-color: #b3e5ef;
+      box-shadow: 0 3px 8px rgba(8,145,178,0.1);
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #0891b2; /* OsLAM title color */
+      border-radius: 4px 0 0 4px;
+      box-shadow: 0 0 0 1px #0891b2;
+    }
+  </style>
+</head>
+<body>
+   <!-- FLOATING SIDEBAR -->
+  <aside class="sidebar">
+    <div style="display:flex;align-items:center;gap:12px;padding:24px 20px 12px 20px;">
+      <img src="/logo.png" style="width:44px;height:44px;border-radius:8px;object-fit:contain;">
+      <div>
+        <div style="font-size:20px;font-weight:700;color:#0891b2;">OsLAM</div>
+        <div style="font-size:13px;color:#666;">Billing</div>
+      </div>
+    </div>
+    <nav style="margin-top:10px;">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="/dashboard" class="nav-link"><i class="bi bi-grid"></i> Dashboard</a></li>
+        <li><a href="/promissory" class="nav-link"><i class="bi bi-file-earmark-text"></i> Promissory Notes</a></li>
+        <li><a href="/services" class="nav-link"><i class="bi bi-tools"></i> Services</a></li>
+         <li><a href="/doctor" class="nav-link"><i class="bi bi-person-badge"></i> Doctors</a></li>
+        <li><a href="/nurse" class="nav-link"><i class="bi bi-person-lines-fill"></i> Nurses</a></li>
+         <li><a href="/doctorscheduling" class="nav-link"><i class="bi bi-calendar-event"></i> Doctor Schedule</a></li>
+        <li><a href="/nursescheduling" class="nav-link"><i class="bi bi-calendar-event"></i> Nurse Schedule</a></li>
+         <li><a href="/staff" class="nav-link"><i class="bi bi-people"></i> Staff</a></li>
+        <li><a href="/audittrail" class="nav-link"><i class="bi bi-shield-check"></i> Audit Trail</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div style="margin-left: 270px;">
+    <div class="container">
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 16px;">
+      <h2 style="margin:0;">Doctor Scheduling</h2>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <div style="position:relative;" id="docSchedViewWrapper">
+          <button id="docSchedViewBtn" onclick="toggleDocSchedViewMenu(event)" style="padding:6px 12px; cursor:pointer; border:1px solid #ccc; background:white; border-radius:4px;">
+            <i class="bi bi-eye"></i> View
+          </button>
+          <div id="docSchedViewMenu" style="display:none; position:absolute; right:0; top:100%; margin-top:4px; background:white; border:1px solid #ccc; border-radius:4px; box-shadow:0 2px 8px rgba(0,0,0,0.15); min-width:220px; z-index:1000;">
+            <div style="padding:8px 12px; border-bottom:1px solid #eee; font-weight:600; font-size:13px;">Show Columns</div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="docSchedToggle-license" checked onchange="toggleDocSchedColumn('license', this.checked)"> <label for="docSchedToggle-license">License Number</label></div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="docSchedToggle-name" checked onchange="toggleDocSchedColumn('name', this.checked)"> <label for="docSchedToggle-name">Name</label></div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="docSchedToggle-specialties" checked onchange="toggleDocSchedColumn('specialties', this.checked)"> <label for="docSchedToggle-specialties">Specialties</label></div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="docSchedToggle-services" checked onchange="toggleDocSchedColumn('services', this.checked)"> <label for="docSchedToggle-services">Services</label></div>
+            <div style="padding:6px 12px;" onclick="event.stopPropagation()"><input type="checkbox" id="docSchedToggle-action" checked onchange="toggleDocSchedColumn('action', this.checked)"> <label for="docSchedToggle-action">Actions</label></div>
+          </div>
+        </div>
+        <input id="docSchedSearch" type="text" placeholder="Search name or license" style="border:1px solid #ccc; border-radius:4px; padding:6px 10px; font-size:13px; width:200px;">
+        <div style="display:flex; align-items:center; gap:6px; font-size:13px;">
+          Rows per page
+          <select id="docSchedRowsPerPage" style="border:1px solid #ccc; border-radius:4px; padding:4px 8px;">
+            <option>10</option>
+            <option>25</option>
+            <option>50</option>
+            <option>100</option>
+            <option value="all">All</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" width="100%" id="docSchedTable">
+    <thead>
+      <tr>
+        <th class="col-license">License Number</th>
+        <th class="col-name">Name</th>
+        <th class="col-specialties">Specialties</th>
+        <th class="col-services">Services</th>
+        <th class="col-action">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% doctors.forEach((doc, index) => { %>
+        <tr>
+          <td class="col-license"><%= doc.licenseNumber || '—' %></td>
+          <td class="col-name"><%= doc.lastName %>, <%= doc.firstName %> <%= doc.middleName %>.</td>
+          <td class="col-specialties"><%= doc.specialties.join(', ') %></td>
+          <td class="col-services"><%= doc.services.join(', ') %></td>
+          <td class="col-action">
+            <button onclick="openScheduleModal('<%= doc.doctorId %>', '<%= doc.firstName %> <%= doc.middleName %> <%= doc.lastName %>')">View Schedule</button>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
+  <div id="docSchedPager" style="display:flex; align-items:center; justify-content:flex-end; gap:10px; margin-top:10px; font-size:13px; color:#666;">
+    <span id="docSchedPageInfo">Page 1 of 1</span>
+    <button id="docSchedPrev" style="padding:4px 8px; cursor:pointer;">&laquo;</button>
+    <button id="docSchedNext" style="padding:4px 8px; cursor:pointer;">&raquo;</button>
+  </div>
+
+  <!-- Compact Calendar Modal -->
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.css' rel='stylesheet' />
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <style>
+    .modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:1000; }
+    .modal-content { background:#fff; padding:16px; border-radius:6px; width:95%; max-width:900px; }
+    .modal-actions { display:flex; gap:8px; justify-content:flex-end; margin-top:10px; }
+    #calendar { max-height:450px; }
+    .inline-form { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:10px; }
+  </style>
+
+  <div id="schedule-modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <h3 style="margin:0;" id="modal-title">Doctor Schedule</h3>
+        <button onclick="closeScheduleModal()" style="background:none;border:none;font-size:20px;cursor:pointer;">&times;</button>
+      </div>
+      <div id='calendar'></div>
+      <div style="margin-top:8px; font-size:14px; color:#666;" id="selected-dates-info"></div>
+      <div class="inline-form">
+        <label>Date <input type="date" id="sched-date"></label>
+        <label>From <input type="time" id="sched-start"></label>
+        <label>To <input type="time" id="sched-end"></label>
+        <label>Department
+          <select id="sched-dept">
+            <option value="OPD">Outpatient Department</option>
+            <option value="Emergency">Emergency</option>
+          </select>
+        </label>
+        <input type="hidden" id="sched-id">
+        <input type="hidden" id="selected-dates">
+      </div>
+      <div class="modal-actions">
+        <button onclick="saveOrUpdateSchedule()">Save or Update Schedule</button>
+        <button onclick="deleteSchedule()" id="delete-sched-btn" style="display:none; background:#dc3545; color:#fff;">Delete Schedule</button>
+        <button onclick="closeScheduleModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // Table controls JavaScript
+  function toggleDocSchedViewMenu(e){
+    e?.stopPropagation();
+    const menu = document.getElementById('docSchedViewMenu');
+    menu.style.display = menu.style.display==='none'?'block':'none';
+  }
+  function toggleDocSchedColumn(colClass, isChecked){
+    const cells = document.querySelectorAll('.col-'+colClass);
+    cells.forEach(c => c.style.display = isChecked ? '' : 'none');
+  }
+  (function(){
+    const docSchedViewOutside = (e)=>{
+      const menu = document.getElementById('docSchedViewMenu');
+      const btn = document.getElementById('docSchedViewBtn');
+      if (!menu.contains(e.target) && !btn.contains(e.target)) menu.style.display='none';
+    };
+    setTimeout(()=>document.addEventListener('click', docSchedViewOutside), 0);
+  })();
+  (function(){
+    const tbl = document.getElementById('docSchedTable');
+    if (!tbl) return;
+    const tbody = tbl.querySelector('tbody');
+    const allRows = Array.from(tbody.querySelectorAll('tr'));
+    const searchInput = document.getElementById('docSchedSearch');
+    const rowsPerSelect = document.getElementById('docSchedRowsPerPage');
+    const pageInfo = document.getElementById('docSchedPageInfo');
+    const prevBtn = document.getElementById('docSchedPrev');
+    const nextBtn = document.getElementById('docSchedNext');
+    let currentPage=1, rowsPerPage=10;
+    function parseRowsPer(v){ return v==='all'?Infinity:parseInt(v,10); }
+    function applySearch(){ currentPage=1; render(); }
+    function render(){
+      const searchTerm = searchInput.value.toLowerCase();
+      const filtered = allRows.filter(row=>{
+        if (!searchTerm) return true;
+        const license = row.children[0]?.textContent.toLowerCase()||'';
+        const name = row.children[1]?.textContent.toLowerCase()||'';
+        return license.includes(searchTerm) || name.includes(searchTerm);
+      });
+      const perPage = rowsPerPage===Infinity ? filtered.length : rowsPerPage;
+      const totalPages = Math.ceil(filtered.length/perPage)||1;
+      if (currentPage>totalPages) currentPage=totalPages;
+      allRows.forEach(r=>r.style.display='none');
+      const start=(currentPage-1)*perPage, end=start+perPage;
+      filtered.slice(start,end).forEach(r=>r.style.display='');
+      pageInfo.textContent=`Page ${currentPage} of ${totalPages}`;
+      prevBtn.disabled = currentPage<=1;
+      nextBtn.disabled = currentPage>=totalPages;
+    }
+    searchInput?.addEventListener('input', applySearch);
+    rowsPerSelect?.addEventListener('change', ()=>{ rowsPerPage = parseRowsPer(rowsPerSelect.value); currentPage=1; render(); });
+    prevBtn?.addEventListener('click', ()=>{ if(currentPage>1){ currentPage--; render(); }});
+    nextBtn?.addEventListener('click', ()=>{
+      const searchTerm = searchInput.value.toLowerCase();
+      const filtered = allRows.filter(row=>{
+        if (!searchTerm) return true;
+        const license = row.children[0]?.textContent.toLowerCase()||'';
+        const name = row.children[1]?.textContent.toLowerCase()||'';
+        return license.includes(searchTerm) || name.includes(searchTerm);
+      });
+      const perPage = rowsPerPage===Infinity ? filtered.length : rowsPerPage;
+      const totalPages = Math.ceil(filtered.length/perPage)||1;
+      if (currentPage<totalPages){ currentPage++; render(); }
+    });
+    render();
+  })();
+
+  // Original scheduling modal JavaScript
+  let currentDoctorId = null;
+  let currentDoctorName = '';
+  let calendar = null;
+  let selectedDatesArray = [];
+  
+  function openScheduleModal(doctorId, doctorName){
+    currentDoctorId = doctorId;
+    currentDoctorName = doctorName || 'Doctor';
+    document.getElementById('modal-title').textContent = `Doctor Schedule - ${currentDoctorName}`;
+    selectedDatesArray = [];
+    const modal = document.getElementById('schedule-modal');
+    modal.style.display='flex';
+    modal.setAttribute('aria-hidden','false');
+    setTimeout(initCalendar, 0);
+  }
+  function closeScheduleModal(){
+    const modal = document.getElementById('schedule-modal');
+    modal.style.display='none';
+    modal.setAttribute('aria-hidden','true');
+    calendar && calendar.destroy();
+    calendar = null;
+    document.getElementById('sched-id').value='';
+    document.getElementById('sched-date').value='';
+    document.getElementById('sched-start').value='';
+    document.getElementById('sched-end').value='';
+    document.getElementById('selected-dates').value='';
+    document.getElementById('selected-dates-info').textContent='';
+    document.getElementById('delete-sched-btn').style.display='none';
+    selectedDatesArray = [];
+  }
+  async function initCalendar(){
+    const el = document.getElementById('calendar');
+    if (!el) return;
+    const events = await fetchDoctorEvents(currentDoctorId);
+    calendar = new FullCalendar.Calendar(el, {
+      initialView: 'dayGridMonth',
+      height: 450,
+      selectable: false,
+      events,
+      dateClick: (info)=>{
+        const dateStr = info.dateStr;
+        const idx = selectedDatesArray.indexOf(dateStr);
+        if (idx > -1){
+          // Already selected, remove it
+          selectedDatesArray.splice(idx, 1);
+          // Remove highlight
+          const bgEvent = calendar.getEventById('bg-' + dateStr);
+          if (bgEvent) bgEvent.remove();
+        } else {
+          // Not selected, add it
+          selectedDatesArray.push(dateStr);
+          // Add highlight as background event
+          calendar.addEvent({
+            id: 'bg-' + dateStr,
+            start: dateStr,
+            allDay: true,
+            display: 'background',
+            backgroundColor: '#d1e7dd'
+          });
+        }
+        // Update UI
+        if (selectedDatesArray.length > 0){
+          document.getElementById('sched-date').value = selectedDatesArray[0];
+          document.getElementById('selected-dates').value = selectedDatesArray.join(',');
+          document.getElementById('selected-dates-info').textContent = `Selected: ${selectedDatesArray.length} day${selectedDatesArray.length>1?'s':''} (${selectedDatesArray.join(', ')})`;
+        } else {
+          document.getElementById('sched-date').value = '';
+          document.getElementById('selected-dates').value = '';
+          document.getElementById('selected-dates-info').textContent = '';
+        }
+        document.getElementById('sched-id').value = '';
+        document.getElementById('delete-sched-btn').style.display='none';
+      },
+      eventClick: (info)=>{
+        if (info.event.display === 'background') return; // Ignore clicks on background events
+        const e = info.event;
+        // Clear multi-select mode
+        selectedDatesArray.forEach(d => {
+          const bgEvent = calendar.getEventById('bg-' + d);
+          if (bgEvent) bgEvent.remove();
+        });
+        selectedDatesArray = [];
+        document.getElementById('selected-dates').value='';
+        document.getElementById('selected-dates-info').textContent='';
+        // Populate form for editing
+        document.getElementById('sched-id').value = e.extendedProps._id || '';
+        document.getElementById('sched-date').value = e.startStr.slice(0,10);
+        document.getElementById('sched-start').value = e.startStr.slice(11,16);
+        if (e.endStr) document.getElementById('sched-end').value = e.endStr.slice(11,16);
+        if (e.extendedProps && e.extendedProps.department) { document.getElementById('sched-dept').value = e.extendedProps.department; }
+        document.getElementById('delete-sched-btn').style.display = e.extendedProps._id ? 'inline-block' : 'none';
+      }
+    });
+    calendar.render();
+  }
+  async function fetchDoctorEvents(doctorId){
+    const res = await fetch(`/api/doctor-schedule/${doctorId}`);
+    const data = await res.json();
+    return data.map(s=>({
+      title: `On Duty - ${s.department || ''}`.trim(),
+      start: `${s.date}T${s.startTime}`,
+      end: `${s.date}T${s.endTime}`,
+      extendedProps: { _id: s._id, department: s.department }
+    }));
+  }
+  async function saveOrUpdateSchedule(){
+    const id = document.getElementById('sched-id').value;
+    const startTime = document.getElementById('sched-start').value;
+    const endTime = document.getElementById('sched-end').value;
+    const department = document.getElementById('sched-dept').value;
+    const selectedDatesStr = document.getElementById('selected-dates').value;
+    
+    if (!startTime || !endTime || !department) { alert('Please complete time and department.'); return; }
+    
+    try{
+      if (id){
+        // Update existing single schedule
+        const date = document.getElementById('sched-date').value;
+        if (!date) { alert('Please select a date.'); return; }
+        await axios.put(`/api/doctor-schedule/${id}`, { date, startTime, endTime, department });
+        alert('Schedule updated.');
+      } else {
+        // Create new schedule(s)
+        const dates = selectedDatesStr ? selectedDatesStr.split(',') : [document.getElementById('sched-date').value];
+        if (dates.length === 0 || !dates[0]) { alert('Please select at least one date.'); return; }
+        
+        for (const date of dates){
+          await axios.post(`/api/doctor-schedule/${currentDoctorId}`, { date, startTime, endTime, department });
+        }
+        alert(`${dates.length} schedule${dates.length>1?'s':''} saved.`);
+      }
+      closeScheduleModal();
+      openScheduleModal(currentDoctorId, currentDoctorName);
+    }catch(err){
+      alert(err.response?.data?.error || 'Failed to save schedule');
+    }
+  }
+  async function deleteSchedule(){
+    const id = document.getElementById('sched-id').value;
+    if (!id) { alert('No schedule selected to delete.'); return; }
+    if (!confirm('Are you sure you want to delete this schedule?')) return;
+    try{
+      await axios.delete(`/api/doctor-schedule/${id}`);
+      alert('Schedule deleted.');
+      closeScheduleModal();
+      openScheduleModal(currentDoctorId, currentDoctorName);
+    }catch(err){
+      alert(err.response?.data?.error || 'Failed to delete schedule');
+    }
+  }
+</script>
+</div>
+</body>
+</html>
